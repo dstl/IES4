@@ -127,7 +127,7 @@ def process_n3_file(ontology: str | Path | Graph):
     _create_node_shapes_for_properties(ont_graph, sh_graph, OWL.ObjectProperty)
     _create_node_shapes_for_properties(ont_graph, sh_graph, OWL.DatatypeProperty)
 
-    sh_graph.serialize(destination=Path("../IES Specification Docs/ont.file.ttl"), format="turtle")
+    # sh_graph.serialize(destination=Path("../IES Specification Docs/ont.file.ttl"), format="turtle")
     return ont_graph, sh_graph
 
 
