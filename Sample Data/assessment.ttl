@@ -30,27 +30,27 @@ data:FredHackingS1 ies:isPartOf data:Scenario1 ;
   ies:isParticipationOf data:Fred ;
   a ies:Perpetrator .
 
-data:S1Assesment ies:assessed data:Scenario1 ;
+data:S1Assessment ies:assessed data:Scenario1 ;
   ies:confidence "HIGH" ;
   a ies:AssessToBeTrue .
 
-data:S1Assessor ies:isParticipantIn data:S1Assesment ;
+data:S1Assessor ies:isParticipantIn data:S1Assessment ;
   ies:isParticipationOf data:Vladimir ;
   a ies:Assessor .
 
-data:S2Assesment ies:assessed data:Scenario2 ;
+data:S2Assessment ies:assessed data:Scenario2 ;
   ies:confidence "MEDIUM" ;
   a ies:AssessToBeTrue .
 
-data:S2Assessor ies:isParticipantIn data:S2Assesment ;
+data:S2Assessor ies:isParticipantIn data:S2Assessment ;
   ies:isParticipationOf data:Vladimir ;
   a ies:Assessor .
 
-data:S3Assesment ies:assessed data:Scenario3 ;
+data:S3Assessment ies:assessed data:Scenario3 ;
   ies:confidence "LOW" ;
   a ies:AssessToBeTrue .
 
-data:S3Assessor ies:isParticipantIn data:S3Assesment ;
+data:S3Assessor ies:isParticipantIn data:S3Assessment ;
   ies:isParticipationOf data:Vladimir ;
   a ies:Assessor .
   
