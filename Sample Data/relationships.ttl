@@ -3,6 +3,7 @@
 @prefix data: <http://data.gov.uk/testdata#> .
 @prefix iso8601: <http://iso.org/iso8601#> .
 
+data:AcmeInc a ies:Organisation .
 data:Barry a ies:Person .
 data:Fred a ies:Person ;
     ies:siblingOf data:Barry .
