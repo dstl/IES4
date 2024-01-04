@@ -8,7 +8,7 @@ data:Barry a ies:Person .
 data:Fred a ies:Person ;
     ies:siblingOf data:Barry .
 data:FredState2 a ies:Employed ;
-    ies:stateOf data:Fred ;
+    ies:isStateOf data:Fred ;
     ies:worksFor data:AcmeInc .
 data:FredEmployedStart a ies:BoundingState ;
     ies:inPeriod iso8601:2011-12-05T08%3A00 ;
