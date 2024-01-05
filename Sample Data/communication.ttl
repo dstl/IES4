@@ -5,10 +5,10 @@
 data:Fred a ies:Person .
 data:Brenda a ies:Person .
 data:LAX a ies:Airport .
-data:Wetwang a ies:RegionofCountry .
+data:Wetwang a ies:RegionOfCountry .
 data:0044987654321 a ies:TelephoneNumber .
-data:123456789012345 a ies:imei .
-data:001234567890 a ies:TemephoneNumber . 
+data:123456789012345 a ies:IMEI .
+data:001234567890 a ies:TelephoneNumber . 
 
 data:FredBrendaCall a ies:VoiceCall .
 
@@ -16,7 +16,7 @@ data:FredBrendaCaller a ies:Caller ;
   ies:isPartOf data:FredBrendaCall ;
   ies:happensIn data:Wetwang .
 
-data:FredBrendaCallee a ies:Caller ;
+data:FredBrendaCallee a ies:Callee ;
   ies:isPartOf data:FredBrendaCall ;
   ies:happensIn data:LAX .
 
@@ -33,7 +33,7 @@ data:FredsPhoneInCall a ies:DeviceInCommunication ;
   ies:isIdentifiedBy data:0044987654321 ;
   ies:isParticipationOf data:FredsMobile .
 
-data:BrendaAccountInCall a ies:AccountinCommunication ;
+data:BrendaAccountInCall a ies:AccountInCommunication ;
   ies:isParticipantIn data:FredBrendaCallee ;
   ies:hasRegisteredCommsID data:001234567890 .
 

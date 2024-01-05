@@ -25,7 +25,7 @@ iso8601:2014-01-05T11:00	a			            	ies:ParticularPeriod .
 data:theatreA			    a			            	ies:PartOfFacility .
 data:UniversityHospital		a			            	ies:Facility .
 data:Ward1			        a			            	ies:PartOfFacility .
-data:bed101			        a				            ies:PartofFacility .
+data:bed101			        a				            ies:PartOfFacility .
 data:bed101			        a				            data:HospitalBed .
 data:HospitalBed			a				            rdfs:Class .
 data:HospitalBed 		    rdfs:subClassOf			    ies:PartOfFacility .

@@ -7,11 +7,11 @@ data:Russia_v_Croatia a ies:EntertainmentEvent ;
   ies:isPartOf data:World_Cup_2018 .
 data:Sweden_v_England a ies:EntertainmentEvent ;
   ies:isPartOf data:World_Cup_2018 .
-data:Englrand_v_Colombia a ies:EntertainmentEvent ;
+data:England_v_Colombia a ies:EntertainmentEvent ;
   ies:isPartOf data:World_Cup_2018 .
-data:Englrand_v_Croatia a ies:EntertainmentEvent ;
+data:England_v_Croatia a ies:EntertainmentEvent ;
   ies:isPartOf data:World_Cup_2018 ;
-  ies:after data:Englrand_v_Colombia .
+  ies:after data:England_v_Colombia .
 data:RusVCroKickOff a ies:BoundingState ;
   ies:isStartOf data:Russia_v_Croatia .
 data:SweVEngKickOff a ies:BoundingState ;

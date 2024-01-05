@@ -11,7 +11,7 @@ data:Brendas_Pet_Names a ies:NamingScheme ;
   ies:schemeOwner data:Brenda .
 data:MoS_ID a ies:NamingScheme ;
   ies:schemeOwner data:Ministry_of_Systems ;
-  ies:schemsImplementedBy data:Mos_Database .
+  ies:schemeMasteredIn data:Mos_Database .
 
 data:Barry a ies:Person ;
   ies:documentedBy data:Barry%3A%20A%20Life ;

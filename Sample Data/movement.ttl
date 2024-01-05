@@ -5,7 +5,7 @@
 
 data:Fred a ies:Person .
 data:FredsHouse a ies:Address .
-data:LK176LPX a ies:RoasVehicle .
+data:LK176LPX a ies:RoadVehicle .
 data:LHR a ies:Airport .
 data:LAX a ies:Airport .
 iso8601:2018-08-12T05%3A30Z a ies:ParticularPeriod .
