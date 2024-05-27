@@ -78,7 +78,7 @@
     * [Topological](#{20BF4E8F-9683-4bf4-B59C-F7F2AB2FB8F3})
     * [All Relationships](#{DE627D02-C0D9-462a-9CB7-1C496714A13D})
 * [All Elements](#{5F2E9C9F-780E-4de3-8B3B-017023D6259C})
-## <a id="{9BEA56CA-2E23-47b6-AF37-991F72D7C4DD}"></a>Notation
+## <a href="#{9BEA56CA-2E23-47b6-AF37-991F72D7C4DD}">Notation</a>
 ![Notation Diagram](Images/EAID_9BEA56CA_2E23_47b6_AF37_991F72D7C4DD.png)
 
 ### IES elements in this diagram:
@@ -272,7 +272,7 @@ The Information Exchange Standard is based on 6 key items which are subtypes of 
 
 ### IES elements in this diagram:
 
-* [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
+* [Event](#Event)
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
