@@ -13,17 +13,17 @@ An ontology has some features in common with data models and taxonomies, but it 
 
 In common with a taxonomy, an ontology generally has a hierarchy of classes – types of things. The difference between the two is really one of rigour and purpose. A taxonomy (for information management purposes) is generally structured to enable the classification of information. This classification work is done in order to aid discovery of that information, and so the taxonomy’s structure is dictated by the requirement to make information easier to find. An ontology’s purpose is to provide an accurate model of the business, so tends to take a more neutral and pedantic approach to classification. The example below is from the UK Defence Taxonomy:
 
-![alt text](https://github.com/dstl/IES/blob/main/Images/ukdt1.png)
+![alt text](./Images/ukdt1.png)
 
 A taxonomy works with words, and the relationships between words. In this case, as we descend the tree, the words become narrower in terms of what they refer to. This is great as a filing system as it allows us to be systematic about where we store our information whilst providing a hierarchical way to search for it.
 
 An ontology is intended to be both computer and human interpretable – i.e. it requires a little more semantic and logical rigour. The first enhancement required is to work out the nature of the elements in the taxonomy. Some of these elements are types of things, whilst others are physical things:
 
-![alt text](https://github.com/dstl/IES/blob/main/Images/ukdt2.png)
+![alt text](./Images/ukdt2.png)
 
 Although the broader-narrower relationship between the words holds true, the relationships between the things in the real world to which those words refer1 is somewhat more varied:
 
-![alt text](https://github.com/dstl/IES/blob/main/Images/ukdt3.png)
+![alt text](./Images/ukdt3.png)
 
 
 
