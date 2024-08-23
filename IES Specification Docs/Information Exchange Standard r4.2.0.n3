@@ -3307,4 +3307,4 @@ ies:worksWith rdfs:domain ies:PersonState .
 ies:worshipsAt rdf:type owl:ObjectProperty . 
 ies:worshipsAt sparx:guid "{475617C7-BEE3-4c5e-8749-9386B68A8DA5}" . 
 ies:worshipsAt rdfs:comment "A visits relationship between a ResponsibleActor and a Location where they undertake religious worshipNote: more often than not, this will be a statement of regular/occasional worship, so the instance of the ResponsibleActorState should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, inLocation would generally be used." . 
-ies:worshipsAt rdfs:subPropertyOf ies:visits . 
+ies:worshipsAt rdfs:subPropertyOf ies:visits .
