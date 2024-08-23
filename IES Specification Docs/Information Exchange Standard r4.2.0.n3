@@ -2597,6 +2597,7 @@ ies:Representation rdf:type rdfs:Class .
 ies:Representation sparx:guid "{675A5C23-0746-43d0-96D0-AF0DF72CD697}" . 
 ies:Representation rdfs:comment "An ClassOfEntity whose instances are representations of things in the real worldExamples:* an identifier used for a Person* a document (though not an individual copy of a document)" . 
 ies:Representation rdfs:subClassOf ies:ClassOfEntity . 
+ies:Representation ies:powertype ies:ClassOfRepresentation . 
 ies:representationValue rdf:type owl:DatatypeProperty . 
 ies:representationValue sparx:guid "{AE00F1DE-F42B-4fc0-B07B-21F754F16FD4}" . 
 ies:representationValue rdfs:comment "The examplar text, number, etc. of a Representation" . 
