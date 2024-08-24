@@ -1,9 +1,9 @@
 [back to readme](README.md)
 
-### Crown Copyright 2020-2022
+Crown Copyright 2020-2024
 ![Logo](Images/ies-logo.png)
 
-# IES Model version: 4.2.0
+# IES Model version: 4.3.0rc1
 ## Contents
 * Introduction Diagrams
     * [Notation](#{9BEA56CA-2E23-47b6-AF37-991F72D7C4DD})
@@ -21,6 +21,8 @@
     * [Identifiers](#{A72D9272-DF55-4e58-9174-3F9F168438A0})
     * [Characteristics and Measures](#{80403A46-2297-4e05-8C9C-1F6EF5596779})
     * [Disposition](#{C9919009-48A5-4db1-8123-90396A6F3AD0})
+    * [Replaceable Parts](#{6C923E0C-455B-46bb-B498-2A47AA1A8DE3})
+    * [Stuff and Count](#{5B7A4E68-4F12-48d2-AE62-D359E4CBA907})
     * [Attributes](#{1A40117E-E6F6-4ae0-A438-8583E896BE00})
     * [Source References](#{60CD4A4C-652B-40c9-A65B-321A73329D6E})
     * [Payloads and Groups](#{17F25B76-6D6D-4d6e-8BC8-F97C1B2DCC0B})
@@ -241,7 +243,7 @@ Otherwise, things to watch out for in the UML are:
 ### IES elements in this diagram:
 
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [attribute](#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
@@ -255,7 +257,7 @@ Otherwise, things to watch out for in the UML are:
 * [isParticipantIn](#{BAEA86D9-C90E-4f8d-96F5-A01BB0C49711})
 * [relationship](#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A})
 
-The Information Exchange Standard is based on 6 key items which are subtypes of ExchangedItem:
+The Information Exchange Standard is based on 6 key items which are subtypes of Thing:
 
 <ul>
 	<li>Element - anything physical - i.e. things that have extent in space (and time)</li>
@@ -264,7 +266,7 @@ The Information Exchange Standard is based on 6 key items which are subtypes of 
 	<li>State - a temporal state of an Entity (e.g. a moment in a Person's life, a phase of a Project, etc.) and can be of any duration</li>
 	<li>Event - an activity or incident, involving one of more participating Entities, that occurred/started at a specific point in time - e.g. a meeting or a telephone call.</li>
 	<li>PeriodOfTime - a specific period of time (past, present or future)</li>
-	<li>relationship - relates ExchangedItems.</li>
+	<li>relationship - relates Things.</li>
 </ul>
 
 ## <a id="{164BAFC4-0C40-4900-8A83-2B62248BF22D}"></a>Relationships
@@ -295,7 +297,7 @@ The Information Exchange Standard is based on 6 key items which are subtypes of 
 * [Actor](#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B})
 * [ActorState](#{7ED8BC7C-A85F-4ed5-AC6F-D640F2DF4B7B})
 
-Relationships may exist between ExchangedItems in IES - and can be used to assert anything from structural to legal connections between things. The concept of a relationship should be familiar to anyone who has looked at data model or ontology before. However, as IES4 is a 4D ontology, the relationships may only apply to a certain phase (state) of the Element - e.g. someone working for an Organisation for a period of time. Unlike attributes, the majority of relationships fall into this category. There are exceptions, such as being the sibling of someone (it's for life for both of them) but it turns out the majority are temporal. Like attributes, we create a State of the Entity instance in question and then attach the relationship to the State. 
+Relationships may exist between Things in IES - and can be used to assert anything from structural to legal connections between things. The concept of a relationship should be familiar to anyone who has looked at data model or ontology before. However, as IES4 is a 4D ontology, the relationships may only apply to a certain phase (state) of the Element - e.g. someone working for an Organisation for a period of time. Unlike attributes, the majority of relationships fall into this category. There are exceptions, such as being the sibling of someone (it's for life for both of them) but it turns out the majority are temporal. Like attributes, we create a State of the Entity instance in question and then attach the relationship to the State. 
 
 In the example below, Fred has always been Barry's sibling and will continue to be whilst they both exist so there is no need for a State. In the second relationship, Fred worked for Acme since 5th December 2011, and is still working there because there is no end date. 
 
@@ -326,7 +328,7 @@ Periods of time are Elements in a 4D ontology. They can be treated like any othe
 
 IES also allows a duration to specified even when the precise start and end are not known - e.g. we can specify a meeting lasted an hour and took place on a particular day, but we don't know what time it began and ended.
 
-Note: to prevent duplicate periods being created, the uri of each period should reflect the ISO8601 datetime (encoded to % out the disallowed URI characters). So for example, the uri for January 2008 would be http://iso8601.iso.org#2008-01. For ParticularPeriod, this is fairly simple. For PeriodOfTime, the ISO8601 encoding for the period should be used.
+Note: to prevent duplicate periods being created, the uri of each period should reflect the ISO8601 datetime in Coordinated Universal Time (encoded without punctuation). So for example, the uri for January 2008 would be http://iso8601.iso.org#200801. For ParticularPeriod, this is fairly simple. For PeriodOfTime, the ISO8601 encoding for the period should be used.
 
 In the first example below, we show that Fred began working for Acme in 2011, and that we know he left Acme, and we're not sure of the day he left, but it was before 2016-05-07.
 
@@ -344,10 +346,8 @@ Technically, a PeriodOfTime is all of space, for a specific (or recurring) perio
 * [inPeriod](#{2F08EF25-A5C8-48ad-85E3-903DB008AA19})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [PeriodOfTime](#{3FDFA898-C340-4279-8B3C-275359D5B02D})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
-* [takesplaceIn](#{5D13DE13-CAAC-4879-9237-D20A6846F4D8})
 * [EventParticipant](#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB})
 
 Because IES4 is a 4D ontology, time and space (in fact spacetime) are handled in the same way*. If something happens entirely within a location, it is part of that location. If a person walks through a location, there is a state of them that is part of that location. Similarly, if something happens in a particular period of time, it is part of that period of time. IES4 specifies subproperties of the isPartOf relationship with slightly more intuitive names;<i> inLocation, happensIn, takesPlaceIn, inPeriod</i>, etc.
@@ -420,7 +420,6 @@ For more complex temporal logic, such as an Event <i>starting </i>before another
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [isPartOf](#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC})
 * [isParticipantIn](#{BAEA86D9-C90E-4f8d-96F5-A01BB0C49711})
-* [isParticipantStateIn](#{A77A19DA-2775-4dfa-A76C-41C158AC582C})
 * [PeriodOfTime](#{3FDFA898-C340-4279-8B3C-275359D5B02D})
 * [ResponsibleActor](#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9})
 * [Person](#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2})
@@ -431,8 +430,6 @@ For more complex temporal logic, such as an Event <i>starting </i>before another
 * [Meeting](#{6445E51F-3DDF-4dcf-ABDF-3ED123D53188})
 * [CoLocation](#{3524D10D-D9B0-416d-ADED-D5AAEB99DD09})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
-* [Role](#{0066A327-D497-42e0-9F50-D988F522F4A5})
-* [hasRole](#{5C76592F-C47D-40ee-8D82-497962686D34})
 * [MeetingChair](#{B499C172-310D-4c5f-BA92-93B1C7874EEB})
 * [Attendance](#{626D5F2C-9153-40f4-9F2A-393B6DB072D3})
 * [Actor](#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B})
@@ -475,7 +472,7 @@ At first glance, this may seem contrary to the BORO mantra about always identify
 
 * [ClassOfClassOfEntity](#{1F9AC8FE-3862-48d6-A3DC-E429B08D2B26})
 * [ClassOfClassOfElement](#{85305668-DE1A-454a-87EE-346A221E846C})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
@@ -502,7 +499,7 @@ Hierarchies of <b>ClassOfElement </b>can be built using the <i>rdfs:subClassOf <
 
 ### IES elements in this diagram:
 
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
@@ -528,7 +525,7 @@ Hierarchies of <b>ClassOfElement </b>can be built using the <i>rdfs:subClassOf <
 * [DataObject](#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2})
 * [JsonData](#{6A9A065C-A31A-42be-B7E2-275F076DCA9D})
 
-IES distinguished between things in the real world and our representations of them. In this case, a Representation is not a PhysicalThing (see Document for the distinction). Representations may be documents, videos, blog text, etc. The represents relationship links ExchangedItems to their Representations.
+IES distinguished between things in the real world and our representations of them. In this case, a Representation is not a PhysicalThing (see Document for the distinction). Representations may be documents, videos, blog text, etc. The represents relationship links Things to their Representations.
 
 Sometimes it is important to establish arbitrary categories of Representation - such as "financial accounts", "pictures of kittens" or "educational films". ContentCategory is used to collect together all Representations of similar content.
 
@@ -537,7 +534,7 @@ Sometimes it is important to establish arbitrary categories of Representation - 
 
 ### IES elements in this diagram:
 
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
@@ -563,7 +560,7 @@ Sometimes it is important to establish arbitrary categories of Representation - 
 * [hasName](#{C3A36E36-0C73-4af7-88E3-81C9243CE456})
 * [documentedBy](#{AC7C948A-F19C-4296-AC38-0FEE6A4C5E90})
 
-IES4 distinguishes between things in the real world and representations of those things. The representation pattern allows any <b>ExchangedItem </b>to have multiple representations - e.g. a book about the Ministry Of Defence, the DUNS number for the Ministry Of Defence, etc. 
+IES4 distinguishes between things in the real world and representations of those things. The representation pattern allows any <b>Thing</b>to have multiple representations - e.g. a book about the Ministry Of Defence, the DUNS number for the Ministry Of Defence, etc. 
 
 Representations specialise into <b>WorksOfDocumentation </b>(see Document diagram in Entities section), <b>Name</b>s, and <b>Identifier</b>s. <b>Name</b>s and<b> Identifier</b>s belong to <b>NamingScheme</b>s - this allows us to give context when an <b>Element </b>has more than one <b>Name </b>or <b>Identifier</b>. <b>NamingScheme</b>s may be implemented in <b>System</b>s and used by <b>Organisation</b>s. This replaces the idea of EnterpriseIdentity and SystemIdentity in IES3
 
@@ -572,7 +569,7 @@ Representations specialise into <b>WorksOfDocumentation </b>(see Document diagra
 
 ### IES elements in this diagram:
 
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
 * [Characteristic](#{A7F266E8-B1CB-4b9b-8AF1-1EF2A7D8F5EE})
@@ -606,6 +603,7 @@ Representations specialise into <b>WorksOfDocumentation </b>(see Document diagra
 * [ValueInAmperes](#{0C682BA6-23AB-459c-B8FF-A114AA27650B})
 * [ValueInKelvin](#{32097C4D-A0FB-4024-BDB8-8E899DDCF217})
 * [ValueInMoles](#{943CA047-F259-4181-BF04-F6D54065AAD4})
+* [isRepresentedAs](#{D106A0A9-55C4-454f-9E20-35BA54114036})
 
 IES provides a basic set of classes for characteristics and measures. Characteristics are properties of Elements that are qualitative, Measures are quantitative. To support Measures, IES provides classes for all the SI units, a model for units of measure and an ability to specify measure ranges. 
 
@@ -613,7 +611,7 @@ The key points about this model are that the Measure is separate from its repres
 
 Characteristics and measures can be applied to an Element, or to a ClassOfElement in the case where all instances of the ClassOfElement share the same characteristic or measure - e.g. all London buses being red. 
 
-This model is new in IES 4.1 - previously, there was no consistent way to do this, but mostly it relied on attributes. 
+This model is new in IES 4.1 - previously, there was no consistent way to do this, but mostly it relied on attributes.
 
 ## <a id="{C9919009-48A5-4db1-8123-90396A6F3AD0}"></a>Disposition
 ![Disposition Diagram](Images/EAID_C9919009_48A5_4db1_8123_90396A6F3AD0.png)
@@ -621,7 +619,7 @@ This model is new in IES 4.1 - previously, there was no consistent way to do thi
 ### IES elements in this diagram:
 
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [attribute](#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
@@ -640,12 +638,58 @@ A disposition is about an Element's capability or tendency to do something or to
 
 Dispositions are managed in IES using DispositionalClass - something that was also in the international IDEAS ontology where capability was a key concept they had to model. Dispositional classes collect together all Elements that share the same disposition (e.g. all aircraft capable of Mach 2). 
 
+## <a id="{6C923E0C-455B-46bb-B498-2A47AA1A8DE3}"></a>Replaceable Parts
+![Replaceable Parts Diagram](Images/EAID_6C923E0C_455B_46bb_B498_2A47AA1A8DE3.png)
+
+### IES elements in this diagram:
+
+* [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
+* [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
+* [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
+* [ReplaceablePart](#{624D6CD1-31D9-46db-B42D-56DAD35BABD8})
+* [InstalledState](#{6B36C428-3A86-493e-9B3B-6D394C567577})
+* [InPost](#{6C1949B5-B86B-4940-8912-9008CCD67150})
+* [isPartOf](#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC})
+* [isStateOf](#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E})
+
+Understanding a thing's parts can be straight-forward at any given time, however that is complicated by changes over time. For example, a car's components, like its gearbox or tyres, can be replaced when worn. When we replace a car's tyre, it remains the same car, just with a different tyre. BORO and 4D thinking clarifies this: the extent of the car contains a temporal part of one tyre followed by the temporal part of another tyre. At any one time, the car overlaps with only one tyre; but, over time, it overlaps with two tyres. The two tyres have <b>InstalledStates</b> that are parts of the car.
+
+Sometimes it is useful to call out the enduring part of an Element e.g. the tyre of a car whichever actual tyre is installed at a given time. This is what we call a <b>ReplaceablePart</b>. A replaceable part can be substituted or exchanged without altering the overall identity or functionality. Moreover, the identity of a <b>ReplaceablePart</b> can survive periods when nothing fulfils its purpose or role, i.e. its existence is not necessarily continuous.
+
+In IES, we instantiate this enduring, replaceable part as both a <b>ReplaceablePart</b> and the class of Element that is intended to be installed into it. For example, the replaceable tyre part of a car is instantiated as both a <b>ReplaceablePart</b> and a Tyre.
+
+## <a id="{5B7A4E68-4F12-48d2-AE62-D359E4CBA907}"></a>Stuff and Count
+![Stuff and Count Diagram](Images/EAID_5B7A4E68_4F12_48d2_AE62_D359E4CBA907.png)
+
+### IES elements in this diagram:
+
+* [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
+* [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
+* [relationship](#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A})
+* [Stuff](#{CC9E60AC-B3C8-4c9b-B657-2734538AE2B9})
+* [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
+* [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
+* [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
+* [PeriodOfTime](#{3FDFA898-C340-4279-8B3C-275359D5B02D})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Parked](#{B6A503E5-3FC4-4a45-8DC0-994EA31A895A})
+* [VehicleState](#{D3275233-7381-483e-B2D2-77F13D73A52E})
+* [attribute](#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA})
+* [finiteMembershipCount](#{FF3DDC24-010C-4cd2-BF97-7464EAF45317})
+* [FiniteClassOfElement](#{06BAC6F4-F6B2-4be1-95C5-8E31C34796CB})
+
+There are times where we want to talk about sets of elements without having to instantiate every individual element as an instance. Instead, we want to just provide a count of the members of the set e.g. the number of cars in the set parked at Acacia Avenue. Such sets are instances of <b>FiniteClassOfElement</b> where the count is provided using the attribute <b>finiteMembershipCount</b>. 
+
+In the illustrated example, to get the set of cars parked at Acacia Avenue, we create a subClassOf of the set of all parked cars, <b>Parked</b>. This gives us a specific subset of cars parked at Acacia Avenue at a time. This subclass is also an instance of <b>FiniteClassOfElement</b> allowing us to assign <i>57</i> as its <b>finiteMembershipCount</b>.
+
+There are physically things in the world that are difficult to call out as separate individuals due to their high divisibility. For example, water in a swimming pool, sand on a beach or the walls and floors of a building. <b>Stuff</b> allows us to talk about these highly divisible or generally uncountable things.
+
 ## <a id="{1A40117E-E6F6-4ae0-A438-8583E896BE00}"></a>Attributes
 ![Attributes Diagram](Images/EAID_1A40117E_E6F6_4ae0_A438_8583E896BE00.png)
 
 ### IES elements in this diagram:
 
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [attribute](#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
@@ -666,7 +710,7 @@ Attributes are not as widely used in IES4 as in IES3 where they were used for me
 
 ### IES elements in this diagram:
 
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
@@ -691,7 +735,7 @@ Attributes are not as widely used in IES4 as in IES3 where they were used for me
 * [hasSourceReference](#{16480E86-9FE4-4b37-ACFB-9E410F190664})
 * [EncodedData](#{8AF1DB0B-9BEB-4a33-A459-7EF2BE309E81})
 
-The IES3 Source Reference capability is maintained in IES4, but leverages the Representation pattern to achieve the same thing. The key relationship here is hasSourceReference  which links the Representation (Document, DataObject, etc.) to the ExchangedItem it was the source for.
+The IES3 Source Reference capability is maintained in IES4, but leverages the Representation pattern to achieve the same thing. The key relationship here is hasSourceReference  which links the Representation (Document, DataObject, etc.) to the Thing it was the source for.
 
 Representations can be assembled into structures using the inRepresentation relationship.
 
@@ -713,7 +757,7 @@ Representations can be assembled into structures using the inRepresentation rela
 * [permittedOrganisation](#{90F3E89D-1456-41fe-9354-4E13C4D79564})
 * [handlingCaveat](#{1C02B06E-3159-48f6-9575-64B62765498B})
 * [statementLabel](#{7EC7FCEE-7C60-4233-8938-D6320BD951F2})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [GroupOfItems](#{04C2111A-D958-4a95-9271-7208B849DDD8})
 * [inGroup](#{C21D2CA2-6F42-4b7c-9092-8B8C5B7BAF9F})
 * [groupName](#{42463865-450C-4a9a-9EF0-5322222C2B97})
@@ -725,9 +769,9 @@ Representations can be assembled into structures using the inRepresentation rela
 * [originatingSystem](#{D4A003A3-7FEF-409c-8935-743CD97299E7})
 * [payloadContents](#{10DEB6B8-80CC-4bfc-B10F-1830B559C21F})
 
-IES3 had the concept of an <b>ExchangePayload </b>object to which all the ExchangedItems and Groups were attached. In reality, there was only ever one payload in a file, so in IES4, whilst the <b>ExchangePayload </b>class is kept, it is simply an object in the RDF file to which meta-data about the whole file can be attached. The concept of <b>GroupOfItems </b>is retained from IES3.
+IES3 had the concept of an <b>ExchangePayload </b>object to which all the Things and Groups were attached. In reality, there was only ever one payload in a file, so in IES4, whilst the <b>ExchangePayload </b>class is kept, it is simply an object in the RDF file to which meta-data about the whole file can be attached. The concept of <b>GroupOfItems </b>is retained from IES3.
 
-It is sometimes important to specify the origins (organisation, system, etc.) of certain information. This is achieved using the <i>originator </i>and <i>originatingSystem </i>which link <b>rdf:Resource</b>s (i.e. anything) to their origin. These can be applied to GroupsOfItems also, but care must be taken not to put the same <b>ExchangedItem </b>in different <b>GroupOfItem </b>instances that have <i>originator </i>or <i>originatingSystem </i>properties linked to them. If the source of a relationship (triple) has to be specified, the originator and originatingSystem properties can be applied to rdf:Statement (see RDF documentation on reification).
+It is sometimes important to specify the origins (organisation, system, etc.) of certain information. This is achieved using the <i>originator </i>and <i>originatingSystem </i>which link <b>rdf:Resource</b>s (i.e. anything) to their origin. These can be applied to GroupsOfItems also, but care must be taken not to put the same <b>Thing</b> in different <b>GroupOfItem </b>instances that have <i>originator </i>or <i>originatingSystem </i>properties linked to them. If the source of a relationship (triple) has to be specified, the originator and originatingSystem properties can be applied to rdf:Statement (see RDF documentation on reification).
 
 ## <a id="{C58F08D6-9661-4b21-8576-B7620B7D84E3}"></a>Metadata
 ![Metadata Diagram](Images/EAID_C58F08D6_9661_4b21_8576_B7620B7D84E3.png)
@@ -755,11 +799,11 @@ The fact that IES has its own document referencing capability <i>and</i> Dublin 
 * [Asset](#{40231334-5ACC-4dd4-A8C1-05012E2170E0})
 * [Currency](#{A06EE74F-9A66-4b63-8DC3-3B1C2B362862})
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
-* [ISO639-3Code](#{ECFED94D-CC69-46b9-B09D-B282D5665787})
+* [ISO4217Code](#{598ACBB6-DF51-4bd9-A5DD-52EDE1895327})
 * [Country](#{92EBA9B9-48C2-4082-9FE5-603977BD6846})
 * [isLegalTenderIn](#{2415B865-3C37-4595-9F38-11075EAB5D34})
 
-This part of IEAS deals with  specific amounts of a given currency
+This part of IES deals with  specific amounts of a given currency
 
 ### <a id="{DC826580-C2BF-482e-ABF2-B90684A4CB74}"></a>Assets
 ![Assets Diagram](Images/EAID_DC826580_C2BF_482e_ABF2_B90684A4CB74.png)
@@ -778,7 +822,6 @@ This part of IEAS deals with  specific amounts of a given currency
 * [AmountOfMoney](#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8})
 * [Device](#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461})
 * [RealEstate](#{8E0DF17F-34EE-43c6-8DA4-30F698384FD3})
-* [storedIn](#{2E33B6DC-54D5-4e5e-9894-B2801F174B00})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [owns](#{FDD94D9F-F343-4c1b-9688-752C896A3C7C})
 * [ResponsibleActorState](#{100B93CD-937E-4fdd-8851-02D1DC07F5B6})
@@ -854,7 +897,7 @@ Communications Accounts are new for IES4. In most online and telecoms scenarios,
 * [SerialNumber](#{51F79BC9-9BB5-47d6-973B-6F86F289B5FB})
 * [make](#{E0036B31-8D73-4268-8959-6E9A5EE55BB2})
 * [IMEI](#{3987794E-6E2E-4457-8BF7-47813B51B139})
-* [installedSoftware](#{B37ADF66-D5D0-4144-9539-DA91BA302914})
+* [InstanceOfSoftware](#{297F9CC1-2ACF-4da0-92D9-0AA9E808CAD8})
 * [Software](#{B6014BB6-FD82-4748-8DFF-65401770515C})
 * [OperatingSystem](#{4F83D781-7E46-4ad4-B2A5-ECD27565EA49})
 * [DeviceState](#{6107EEA5-1A13-46e4-83FB-14740437B814})
@@ -863,7 +906,6 @@ Communications Accounts are new for IES4. In most online and telecoms scenarios,
 * [System](#{F682A265-1AFE-4287-A9CD-0D4C83F54C52})
 * [CommunicationsIdentifier](#{A82378B9-9774-46b9-9845-CC75BE882F06})
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
-* [ClassOfDevice](#{09F9136C-9069-47ec-A58E-FC26CF9BA55E})
 * [NetworkInterface](#{C544CCAC-91C5-4e82-B5D9-7A1B8D48E771})
 * [RadioMast](#{F02CFF55-12A7-4308-9A60-E2353DE5BE58})
 * [CellularBaseStation](#{9D4A1395-8687-4f0b-BC5D-61A756210B4D})
@@ -871,7 +913,6 @@ Communications Accounts are new for IES4. In most online and telecoms scenarios,
 * [hasAccessTo](#{CB7F872F-7999-4bfd-8274-2C0E0AFE22AB})
 * [ResponsibleActorState](#{100B93CD-937E-4fdd-8851-02D1DC07F5B6})
 * [Organisation](#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F})
-* [ModelOfDevice](#{7A879268-33C2-4f2b-8928-9E78AFF01E69})
 * [PartNumber](#{772CD8A3-3DCA-4cc7-8BA3-17D1C57E94BC})
 
 Devices are Assets that have been designed to perform one or more functions. IES then further sub-divides Device into <i>System </i>and <i>CommunicationsDevice</i>. A CommunicationsDevice is a self-contained device that acts as an endpoint for communication. A System is a collection of interacting Devices that together provide one or more functions. System components are generally removable / replacable.
@@ -994,7 +1035,7 @@ A DataObject is a Representationt that may contain internal structure that can b
 * [format](#{EF2C13D4-7106-4799-BB72-7CD47714F257})
 * [ParticularPeriod](#{2173F463-524C-457c-B106-51322F64F122})
 * [isRepresentedAs](#{D106A0A9-55C4-454f-9E20-35BA54114036})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [documentedBy](#{AC7C948A-F19C-4296-AC38-0FEE6A4C5E90})
 
 In IES 3 there was just "Document", but it wasn't clear if this referred to a specific, individual copy of a document, or just the document in general (of which there may be many copies). For example, it wasn't clear if it was "my copy of War &amp; Peace" or just "War and Peace".
@@ -1031,8 +1072,6 @@ This has been rectified in IES4 and "Document" has been replaced by "Work of Doc
 * [Bank](#{4E10343E-8350-4354-B3DB-A7F74B4535EF})
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
 * [AccountHolder](#{C93379F2-6B01-4100-ABFA-BD26098AC1CB})
-* [ClassOfFinancialAccount](#{901334E9-238C-4d05-8F85-FE9A8E537BA1})
-* [financialAccountType](#{94BC4F7F-3DC3-4e26-8E2B-26E7D9B1A760})
 * [JointAccount](#{AD17E3D9-CAB2-4a60-99C9-109F4496F92F})
 
 Accounts are ways to collect together transactions and other related Events. A FinancialAccount is an Account that is used to manage financial transactions.
@@ -1072,7 +1111,6 @@ Accounts are ways to collect together transactions and other related Events. A F
 * [hasStatedCountryOfResidence](#{9A4EB722-0BDA-4ba7-B895-7A4E273865C9})
 * [hasStatedNationality](#{C8AB9A91-97ED-4868-8167-44E71F40AFE7})
 * [isAuthorisedForUseWithPassport](#{1CA57828-3B6B-450b-B477-C59A196EAE34})
-* [visaType](#{2ED602C6-C93C-41f3-8A02-10F0CAD0D64A})
 * [vafNumber](#{6DEB5776-59E6-4645-9566-65EC62A36330})
 * [Country](#{92EBA9B9-48C2-4082-9FE5-603977BD6846})
 * [RegionOfCountry](#{65D869DB-19EE-4886-98BA-E579C39C4A68})
@@ -1087,7 +1125,6 @@ Accounts are ways to collect together transactions and other related Events. A F
 * [IndividualDocumentID](#{D68F4E10-957A-4e98-8447-8F2768940DA7})
 * [Nation](#{6AE6F8A5-F427-4ea6-BABD-5720F07430F5})
 * [Gender](#{8B4DB18E-DF46-4419-B0ED-0159A25F2319})
-* [ClassOfTravelVisa](#{2BADCB50-7A19-4d7b-A46E-8369F8B00D57})
 
 IdentityDocuments are IndividualDocuments that can be used to authenticate the identity of their bearers. 
 
@@ -1116,8 +1153,6 @@ IdentityDocuments are IndividualDocuments that can be used to authenticate the i
 * [FirstLineOfAddress](#{8B6DD87E-3D76-4836-9201-1244B80CDC69})
 * [isPartOf](#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC})
 * [inLocation](#{463F9B14-2D14-4364-B4F0-658A20DFCBFA})
-* [addressRegion](#{3E452516-2523-4a86-974D-1D2251057E6E})
-* [regionCountry](#{B3B6D7F3-F5B0-49d6-886F-F5AF7C56F041})
 * [Representation](#{675A5C23-0746-43d0-96D0-AF0DF72CD697})
 * [Name](#{7D7CC966-56EB-4220-A650-A993E598F2E2})
 * [representationValue](#{AE00F1DE-F42B-4fc0-B07B-21F754F16FD4})
@@ -1147,6 +1182,7 @@ IdentityDocuments are IndividualDocuments that can be used to authenticate the i
 * [PointOnEarthSurface](#{A11A426E-ED15-4aaf-B9A5-02A4060533AA})
 * [PartOfFacility](#{3EFEA421-6B88-4e51-9B20-4FFA22E8C5CA})
 * [RoomNumber](#{0B2564A8-9A95-4164-BB49-01900DD530AD})
+* [relationship](#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A})
 
 Locations are physical chunks of the earth (and usually the airspace above) - i.e. they are defined by their extent. 
 
@@ -1237,7 +1273,7 @@ This diagram covers the online aspects of IES.
 * [governedPopulation](#{917C549C-259F-4850-9CFD-35E05485BF63})
 * [ISO3166_1Alpha_3](#{B92D79E2-9E7D-4df7-8D38-3D884AA09AD2})
 * [OrganisationState](#{F3DB6A59-B2DE-4743-A9A8-7DA9CCC68638})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Name](#{7D7CC966-56EB-4220-A650-A993E598F2E2})
 * [NamingScheme](#{222534A5-25C8-4ecd-BE55-27DA1534D402})
 * [inScheme](#{7EB9FE85-127C-4918-AC56-62E1BE1DE825})
@@ -1247,9 +1283,6 @@ This diagram covers the online aspects of IES.
 * [ResponsibleActorState](#{100B93CD-937E-4fdd-8851-02D1DC07F5B6})
 * [Actor](#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B})
 * [ActorState](#{7ED8BC7C-A85F-4ed5-AC6F-D640F2DF4B7B})
-* [ClassOfEntity](#{D1B2FB30-36CA-4012-B85F-514E270BF541})
-* [ClassOfResponsibleActor](#{9FC2431D-63A4-4e1b-8D31-2BCD125853D9})
-* [ClassOfOrganisation](#{5B21F148-72C1-45e6-A3E3-F2D8B33729D3})
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
 * [OrganisationIdentifier](#{13865B40-B57D-44e7-9658-00C45C8175C8})
 
@@ -1262,17 +1295,17 @@ This diagram covers the Organisation aspects of IES.
 
 * [ResponsibleActor](#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
-* [Role](#{0066A327-D497-42e0-9F50-D988F522F4A5})
 * [Organisation](#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F})
-* [OrganisationalRole](#{C0B7C4B2-C067-4ca8-A9FB-E82782889250})
-* [hasRole](#{5C76592F-C47D-40ee-8D82-497962686D34})
 * [ActorState](#{7ED8BC7C-A85F-4ed5-AC6F-D640F2DF4B7B})
 * [Post](#{7C28E83C-1895-4901-ABF8-9D78C9C12C62})
 * [ResponsibleActorState](#{100B93CD-937E-4fdd-8851-02D1DC07F5B6})
 * [InPost](#{6C1949B5-B86B-4940-8912-9008CCD67150})
 * [PostState](#{DB51B007-E3E8-431f-9C23-3C0A7E83FB11})
+* [InstalledState](#{6B36C428-3A86-493e-9B3B-6D394C567577})
+* [ReplaceablePart](#{624D6CD1-31D9-46db-B42D-56DAD35BABD8})
+* [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 
-Posts are parts of Organisations. A PersonOrOrganisation can be in post for a period of time - i.e. there is a state of the PersonOrOrganisation (InPost) that is part of the Post. Note that this is part of the Post, not a state of it, as there may be more than one PersonOrOrganisation in a given Post at the same time.
+Posts are parts of Organisations. A ResponsibleActor can be in post for a period of time - i.e. there is a state of the ResponsibleActor (InPost) that is part of the Post. Note that this is part of the Post, not a state of it, as there may be more than one ResponsibleActor in a given Post at the same time.
 
 Roles are also defined. These are ClassOfStates that are used to categorise a given state in terms of it role. 
 
@@ -1306,8 +1339,6 @@ Roles are also defined. These are ClassOfStates that are used to categorise a gi
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
 * [Asset](#{40231334-5ACC-4dd4-A8C1-05012E2170E0})
 * [CardNumber](#{087F3453-B1D7-41e6-B79F-31B123ED0D68})
-* [ClassOfPaymentArtefact](#{46144D4F-5A9F-432b-B533-26C0399DBB34})
-* [cardType](#{CF6B72ED-DF58-42e1-A72A-1F047287B80D})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [RegionOfCountry](#{65D869DB-19EE-4886-98BA-E579C39C4A68})
 
@@ -1420,14 +1451,12 @@ Tickets are IndividualDocuments that authorise access to Events - e.g. travel an
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
 * [Organisation](#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F})
 * [Device](#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461})
-* [ModelOfDevice](#{7A879268-33C2-4f2b-8928-9E78AFF01E69})
 * [DiscontinuousState](#{52DB371E-71AC-4812-B3CF-0FD7D73F1BB0})
 * [Parked](#{B6A503E5-3FC4-4a45-8DC0-994EA31A895A})
 * [UsuallyParked](#{FCE0D994-4838-48fa-A274-57DB092A2960})
 * [AssetState](#{CA196722-9531-4eb4-A8CF-B9A5145CDCFD})
 * [VehicleIdentificationNumber](#{AC9AB7B0-6C38-4b08-B2B9-CAA8486F0F4B})
 * [Colour](#{B10D22FB-1D6A-47c9-B1C0-E870D43A5C52})
-* [ClassOfDevice](#{09F9136C-9069-47ec-A58E-FC26CF9BA55E})
 
 A means of transportation � e.g. car, aircraft, ship.
 
@@ -1460,44 +1489,15 @@ A means of transportation � e.g. car, aircraft, ship.
 * [Religion](#{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B})
 * [System](#{F682A265-1AFE-4287-A9CD-0D4C83F54C52})
 * [Actor](#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B})
+* [RadioCoverageArea](#{7A2CC7C7-6B82-4751-BDBE-A770B3AFBBEB})
+* [MapGridArea](#{18A66904-823F-471d-A465-65ECD2D69867})
+* [Rights](#{487778E0-4BD7-4d9a-B7F7-63731478E1A2})
+* [InstanceOfSoftware](#{297F9CC1-2ACF-4da0-92D9-0AA9E808CAD8})
+* [Post](#{7C28E83C-1895-4901-ABF8-9D78C9C12C62})
+* [RadioMast](#{F02CFF55-12A7-4308-9A60-E2353DE5BE58})
+* [NetworkInterface](#{C544CCAC-91C5-4e82-B5D9-7A1B8D48E771})
 
 
-
-### <a id="{2CE240E2-1CC5-440e-B8BD-53DC6CFDF831}"></a>
-In IES3 there was "User of" which connected a person to an OnlineService. In IES4, we use <i>hasAccessTo.</i>
-
-As with "User of" this is a statement of occasional use (or access to) rather than a specific event.
-
-For a single use of the account, the Account is related to an instance of a PersonState. To show ongoing (regular) account use, the instance of the PersonState should also be an instance of DiscontinuousState
-
-### <a id="{A18A0572-BD13-48ea-AB51-0F14910EE79B}"></a>
-The names relationship is used to apply a Name to any ExchangedItem (including a Person)
-
-### <a id="{64C3BA25-D454-44ab-92FB-B556D3F0C584}"></a>
-In IES3, AliasName was just an attribute of a Person. However, aliases are much more complex than this, and can have associated passports, etc. just like a real person.
-
-Also, more than one Person may play the role of the Alias over time.
-
-### <a id="{18C66463-11B9-4b80-B401-0F31AE856802}"></a>
-The birthDateTime, deathDateTime, locations, etc. are now managed with states. The states have start and end times (a birth or death may not be an instantaneous thing) and can be related to Locations using the inLocation relationship. The stateOf relationship is used to link the states to the Person.
-
-### <a id="{0067E48C-5E00-4350-965C-02171515379C}"></a>Entities : Document
-See also: Document
-
-### <a id="{D72C3B4C-D3A7-4d1c-9649-404268B44BCA}"></a>Entities : Identity Document
-See also : Identity Document
-
-### <a id="{0F5E052E-7103-44ed-AF91-1ECA6BFA002F}"></a>Entities : Person
-See : Person
-
-### <a id="{ED29A5AC-402F-44c5-AFC8-1D79F0CF54D3}"></a>IES v4 : Identifiers
-See : Identifiers
-
-### <a id="{484D67F7-1FE1-4e54-9B13-7AA48670208C}"></a>IES v4 : Identifiers
-See : Identifiers
-
-### <a id="{C5D2A38B-BA1C-4325-A60B-18E46C51366A}"></a>see: Assessment Diagram
-See: Assessment
 
 ## <a id="{8CE69414-E291-4f34-B5C5-443FED062F40}"></a>Events
 
@@ -1508,7 +1508,6 @@ See: Assessment
 #### IES elements in this diagram:
 
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
@@ -1516,7 +1515,6 @@ See: Assessment
 * [EventParticipant](#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB})
 * [isParticipationOf](#{DF9F6056-CCD4-41aa-9A86-536F6150EC25})
 * [isParticipantIn](#{BAEA86D9-C90E-4f8d-96F5-A01BB0C49711})
-* [takesplaceIn](#{5D13DE13-CAAC-4879-9237-D20A6846F4D8})
 * [EndToEndActivity](#{A88ABE99-1D6C-4843-A2E4-7531626D3859})
 * [EventState](#{FE668C24-D25C-4273-872A-EB77CB09341D})
 
@@ -1535,7 +1533,7 @@ Locations of Events are handled with more precision in IES4. The happensIn relat
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 * [Actor](#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B})
 * [AssessToBeTrue](#{7150208D-A02E-45ed-8279-44843F4DA897})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Assessor](#{80F9B97D-2C7F-4978-83A3-BE934DD4E1FF})
 * [assessed](#{669E3CD0-CD9D-496c-A711-ECDE3F589012})
 * [attribute](#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA})
@@ -1549,6 +1547,7 @@ Locations of Events are handled with more precision in IES4. The happensIn relat
 * [Organisation](#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F})
 * [GroupOfItems](#{04C2111A-D958-4a95-9271-7208B849DDD8})
 * [inGroup](#{C21D2CA2-6F42-4b7c-9092-8B8C5B7BAF9F})
+* [Assessment](#{E4AB33D9-9978-446f-9C39-4F4C41FB3D45})
 
 The Assessment pattern breaks away from the usual IES EventParticipant pattern slightly. There is still an event (AssessToBeTrue) and a participant (Assessor) but the thing that is being assessed isn't necessarily a participant - it could be something intangible such as Class or relationship, so a simple owl:objectProperty is used to link the event to the thing that has been assessed to be true.
 
@@ -1565,8 +1564,6 @@ In the example shown, there are three scenarios. In scenario 1, Fred is assessed
 
 #### IES elements in this diagram:
 
-* [beginBoundOfClass](#{2C441F0A-635D-41ef-B8CC-96AA07958F8E})
-* [endBoundOfClass](#{F8109922-1CB1-490d-BBB5-FD5B76E19FD1})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [EndToEndActivity](#{A88ABE99-1D6C-4843-A2E4-7531626D3859})
 * [EndToEndAuthorisation](#{D75F18D1-95D6-481b-84D5-F8D7F3A5A389})
@@ -1578,24 +1575,14 @@ In the example shown, there are three scenarios. In scenario 1, Fred is assessed
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
 * [AuthorisationReviewer](#{8E4CC036-C4C5-4222-8532-9B6C53EEC56E})
 * [AuthorisationRequester](#{81BF6EA6-996D-4148-8F5D-8B41156637F6})
-* [ClassOfEvent](#{4EA194C6-BBF9-45ab-85DE-5802D8C3A531})
-* [requestedActivityType](#{132AFC03-7A64-45fa-9F87-93171BBFBE3D})
-* [TimeBoundedClass](#{E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A})
-* [AuthorisedEventClass](#{057C04F9-EB8A-4e21-9CF8-2D98038570FB})
 * [Actor](#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B})
-* [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
-* [allAuthorisedAgainst](#{97E2E16A-5D4C-41bd-AF32-8DF2057A35BA})
-* [grantedActivityType](#{289608A2-3F9D-413a-98AB-25579C370924})
 * [Authoriser](#{466DCDFB-B642-468b-A47A-E83291A86C6B})
 * [AuthorisedActor](#{F69279D2-BA11-4a31-8739-0D91EF5B9BEF})
-* [ParticularPeriod](#{2173F463-524C-457c-B106-51322F64F122})
 * [Warrantry](#{CA2023C6-1677-4d24-A1E6-22BC4D595E6F})
 * [Warrant](#{4CAD884A-1EA7-473d-9881-8B76EBF8526F})
 * [WorkOfDocumentation](#{F0B48978-D4E4-45a4-8238-091A5B714D82})
 * [AuthorisationDocument](#{8177A2FB-CA54-4dc5-9884-33FBA660B174})
 * [RequestDocument](#{C0273975-049B-40f0-817C-DFBFA4A3E5CE})
-* [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 
 The Authorisation Model (added in v4.2 of IES) is about capturing the end-to-end authorisation process from request, through grant of authority to act, through to the actions that take place under that authority. The primary need for this model is in Police warrantry, though the model is general and can be used for other forms of authorisation. 
 
@@ -1632,8 +1619,6 @@ The use of the EventParticipation pattern allows for the locations of Observer a
 
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [EventParticipant](#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
-* [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [EndToEndAgreement](#{1B39630B-B00F-4def-9C65-48082C4AD2E0})
 * [AgreementStage](#{422B4F1C-DA90-400b-8FFD-43C90B4F10F4})
 * [Negotiation](#{FB2EA8AE-164A-4642-82E3-D2622DC6FCCB})
@@ -1652,13 +1637,13 @@ The use of the EventParticipation pattern allows for the locations of Observer a
 * [Renter](#{E2FC3A09-EC9D-4ab9-B273-A526CB511B5A})
 * [RentalProvider](#{8ECC64A4-CED0-4122-AB54-64EA870837FC})
 * [Rented](#{E5C65CAB-65BE-4502-8B46-5C5CC3C73B00})
-* [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [EndToEndActivity](#{A88ABE99-1D6C-4843-A2E4-7531626D3859})
 * [PoliticalAgreement](#{686C8BFB-6CB2-4185-9FCF-89D2D4BB3051})
 * [TradeAgreement](#{54A4E900-7E8E-49fd-91F4-23ADDDF2DA60})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
 * [Name](#{7D7CC966-56EB-4220-A650-A993E598F2E2})
 * [AgreementName](#{7A750064-E711-4871-AFC3-39057342FB9E})
+* [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 
 In IES4, Agreements are handled using a pattern of AgreementStages that form part of an EndToEndAgreement. 
 
@@ -1708,19 +1693,16 @@ IES3 listed disagreements and war in the event tables. IES4 has maintained these
 * [accountProvider](#{0F9244C3-B2F5-4b8a-AED2-54B7FDAB9578})
 * [FinancialAccount](#{44DAC574-2A2E-44bc-ACD2-236811FA8D29})
 * [MoneyTransfer](#{D94ED70F-8CCA-4c6e-8AE5-65450BBA62D7})
-* [transferType](#{9574377B-6752-4317-94DC-E075C408442D})
 * [transferValue](#{A9D01DAB-281E-48ae-BB33-8518701ABBDE})
 * [EventParticipant](#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB})
 * [SendingAccount](#{F7172876-85F6-4d29-B11F-A1B36616416A})
 * [ReceivingAccount](#{25965198-3FE0-4bb9-BCA9-808E15A3EE49})
 * [AdministeredAccount](#{D779F547-C1FB-4d48-9BB8-CB37B9D2F82C})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [Account](#{31BFE794-924E-44e3-942E-ADC9ED19FBA1})
 * [AmountOfMoney](#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8})
 * [AccountHolder](#{C93379F2-6B01-4100-ABFA-BD26098AC1CB})
 * [BankBranch](#{02E3C3B8-8650-4867-8390-823E4B3360E6})
-* [ClassOfMoneyTransfer](#{F1AACA77-BA24-41cb-9AB8-7AF9C1B9971D})
 
 The BusinessEvent model is really about Events that affect accounts - opening them, closing them and updating them. It also covers money transfers between FinancialAccounts.
 
@@ -1734,7 +1716,6 @@ The BusinessEvent model is really about Events that affect accounts - opening th
 * [EntertainmentEvent](#{78C33499-CD14-43cb-82AE-93A0F8CF022B})
 * [Person](#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2})
 * [CoLocation](#{3524D10D-D9B0-416d-ADED-D5AAEB99DD09})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [Presence](#{8404464D-3904-4c59-AE0E-B3FAFB46AC4E})
@@ -1749,7 +1730,7 @@ The BusinessEvent model is really about Events that affect accounts - opening th
 * [NamingScheme](#{222534A5-25C8-4ecd-BE55-27DA1534D402})
 * [inScheme](#{7EB9FE85-127C-4918-AC56-62E1BE1DE825})
 * [Attendance](#{626D5F2C-9153-40f4-9F2A-393B6DB072D3})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [hasTheme](#{654CB83B-75CF-4940-A2CF-C7820141C5AE})
 
 The attendance model in IES4 introduces some new concepts form IES3 - Meeting and CheckIn. These events weren't explicitly called out in IES3 - being colocated doesn't necessarily mean people are meeting.
@@ -1796,7 +1777,7 @@ The attendance model in IES4 introduces some new concepts form IES3 - Meeting an
 * [Account](#{31BFE794-924E-44e3-942E-ADC9ED19FBA1})
 * [OnlineAccount](#{E95170B9-2599-46dc-BEDC-012B08F09D43})
 * [TelephoneNumber](#{168D7B01-CD70-4f83-A414-19B6ABEB961C})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [hasTheme](#{654CB83B-75CF-4940-A2CF-C7820141C5AE})
 
 The Communication Event consists of two or more PartyInCommunication events - each being an "end" of the communcation. A PartyInCommunication may involve the participations of people, accounts or devices. 
@@ -1819,7 +1800,6 @@ In the example shown, Fred calls Brenda (we know they were both on the call). We
 * [Forgery](#{78686D99-2AAC-4f5b-8EE0-456BDCC6F99E})
 * [EventParticipant](#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
 * [preModificationState](#{4E954855-D50A-42ab-9401-4B1C890542AD})
@@ -1855,7 +1835,6 @@ Some of the roles originally in IES3 have been simplified in IES4 (see table at 
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
 * [Account](#{31BFE794-924E-44e3-942E-ADC9ED19FBA1})
 * [PersonState](#{38F8B795-0BCE-4945-8C69-8678ED935C1A})
-* [DiscontinuousState](#{52DB371E-71AC-4812-B3CF-0FD7D73F1BB0})
 * [OnlineArtefactInEvent](#{FE21E354-7770-4e6b-A7EA-E012F759E835})
 * [OnlineContentCreation](#{DB70D7EE-5076-4eb2-950B-63C71A3C8859})
 * [Logoff](#{8010625F-BA25-457a-93CF-7EC1E99261D7})
@@ -1874,6 +1853,8 @@ Some of the roles originally in IES3 have been simplified in IES4 (see table at 
 * [DeviceOnline](#{700BC564-35E1-4921-8759-5DAFA51B4E83})
 * [Device](#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461})
 * [Message](#{70AEDFC7-2B17-43d8-BF49-B5ACF8812317})
+* [OnlineMessage](#{067AEA85-D3DD-478c-AF00-FB54F95DF1E2})
+* [Communication](#{6698805F-F492-4f1f-954C-E1EB3C53E148})
 
 OnlineEvents are activities such as logging in, notifications, etc. 
 
@@ -1886,7 +1867,6 @@ OnlineEvents are activities such as logging in, notifications, etc.
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
 * [EventParticipant](#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
-* [typeOfCriminality](#{07BDCB73-1CDA-4057-9D7E-EC088D304B04})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
 * [CriminalActivity](#{43E58528-16E4-48b3-8F13-10500879EA83})
 * [Hacking](#{2AC7FDAB-7BB8-41ee-B558-AEBFE01274F2})
@@ -1900,9 +1880,6 @@ OnlineEvents are activities such as logging in, notifications, etc.
 * [OnlineAccountInUse](#{BCFD5BED-785D-4c5d-B004-2C8A5C7B40C3})
 * [MaliciousAccountUse](#{F0C08ADE-7EE5-4392-9877-5FD8FB4076E9})
 * [Created](#{46DE5D1F-B3CE-4858-A6D1-64A0B891A00F})
-* [ClassOfCriminalActivity](#{69868D83-C3BD-4877-AB5C-374B4C6F4A7E})
-* [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
-* [OffenceCode](#{66A24EF2-F417-46c7-A68D-D4540260F64F})
 
 Criminal Activity covers any Event that involves breaking the law
 
@@ -1916,7 +1893,6 @@ Criminal Activity covers any Event that involves breaking the law
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [LawEnforcement](#{3876B81C-E316-4e11-A6C4-8024E52F769B})
 * [Arrest](#{D8D7184C-2F7B-4a5d-AA8F-7EE7B5A04F94})
 * [Person](#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2})
@@ -1949,7 +1925,6 @@ In IES3, law enforcement came under OperationalEvent, but has been separated out
 * [Event](#{B376370E-F5E8-4287-A3EC-AC35532919B1})
 * [attribute](#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA})
 * [ActiveEventParticipant](#{3360DCC9-D39B-4280-8872-2FE122240407})
-* [happensIn](#{60A37745-8DD5-4e4c-9A4C-6957F71AD971})
 * [OperationalEvent](#{59121C21-38E4-4224-8C2D-4D3E94A3A0D9})
 * [IntelligenceOperation](#{A0A9CD13-A4B4-415b-9187-64C9B72E2F4E})
 * [missionPurpose](#{A6DED556-12B8-45b7-A69C-A6A3D813269B})
@@ -1967,11 +1942,7 @@ In IES3, law enforcement came under OperationalEvent, but has been separated out
 * [Investigator](#{3525F314-87ED-43c8-9A84-68EDCD203B30})
 * [LeadInvestigator](#{E1AF7AFE-FA2F-40f7-88A3-CA6988BC2E0D})
 * [Arrest](#{D8D7184C-2F7B-4a5d-AA8F-7EE7B5A04F94})
-* [ClassOfEvent](#{4EA194C6-BBF9-45ab-85DE-5802D8C3A531})
-* [ClassOfOperationalEvent](#{64CE6FEA-7B05-4813-BD55-D56C02A54486})
-* [ClassOfCriminalActivity](#{69868D83-C3BD-4877-AB5C-374B4C6F4A7E})
-* [typicallyTargets](#{AE6D5097-F555-48af-AFBA-88ECAA31BFF3})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [hasTheme](#{654CB83B-75CF-4940-A2CF-C7820141C5AE})
 
 Operational Events are conducted against targets (SubjectOfOperation). They specialise into IntelligenceOperations and MilitaryEvents.
@@ -2057,9 +2028,7 @@ PoliticalEvents are Events that take place in local or national government, or i
 * [SendingAccount](#{F7172876-85F6-4d29-B11F-A1B36616416A})
 * [ReceivingAccount](#{25965198-3FE0-4bb9-BCA9-808E15A3EE49})
 * [transferValue](#{A9D01DAB-281E-48ae-BB33-8518701ABBDE})
-* [ModelOfDevice](#{7A879268-33C2-4f2b-8928-9E78AFF01E69})
 * [ClassOfAsset](#{F999F59A-7C7B-40f3-8F86-5B2592889E95})
-* [ClassOfDevice](#{09F9136C-9069-47ec-A58E-FC26CF9BA55E})
 * [Device](#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461})
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
 * [PartNumber](#{772CD8A3-3DCA-4cc7-8BA3-17D1C57E94BC})
@@ -2149,8 +2118,6 @@ Overall, much like the rest of IES, this model has been designed to work with as
 * [BookingPayment](#{61BDEBA6-BE87-44e3-A1C7-246D0CE60ADC})
 * [Identifier](#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E})
 * [BookingReference](#{D31E959A-6354-40e7-8370-1FE5246624AD})
-* [ClassOfTravelBooking](#{44D4DD7C-201A-447d-8BCE-C8B3E3E6A890})
-* [bookingType](#{C52879E4-919A-4dee-82EB-3CB11DD69E56})
 * [Rights](#{487778E0-4BD7-4d9a-B7F7-63731478E1A2})
 * [Asset](#{40231334-5ACC-4dd4-A8C1-05012E2170E0})
 * [Reservation](#{CDF94674-D458-4996-9A99-6CBFFF3907EB})
@@ -2196,126 +2163,6 @@ TravelBooking is currently an Entity though there is some debate as to whether i
 
 The diagram below shows all the immediate subtypes of Event
 
-### <a id="{832A60AA-2F61-4a7f-BC86-A58E8D7FCFDA}"></a>
-In IES3 there was "User of" which connected a person to an OnlineService. In IES4, we use hasAccessTo, and this connects to the OnlineAccount rather than directly to the service.
-
-As with "User of" this is a statement of occasional use (or access to) rather than a specific event.
-
-For a single use of the account, the Account is related to an instance of a PersonState. To show ongoing (regular) account use, the instance of the PersonState should also be an instance of DiscontinuousState
-
-### <a id="{392C98BE-E511-4e53-88FE-44ABF7BF7616}"></a>
-Sometimes we don't know anything about a CommunicationAccount other than there must have been one. To help prevent duplication as more information comes in, it is therefore best to just create the participation (a state of the account) and attach the comms ID to that, rather than second-guessing the Account itself. 
-
-### <a id="{77E90A65-705B-4838-AFD5-02B77B8CC98E}"></a>
-IES 3.x presented a number of different Event roles for Lifecycle events - e.g. DestroyedDocument, etc. This has been slightly simplified in IES4, see below...
-
-<b>IES3.x 						IES4</b>
-Founder						Creator
-NewOrganisation					Created
-Forger							Creator
-ForgedIdentityDocument				Created
-Modifier	of					Modifier
-Destroyer of						Destroyer
-DestroyedCommunicationsIdentitifier		Destroyed
-
-Note that the CreationLocation/PlaceOfChange is handled using happensIn
-
-### <a id="{26821289-4446-4092-911B-CDB41A467DE5}"></a>
-In IES4, happensIn replaces:
-
-ArrestLocation
-TrialLocation
-Prison
-
-### <a id="{4C9E3526-D763-4ad5-A48D-3396E6261D87}"></a>
-happensIn should only be used when the Location complete envelops the Event. In other cases (e.g. departure and arrival locations for a travel event) the appropriate EventParticipant subtype should be used
-
-### <a id="{6092B3D7-05E4-41fb-AE7B-E3CB42AE3D01}"></a>
-In IES4, happensIn replaces CreationLocation from IES3
-
-### <a id="{1A23D669-160A-47b2-A903-9436ED4F2E72}"></a>
-In IES3 there was an attribute called natureOfEvent. In IES4, the approach is to create subtypes of the Event in your data and then instantiate those.
-
-### <a id="{B583A07C-4088-4ca9-A0A9-3342B8CFF612}"></a>
-See also visits, socialises, and worksIn in the Operational relationships diagram
-
-### <a id="{62284CB2-4E40-4369-9A52-F96BEFBA5AA0}"></a>
-In IES4, happensIn replaces:
-
-ArrestLocation
-TrialLocation
-Prison
-AttackLocation (area of attack in general rather than weapon/target location)
-
-### <a id="{B4A59386-B831-41ed-9604-03B4BD97CEB8}"></a>
-More often than not, authority to act is only granted for a period of time - or requested for a period of time. To reflect this, an instance of an AuthorisedEventClass will most likely also be an instance of TimeBoundedClass (see Types diagram)
-
-### <a id="{1074785F-032F-41a3-A1AA-F7E7E68117F3}"></a>
-IES 3.x presented a number of different Event roles for Operational events. In IES4, these are just covered by two roles - Operator and SubjectOfOperation:
-
-<b>IES3.x 						IES4</b>
-SurveillngOrganisation				Operator
-LocationUnderSurveillance*			SubjectOfOperation
-OrganisationUnderInvestigation**		SubjectOfOperation
-InvestigatingOrganisation				Operator
-Target***						SubjectOfOperation
-Instigator						Operator
-
-*note, this is not the location <i>of </i>the surveillance, for that use <b>happensIn</b>
-** in IES4 this also allows for an investigation against an individual person
-*** note that the location of the target and the weapon can also now be specified in IES4
-
-### <a id="{E0ADF541-B93C-44a4-8A23-5ED7475D3B5C}"></a>
-UML Dependency is used to indicate which Entities are appropriate for a given type of EventParticipant - i.e. a shortcut for isParticipationOf
-
-### <a id="{99A0962F-65B1-4252-B929-D85CEED655A1}"></a>
-ies:seatNumber
-
-### <a id="{13182B8F-DA31-4bba-93E0-E6EBCEE53E94}"></a>
-"LOW"
-
-### <a id="{97D446C7-3BDA-46d0-8775-E83BBF6C9AC2}"></a>
-"33B"
-
-### <a id="{D82FE095-D5C4-434c-9538-017A42C5AF22}"></a>
-"MEDIUM"
-
-### <a id="{FB50E4D6-B478-4185-B1D1-C7E04ACA2D95}"></a>
-"HIGH"
-
-### <a id="{9A26AB2C-2C95-457d-BACF-D29C3FD26B61}"></a>Entities : Amount of Money
-See also : Amount of Money
-
-### <a id="{1A8010BB-7AA4-40fc-B821-40594F97DDA1}"></a>Entities : Assets
-See: Assets
-
-### <a id="{B1600689-297E-46af-B18C-9AA4DDA82FFF}"></a>Entities : Communications Device
-See also : Communications Device
-
-### <a id="{4A89B4DF-249B-43c0-84F1-7580449234E8}"></a>Entities : Communications Identifier
-See also : Communications Identifier
-
-### <a id="{5AA4F729-B191-4ec4-AB70-97C3DC74DA8B}"></a>Events : Agreement
-See also : Agreement
-
-### <a id="{79136301-AC55-4e8e-9AE0-1307A3B70EA1}"></a>Events : Communication
-See also : Communication
-
-### <a id="{CAEFBF64-6AB1-48e3-9ADE-528B3FFB35FD}"></a>Events : Criminal
-See : Criminal
-
-### <a id="{33C5A358-7945-4af1-8FA9-F5FA76B3524E}"></a>Events : Disagreement and War
-See also : Disagreement and War
-
-### <a id="{07F84688-05BA-4256-90AE-8FC82231ED2E}"></a>Events : Operational
-See also : Operational
-
-### <a id="{D08EA2CA-FA75-40c7-A2AC-F4B5576DC175}"></a>IES v4 : Event Participation
-See also : Event Participation
-
-### <a id="{66904BF0-3FCF-4ded-8217-15C0A231D87D}"></a>Relationships : Operational Part 2
-Operational Part 2
-
 ## <a id="{9ED67AE2-F907-4f58-A67F-921186EC23FB}"></a>Relationships
 
 
@@ -2359,7 +2206,7 @@ Most of the familial relationships from IES3 end up being relationships in IES4 
 * [PersonState](#{38F8B795-0BCE-4945-8C69-8678ED935C1A})
 * [interestedIn](#{7BD2B884-F02C-4da2-AF6A-21B790FBF669})
 * [ResponsibleActorState](#{100B93CD-937E-4fdd-8851-02D1DC07F5B6})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
 * [Dislikes](#{30A0F2DA-DB31-40fd-8723-88A24B2F8448})
 * [Likes](#{B292748F-D41E-4c3b-9335-04D4B06A1F34})
@@ -2372,7 +2219,7 @@ Most of the familial relationships from IES3 end up being relationships in IES4 
 * [Interested](#{B1D011F9-9585-49eb-97C4-86E82D6F0BCF})
 * [ResponsibleActor](#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9})
 
-The InterestedIn relationship links a PersonOrOrganisationState to something they are interested in (any ExchangedItem). The state is used, as people tend not to be interested in something for their whole lives. 
+The InterestedIn relationship links a ResponsibleActorState to something they are interested in (any Thing). The state is used, as people tend not to be interested in something for their whole lives. 
 
 GeneralConcepts are often the things of interest (e.g. football, finance, animal husbandry, etc.), but there may be Entities that are also of interest (e.g. a financier being interested in Vodafone plc)
 
@@ -2440,10 +2287,8 @@ All of the Mutual Understanding relationships from IES3 end up being EventPartic
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 * [maintains](#{727175D4-0998-49a0-BAEE-6B8F1F1FD8D4})
 * [residesIn](#{6BC3DDD8-477E-4c8a-B85D-E637CF9DB6DF})
-* [isPartOf](#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC})
 * [Asset](#{40231334-5ACC-4dd4-A8C1-05012E2170E0})
 * [AssetState](#{CA196722-9531-4eb4-A8CF-B9A5145CDCFD})
-* [storedIn](#{2E33B6DC-54D5-4e5e-9894-B2801F174B00})
 * [TravelTicket](#{6C669BEF-9267-4612-9F29-B28918B203F5})
 * [authorisesAccessTo](#{A2DA918D-843C-43c9-A974-4795601E9D65})
 * [Ticket](#{0BC61540-2AFB-42e6-A845-79771EE0268D})
@@ -2531,7 +2376,7 @@ All of the Mutual Understanding relationships from IES3 end up being EventPartic
 * [intimidatedBy](#{39D0AC05-01DB-423a-861A-26E6125DF906})
 * [opposedTo](#{436E6ABB-C1E3-484e-B15B-63E700B27EA8})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [knownAssociateOf](#{57F3607C-0204-4590-9442-24F372A35931})
 
 The nearest an ontologist gets to Tinder
@@ -2547,7 +2392,7 @@ The nearest an ontologist gets to Tinder
 * [isStateOf](#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E})
 * [relationship](#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A})
 * [isPartOf](#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [assessedToBeTheSameAs](#{6A1C6C65-D671-4ea3-9184-044AE2A802CF})
 * [ClassOfElement](#{3C13E07D-5796-4d03-9EBC-C75277E87CA4})
 * [Asset](#{40231334-5ACC-4dd4-A8C1-05012E2170E0})
@@ -2582,7 +2427,7 @@ The way that structural relationships handled (as defined in IES3) has changed i
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 * [relationship](#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A})
 * [isPartOf](#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [ArbitraryOverlap](#{F8FABF60-63D3-42ae-BA6A-54CFD0C036BF})
 * [Location](#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A})
 * [Crossing](#{B85F065A-6A18-433e-9195-7B6BCBB91C7C})
@@ -2649,7 +2494,7 @@ As with the Structural Relationships, Topological Relationships are handled diff
 * [assessedToBeTheSameAs](#{6A1C6C65-D671-4ea3-9184-044AE2A802CF})
 * [inRepresentation](#{7238489D-6802-4733-9F7F-9B31D02B3C81})
 * [Entity](#{F4EDE167-6F5A-417d-9984-0221CCDF752C})
-* [ExchangedItem](#{485CBF1A-04FF-4741-8471-46A03D28C406})
+* [Thing](#{485CBF1A-04FF-4741-8471-46A03D28C406})
 * [Element](#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21})
 * [State](#{47301D66-CBD5-4d10-9481-B66966A3F3A2})
 * [nationality](#{45CDA5C1-624D-4f2f-81F6-EF19300820A9})
@@ -2681,103 +2526,11 @@ As with the Structural Relationships, Topological Relationships are handled diff
 
 
 
-### <a id="{B01D5F55-BF7F-4bcd-B5A3-ACEEBB67F37E}"></a>
-Changes from IES 3:
-
-<ul>
-	<li>For "In contact with", see Communication diagram</li>
-</ul>
-
-
-&nbsp;
-<ul>
-	<li>For "Subscriber to" see Online diagram</li>
-</ul>
-
-
-
-
-### <a id="{71F3F3B1-ADEC-480e-B9A4-99E68B8F2E44}"></a>
-Changes from IES 3:
-
-<ul>
-	<li>For Located At, use inLocation - see the WhereAndWhen diagram</li>
-</ul>
-
-<ul>
-	<li>For "Used to Verify", see CheckIn in  the Attendance diagram</li>
-</ul>
-
-<ul>
-	<li>For "Paired With", see CommunicationsIdentifier diagram</li>
-</ul>
-
-<ul>
-	<li>For "Is associated with" see IdentityDocument diagram</li>
-</ul>
-
-<ul>
-	<li>For "Rental Of", see RentalAgreeement in the Agreements diagram</li>
-</ul>
-
-<ul>
-	<li>For "Fulfilled By", see VehicleUsed in the Movement diagram</li>
-</ul>
-
-<ul>
-	<li>For "Purchaser Of", see Trade diagram</li>
-</ul>
-
-### <a id="{32236FE8-78CF-4997-A848-3B877338E1E7}"></a>
-Use with caution. In 99.99% of the occasions when you think you need this, you actually don't
-
-### <a id="{21F150BC-4EBB-459f-880E-8433BDED9D12}"></a>
-See main models:
-
-### <a id="{3C8959FE-BDE5-427c-8250-7644B8CE146A}"></a>Entities : Communications Identifier
-Communications Identifier
-
-### <a id="{962E4B18-0F33-4a32-B823-D233EE16A2FB}"></a>Entities : Identity Document
-Identity Document
-
-### <a id="{A13E7FBB-91E9-4ff5-AEE6-2C8BD83482AA}"></a>Entities : Online
-Entities : Online
-
-### <a id="{14619905-B6F7-4994-A049-2D2FDBEA0248}"></a>Entities : Online
-See also online likes
-
-### <a id="{652F5D5D-7708-4443-821C-5C305EA0CD02}"></a>Events : Agreement
-Events : Agreement
-
-### <a id="{6CD3254D-F304-456e-A517-8F8A84EFD533}"></a>Events : Agreement
-Agreement
-
-### <a id="{C9C0DE32-05C8-4f9f-B379-A2624D5353E7}"></a>Events : Attendance
-Attendance
-
-### <a id="{DCC61F0C-7C68-4fb5-92AA-3E3416E2ADD0}"></a>Events : Communication
-Events : Communication
-
-### <a id="{2A750776-1EBA-485f-968D-E9A2725B8DE2}"></a>Events : Lifecycle
-See main model: Lifecycle
-
-### <a id="{2FD02E92-AA73-4419-BC79-CD23E17A2DF1}"></a>Events : Movement
-Movement
-
-### <a id="{5A30BDDE-ED08-44e4-8B46-B7C277646EF5}"></a>Events : Trade
-Trade
-
-### <a id="{6908DAEB-9557-4648-BA53-CB10E3DD86C8}"></a>Events :Disagreement and War
-Events :Disagreement and War
-
-### <a id="{65CA1E00-2890-4c74-AA97-46308E8D3AC5}"></a>IES v4 : Where and When
-Where and When
-
 ## <a id="{5F2E9C9F-780E-4de3-8B3B-017023D6259C}"></a>All Elements
 
 
 ### <a id="{63409D9A-1779-444a-BF04-23C03B3B2F72}"></a>Accent
-An Characteristic whose members are people who all share the same national or regional accent
+A Characteristic whose members are people who all share the same national or regional accent
 
 ### <a id="{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"></a>Account
 An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> that is the collection of all transactions between a provider and a customer
@@ -2825,9 +2578,6 @@ A temporal state of an <a href="#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B}"><font c
 ### <a id="{C90267B5-77A3-4b79-BD0D-7C50C3F4C333}"></a>Address
 A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that can be specified by a postal address
 
-### <a id="{3E452516-2523-4a86-974D-1D2251057E6E}"></a>addressRegion
-An <a href="#{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate an <a href="#{C90267B5-77A3-4b79-BD0D-7C50C3F4C333}"><font color="#0000ff"><u>Address</u></font></a> is in a <a href="$element://{65D869DB-19EE-4886-98BA-E579C39C4A68}"><font color="#0000ff"><u>RegionOfCountry</u></font></a>
-
 ### <a id="{D779F547-C1FB-4d48-9BB8-CB37B9D2F82C}"></a>AdministeredAccount
 An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> is administered
 
@@ -2848,13 +2598,6 @@ A <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Veh
 
 ### <a id="{82E3793F-D0D1-40ca-927C-7A6FEF913503}"></a>Airport
 A <a href="#{57860A04-0128-4c7e-9BFD-83D3BA432F8C}"><font color="#0000ff"><u>Port</u></font></a> used for air travel
-
-### <a id="{97E2E16A-5D4C-41bd-AF32-8DF2057A35BA}"></a>allAuthorisedAgainst
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{057C04F9-EB8A-4e21-9CF8-2D98038570FB}"><font color="#0000ff"><u>AuthorisedEventClass</u></font></a> to an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> to assert that all instances of the AuthorisedEventClass were Events acting upon the ExchangedItem.
-
-Note: this is generally a law-enforcement concern where a warrant (EndToEndAuthorisation) is granted against people, devices, etc. (GrantOfAuthority).
-
-
 
 ### <a id="{81A1E70D-6ADB-4843-BCA6-C0A710E7716B}"></a>allHaveCharacteristic
 An rdfs:subClassOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts that all instances of a ClassOfElement share a particular Characteristic or Measure
@@ -2907,8 +2650,8 @@ The area over which the TravelCard is valid
 
 Examples:
 
-London � Zone 1
-London � All Zones
+London - Zone 1
+London - All Zones
 
 ### <a id="{D8D7184C-2F7B-4a5d-AA8F-7EE7B5A04F94}"></a>Arrest
 A <a href="#{3876B81C-E316-4e11-A6C4-8024E52F769B}"><font color="#0000ff"><u>LawEnforcement</u></font></a> <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is arrested
@@ -2928,15 +2671,24 @@ The date/time of the arrival can be specified using the <a href="#{2F08EF25-A5C8
 An owl:objectProperty that links an AssesToBeTrue to the rdfs:Resource that is assessed to be true.
 
 ### <a id="{6A1C6C65-D671-4ea3-9184-044AE2A802CF}"></a>assessedToBeTheSameAs
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts two ExchangedItems that may have been previously judged to be different are in fact the same thing. 
+A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts two Things that may have been previously judged to be different are in fact the same thing. 
 
 WARNING:  by "the same" we mean they occupy the same space for the same period of time - i.e. not two different things in the same place at different times, and not the same physical item at two different periods of time. The <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> and <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> patterns should do most of what is needed here, and it is <i>extremely rare </i>that this would ever be needed. Do not use unless absolutely necessary. 
+
+### <a id="{E4AB33D9-9978-446f-9C39-4F4C41FB3D45}"></a>Assessment
+An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thing's possibility, categorisation or other qualitative aspect.
+
+Examples include:
+- Having 'HIGH' confidence that Anne committed the murder.
+- Assessing a statement made in an internet article as with being true or false.
+- Assessing a house to having an energy performance of 'B'
+- Assessing the odds of England winning the World Cup as 20-1
 
 ### <a id="{80F9B97D-2C7F-4978-83A3-BE934DD4E1FF}"></a>Assessor
 An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an Actor assesses something to be true.
 
 ### <a id="{7150208D-A02E-45ed-8279-44843F4DA897}"></a>AssessToBeTrue
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where a fact is assessed to be true by a Actor (i.e. a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> or Device)
+An Assessment where a fact is assessed to be true by a Actor (i.e. a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> or Device)
 
 An AssessToBeTrue shall have one and only one <a href="#{04F797E7-9B5C-48c5-A50D-A14CFF7725DE}"><font color="#0000ff"><u>hmlConfidence</u></font></a> attribute (i.e. this is mandatory)
 
@@ -2968,7 +2720,7 @@ A <a href="#{8404464D-3904-4c59-AE0E-B3FAFB46AC4E}"><font color="#0000ff"><u>Pre
 Note - we may not know the identity of the person, so would just create only the <a href="#{626D5F2C-9153-40f4-9F2A-393B6DB072D3}"><font color="#0000ff"><u>Attendance</u></font></a> (<a href="$element://{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a>). This allows the <a href="$element://{98BDD06F-1BD7-42b8-B338-20A198BCF90A}"><font color="#0000ff"><u>model</u></font></a> to grow as more information is discovered without recourse to using sameAs relationships.
 
 ### <a id="{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"></a>attribute
-A feature or property of an ExchangedItem
+A feature or property of a Thing.
 
 Note: In IES4 it is important to distinguish between names and attributes - attribute should never be used to identify or name something - for that, use Name or Identifier.
 
@@ -2992,13 +2744,6 @@ An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Ev
 
 ### <a id="{F69279D2-BA11-4a31-8739-0D91EF5B9BEF}"></a>AuthorisedActor
 An <a href="#{3360DCC9-D39B-4280-8872-2FE122240407}"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is granted authority to act in a <a href="#{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> 
-
-### <a id="{057C04F9-EB8A-4e21-9CF8-2D98038570FB}"></a>AuthorisedEventClass
-A ClassOfEvent where the type activity described is either authorised or required to be authorised.
-
-An instance of an AuthorisedEventClass will most often also be a TimeBoundedClass as it is rare to see requests or grants of authority with no time limit. 
-
-An AuthorisedEventClass will usually be of the form of "Event type A against Entity X" = e.g. "Arrest of John Smith", "Surveillance of 23 Acacia Gardens". The link from this class to the entity involved is via the allAuthorisedAgainst relationship.
 
 ### <a id="{466DCDFB-B642-468b-A47A-E83291A86C6B}"></a>Authoriser
 An <a href="#{3360DCC9-D39B-4280-8872-2FE122240407}"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> acts as the authoriser (sign off) in a <a href="#{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> 
@@ -3052,9 +2797,6 @@ An <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Id
 
 Note that Booking Reference Numbers are recycled and so are not unique in their own right. When combined with the BookingDate it is potentially possible to identify a specific booking.
 
-### <a id="{C52879E4-919A-4dee-82EB-3CB11DD69E56}"></a>bookingType
-Relates a <a href="#{76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB}"><font color="#0000ff"><u>TravelBooking</u></font></a> to a <a href="#{44D4DD7C-201A-447d-8BCE-C8B3E3E6A890}"><font color="#0000ff"><u>ClassOfTravelBooking</u></font></a> to indicate the method of booking
-
 ### <a id="{892345CD-9FA7-4982-978D-B6D3ABAE839C}"></a>BoundingState
 A <a href="#{6E5AF4BB-BB7F-4387-A7BB-476B81FEC103}"><font color="#0000ff"><u>ContinuousState</u></font></a> that occurs at the beginning or end of an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> 
 
@@ -3087,9 +2829,6 @@ Example: Vehicles capable of Mach 2
 
 ### <a id="{087F3453-B1D7-41e6-B79F-31B123ED0D68}"></a>CardNumber
 An <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> that is the long number on the face of the card (<a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a>)
-
-### <a id="{CF6B72ED-DF58-42e1-A72A-1F047287B80D}"></a>cardType
-The type of a <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a>
 
 ### <a id="{1B9C8EB0-69A7-4fe7-8358-0F6067439C42}"></a>CardUsed
 An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a> is participant in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a>
@@ -3154,35 +2893,16 @@ Examples:
 * Apple iPhone 6S
 
 ### <a id="{85305668-DE1A-454a-87EE-346A221E846C}"></a>ClassOfClassOfElement
-An <a href="#{58C6DE35-5E57-4009-A6CE-69C889B31D82}"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> whose instances are classes of classes of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a>
+An <a href="#{58C6DE35-5E57-4009-A6CE-69C889B31D82}"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <font color="#0000ff"><u>Thing</u></font> whose instances are classes of classes of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a>
 
 ### <a id="{1F9AC8FE-3862-48d6-A3DC-E429B08D2B26}"></a>ClassOfClassOfEntity
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a>
 
-### <a id="{69868D83-C3BD-4877-AB5C-374B4C6F4A7E}"></a>ClassOfCriminalActivity
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a>
-
-Example instances:
-
-* Burglary
-* Fraud
-* Murder
-* Driving sheep across London Bridge if not a freeman of the City
-* Being Welsh inside the walls of Chester outside daylight hours
-
-### <a id="{09F9136C-9069-47ec-A58E-FC26CF9BA55E}"></a>ClassOfDevice
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a>- i.e. a <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are classes of Device
-
-Examples:
-
-* Smartphone
-* Apple iPhone 6S
-
 ### <a id="{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"></a>ClassOfElement
-An <a href="#{58C6DE35-5E57-4009-A6CE-69C889B31D82}"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> whose instances are classes of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a>
+An <a href="#{58C6DE35-5E57-4009-A6CE-69C889B31D82}"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a> whose instances are classes of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a>
 
 Examples:
-
+&nbsp;
 <ul>
 	<li>Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);</li>
 	<li>Political Ideologies</li>
@@ -3210,55 +2930,14 @@ Examples:
 * Football Match
 * Annual General <a href="$element://{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a>
 
-### <a id="{901334E9-238C-4d05-8F85-FE9A8E537BA1}"></a>ClassOfFinancialAccount
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a>
-
-Examples:
-
-* Savings Account
-* Current Account
-* Credit Card <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a>
-
 ### <a id="{CCC8FA06-CDA8-491d-BFFC-0A88D6A565B1}"></a>ClassOfIndividualDocument
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{0F327324-6B4E-40b1-B96B-97A334BA5E4A}"><font color="#0000ff"><u>IndividualDocument</u></font></a>
 
 ### <a id="{4520A91C-D956-46c1-9A81-93C4C0B12880}"></a>ClassOfMeasureValue
 A ClassOfRepresentation that is the powertype of MeasureValue
 
-### <a id="{F1AACA77-BA24-41cb-9AB8-7AF9C1B9971D}"></a>ClassOfMoneyTransfer
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{D94ED70F-8CCA-4c6e-8AE5-65450BBA62D7}"><font color="#0000ff"><u>MoneyTransfer</u></font></a>
-
-Examples:
-
-* BACS
-* CHAPS
-* Paypal payment
-
 ### <a id="{FBE0CFC1-43C4-47e2-9EFE-20E291A1697C}"></a>ClassOfOnlineService
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a>
-
-### <a id="{64CE6FEA-7B05-4813-BD55-D56C02A54486}"></a>ClassOfOperationalEvent
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{59121C21-38E4-4224-8C2D-4D3E94A3A0D9}"><font color="#0000ff"><u>OperationalEvent</u></font></a>
-
-Examples:
-
-* Counter-Narcotics Operation
-* Murder Investigation
-
-
-### <a id="{5B21F148-72C1-45e6-A3E3-F2D8B33729D3}"></a>ClassOfOrganisation
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a>
-
-Note: care should be exercised when using ClassOfOrganisation - it should only be used for classifications that apply to the whole life of the organisation.
-
-### <a id="{46144D4F-5A9F-432b-B533-26C0399DBB34}"></a>ClassOfPaymentArtefact
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a>
-
-Examples:
-
-* Visa
-* Oyster
-* Selfridges Store Card
 
 ### <a id="{2A62C672-1757-4a2d-874B-C099C9DEC416}"></a>ClassOfPerson
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
@@ -3281,17 +2960,6 @@ A <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>Cla
 Examples:
 
 * Roles
-
-### <a id="{44D4DD7C-201A-447d-8BCE-C8B3E3E6A890}"></a>ClassOfTravelBooking
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB}"><font color="#0000ff"><u>TravelBooking</u></font></a>
-
-Examples:
-
-INTERNET Booking
-TELEPHONE Booking
-
-### <a id="{2BADCB50-7A19-4d7b-A46E-8369F8B00D57}"></a>ClassOfTravelVisa
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{C066EEB4-91AF-4ee6-BB02-44A49087946B}"><font color="#0000ff"><u>TravelVisa</u></font></a>
 
 ### <a id="{B1AAE4CA-CAB0-475f-B7D3-8CED404B1FC6}"></a>ClassOfWebResource
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{46D508B4-F1CC-45d7-9E4B-BA8A3C88D82A}"><font color="#0000ff"><u>WebResource</u></font></a>
@@ -3577,7 +3245,7 @@ A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><fo
 Note: this should not be considered a bi-directional relationship. Just because one person distrusts another person does not necessarily mean the feeling is reciprocated. 
 
 ### <a id="{AC7C948A-F19C-4296-AC38-0FEE6A4C5E90}"></a>documentedBy
-An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> is about an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a>
+An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> is about an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a>
 
 ### <a id="{ACB44E46-7A30-4911-A9F0-3D5412FB3725}"></a>DocumentFormat
 A <a href="#{CCC8FA06-CDA8-491d-BFFC-0A88D6A565B1}"><font color="#0000ff"><u>ClassOfIndividualDocument</u></font></a> whose members are all of the same document <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> - e.g.
@@ -3625,7 +3293,7 @@ The Measure of the flow of electric charge
 Note: whilst this is a tricky Measure in a 4D ontology, it should be used in a niaive manner - i.e. a measure of a State of an Entity when the current is flowing through it.
 
 ### <a id="{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"></a>Element
-An <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> that has a spatial extent and can have start and end dates
+An <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a> that has a spatial extent and can have start and end dates
 
 ### <a id="{FCBB35B9-704B-46c1-8054-10B7DA7EB8F8}"></a>EmailAccount
 A <a href="#{8300451C-1DF9-4545-9174-D8AA69C58CCD}"><font color="#0000ff"><u>CommunicationsAccount</u></font></a> that is used to administer the use of one or more e-mail addresses.
@@ -3698,9 +3366,6 @@ Note: care must be taken with using this in a 4D, extensional model such as IES.
 ### <a id="{AFFFF30F-B274-4466-B0F2-D2A6A78E1832}"></a>EvidentialPhotograph
 Relates a <a href="#{AD0F575E-5C28-4594-B346-50E9F22C2A8E}"><font color="#0000ff"><u>Surveillance</u></font></a> <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> to a Document that is the evidence resulting from the Surveillance
 
-### <a id="{485CBF1A-04FF-4741-8471-46A03D28C406}"></a>ExchangedItem
-An <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> is a real world �thing� about which a sender might retain specific knowledge, some or all of which is needed to be shared (exchanged) with one or more recipients.
-
 ### <a id="{749B002E-37B1-4754-B3B2-96642B3CF4A7}"></a>ExchangePayload
 A marker object that shall be present in all IES exchange files. This object is the domain for all meta-data about the file.
 
@@ -3734,8 +3399,11 @@ A <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Tic
 ### <a id="{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"></a>FinancialAccount
 An <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> held for financial management purposes.
 
-### <a id="{94BC4F7F-3DC3-4e26-8E2B-26E7D9B1A760}"></a>financialAccountType
-Relates a <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> to its type. Note, that a given FinancialAccount may have more than one <a href="#{901334E9-238C-4d05-8F85-FE9A8E537BA1}"><font color="#0000ff"><u>ClassOfFinancialAccount</u></font></a> - e.g. a Business <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> that is also a Current Account
+### <a id="{06BAC6F4-F6B2-4be1-95C5-8E31C34796CB}"></a>FiniteClassOfElement
+A ClassOfElement whose instances are classes with finite, fixed  membership of Elements.
+
+### <a id="{FF3DDC24-010C-4cd2-BF97-7464EAF45317}"></a>finiteMembershipCount
+An integer count of members of a FiniteClassOfElement. 
 
 ### <a id="{8B6DD87E-3D76-4836-9201-1244B80CDC69}"></a>FirstLineOfAddress
 The first line of the Address including the number of the dwelling and the street name.
@@ -3828,13 +3496,6 @@ An Organisation that is (usually) elected to run a governedRegion
 ### <a id="{0D042066-06C8-48d6-8387-500CF8EE2592}"></a>GovernmentOrganisation
 An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that is part of, or controlled by a national or local Government
 
-### <a id="{289608A2-3F9D-413a-98AB-25579C370924}"></a>grantedActivityType
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> to a <a href="#{057C04F9-EB8A-4e21-9CF8-2D98038570FB}"><font color="#0000ff"><u>AuthorisedEventClass</u></font></a> that the authorisation grants.
-
-For example,  granting authorisation to travel
-
-
-
 ### <a id="{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}"></a>GrantOfAuthority
 An <a href="#{2D5069F2-FE77-477f-A607-FA6458E64173}"><font color="#0000ff"><u>AuthorisationStage</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> grants another <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> authority to act.
 
@@ -3845,18 +3506,15 @@ A simple text description of a GroupOfItems
 A name given to a GroupOfItems
 
 ### <a id="{04C2111A-D958-4a95-9271-7208B849DDD8}"></a>GroupOfItems
-A collection of <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> that have been gathered together for a purpose. 
+A collection of <font color="#0000ff"><u>Thing</u></font> that have been gathered together for a purpose. 
 
-Note: The same ExchangedItem can be in more than one <a href="#{04C2111A-D958-4a95-9271-7208B849DDD8}"><font color="#0000ff"><u>GroupOfItems</u></font></a>
+Note: The same Thing can be in more than one <a href="#{04C2111A-D958-4a95-9271-7208B849DDD8}"><font color="#0000ff"><u>GroupOfItems</u></font></a>
 
 ### <a id="{2AC7FDAB-7BB8-41ee-B558-AEBFE01274F2}"></a>Hacking
 A <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a> where computer equipment is interfered with without the owners permission
 
 ### <a id="{1C02B06E-3159-48f6-9575-64B62765498B}"></a>handlingCaveat
 A textual description of any handling caveats that must be adhered to.
-
-### <a id="{60A37745-8DD5-4e4c-9A4C-6957F71AD971}"></a>happensIn
-A partOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate an <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> takes place within a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
 
 ### <a id="{CB7F872F-7999-4bfd-8274-2C0E0AFE22AB}"></a>hasAccessTo
 A Relationship between a <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> they have access to - e.g. a FinancialAccount, CommunicationsDevice, etc.
@@ -3888,7 +3546,7 @@ The gender the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0
 A language spoken by the respective <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> at a stage (PersonState) in their life
 
 ### <a id="{C3A36E36-0C73-4af7-88E3-81C9243CE456}"></a>hasName
-An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> is identified (albeit loosely) by a <a href="$element://{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a>
+An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing </u></font></a>is identified (albeit loosely) by a <a href="$element://{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a>
 
 ### <a id="{07FD1DF6-BA77-4657-B3D3-D6D579FD4608}"></a>hasPublisher
 The publisher of the document.
@@ -3899,13 +3557,8 @@ A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>rel
 ### <a id="{6D1839A4-342A-4e34-823C-BDB392483048}"></a>hasReligion
 A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> holds or follows a <a href="#{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B}"><font color="#0000ff"><u>Religion</u></font></a>
 
-### <a id="{5C76592F-C47D-40ee-8D82-497962686D34}"></a>hasRole
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> has a Role
-
-Example - Fred's time in Acme as a manager
-
 ### <a id="{16480E86-9FE4-4b37-ACFB-9E410F190664}"></a>hasSourceReference
-A <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is the source (information provenance) for an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a>
+A <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is the source (information provenance) for an <font color="#0000ff"><u>Thing</u></font>
 
 ### <a id="{0451B5D4-99CB-47a7-BB93-DF4DF6625837}"></a>hasStatedAddress
 The address of the owner/user as recorded on the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> or PaymentArtefact.
@@ -3923,7 +3576,7 @@ A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>rel
 A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to the place of issue as specified on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="{654CB83B-75CF-4940-A2CF-C7820141C5AE}"></a>hasTheme
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> (e.g. Communication, <a href="#{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a> or Investigation) to an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> that is a theme (or topic)
+A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> (e.g. Communication, <a href="#{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a> or Investigation) to an <font color="#0000ff"><u>Thing</u></font> that is a theme (or topic)
 
 Examples:
 
@@ -4084,9 +3737,9 @@ A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>rel
 Note: a state is used here as the content may change over time even though the WebResource persists
 
 ### <a id="{C21D2CA2-6F42-4b7c-9092-8B8C5B7BAF9F}"></a>inGroup
-A property linking an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> to a <a href="#{04C2111A-D958-4a95-9271-7208B849DDD8}"><font color="#0000ff"><u>GroupOfItems</u></font></a> indicating that it belongs to that group.
+A property linking a <font color="#0000ff"><u>Thing</u></font> to a <a href="#{04C2111A-D958-4a95-9271-7208B849DDD8}"><font color="#0000ff"><u>GroupOfItems</u></font></a> indicating that it belongs to that group.
 
-Note: An ExchangedItem may be in more than one group and a group may contain more than one ExchangedItem
+Note: A Thing may be in more than one group and a group may contain more than one Thing
 
 ### <a id="{FF902F8E-6B22-4f17-9C16-48543251D22E}"></a>inLanguage
 An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is in a particular <a href="$element://{82652FF5-258F-459c-BC7F-6DAC65E1ECA1}"><font color="#0000ff"><u>Language</u></font></a>
@@ -4109,7 +3762,7 @@ A Relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font
 Note: this is separate to ownership - e.g. the possessor may well be the owner (use the <a href="#{FDD94D9F-F343-4c1b-9688-752C896A3C7C}"><font color="#0000ff"><u>owns</u></font></a> relationship) but may also be a result of borrowing, theft, temporary custodianship, 
 
 ### <a id="{6C1949B5-B86B-4940-8912-9008CCD67150}"></a>InPost
-A temporal state of a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> when they are in a <a href="#{7C28E83C-1895-4901-ABF8-9D78C9C12C62}"><font color="#0000ff"><u>Post</u></font></a>
+An <a href="#{6B36C428-3A86-493e-9B3B-6D394C567577}"><font color="#0000ff"><u>InstalledState</u></font></a> of a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> when they are in a <a href="#{7C28E83C-1895-4901-ABF8-9D78C9C12C62}"><font color="#0000ff"><u>Post</u></font></a>.
 
 ### <a id="{7238489D-6802-4733-9F7F-9B31D02B3C81}"></a>inRepresentation
 A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is part of another Representation
@@ -4122,8 +3775,12 @@ Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9
 ### <a id="{7EB9FE85-127C-4918-AC56-62E1BE1DE825}"></a>inScheme
 An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is a member of a RepresentationScheme
 
-### <a id="{B37ADF66-D5D0-4144-9539-DA91BA302914}"></a>installedSoftware
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> indicating <a href="#{B6014BB6-FD82-4748-8DFF-65401770515C}"><font color="#0000ff"><u>Software</u></font></a> is installed on a <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a>
+### <a id="{6B36C428-3A86-493e-9B3B-6D394C567577}"></a>InstalledState
+A temporal state of an Entity when it fulfils a ReplaceablePart.
+
+
+### <a id="{297F9CC1-2ACF-4da0-92D9-0AA9E808CAD8}"></a>InstanceOfSoftware
+An <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> that is an installed instance of a set of programmatic instructions that control or affect the behaviour of an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> (usually a Device). 
 
 ### <a id="{F87E3B6F-5872-47eb-89F8-6642DD7C8237}"></a>IntelligenceAgency
 A <a href="#{0D042066-06C8-48d6-8387-500CF8EE2592}"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that collects, analyses or disseminates intelligence
@@ -4204,7 +3861,7 @@ An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rd
 An <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates a <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> to the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> it marks the end of
 
 ### <a id="{FBA54EEF-91BF-4ba2-8B67-79C899963149}"></a>isIdentifiedBy
-A <a href="#{C3A36E36-0C73-4af7-88E3-81C9243CE456}"><font color="#0000ff"><u>hasName</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> identifies an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a>
+A <a href="#{C3A36E36-0C73-4af7-88E3-81C9243CE456}"><font color="#0000ff"><u>hasName</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> identifies an <font color="#0000ff"><u>Thing</u></font>
 
 ### <a id="{2415B865-3C37-4595-9F38-11075EAB5D34}"></a>isLegalTenderIn
 The <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> in which a <a href="#{A06EE74F-9A66-4b63-8DC3-3B1C2B362862}"><font color="#0000ff"><u>Currency</u></font></a> is legal tender
@@ -4217,21 +3874,21 @@ Note: the WKT must include the coordinate reference system used - e.g WGS 84
 ### <a id="{B92D79E2-9E7D-4df7-8D38-3D884AA09AD2}"></a>ISO3166_1Alpha_3
 ISO 3166-1 alpha 3 (3-Letter <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> Code)
 
+### <a id="{598ACBB6-DF51-4bd9-A5DD-52EDE1895327}"></a>ISO4217Code
+ISO4217 three-letter code (e.g. USD, GBP, EUR, etc.)
+
 ### <a id="{ECFED94D-CC69-46b9-B09D-B282D5665787}"></a>ISO639-3Code
 ISO639-3 three-letter language code
 
 ### <a id="{E9372543-434E-45d3-A1F0-8D711952D10A}"></a>iso8601PeriodRepresentation
-A ISO8601 datetime (as <a href="#{57843280-4451-47eb-9616-B0843FE4E2C5}"><font color="#0000ff"><u>xsd:dateTime</u></font></a> if possible) that represents the ParticularPeriod.
+A ISO8601 datetime (as <a href="#{57843280-4451-47eb-9616-B0843FE4E2C5}"><font color="#0000ff"><u>xsd:dateTime</u></font></a>) that represents the ParticularPeriod.
+
+This representation is also encoded in the URI of the period, this is an additional required <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: "2007-01-18T15:30:00"
 
 Note: the representation is also encoded in the URI of the period, this is an additional required <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> to enable querying by dateTime and SPARQL temporal operations.
 
 ### <a id="{BAEA86D9-C90E-4f8d-96F5-A01BB0C49711}"></a>isParticipantIn
 An <a href="#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC}"><font color="#0000ff"><u>isPartOf</u></font></a> that relates an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> it participates in.
-
-### <a id="{A77A19DA-2775-4dfa-A76C-41C158AC582C}"></a>isParticipantStateIn
-An <a href="#{BAEA86D9-C90E-4f8d-96F5-A01BB0C49711}"><font color="#0000ff"><u>isParticipantIn</u></font></a> and an <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> it participates, in the case where the participant has the same spatial extent as the Event for that period of time.
-
-Note: This is really just a bit of logical plumbing to enable start and end states of Events to be "all of the event for a period of time".
 
 ### <a id="{DF9F6056-CCD4-41aa-9A86-536F6150EC25}"></a>isParticipationOf
 An <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> that is the participant
@@ -4245,7 +3902,7 @@ London partOf UK
 My Arm partOf Me
 
 ### <a id="{D6974F5E-B24C-4a06-9AC1-DB6299E9BF55}"></a>isPrimaryForOrganisation
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that prefers the use of that ExchangedItem.
+A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <font color="#0000ff"><u>Thing</u></font> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that prefers the use of that Thing.
 
 This is used when there are more than one state, name, etc. for a given item, and there is a requirement to specify which one is considered primary / preferred by a particular Organisation.
 
@@ -4253,10 +3910,10 @@ Examples:
 
 * A primary name for a person (applied to PersonName)
 * A primary DoB for a person (applied to BirthState)
-* A primary <a href="$element://{45CDA5C1-624D-4f2f-81F6-EF19300820A9}"><font color="#0000ff"><u>nationality</u></font></a> for a person (applied to the <a href="$element://{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> that links to the Nation)
+* A primary <a href="#{45CDA5C1-624D-4f2f-81F6-EF19300820A9}"><font color="#0000ff"><u>nationality</u></font></a> for a person (applied to the <a href="$element://{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> that links to the Nation)
 
 ### <a id="{D106A0A9-55C4-454f-9E20-35BA54114036}"></a>isRepresentedAs
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> in someway depicts an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>ExchangedItem</u></font></a>
+A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> in someway depicts an <font color="#0000ff"><u>Thing</u></font>
 
 ### <a id="{D9E068B1-2A44-4523-B8FC-F9888212B35C}"></a>isStartOf
 An <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates a <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> to the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> it marks the start of
@@ -4428,7 +4085,7 @@ A <a href="#{3524D10D-D9B0-416d-ADED-D5AAEB99DD09}"><font color="#0000ff"><u>CoL
 An Attendance where the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> involved is the chair of a <a href="#{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a>
 
 ### <a id="{70AEDFC7-2B17-43d8-BF49-B5ACF8812317}"></a>Message
-A <a href="#{6698805F-F492-4f1f-954C-E1EB3C53E148}"><font color="#0000ff"><u>Communication</u></font></a> or <a href="#{2176DEAE-6B5A-4906-AE37-FC76B0A50C0D}"><font color="#0000ff"><u>OnlineContentEvent</u></font></a> where a message is sent
+A <a href="#{6698805F-F492-4f1f-954C-E1EB3C53E148}"><font color="#0000ff"><u>Communication</u></font></a> where a message is sent.
 
 ### <a id="{E1A85BEA-C374-4727-A189-E536BA248D98}"></a>messageContent
 An attribute representing the content of a message
@@ -4457,14 +4114,6 @@ A CommunicationsDevice that is a portable telephone using cellular networks
 
 ### <a id="{9F5EDA24-5991-48e7-9303-C86E25A196CF}"></a>MobileTelephoneAccount
 A <a href="#{593AE684-C2E9-4e40-A7FD-549BFA64900D}"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the telephones in use connects using a cellular network
-
-### <a id="{7A879268-33C2-4f2b-8928-9E78AFF01E69}"></a>ModelOfDevice
-A <a href="#{09F9136C-9069-47ec-A58E-FC26CF9BA55E}"><font color="#0000ff"><u>ClassOfDevice</u></font></a> where the model is specified
-
-Examples:
-
-* Apple iPhone 6S
-* Ford Focus
 
 ### <a id="{21A341AE-9A38-4f45-BCB5-B29B02DC1B90}"></a>Modifier
 An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{3EF09CE4-79B0-42be-9AA1-12B97611BF2B}"><font color="#0000ff"><u>Modify</u></font></a> event as a modifier
@@ -4584,11 +4233,6 @@ An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>Ev
 ### <a id="{FB2FDA67-B258-4b18-9E95-3B9DFAB8FB14}"></a>ObserverStatus
 When a <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> has observer rights at a <a href="#{78D65599-BCBB-491a-8C34-75B9F7AB60D5}"><font color="#0000ff"><u>Summit</u></font></a>
 
-### <a id="{66A24EF2-F417-46c7-A68D-D4540260F64F}"></a>OffenceCode
-An Identifier for a ClassOfCriminalActivity
-
-The Home Office Offence Classification Index [B] should be used wherever possible to specify the Crime Type
-
 ### <a id="{1D589649-490D-4558-91D5-2D977B2B42DE}"></a>OfferForSale
 A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities of the same type (specified by an ClassOfEntity) are offered for sale or exchange
 
@@ -4639,7 +4283,7 @@ Examples:
 An <a href="#{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}"><font color="#0000ff"><u>OnlineEvent</u></font></a> where content (text, images, video, etc.) is uploaded, downloaded or viewed
 
 ### <a id="{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}"></a>OnlineEvent
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> on the internet
+An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> on a computer network. This can include events on any network of computer including the internet or other air-gapped or isolated network.
 
 ### <a id="{5B50EECC-45FC-4e5b-933E-51BC0FEE0FCD}"></a>OnlineLike
 OnlineArtefact that is a "like" of an existing OnlineArtefact instance
@@ -4647,11 +4291,14 @@ OnlineArtefact that is a "like" of an existing OnlineArtefact instance
 ### <a id="{4A3F24C6-EEC9-48ce-93FB-26FF64E1268A}"></a>onlineLikeOf
 Relates an <a href="#{5B50EECC-45FC-4e5b-933E-51BC0FEE0FCD}"><font color="#0000ff"><u>OnlineLike</u></font></a> to the OnlineContent that was "liked"
 
+### <a id="{067AEA85-D3DD-478c-AF00-FB54F95DF1E2}"></a>OnlineMessage
+A <a href="#{70AEDFC7-2B17-43d8-BF49-B5ACF8812317}"><font color="#0000ff"><u>Message</u></font></a> that was sent Online or any other networked system including air-gapped networks.
+
 ### <a id="{34F13F26-7C4E-451a-BDA0-62BA7738039F}"></a>onlinePublisher
 Relates an <a href="#{54500458-51CF-46b5-A5A3-14B1D5C7F755}"><font color="#0000ff"><u>OnlineArtefact</u></font></a> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that produced it.
 
 ### <a id="{27BEFD0A-B30B-47db-B863-13E48D1172F9}"></a>OnlineService
-A service provided on the internet.
+A service provided on a computer network.
 
 ### <a id="{DEE1404A-AAC3-4d46-9BA3-8E097A55C7F5}"></a>onlineServiceProvider
 Relates an <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that owns/runs it
@@ -4681,9 +4328,6 @@ Examples: an organisation that is opposed to Nuclear Weapons
 
 ### <a id="{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"></a>Organisation
 A ResponsibleActor that is a group of people formed for one or more of purposes � e.g. government organisations, educational organisations, terrorists organisations, religious organisations, etc.
-
-### <a id="{C0B7C4B2-C067-4ca8-A9FB-E82782889250}"></a>OrganisationalRole
-A <a href="#{0066A327-D497-42e0-9F50-D988F522F4A5}"><font color="#0000ff"><u>Role</u></font></a> that a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> can have in an <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a>
 
 ### <a id="{13865B40-B57D-44e7-9658-00C45C8175C8}"></a>OrganisationIdentifier
 A unique Identifier for an Organisation (more usually an OrganisationState)
@@ -4736,11 +4380,11 @@ Examples:
 ### <a id="{2173F463-524C-457c-B106-51322F64F122}"></a>ParticularPeriod
 A <a href="#{3FDFA898-C340-4279-8B3C-275359D5B02D}"><font color="#0000ff"><u>PeriodOfTime</u></font></a> that is a specific, contiguous extent of time.
 
-IMPORTANT NOTE: The URI of a <a href="#{2173F463-524C-457c-B106-51322F64F122}"><font color="#0000ff"><u>ParticularPeriod</u></font></a> shall be encoded as follows:
+IMPORTANT NOTE: The URI of a <a href="#{2173F463-524C-457c-B106-51322F64F122}"><font color="#0000ff"><u>ParticularPeriod</u></font></a> shall be encoded in UTC (Coordinated Universal Time) and as follows:
 
-http://iso8601.iso.org/2007-01-18T15%3A00%3A00
+http://iso8601.iso.org/20070118T153000
 
-Where the content <a href="#{FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB}"><font color="#0000ff"><u>after</u></font></a> the / is % encoded (e.g. encodeURIComponent in javascript). In the example above, the unencoded content would be "2007-01-18T15:00:00"
+Where the content <a href="#{FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB}"><font color="#0000ff"><u>after</u></font></a> the / is encoded without punctuation and without the trailing "Z". In the example above, the punctuated equivalent would be "2007-01-18T15:30:00Z"
 
 The reason behind using a URI is that receiving systems can resolve the periods of time and de-duplicate. 
 
@@ -4980,7 +4624,7 @@ A modified ISO8601 <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color
 ### <a id="{986E66AC-9092-410b-88AD-30B86EFC32DD}"></a>RecurringPeriod
 A <a href="#{3FDFA898-C340-4279-8B3C-275359D5B02D}"><font color="#0000ff"><u>PeriodOfTime</u></font></a> that is composed of regularly recurring periods of time.
 
-ISO8601 is used to represent these periods (recurrentP<i>eriod </i>property), using the blanking technique (e.g. blanking the date to give a daily time). The recurrence can be limited using the recurringFrom<i> </i>and <i>recurringUntil </i>properties 
+ISO8601 is used to represent these periods (<i>recurrentPeriodRepresentation </i>property), using the blanking technique (e.g. blanking the date to give a daily time). The recurrence can be limited using the <i>startsIn </i>and <i>endsIn </i>properties 
 Examples:
 
 Every Tuesday from 28th August 2018 to 2 October 2018
@@ -4991,9 +4635,6 @@ An Identifier used to uniquely identity a document.
 
 ### <a id="{FC55D479-07C4-4d98-B48C-5032190E493D}"></a>RegionalConstituency
 The people residing (or entitled to reside / vote in) a particular Location.
-
-### <a id="{B3B6D7F3-F5B0-49d6-886F-F5AF7C56F041}"></a>regionCountry
-An <a href="#{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#{65D869DB-19EE-4886-98BA-E579C39C4A68}"><font color="#0000ff"><u>RegionOfCountry</u></font></a> is in a <a href="$element://{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a>
 
 ### <a id="{65D869DB-19EE-4886-98BA-E579C39C4A68}"></a>RegionOfCountry
 A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is a general subdivision of a Country
@@ -5013,7 +4654,7 @@ For road vehicles this is often referred to as the VRN (vehicle registration num
 For aircraft the tail number is often used as a means of identification and/or registration.
 
 ### <a id="{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"></a>relationship
-A relationship represents an association between two Entities
+A relationship represents an association between two Thing
 
 ### <a id="{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B}"></a>Religion
 An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> whose extent is all the people (PersonState) who share the same belief.
@@ -5042,6 +4683,20 @@ An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>Ev
 ### <a id="{E2FC3A09-EC9D-4ab9-B273-A526CB511B5A}"></a>Renter
 A <a href="#{AF57E842-9BF7-4f6e-B180-DDEACB0F5386}"><font color="#0000ff"><u>PartyToAgreement</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> rents an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> from another party
 
+### <a id="{624D6CD1-31D9-46db-B42D-56DAD35BABD8}"></a>ReplaceablePart
+An <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> which is a part of a whole that can be replaced (possibly multiple times) without altering its overall identity. It is coincident with any Element which fulfils its purpose, role or function to the whole.
+
+The identity of a RepleacablePart can survive periods when no Element fulfils its purpose.
+
+A RepleacablePart does not survive the destruction of the whole it is a part of, though an Element that fulfils the RepleacablePart may do.
+
+Examples include:
+-	Tyres of a car
+-	CEO of a company
+-	Simcard in a mobile handset
+-	A pump in an oil refinery system
+
+
 ### <a id="{8D510CB0-C9BF-4de3-A442-9070ABB15732}"></a>Report
 A WorkOfDocumentation that offers one or more persons view on a particular topic. 
 
@@ -5057,13 +4712,6 @@ The examplar text, number, etc. of a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72C
 
 ### <a id="{C0273975-049B-40f0-817C-DFBFA4A3E5CE}"></a>RequestDocument
 A <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that requests permission
-
-### <a id="{132AFC03-7A64-45fa-9F87-93171BBFBE3D}"></a>requestedActivityType
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{1D6BAE08-B8F1-4eee-928E-991B3B46EADF}"><font color="#0000ff"><u>AuthorisationRequest</u></font></a> to a <a href="#{057C04F9-EB8A-4e21-9CF8-2D98038570FB}"><font color="#0000ff"><u>AuthorisedEventClass</u></font></a> that the request requires authorisation to do.
-
-For example, someone making request authorisation to travel
-
-
 
 ### <a id="{300203EC-607A-4d77-AE6F-7EAE7FA44DF2}"></a>RequestForQuotation
 A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities are is required
@@ -5114,11 +4762,6 @@ Example:
 
 ### <a id="{830B2164-E880-4bef-A62C-B38CEB6A824D}"></a>RoadVehicle
 A <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> that travels by road (surprisingly enough)
-
-### <a id="{0066A327-D497-42e0-9F50-D988F522F4A5}"></a>Role
-An <a href="#{0358DDAB-D22C-4ee5-8F9A-CF18F3E432BD}"><font color="#0000ff"><u>ClassOfState</u></font></a> that is the role an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> has in context (as part of) an Element
-
-- e.g. Manager, 
 
 ### <a id="{0B2564A8-9A95-4164-BB49-01900DD530AD}"></a>RoomNumber
 A GeoIdentity used to identify a PartOfFacility
@@ -5276,14 +4919,14 @@ Note: more often than not, this will be a statement of regular/occasional stays,
 ### <a id="{686293F8-123B-478f-9A67-A6074937B528}"></a>StoreCard
 A PaymentArtefact issued by a retail Organisation that can only be used to pay for items supplied by that Organisation. 
 
-### <a id="{2E33B6DC-54D5-4e5e-9894-B2801F174B00}"></a>storedIn
-A Relationship between an <a href="#{CA196722-9531-4eb4-A8CF-B9A5145CDCFD}"><font color="#0000ff"><u>AssetState</u></font></a> and a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where the <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> is/was stored
-
 ### <a id="{49B3D340-AADC-4fcd-80CC-283AE0FC85DF}"></a>strengthOfInterest
 StrengthOfInterest is used in its most general sense and is limited to the following values:
 � Weak
 � Strong
 � Fanatical
+
+### <a id="{CC9E60AC-B3C8-4c9b-B657-2734538AE2B9}"></a>Stuff
+An element that is highly dissective <font color="#272727">or generally uncountable. For example, sand, water, gas and coffee.</font>
 
 ### <a id="{BFFBC847-AD87-458e-9A86-690D659EB48F}"></a>SubjectOfInterest
 A <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> during which an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> is of interest to an investigation
@@ -5327,9 +4970,6 @@ An <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>De
 ### <a id="{056DDAD3-9315-48a8-8598-3DD4F783C5CF}"></a>SystemState
 A temporal state of a <a href="#{F682A265-1AFE-4287-A9CD-0D4C83F54C52}"><font color="#0000ff"><u>System</u></font></a>
 
-### <a id="{5D13DE13-CAAC-4879-9237-D20A6846F4D8}"></a>takesplaceIn
-An <a href="#{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate an EventParticipant takes place within a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
-
 ### <a id="{9BEF1C80-3823-4611-9349-AA1E11E41BE7}"></a>TargetLocation
 Relates an <a href="#{8787BE51-8FE0-4d76-97B4-608311434F5B}"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the location specified for the attack
 
@@ -5368,6 +5008,16 @@ An <a href="#{F3DB6A59-B2DE-4743-A9A8-7DA9CCC68638}"><font color="#0000ff"><u>Or
 
 ### <a id="{5CD50268-582A-426b-B4CC-F6EE308B84A3}"></a>TheatreTicket
 An EntertainmentTicket for a theatre show
+
+### <a id="{485CBF1A-04FF-4741-8471-46A03D28C406}"></a>Thing
+A rdfs:Resource which is a real or possible world 'thing'.
+
+Thing and its immediate subclasses are too broad a set of concepts to ever need to instantiate directly.
+
+EXAMPLES:
+- An instance of a class (element)
+- A class (class of element)
+
 
 ### <a id="{0BC61540-2AFB-42e6-A845-79771EE0268D}"></a>Ticket
 Documented authority (paid-for or otherwise) entitling the bearer to some specified activity.
@@ -5425,9 +5075,6 @@ A <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Tic
 ### <a id="{F2D6CFE4-BCE9-4bce-ADB0-075656038A55}"></a>TrainTravel
 A <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> by rail
 
-### <a id="{9574377B-6752-4317-94DC-E075C408442D}"></a>transferType
-An rdf:type relationship from a MoneyTransfer to a ClassOfMoneyTransfer
-
 ### <a id="{A9D01DAB-281E-48ae-BB33-8518701ABBDE}"></a>transferValue
 A relationship from a MoneyTransfer to the AmountOfMoney transferred.
 
@@ -5476,14 +5123,6 @@ A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><fo
 
 Note: this should not be considered a bi-directional relationship. Just because one person trusts another person does not necessarily mean the feeling is reciprocated. 
 
-### <a id="{07BDCB73-1CDA-4057-9D7E-EC088D304B04}"></a>typeOfCriminality
-A link to the <a href="#{69868D83-C3BD-4877-AB5C-374B4C6F4A7E}"><font color="#0000ff"><u>ClassOfCriminalActivity</u></font></a> conducted
-
-### <a id="{AE6D5097-F555-48af-AFBA-88ECAA31BFF3}"></a>typicallyTargets
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking a <a href="#{64CE6FEA-7B05-4813-BD55-D56C02A54486}"><font color="#0000ff"><u>ClassOfOperation</u></font></a>alEvent to a <a href="#{69868D83-C3BD-4877-AB5C-374B4C6F4A7E}"><font color="#0000ff"><u>ClassOfCriminalActivity</u></font></a> where the operations are intended to counter or target certain criminal activities.
-
-Example: counter-narcotics operations typically target drug dealing
-
 ### <a id="{AEA785BB-B625-41aa-8738-FB0F3726A281}"></a>UN_LOCODE
 A GeoIdentity that is a United Nations Code for Trade and Transport Locations
 
@@ -5509,7 +5148,7 @@ http://en.wikipedia.org/wiki/URI_scheme#Official_IANAregistered_schemes
 An Identifier for a WebResource
 
 ### <a id="{9D703CE2-DED0-4aba-BE21-474781670297}"></a>Username
-The Identity for an account registered with an internet-based service.
+The Identity for an account registered with a computer-network-based service e.g. the internet.
 
 An email address can be used as an online identifier for a specific domain (like Facebook). Where this is the case it can be considered to be both an instance of an email address and an instance of a username for an online identity.
 
@@ -5596,7 +5235,7 @@ The venue of the event the <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><fo
 Note: venues change, and the actual event may not run at the stated venue. 
 
 ### <a id="{E4C44F5B-5D57-4283-B985-5A2DA87BF212}"></a>VersionNumber
-The number or code that identifies a VersionOfDocument.
+The number or code that identifies the version of something.
 
 ### <a id="{C01F47A2-F545-4fac-A707-469AD32FBF94}"></a>versionOf
 A relationship between a VersionOfDocument and the WorkOfDocumentation it is a version of.
@@ -5609,14 +5248,6 @@ An EventParticipant where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><f
 
 ### <a id="{1ED09A3D-7EE9-4b7a-8F0B-8590023C9F81}"></a>VideoConference
 A <a href="#{6EAC8930-3D16-4e44-9706-989BDF6564A5}"><font color="#0000ff"><u>TeleConference</u></font></a> where parties communicate over video (with audio)
-
-### <a id="{2ED602C6-C93C-41f3-8A02-10F0CAD0D64A}"></a>visaType
-The type of the TravelVisa
-
-Examples:
-
-B1/B2
-VISA TIER 4
 
 ### <a id="{EB558A61-8725-40d0-B87D-D6AA1FC27C89}"></a>Visiting
 A temporal state of a ResponsibleActor
