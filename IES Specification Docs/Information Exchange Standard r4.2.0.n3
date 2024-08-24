@@ -161,6 +161,7 @@ ies:AmountOfMoney rdf:type rdfs:Class .
 ies:AmountOfMoney sparx:guid "{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}" . 
 ies:AmountOfMoney rdfs:comment "A specific amount of a given currency" . 
 ies:AmountOfMoney rdfs:subClassOf ies:Asset . 
+ies:AmountOfMoney ies:powertype ies:ClassOfAmountOfMoney . 
 ies:AmountOfSubstance rdf:type rdfs:Class . 
 ies:AmountOfSubstance sparx:guid "{324D0329-1299-45cc-92A5-270134E66512}" . 
 ies:AmountOfSubstance rdfs:comment "The Measure of the stoichiometric quantity of substance (usually measured in moles)" . 
@@ -234,6 +235,7 @@ ies:Asset sparx:guid "{40231334-5ACC-4dd4-A8C1-05012E2170E0}" .
 ies:Asset rdfs:comment "An Entity that is either man-made (or defined - see Rights) or whose extent is defined in such a way as to specify ownership - e.g. a parcel of real estate" . 
 ies:Asset rdfs:subClassOf ies:Entity . 
 ies:Asset rdfs:subClassOf ies:AssetState . 
+ies:Asset ies:powertype ies:ClassOfAsset . 
 ies:AssetState rdf:type rdfs:Class . 
 ies:AssetState sparx:guid "{CA196722-9531-4eb4-A8CF-B9A5145CDCFD}" . 
 ies:AssetState rdfs:comment "A temporal state of an Asset" . 
@@ -1879,7 +1881,6 @@ ies:MapGridArea rdf:type rdfs:Class .
 ies:MapGridArea sparx:guid "{18A66904-823F-471d-A465-65ECD2D69867}" . 
 ies:MapGridArea rdfs:comment "A Location whose area is specified by a grid on a map.Note this is the actual area, not the map grid. " . 
 ies:MapGridArea rdfs:subClassOf ies:Location . 
-ies:MapGridArea rdfs:subClassOf ies:Asset . 
 ies:Marriage rdf:type rdfs:Class . 
 ies:Marriage sparx:guid "{9DFEDF24-1203-4341-B282-BD37C1B9CDF5}" . 
 ies:Marriage rdfs:comment "An EndToEndActivity covering the entire extent of a two peoples marriage (from the ceremony to either divorce or death)Note: As IES4 does not increase the scope of IES3, Marriage also includes common-law partners and civil partnerships" . 
@@ -2495,7 +2496,6 @@ ies:RadioCoverageArea rdf:type rdfs:Class .
 ies:RadioCoverageArea sparx:guid "{7A2CC7C7-6B82-4751-BDBE-A770B3AFBBEB}" . 
 ies:RadioCoverageArea rdfs:comment "A Location whose area is that in which a RadioMast hast viable communications coverage.Note: The RadioMast itself may not be part of this area, as often the immediate area around the base of a RadioMast is a deadspot. Note: Most radio area coverage is complex in shape, and the preferred representation in IES4 is GeoJSON. No attempt is made here to differentiate between signal strength zones. To do this, create multople RadioCoverAreas for the same RadioMast and label them appropriately. " . 
 ies:RadioCoverageArea rdfs:subClassOf ies:Location . 
-ies:RadioCoverageArea rdfs:subClassOf ies:Asset . 
 ies:RadioMast rdf:type rdfs:Class . 
 ies:RadioMast sparx:guid "{F02CFF55-12A7-4308-9A60-E2353DE5BE58}" . 
 ies:RadioMast rdfs:comment "An Device that is placed in a Location to provide either a link from a wired to wireless connection, or to relay between two wireless endpoints." . 
@@ -2744,7 +2744,7 @@ ies:ServiceUser rdfs:subClassOf ies:Visiting .
 ies:Ship rdf:type rdfs:Class . 
 ies:Ship sparx:guid "{14098560-1FF3-4599-B9A5-41167861538B}" . 
 ies:Ship rdfs:comment "A Vehicle that travels on water" . 
-ies:Ship rdfs:subClassOf ies:Vehicle .
+ies:Ship rdfs:subClassOf ies:Vehicle . 
 ies:siblingOf rdf:type owl:ObjectProperty . 
 ies:siblingOf sparx:guid "{A0D40C4F-B513-4c9f-8D4A-79D0FA7CEF50}" . 
 ies:siblingOf rdfs:comment "A Relationship between two Person Entities that indicates one is the sibling of the other" . 
@@ -3308,4 +3308,4 @@ ies:worksWith rdfs:domain ies:PersonState .
 ies:worshipsAt rdf:type owl:ObjectProperty . 
 ies:worshipsAt sparx:guid "{475617C7-BEE3-4c5e-8749-9386B68A8DA5}" . 
 ies:worshipsAt rdfs:comment "A visits relationship between a ResponsibleActor and a Location where they undertake religious worshipNote: more often than not, this will be a statement of regular/occasional worship, so the instance of the ResponsibleActorState should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, inLocation would generally be used." . 
-ies:worshipsAt rdfs:subPropertyOf ies:visits .
+ies:worshipsAt rdfs:subPropertyOf ies:visits . 
