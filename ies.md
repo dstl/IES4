@@ -237,6 +237,114 @@ Otherwise, things to watch out for in the UML are:
 	<li>"model" property removed - now use rdf:type</li>
 </ul>
 
+<b>v4.3.0 - Changes resulting from project engagements</b>
+1. Added <b>Stuff and Count </b>pattern, including addition of:
+<ul>
+	<li><b>Stuff</b> class</li>
+	<li><b>FiniteClassOfElement</b> class</li>
+	<li><b>finiteMembershipCount</b> attribute</li>
+	<li><b>pluriverse </b>as an instance of Element</li>
+	<li>Added example use</li>
+</ul>
+2. Added <b>Replaceable Parts </b>pattern, including addition of:
+<ul>
+	<li><b>ReplaceablePart </b>class</li>
+	<li><b>InstalledState </b>class as a superclass of <b>InPost </b>(non-breaking)</li>
+	<li>Added example use</li>
+</ul>
+3. Changes to <b>Payloads and Groups</b> pattern:
+<ul>
+	<li>(Bug fix) Added <b>rdfs:subClassOf </b>relation between <b>SecurityLabel</b> and <b>rdfs:Resource</b></li>
+</ul>
+<ul>
+	<li>(Bug fix) Added <b>rdfs:subClassOf </b>relation between <b>ExchangedPayload</b> and <b>rdfs:Resource</b></li>
+</ul>
+4. Changes to <b>Posts and Roles</b> pattern:
+<ul>
+	<li>Removal of <b>hasRole</b>, <b>Role </b>and <b>OrganisationRole </b>(breaking change). Instead use <b>ReplaceablePart</b>/<b>InPost</b> example now provided in the same pattern</li>
+	<li>Update to definition of <b>InPost </b>now that is also a <b>InstalledState</b></li>
+</ul>
+5. Changes to <b>Assessment </b>pattern:
+<ul>
+	<li>Addition of <b>Assessment </b>as a new superclass of <b>AssessToBeTrue </b>(non-breaking)</li>
+</ul>
+6. Changes to <b>Location </b>pattern:
+<ul>
+	<li><b>regionCountry</b>, <b>addressRegion </b>deleted. Use <b>inLocation </b>instead</li>
+	<li><b>isCentroidOf </b>corrected to be <b>subProperty </b>of relationship not <b>inLocation</b></li>
+	<li><b>MapGridArea </b>no longer an <b>Asset </b>as well as a <b>Location</b></li>
+	<li><b>RadioCoverageArea </b>no longer an <b>Asset </b>as well as a <b>Location</b></li>
+</ul>
+7. Changes to <b>Where and When</b> pattern:
+<ul>
+	<li><b>happensIn</b>, <b>takesplaceIn </b>deleted. Use <b>inLocation </b>instead.</li>
+</ul>
+8. Changes to <b>Asset </b>pattern
+<ul>
+	<li><b>storedIn </b>deleted. Use <b>inLocation </b>instead.</li>
+</ul>
+9. Changes to <b>Communications Device</b> pattern:
+<ul>
+	<li>Removal of <b>installedSoftware</b>, replaced with <b>InstanceOfSoftware </b>which can be associated as being installed using <b>isPartOf.</b></li>
+	<li>Removed <b>ModelOfDevice </b>and <b>ClassOfDevice</b>. Instantiations of <b>ModelOfDevice </b>to be done instead using subClassOf <b>Device.</b></li>
+	<li>Linked Device to <b>PartNumber </b>using <b>isIdentifiedBy</b></li>
+</ul>
+10. Changes to <b>Period of Time</b> pattern:
+<ul>
+	<li><b>ParticularPeriod</b> URI pattern now mandated to be non-punctuated encoding (20070118T153000Z).  This avoids the use of escape characters in the URI. NOTE:<b> </b>the literal for <b>iso8601PeriodRepresentation </b>remains punctuated.</li>
+	<li><b>ParticularPeriod</b> mandated to be in UTC / Zulu time</li>
+	<li><b>Period of Time</b> diagram changed to reflect changes to URI encoding</li>
+	<li>Updates to all examples to include new encoding</li>
+</ul>
+11. Changes to <b>Disposition</b> pattern:
+<ul>
+	<li>Correction to <b>allHaveDisposition</b> rdfs:Domain - fixed to <b>ClassOfElement </b>not <b>Element</b></li>
+</ul>
+12. Changes to <b>Amount of Money </b>pattern:
+<ul>
+	<li>Currency identifier correct to <b>ISO4217Code </b>not <b>ISO639-3Code</b> (country code)</li>
+</ul>
+13. Changes to <b>Online </b>and <b>Communication </b>patterns covering <b>Message</b>. <b>Message </b>used to inherit from both <b>OnlineEvent </b>and <b>Communication </b>which didn't make sense considering <b>SMS </b>is a subtype of <b>Message</b>. Changes included:
+<ul>
+	<li>Deleted subclass relation between <b>Message </b>and <b>OnlineContentEvent</b></li>
+	<li>Added <b>OnlineMessage </b>class with the definition of "A Message that was sent Online."</li>
+	<li>Added <b>OnlineMessage </b>to the <b>OnlineEvent </b>diagram</li>
+	<li>Made <b>OnlineMessage </b>a subclass of <b>OnlineContentEvent </b>and Message</li>
+	<li>Added Communication class to <b>OnlineEvent </b>diagram</li>
+	<li>Changed <b>Message </b>definition from "A Communication or OnlineContentEvent where a message is sent" to "A Communication where a message is sent"</li>
+</ul>
+14. IES 4.2 had ClassOfElements and subProperties of rdf:type which encouraged extending the IES classes via ClassOfElements hierarchy rather than the Elements hierarchy. IES 4.3 prunes some of classes (breaking changes) to discourage this behaviour and encourage one approach of extending IES. This approach is documented in "Extending IES4 2024-03-v1.0 O.pdf". Pruned classes and properties include:
+<ul>
+	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted – just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
+	<li>From <b>Operational </b>pattern - <b>ClassOfOperationalEvent</b>, <b>ClassOfCriminalActivity </b>and <b>typicallyTargets</b></li>
+	<li>From <b>Criminal </b>pattern - Deleted of <b>special forms of rdf:type</b>, <b>typeOfCriminality. Also deleted</b> <b>OffenceCode</b>.</li>
+	<li>From <b>Financial Account</b> pattern - Deleted special forms of rdf:type, <b>financialAccountType ClassOfFinancialAccount</b></li>
+	<li>From <b>Organisation </b>pattern - Deleted <b>ClassOfResponsibleActor</b></li>
+	<li>From <b>Identity Document</b> pattern - Deleted special form of rdf:type, <b>visaType</b>. Also deleted <b>ClassOfTravelVisa</b>.</li>
+</ul>
+<ul>
+	<li>From <b>PaymentArtefact </b>pattern - <b>cardType </b>and <b>ClassOfPaymentArtefact</b>. Just extend <b>PaymentArtifact</b></li>
+	<li>From <b>Business </b>pattern - deleted <b>transferType </b>and <b>ClassOfMoneyTransfer</b>. Instead just extend <b>TravelBooking</b></li>
+	<li>From <b>Travel Booking</b> - deleted deleted <b>bookingType </b>and <b>ClassOfTravelBooking</b></li>
+</ul>
+15. Other changes:
+<ul>
+	<li><b>ExchangedItem </b>changed to <b>Thing</b>. Its definition has also been changed.</li>
+	<li><b>VersionOfDocument </b>- update to definition to apply to anything that is identifiable</li>
+	<li><b>currencyDenomination </b>no longer a subProperty of relationship and rdf:type. Its now just a subtype of rdf:type only.</li>
+	<li><b>isParticipantStateIn </b>deleted. Just use <b>isParticipantIn</b>.</li>
+</ul>
+<ul>
+	<li>Removed all references of PersonOrOrganisation. All updated to <b>ResponsibleActor</b></li>
+	<li><b>Marriage </b>no longer a subClassOf <b>LawEnforcement</b></li>
+	<li><b>Latitude </b>and <b>Longitude </b>specified to be xsd:demical literals</li>
+	<li><b>hasTheme </b>no longer domain as <b>Investigation</b>, <b>Communication </b>and <b>Meeting</b>. Now that of only <b>Event</b></li>
+</ul>
+<ul>
+	<li>Updated comment for <b>RecurringPeriod</b>. Changed mention of recurringFrom and recurringUntil to startsIn and endsIn respectively within the definition of <b>RecurringPeriod</b>. Also corrected the mention of <b>recurrentPeriodRepresentation </b>from recurrentPeriod in the definition of <b>RecurringPeriod</b>.</li>
+	<li>Inclusion of missing <b>powertype </b>relations between Elements and ClassOfElements</li>
+</ul>
+
 ## <a id="{E169A2F5-85CB-41a7-A8B5-5BFAC5330AB5}"></a>IES Overview
 ![IES Overview Diagram](Images/EAID_E169A2F5_85CB_41a7_A8B5_5BFAC5330AB5.png)
 
@@ -3875,7 +3983,7 @@ Note: the WKT must include the coordinate reference system used - e.g WGS 84
 ISO 3166-1 alpha 3 (3-Letter <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> Code)
 
 ### <a id="{598ACBB6-DF51-4bd9-A5DD-52EDE1895327}"></a>ISO4217Code
-ISO4217 three-letter code (e.g. USD, GBP, EUR, etc.)
+ISO4217 three-letter currency code (e.g. USD, GBP, EUR, etc.)
 
 ### <a id="{ECFED94D-CC69-46b9-B09D-B282D5665787}"></a>ISO639-3Code
 ISO639-3 three-letter language code
