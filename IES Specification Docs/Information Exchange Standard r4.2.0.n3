@@ -1681,7 +1681,7 @@ ies:ISO639-3Code rdfs:comment "ISO639-3 three-letter language code" .
 ies:ISO639-3Code rdfs:subClassOf ies:Identifier . 
 ies:iso8601PeriodRepresentation rdf:type owl:DatatypeProperty . 
 ies:iso8601PeriodRepresentation sparx:guid "{E9372543-434E-45d3-A1F0-8D711952D10A}" . 
-ies:iso8601PeriodRepresentation rdfs:comment "A ISO8601 datetime (as xsd:dateTime) that represents the ParticularPeriod. This representation is also encoded in the URI of the period, this is an additional required attribute to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: 2007-01-18T15:30:00Note: the representation is also encoded in the URI of the period, this is an additional required attribute to enable querying by dateTime and SPARQL temporal operations." . 
+ies:iso8601PeriodRepresentation rdfs:comment "A ISO8601 datetime (as xsd:dateTime) that represents the ParticularPeriod. This representation is also encoded in the URI of the period, this is an additional required attribute to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: 2007-01-18T15:30:00" . 
 ies:iso8601PeriodRepresentation rdfs:subPropertyOf ies:attribute . 
 ies:iso8601PeriodRepresentation rdfs:domain ies:ParticularPeriod . 
 ies:isParticipantIn rdf:type owl:ObjectProperty . 
