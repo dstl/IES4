@@ -454,10 +454,6 @@ ies:CinemaTicket rdf:type rdfs:Class .
 ies:CinemaTicket sparx:guid "{7E0C25C9-DD3A-463e-A481-7CA4EA4AC8C5}" . 
 ies:CinemaTicket rdfs:comment "An EntertainmentTicket that permits attendance at a cinema" . 
 ies:CinemaTicket rdfs:subClassOf ies:EntertainmentTicket . 
-ies:ClassOfAccount rdf:type rdfs:Class . 
-ies:ClassOfAccount sparx:guid "{0077DA88-19EF-4c4c-B6C0-D418D5D77256}" . 
-ies:ClassOfAccount rdfs:comment "The powertype of Account" . 
-ies:ClassOfAccount rdfs:subClassOf ies:ClassOfEntity . 
 ies:ClassOfAmountOfMoney rdf:type rdfs:Class . 
 ies:ClassOfAmountOfMoney sparx:guid "{E5C27DA8-7DF1-49ea-A9EC-ABE17AFD2047}" . 
 ies:ClassOfAmountOfMoney rdfs:comment "The powertype of AmountOfMoney" . 
@@ -480,6 +476,7 @@ ies:ClassOfElement sparx:guid "{3C13E07D-5796-4d03-9EBC-C75277E87CA4}" .
 ies:ClassOfElement rdfs:comment "An rdfs:Class and an Thing whose instances are classes of Element. Examples:	Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);	Political Ideologies	Weapons	Days of the week	Standard procedures	etc." . 
 ies:ClassOfElement rdfs:subClassOf ies:Thing . 
 ies:ClassOfElement rdfs:subClassOf rdfs:Class . 
+ies:ClassOfElement ies:powertype ies:ClassOfClassOfElement . 
 ies:ClassOfEntity rdf:type rdfs:Class . 
 ies:ClassOfEntity sparx:guid "{D1B2FB30-36CA-4012-B85F-514E270BF541}" . 
 ies:ClassOfEntity rdfs:comment "The powertype of Entity - i.e. a ClassOfElement whose instances are classes of EntityExamples:∑ Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);∑ Weapons∑ Etc." . 
@@ -497,11 +494,6 @@ ies:ClassOfMeasureValue rdf:type rdfs:Class .
 ies:ClassOfMeasureValue sparx:guid "{4520A91C-D956-46c1-9A81-93C4C0B12880}" . 
 ies:ClassOfMeasureValue rdfs:comment "A ClassOfRepresentation that is the powertype of MeasureValue" . 
 ies:ClassOfMeasureValue rdfs:subClassOf ies:ClassOfRepresentation . 
-ies:ClassOfMeasureValue ies:powertype ies:MeasureValue . 
-ies:ClassOfOnlineService rdf:type rdfs:Class . 
-ies:ClassOfOnlineService sparx:guid "{FBE0CFC1-43C4-47e2-9EFE-20E291A1697C}" . 
-ies:ClassOfOnlineService rdfs:comment "The powertype of OnlineService" . 
-ies:ClassOfOnlineService rdfs:subClassOf ies:ClassOfWebResource . 
 ies:ClassOfPerson rdf:type rdfs:Class . 
 ies:ClassOfPerson sparx:guid "{2A62C672-1757-4a2d-874B-C099C9DEC416}" . 
 ies:ClassOfPerson rdfs:comment "The powertype of Person" . 
@@ -526,10 +518,6 @@ ies:ClassOfState rdf:type rdfs:Class .
 ies:ClassOfState sparx:guid "{0358DDAB-D22C-4ee5-8F9A-CF18F3E432BD}" . 
 ies:ClassOfState rdfs:comment "A ClassOfElement whose instances are classes of States. This is the powertype of State.Examples:* Roles" . 
 ies:ClassOfState rdfs:subClassOf ies:ClassOfElement . 
-ies:ClassOfWebResource rdf:type rdfs:Class . 
-ies:ClassOfWebResource sparx:guid "{B1AAE4CA-CAB0-475f-B7D3-8CED404B1FC6}" . 
-ies:ClassOfWebResource rdfs:comment "The powertype of WebResource" . 
-ies:ClassOfWebResource rdfs:subClassOf ies:ClassOfEntity . 
 ies:CloseAccount rdf:type rdfs:Class . 
 ies:CloseAccount sparx:guid "{2A5450A7-5B26-4605-A109-5CB26DD9A70F}" . 
 ies:CloseAccount rdfs:comment "An AccountAdminEvent where an Account is shut down." . 
@@ -930,6 +918,7 @@ ies:Element rdf:type rdfs:Class .
 ies:Element sparx:guid "{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}" . 
 ies:Element rdfs:comment "An Thing that has a spatial extent and can have start and end dates" . 
 ies:Element rdfs:subClassOf ies:Thing . 
+ies:Element ies:powertype ies:ClassOfElement . 
 ies:EmailAccount rdf:type rdfs:Class . 
 ies:EmailAccount sparx:guid "{FCBB35B9-704B-46c1-8054-10B7DA7EB8F8}" . 
 ies:EmailAccount rdfs:comment "A CommunicationsAccount that is used to administer the use of one or more e-mail addresses." . 
@@ -1913,6 +1902,7 @@ ies:MeasureValue rdf:type rdfs:Class .
 ies:MeasureValue sparx:guid "{3693B7DE-DCE7-4bf9-BC2A-A8914DA4A11E}" . 
 ies:MeasureValue rdfs:comment "A Representation of the value of a MeasureNote: A UnitOfMeasure is almost always required. The reason it is not mandatory is that in some cases (due to partial reporting) we do not have complete information - e.g. we know the value was stated to be 10 but we dont know if thats metres or feet" . 
 ies:MeasureValue rdfs:subClassOf ies:Representation . 
+ies:MeasureValue ies:powertype ies:ClassOfMeasureValue . 
 ies:MediaFile rdf:type rdfs:Class . 
 ies:MediaFile sparx:guid "{CE2E2EB2-17F7-4054-9107-E8DC275B0B11}" . 
 ies:MediaFile rdfs:comment "A DataObject that is a stand-alone file - e.g. a video, image or sound recording" . 
@@ -2178,13 +2168,6 @@ ies:onlineServiceProvider rdfs:comment "Relates an OnlineService to the Responsi
 ies:onlineServiceProvider rdfs:subPropertyOf ies:relationship . 
 ies:onlineServiceProvider rdfs:domain ies:OnlineService . 
 ies:onlineServiceProvider rdfs:range ies:ResponsibleActor . 
-ies:onlineServiceType rdf:type owl:ObjectProperty . 
-ies:onlineServiceType sparx:guid "{2C9CEF7F-FA9A-4a0e-9E2C-AC3D3EB51D5C}" . 
-ies:onlineServiceType rdfs:comment "The class of OnlineService" . 
-ies:onlineServiceType rdfs:subPropertyOf ies:relationship . 
-ies:onlineServiceType rdfs:domain ies:OnlineService . 
-ies:onlineServiceType rdfs:subPropertyOf rdf:type . 
-ies:onlineServiceType rdfs:range ies:ClassOfOnlineService . 
 ies:OnlineShop rdf:type rdfs:Class . 
 ies:OnlineShop sparx:guid "{980404C4-C512-4f36-B3B1-5088CC754DCF}" . 
 ies:OnlineShop rdfs:comment "An EventParticipant where a ResponsibleActor participates in a TradeEvent as an online shop" . 
@@ -2344,6 +2327,7 @@ ies:Person sparx:guid "{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}" .
 ies:Person rdfs:comment "A human being, living or dead. This also includes what may appear to be a person, but is in fact an Alias" . 
 ies:Person rdfs:subClassOf ies:ResponsibleActor . 
 ies:Person rdfs:subClassOf ies:PersonState . 
+ies:Person ies:powertype ies:ClassOfPerson . 
 ies:PersonalRadioHandset rdf:type rdfs:Class . 
 ies:PersonalRadioHandset sparx:guid "{9D84921F-87A3-4ee9-8A3D-A88F564295FA}" . 
 ies:PersonalRadioHandset rdfs:comment "A CommunicationsDevice for portable radio communications - e.g. a walkie-talkie" . 
@@ -2369,6 +2353,7 @@ ies:PersonState rdf:type rdfs:Class .
 ies:PersonState sparx:guid "{38F8B795-0BCE-4945-8C69-8678ED935C1A}" . 
 ies:PersonState rdfs:comment "A temporal state of a Person" . 
 ies:PersonState rdfs:subClassOf ies:ResponsibleActorState . 
+ies:PersonState ies:powertype ies:ClassOfPersonState . 
 ies:PersonTitle rdf:type rdfs:Class . 
 ies:PersonTitle sparx:guid "{CA36058B-835C-48ef-944A-2507708ADA71}" . 
 ies:PersonTitle rdfs:comment "The title associated with the name of the person." . 
@@ -2553,7 +2538,7 @@ ies:RegistrationNumber rdfs:comment "The registration number for the respective 
 ies:RegistrationNumber rdfs:subClassOf ies:Identifier . 
 ies:relationship rdf:type owl:ObjectProperty . 
 ies:relationship sparx:guid "{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}" . 
-ies:relationship rdfs:comment "A relationship represents an association between two Thing" . 
+ies:relationship rdfs:comment "A relationship represents an association between two Things" . 
 ies:relationship rdfs:range ies:Thing . 
 ies:relationship rdfs:domain ies:Thing . 
 ies:Religion rdf:type rdfs:Class . 
@@ -2637,6 +2622,7 @@ ies:ResponsibleActorState rdf:type rdfs:Class .
 ies:ResponsibleActorState sparx:guid "{100B93CD-937E-4fdd-8851-02D1DC07F5B6}" . 
 ies:ResponsibleActorState rdfs:comment "A temporal state of a ResponsibleActorNote:  this is the superclass of ResponsibleActor (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. " . 
 ies:ResponsibleActorState rdfs:subClassOf ies:ActorState . 
+ies:ResponsibleActorState ies:powertype ies:ClassOfResponsibleActorState . 
 ies:Retailer rdf:type rdfs:Class . 
 ies:Retailer sparx:guid "{BA2472AB-56F0-462e-9460-F0192ABCD979}" . 
 ies:Retailer rdfs:comment "An EventParticipant where a ResponsibleActor participates in a TradeEvent as a retailer" . 
