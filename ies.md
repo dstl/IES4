@@ -315,7 +315,7 @@ Otherwise, things to watch out for in the UML are:
 </ul>
 14. IES 4.2 had ClassOfElements and subProperties of rdf:type which encouraged extending the IES classes via ClassOfElements hierarchy rather than the Elements hierarchy. IES 4.3 prunes some of classes (breaking changes) to discourage this behaviour and encourage one approach of extending IES. This approach is documented in "Extending IES4 2024-03-v1.0 O.pdf". Pruned classes and properties include:
 <ul>
-	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted – just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
+	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted ï¿½ just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
 	<li>From <b>Operational </b>pattern - <b>ClassOfOperationalEvent</b>, <b>ClassOfCriminalActivity </b>and <b>typicallyTargets</b></li>
 	<li>From <b>Criminal </b>pattern - Deleted of <b>special forms of rdf:type</b>, <b>typeOfCriminality. Also deleted</b> <b>OffenceCode</b>.</li>
 	<li>From <b>Financial Account</b> pattern - Deleted special forms of rdf:type, <b>financialAccountType ClassOfFinancialAccount</b></li>
@@ -325,7 +325,9 @@ Otherwise, things to watch out for in the UML are:
 <ul>
 	<li>From <b>PaymentArtefact </b>pattern - <b>cardType </b>and <b>ClassOfPaymentArtefact</b>. Just extend <b>PaymentArtifact</b></li>
 	<li>From <b>Business </b>pattern - deleted <b>transferType </b>and <b>ClassOfMoneyTransfer</b>. Instead just extend <b>TravelBooking</b></li>
-	<li>From <b>Travel Booking</b> - deleted deleted <b>bookingType </b>and <b>ClassOfTravelBooking</b></li>
+	<li>From <b>Online </b>pattern - deleted <b>onlineServiceType </b>and <b>ClassOfOnlineService</b>. Instead just extend <b>OnlineService. </b>Also deleted ClassOfWebResource.</li>
+	<li>From <b>Travel Booking</b> - deleted <b>bookingType </b>and <b>ClassOfTravelBooking</b></li>
+	<li>From <b>Communications Account</b> - deleted <b>ClassOfAccount</b></li>
 </ul>
 15. Other changes:
 <ul>
@@ -668,7 +670,7 @@ Sometimes it is important to establish arbitrary categories of Representation - 
 * [hasName](#{C3A36E36-0C73-4af7-88E3-81C9243CE456})
 * [documentedBy](#{AC7C948A-F19C-4296-AC38-0FEE6A4C5E90})
 
-IES4 distinguishes between things in the real world and representations of those things. The representation pattern allows any <b>Thing</b>to have multiple representations - e.g. a book about the Ministry Of Defence, the DUNS number for the Ministry Of Defence, etc. 
+IES4 distinguishes between things in the real world and representations of those things. The representation pattern allows any <b>Thing</b> to have multiple representations - e.g. a book about the Ministry Of Defence, the DUNS number for the Ministry Of Defence, etc. 
 
 Representations specialise into <b>WorksOfDocumentation </b>(see Document diagram in Entities section), <b>Name</b>s, and <b>Identifier</b>s. <b>Name</b>s and<b> Identifier</b>s belong to <b>NamingScheme</b>s - this allows us to give context when an <b>Element </b>has more than one <b>Name </b>or <b>Identifier</b>. <b>NamingScheme</b>s may be implemented in <b>System</b>s and used by <b>Organisation</b>s. This replaces the idea of EnterpriseIdentity and SystemIdentity in IES3
 
@@ -1308,7 +1310,6 @@ The model is intended to be used hierarchically - e.g. an Address should be part
 * [onlineAccountProvider](#{2CF1B157-A2F6-41c8-8A87-7B82EEB71F40})
 * [ResponsibleActor](#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9})
 * [onlineServiceProvider](#{DEE1404A-AAC3-4d46-9BA3-8E097A55C7F5})
-* [onlineServiceType](#{2C9CEF7F-FA9A-4a0e-9E2C-AC3D3EB51D5C})
 * [URL](#{C23AB49C-0734-45b7-A383-8EEA305CDBE4})
 * [WebResource](#{46D508B4-F1CC-45d7-9E4B-BA8A3C88D82A})
 * [uriScheme](#{D97141BD-F6CF-4b10-B4E5-B1ECF6DF5178})
@@ -1346,7 +1347,6 @@ The model is intended to be used hierarchically - e.g. an Address should be part
 * [Cookie](#{C81B6EAD-8494-45ca-928C-21CB6D395C39})
 * [Device](#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461})
 * [cookieOnDevice](#{76D8EA41-E338-4db5-BB30-D642CF0F90EB})
-* [ClassOfOnlineService](#{FBE0CFC1-43C4-47e2-9EFE-20E291A1697C})
 
 This diagram covers the online aspects of IES. 
 
@@ -2327,7 +2327,7 @@ Most of the familial relationships from IES3 end up being relationships in IES4 
 * [Interested](#{B1D011F9-9585-49eb-97C4-86E82D6F0BCF})
 * [ResponsibleActor](#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9})
 
-The InterestedIn relationship links a ResponsibleActorState to something they are interested in (any Thing). The state is used, as people tend not to be interested in something for their whole lives. 
+The interestedIn relationship links a ResponsibleActorState to something they are interested in (any Thing). The state is used, as people tend not to be interested in something for their whole lives. 
 
 GeneralConcepts are often the things of interest (e.g. football, finance, animal husbandry, etc.), but there may be Entities that are also of interest (e.g. a financier being interested in Vodafone plc)
 
@@ -2985,9 +2985,6 @@ The CheckIn may be part of another Event - e.g. an <a href="$element://{78C33499
 ### <a id="{7E0C25C9-DD3A-463e-A481-7CA4EA4AC8C5}"></a>CinemaTicket
 An <a href="#{96989C30-99CC-4606-A8D4-DFD9421F0E34}"><font color="#0000ff"><u>EntertainmentTicket</u></font></a> that permits attendance at a cinema
 
-### <a id="{0077DA88-19EF-4c4c-B6C0-D418D5D77256}"></a>ClassOfAccount
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a>
-
 ### <a id="{E5C27DA8-7DF1-49ea-A9EC-ABE17AFD2047}"></a>ClassOfAmountOfMoney
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}"><font color="#0000ff"><u>AmountOfMoney</u></font></a>
 
@@ -3044,9 +3041,6 @@ The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>p
 ### <a id="{4520A91C-D956-46c1-9A81-93C4C0B12880}"></a>ClassOfMeasureValue
 A ClassOfRepresentation that is the powertype of MeasureValue
 
-### <a id="{FBE0CFC1-43C4-47e2-9EFE-20E291A1697C}"></a>ClassOfOnlineService
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a>
-
 ### <a id="{2A62C672-1757-4a2d-874B-C099C9DEC416}"></a>ClassOfPerson
 The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
 
@@ -3068,9 +3062,6 @@ A <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>Cla
 Examples:
 
 * Roles
-
-### <a id="{B1AAE4CA-CAB0-475f-B7D3-8CED404B1FC6}"></a>ClassOfWebResource
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{46D508B4-F1CC-45d7-9E4B-BA8A3C88D82A}"><font color="#0000ff"><u>WebResource</u></font></a>
 
 ### <a id="{2A5450A7-5B26-4605-A109-5CB26DD9A70F}"></a>CloseAccount
 An <a href="#{19E90CA4-F0EB-4245-826E-EDC278642B41}"><font color="#0000ff"><u>AccountAdminEvent</u></font></a> where an <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> is shut down.
@@ -3989,11 +3980,9 @@ ISO4217 three-letter currency code (e.g. USD, GBP, EUR, etc.)
 ISO639-3 three-letter language code
 
 ### <a id="{E9372543-434E-45d3-A1F0-8D711952D10A}"></a>iso8601PeriodRepresentation
-A ISO8601 datetime (as <a href="#{57843280-4451-47eb-9616-B0843FE4E2C5}"><font color="#0000ff"><u>xsd:dateTime</u></font></a>) that represents the ParticularPeriod.
+A ISO8601 datetime (as <a href="#{57843280-4451-47eb-9616-B0843FE4E2C5}"><font color="#0000ff"><u>xsd:dateTime</u></font></a>) that represents the ParticularPeriod. 
 
 This representation is also encoded in the URI of the period, this is an additional required <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: "2007-01-18T15:30:00"
-
-Note: the representation is also encoded in the URI of the period, this is an additional required <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> to enable querying by dateTime and SPARQL temporal operations.
 
 ### <a id="{BAEA86D9-C90E-4f8d-96F5-A01BB0C49711}"></a>isParticipantIn
 An <a href="#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC}"><font color="#0000ff"><u>isPartOf</u></font></a> that relates an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> it participates in.
@@ -4411,9 +4400,6 @@ A service provided on a computer network.
 ### <a id="{DEE1404A-AAC3-4d46-9BA3-8E097A55C7F5}"></a>onlineServiceProvider
 Relates an <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that owns/runs it
 
-### <a id="{2C9CEF7F-FA9A-4a0e-9E2C-AC3D3EB51D5C}"></a>onlineServiceType
-The class of <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a>
-
 ### <a id="{980404C4-C512-4f36-B3B1-5088CC754DCF}"></a>OnlineShop
 An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> as an online shop
 
@@ -4762,7 +4748,7 @@ For road vehicles this is often referred to as the VRN (vehicle registration num
 For aircraft the tail number is often used as a means of identification and/or registration.
 
 ### <a id="{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"></a>relationship
-A relationship represents an association between two Thing
+A relationship represents an association between two Things
 
 ### <a id="{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B}"></a>Religion
 An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> whose extent is all the people (PersonState) who share the same belief.
@@ -5438,6 +5424,9 @@ Note: this <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000f
 A <a href="#{92FC2C35-D40B-4393-BA0B-88849743FEB6}"><font color="#0000ff"><u>visits</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where they undertake religious worship
 
 Note: more often than not, this will be a statement of regular/occasional worship, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, <a href="$element://{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> would generally be used.
+
+### <a id="{D3AA70B6-BA62-459a-B3F8-C504C2AF6A0B}"></a>pluriverse
+An instance of Element which is the sum of all possible worlds including everything in those worlds. Put another way, this is everything in our world and everything in all possible worlds.
 
 ### <a id="{23C7BEF3-23D3-4d16-9401-16E537BE9B35}"></a>rdf:Statement
 
