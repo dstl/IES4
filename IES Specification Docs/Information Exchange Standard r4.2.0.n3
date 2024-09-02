@@ -3309,3 +3309,6 @@ ies:worshipsAt rdf:type owl:ObjectProperty .
 ies:worshipsAt sparx:guid "{475617C7-BEE3-4c5e-8749-9386B68A8DA5}" . 
 ies:worshipsAt rdfs:comment "A visits relationship between a ResponsibleActor and a Location where they undertake religious worshipNote: more often than not, this will be a statement of regular/occasional worship, so the instance of the ResponsibleActorState should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, inLocation would generally be used." . 
 ies:worshipsAt rdfs:subPropertyOf ies:visits . 
+ies:pluriverse rdf:type ies:Element . 
+ies:pluriverse sparx:guid "{D3AA70B6-BA62-459a-B3F8-C504C2AF6A0B}" . 
+ies:pluriverse rdfs:comment "An instance of Element which is the sum of all possible worlds including everything in those worlds. Put another way, this is everything in our world and everything in all possible worlds." . 
