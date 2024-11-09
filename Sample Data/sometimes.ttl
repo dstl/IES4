@@ -5,6 +5,8 @@
 
 data:LK176LPX a ies:RoadVehicle .
 data:Acacia_Gardens a ies:Location .
+iso8601:1987-06-01T09%3A00 a ies:ParticularPeriod .
+iso8601:1987-09-01T21%3A04 a ies:ParticularPeriod .
 data:LK176LPX_in_Acacia_Gardens a ies:DiscontinuousState ;
   ies:isStateOf data:LK176LPX ;
   ies:inLocation data:Acacia_Gardens .
@@ -12,5 +14,6 @@ data:LK176LPX_starts_parking a ies:BoundingState ;
   ies:isStartOf data:LK176LPX_in_Acacia_Gardens ;
   ies:inPeriod iso8601:1987-06-01T09%3A00 .
 data:LK176LPX_stops_parking a ies:BoundingState ;
-  ies:isStartOf data:LK176LPX_in_Acacia_Gardens ;
+  ies:isEndOf data:LK176LPX_in_Acacia_Gardens ;
   ies:inPeriod iso8601:1987-09-01T21%3A04 .
+

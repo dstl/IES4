@@ -3,8 +3,9 @@
 @prefix data: <http://data.gov.uk/testdata#> .
 @prefix iso8601: <http://iso.org/iso8601#> .
 
+data:AcmeInc a ies:Organisation .
 data:Fred a ies:Person .
-data:FredState2 a ies:Employed ;
+data:FredState2 a ies:PersonState ;
     ies:isStateOf data:Fred ;
     ies:worksFor data:AcmeInc .
 data:FredEmployedStart a ies:BoundingState ;

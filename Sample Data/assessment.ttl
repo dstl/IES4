@@ -31,7 +31,7 @@ data:FredHackingS1 ies:isPartOf data:Scenario1 ;
   a ies:Perpetrator .
 
 data:S1Assessment ies:assessed data:Scenario1 ;
-  ies:confidence "HIGH" ;
+  ies:hmlConfidence "HIGH" ;
   a ies:AssessToBeTrue .
 
 data:S1Assessor ies:isParticipantIn data:S1Assessment ;
@@ -39,7 +39,7 @@ data:S1Assessor ies:isParticipantIn data:S1Assessment ;
   a ies:Assessor .
 
 data:S2Assessment ies:assessed data:Scenario2 ;
-  ies:confidence "MEDIUM" ;
+  ies:hmlConfidence "MEDIUM" ;
   a ies:AssessToBeTrue .
 
 data:S2Assessor ies:isParticipantIn data:S2Assessment ;
@@ -47,7 +47,7 @@ data:S2Assessor ies:isParticipantIn data:S2Assessment ;
   a ies:Assessor .
 
 data:S3Assessment ies:assessed data:Scenario3 ;
-  ies:confidence "LOW" ;
+  ies:hmlConfidence "LOW" ;
   a ies:AssessToBeTrue .
 
 data:S3Assessor ies:isParticipantIn data:S3Assessment ;

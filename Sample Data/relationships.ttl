@@ -7,7 +7,7 @@ data:AcmeInc a ies:Organisation .
 data:Barry a ies:Person .
 data:Fred a ies:Person ;
     ies:siblingOf data:Barry .
-data:FredState2 a ies:Employed ;
+data:FredState2 a ies:PersonState ;
     ies:isStateOf data:Fred ;
     ies:worksFor data:AcmeInc .
 data:FredEmployedStart a ies:BoundingState ;
