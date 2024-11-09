@@ -19,32 +19,32 @@ data:VladInMeeting a ies:Attendance ;
   ies:isParticipationOf data:Vladimir .
 
 data:MeetingStart a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T100000Z ;
   ies:isStartOf data:TeamMeeting .
 data:MeetingEnd a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T13%3A00Z ;
+  ies:inPeriod iso8601:20180723T130000Z ;
   ies:isEndOf data:TeamMeeting .
 data:FredIntoMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T100000Z ;
   ies:isStartOf data:FredInMeeting .
 data:FredOutOfMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T13%3A00Z ;
+  ies:inPeriod iso8601:20180723T130000Z ;
   ies:isEndOf data:FredInMeeting .
 data:BarryIntoMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T100000Z ;
   ies:isStartOf data:BarryInMeeting .
 data:BarryOutOfMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A12Z ;
+  ies:inPeriod iso8601:20180723T101200Z ;
   ies:isEndOf data:BarryInMeeting .
 data:VladIntoMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A30Z ;
+  ies:inPeriod iso8601:20180723T103000Z ;
   ies:isStartOf data:VladInMeeting .
 data:VladOutOfMeeting a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T12%3A30Z ;
+  ies:inPeriod iso8601:20180723T123000Z ;
   ies:isEndOf data:VladInMeeting .
 
-iso8601:2018-07-23T10%3A00Z a ies:ParticularPeriod .
-iso8601:2018-07-23T10%3A30Z a ies:ParticularPeriod .
-iso8601:2018-07-23T10%3A12Z a ies:ParticularPeriod .
-iso8601:2018-07-23T12%3A30Z a ies:ParticularPeriod .
-iso8601:2018-07-23T13%3A00Z a ies:ParticularPeriod .
+iso8601:20180723T100000Z a ies:ParticularPeriod .
+iso8601:20180723T103000Z a ies:ParticularPeriod .
+iso8601:20180723T101200Z a ies:ParticularPeriod .
+iso8601:20180723T123000Z a ies:ParticularPeriod .
+iso8601:20180723T130000Z a ies:ParticularPeriod .

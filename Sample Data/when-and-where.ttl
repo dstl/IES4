@@ -5,21 +5,21 @@
 
 data:Fred a ies:Person .
 data:FredBorn a ies:BirthState ;
-  ies:inPeriod iso8601:1984-09-21T21%3A04 ;
+  ies:inPeriod iso8601:19840921T210400Z ;
   ies:inLocation data:UniversityHospital ;
   ies:isStartOf data:Fred .
 data:FredAtMedical a ies:PersonState ;
-  ies:inPeriod iso8601:1991-03-06T11%3A30 ;
+  ies:inPeriod iso8601:1991-03-06T113000Z ;
   ies:inLocation data:AcmeHealthCentre ;
   ies:isStateOf data:Fred .
 data:FredAtFatFighters a ies:PersonState ;
-  ies:inPeriod iso8601:2014-12-18T18%3A10 ;
+  ies:inPeriod iso8601:2014-12-18T181000Z ;
   ies:inLocation data:FatFightersClub ;
   ies:isStateOf data:Fred .
 
-iso8601:1984-09-21T21%3A04 a ies:ParticularPeriod .
-iso8601:1991-03-06T11%3A30 a ies:ParticularPeriod .
-iso8601:2014-12-18T18%3A10 a ies:ParticularPeriod .
+iso8601:19840921T210400Z a ies:ParticularPeriod .
+iso8601:19910306T113000Z a ies:ParticularPeriod .
+iso8601:20141218T181000Z a ies:ParticularPeriod .
 
 data:UniversityHospital a ies:Facility .
 data:AcmeHealthCentre a ies:Facility .

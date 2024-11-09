@@ -12,11 +12,11 @@ data:FredInMeeting a ies:MeetingChair ;
   ies:isParticipantIn data:TeamMeeting ;
   ies:isParticipationOf data:Fred .
 data:MeetingStart a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T10%3A00Z ;
+  ies:inPeriod iso8601:20180723T100000Z ;
   ies:isStartOf data:TeamMeeting .
 data:MeetingEnd a ies:BoundingState ;
-  ies:inPeriod iso8601:2018-07-23T13%3A00Z ;
+  ies:inPeriod iso8601:20180723T130000Z ;
   ies:isEndOf data:TeamMeeting .
 
-iso8601:2018-07-23T10%3A00Z a ies:ParticularPeriod .
-iso8601:2018-07-23T13%3A00Z a ies:ParticularPeriod .
+iso8601:20180723T100000Z a ies:ParticularPeriod .
+iso8601:20180723T130000Z a ies:ParticularPeriod .
