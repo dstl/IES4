@@ -1,4 +1,4 @@
-# Crown Copyright, 2020-2023
+# Crown Copyright, 2020-2024
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-# 
+#
 
 
 # baseURI: http://ies.data.gov.uk/ontology/ies4
@@ -26,7 +26,7 @@
 <http://ies.data.gov.uk/ontology/ies4> rdf:type owl:Ontology . 
 ies:Accent rdf:type rdfs:Class . 
 ies:Accent sparx:guid "{63409D9A-1779-444a-BF04-23C03B3B2F72}" . 
-ies:Accent rdfs:comment "An Characteristic whose members are people who all share the same national or regional accent" . 
+ies:Accent rdfs:comment "A Characteristic whose members are people who all share the same national or regional accent" . 
 ies:Accent rdfs:subClassOf ies:Characteristic . 
 ies:Account rdf:type rdfs:Class . 
 ies:Account sparx:guid "{31BFE794-924E-44e3-942E-ADC9ED19FBA1}" . 
@@ -94,12 +94,6 @@ ies:Address rdf:type rdfs:Class .
 ies:Address sparx:guid "{C90267B5-77A3-4b79-BD0D-7C50C3F4C333}" . 
 ies:Address rdfs:comment "A Location that can be specified by a postal address" . 
 ies:Address rdfs:subClassOf ies:RealEstate . 
-ies:addressRegion rdf:type owl:ObjectProperty . 
-ies:addressRegion sparx:guid "{3E452516-2523-4a86-974D-1D2251057E6E}" . 
-ies:addressRegion rdfs:comment "An inLocation relationship to indicate an Address is in a RegionOfCountry" . 
-ies:addressRegion rdfs:subPropertyOf ies:inLocation . 
-ies:addressRegion rdfs:domain ies:Address . 
-ies:addressRegion rdfs:range ies:RegionOfCountry . 
 ies:AdministeredAccount rdf:type rdfs:Class . 
 ies:AdministeredAccount sparx:guid "{D779F547-C1FB-4d48-9BB8-CB37B9D2F82C}" . 
 ies:AdministeredAccount rdfs:comment "An EventParticipant where a FinancialAccount is administered" . 
@@ -130,12 +124,6 @@ ies:Airport rdf:type rdfs:Class .
 ies:Airport sparx:guid "{82E3793F-D0D1-40ca-927C-7A6FEF913503}" . 
 ies:Airport rdfs:comment "A Port used for air travel" . 
 ies:Airport rdfs:subClassOf ies:Port . 
-ies:allAuthorisedAgainst rdf:type owl:ObjectProperty . 
-ies:allAuthorisedAgainst sparx:guid "{97E2E16A-5D4C-41bd-AF32-8DF2057A35BA}" . 
-ies:allAuthorisedAgainst rdfs:comment "A relationship linking an AuthorisedEventClass to an ExchangedItem to assert that all instances of the AuthorisedEventClass were Events acting upon the ExchangedItem.Note: this is generally a law-enforcement concern where a warrant (EndToEndAuthorisation) is granted against people, devices, etc. (GrantOfAuthority)." . 
-ies:allAuthorisedAgainst rdfs:subPropertyOf ies:relationship . 
-ies:allAuthorisedAgainst rdfs:domain ies:AuthorisedEventClass . 
-ies:allAuthorisedAgainst rdfs:range ies:ExchangedItem . 
 ies:allHaveCharacteristic rdf:type owl:ObjectProperty . 
 ies:allHaveCharacteristic sparx:guid "{81A1E70D-6ADB-4843-BCA6-C0A710E7716B}" . 
 ies:allHaveCharacteristic rdfs:comment "An rdfs:subClassOf relationship that asserts that all instances of a ClassOfElement share a particular Characteristic or Measuree.g. all London buses being red, all heavyweight boxers weighing more than 200lbs" . 
@@ -149,7 +137,7 @@ ies:allHaveDisposition rdfs:comment "An rdfs:subClassOf relationship that assert
 ies:allHaveDisposition rdfs:subPropertyOf ies:relationship . 
 ies:allHaveDisposition rdfs:subPropertyOf rdfs:subClassOf . 
 ies:allHaveDisposition rdfs:range ies:DispositionalClass . 
-ies:allHaveDisposition rdfs:domain ies:Element . 
+ies:allHaveDisposition rdfs:domain ies:ClassOfElement . 
 ies:Alliance rdf:type rdfs:Class . 
 ies:Alliance sparx:guid "{3D83E15F-ACA8-48e4-8C7B-84580807E06F}" . 
 ies:Alliance rdfs:comment "An Organisation made up of allies - these could be people or organisations, and the alliance may be quite loose." . 
@@ -173,6 +161,7 @@ ies:AmountOfMoney rdf:type rdfs:Class .
 ies:AmountOfMoney sparx:guid "{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}" . 
 ies:AmountOfMoney rdfs:comment "A specific amount of a given currency" . 
 ies:AmountOfMoney rdfs:subClassOf ies:Asset . 
+ies:AmountOfMoney ies:powertype ies:ClassOfAmountOfMoney . 
 ies:AmountOfSubstance rdf:type rdfs:Class . 
 ies:AmountOfSubstance sparx:guid "{324D0329-1299-45cc-92A5-270134E66512}" . 
 ies:AmountOfSubstance rdfs:comment "The Measure of the stoichiometric quantity of substance (usually measured in moles)" . 
@@ -227,21 +216,26 @@ ies:assessed rdfs:domain ies:AssessToBeTrue .
 ies:assessed rdfs:range rdfs:Resource . 
 ies:assessedToBeTheSameAs rdf:type owl:ObjectProperty . 
 ies:assessedToBeTheSameAs sparx:guid "{6A1C6C65-D671-4ea3-9184-044AE2A802CF}" . 
-ies:assessedToBeTheSameAs rdfs:comment "A relationship that asserts two ExchangedItems that may have been previously judged to be different are in fact the same thing. WARNING:  by the same we mean they occupy the same space for the same period of time - i.e. not two different things in the same place at different times, and not the same physical item at two different periods of time. The Identifier and State patterns should do most of what is needed here, and it is extremely rare that this would ever be needed. Do not use unless absolutely necessary. " . 
+ies:assessedToBeTheSameAs rdfs:comment "A relationship that asserts two Things that may have been previously judged to be different are in fact the same thing. WARNING:  by the same we mean they occupy the same space for the same period of time - i.e. not two different things in the same place at different times, and not the same physical item at two different periods of time. The Identifier and State patterns should do most of what is needed here, and it is extremely rare that this would ever be needed. Do not use unless absolutely necessary. " . 
 ies:assessedToBeTheSameAs rdfs:subPropertyOf ies:relationship . 
+ies:Assessment rdf:type rdfs:Class . 
+ies:Assessment sparx:guid "{E4AB33D9-9978-446f-9C39-4F4C41FB3D45}" . 
+ies:Assessment rdfs:comment "An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thing�s possibility, categorisation or other qualitative aspect.Examples include:- Having HIGH confidence that Anne committed the murder.- Assessing a statement made in an internet article as being true or false.- Assessing a house to having an energy performance of B- Assessing the odds of England winning the World Cup as 20-1" . 
+ies:Assessment rdfs:subClassOf ies:Event . 
 ies:Assessor rdf:type rdfs:Class . 
 ies:Assessor sparx:guid "{80F9B97D-2C7F-4978-83A3-BE934DD4E1FF}" . 
 ies:Assessor rdfs:comment "An EventParticipant where an Actor assesses something to be true." . 
 ies:Assessor rdfs:subClassOf ies:ActiveEventParticipant . 
 ies:AssessToBeTrue rdf:type rdfs:Class . 
 ies:AssessToBeTrue sparx:guid "{7150208D-A02E-45ed-8279-44843F4DA897}" . 
-ies:AssessToBeTrue rdfs:comment "An Event where a fact is assessed to be true by a Actor (i.e. a Person or Device)An AssessToBeTrue shall have one and only one hmlConfidence attribute (i.e. this is mandatory)" . 
-ies:AssessToBeTrue rdfs:subClassOf ies:Event . 
+ies:AssessToBeTrue rdfs:comment "An Assessment where a fact is assessed to be true by a Actor (i.e. a Person or Device)An AssessToBeTrue shall have one and only one hmlConfidence attribute (i.e. this is mandatory)" . 
+ies:AssessToBeTrue rdfs:subClassOf ies:Assessment . 
 ies:Asset rdf:type rdfs:Class . 
 ies:Asset sparx:guid "{40231334-5ACC-4dd4-A8C1-05012E2170E0}" . 
 ies:Asset rdfs:comment "An Entity that is either man-made (or defined - see Rights) or whose extent is defined in such a way as to specify ownership - e.g. a parcel of real estate" . 
 ies:Asset rdfs:subClassOf ies:Entity . 
 ies:Asset rdfs:subClassOf ies:AssetState . 
+ies:Asset ies:powertype ies:ClassOfAsset . 
 ies:AssetState rdf:type rdfs:Class . 
 ies:AssetState sparx:guid "{CA196722-9531-4eb4-A8CF-B9A5145CDCFD}" . 
 ies:AssetState rdfs:comment "A temporal state of an Asset" . 
@@ -272,8 +266,8 @@ ies:Attendance rdfs:subClassOf ies:PersonState .
 ies:Attendance rdfs:subClassOf ies:ActiveEventParticipant . 
 ies:attribute rdf:type owl:DatatypeProperty . 
 ies:attribute sparx:guid "{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}" . 
-ies:attribute rdfs:comment "A feature or property of an ExchangedItemNote: In IES4 it is important to distinguish between names and attributes - attribute should never be used to identify or name something - for that, use Name or Identifier." . 
-ies:attribute rdfs:domain ies:ExchangedItem . 
+ies:attribute rdfs:comment "A feature or property of a Thing. Note: In IES4 it is important to distinguish between names and attributes - attribute should never be used to identify or name something - for that, use Name or Identifier." . 
+ies:attribute rdfs:domain ies:Thing . 
 ies:AtWar rdf:type rdfs:Class . 
 ies:AtWar sparx:guid "{89953404-8A71-46ef-8F7B-90C12EE286FD}" . 
 ies:AtWar rdfs:comment "An InDisagreement where the parties have declared war" . 
@@ -302,10 +296,6 @@ ies:AuthorisedActor rdf:type rdfs:Class .
 ies:AuthorisedActor sparx:guid "{F69279D2-BA11-4a31-8739-0D91EF5B9BEF}" . 
 ies:AuthorisedActor rdfs:comment "An ActiveEventParticipant where a ResponsibleActor is granted authority to act in a GrantOfAuthority " . 
 ies:AuthorisedActor rdfs:subClassOf ies:ActiveEventParticipant . 
-ies:AuthorisedEventClass rdf:type rdfs:Class . 
-ies:AuthorisedEventClass sparx:guid "{057C04F9-EB8A-4e21-9CF8-2D98038570FB}" . 
-ies:AuthorisedEventClass rdfs:comment "A ClassOfEvent where the type activity described is either authorised or required to be authorised.An instance of an AuthorisedEventClass will most often also be a TimeBoundedClass as it is rare to see requests or grants of authority with no time limit. An AuthorisedEventClass will usually be of the form of Event type A against Entity X = e.g. Arrest of John Smith, Surveillance of 23 Acacia Gardens. The link from this class to the entity involved is via the allAuthorisedAgainst relationship." . 
-ies:AuthorisedEventClass rdfs:subClassOf ies:ClassOfEvent . 
 ies:Authoriser rdf:type rdfs:Class . 
 ies:Authoriser sparx:guid "{466DCDFB-B642-468b-A47A-E83291A86C6B}" . 
 ies:Authoriser rdfs:comment "An ActiveEventParticipant where a ResponsibleActor acts as the authoriser (sign off) in a GrantOfAuthority " . 
@@ -369,13 +359,6 @@ ies:BookingReference rdf:type rdfs:Class .
 ies:BookingReference sparx:guid "{D31E959A-6354-40e7-8370-1FE5246624AD}" . 
 ies:BookingReference rdfs:comment "An Identifier that is  notionally unique number that is allocated to a TravelBooking.Note that Booking Reference Numbers are recycled and so are not unique in their own right. When combined with the BookingDate it is potentially possible to identify a specific booking." . 
 ies:BookingReference rdfs:subClassOf ies:Identifier . 
-ies:bookingType rdf:type owl:ObjectProperty . 
-ies:bookingType sparx:guid "{C52879E4-919A-4dee-82EB-3CB11DD69E56}" . 
-ies:bookingType rdfs:comment "Relates a TravelBooking to a ClassOfTravelBooking to indicate the method of booking" . 
-ies:bookingType rdfs:subPropertyOf ies:relationship . 
-ies:bookingType rdfs:subPropertyOf rdf:type . 
-ies:bookingType rdfs:domain ies:TravelBooking . 
-ies:bookingType rdfs:range ies:ClassOfTravelBooking . 
 ies:BoundingState rdf:type rdfs:Class . 
 ies:BoundingState sparx:guid "{892345CD-9FA7-4982-978D-B6D3ABAE839C}" . 
 ies:BoundingState rdfs:comment "A ContinuousState that occurs at the beginning or end of an Element The date/time of the state can be specified using the inPeriod relationship. " . 
@@ -414,13 +397,6 @@ ies:CardNumber rdf:type rdfs:Class .
 ies:CardNumber sparx:guid "{087F3453-B1D7-41e6-B79F-31B123ED0D68}" . 
 ies:CardNumber rdfs:comment "An Identifier that is the long number on the face of the card (PaymentArtefact)" . 
 ies:CardNumber rdfs:subClassOf ies:Identifier . 
-ies:cardType rdf:type owl:ObjectProperty . 
-ies:cardType sparx:guid "{CF6B72ED-DF58-42e1-A72A-1F047287B80D}" . 
-ies:cardType rdfs:comment "The type of a PaymentArtefact" . 
-ies:cardType rdfs:subPropertyOf ies:relationship . 
-ies:cardType rdfs:domain ies:PaymentArtefact . 
-ies:cardType rdfs:range ies:ClassOfPaymentArtefact . 
-ies:cardType rdfs:subPropertyOf rdf:type . 
 ies:CardUsed rdf:type rdfs:Class . 
 ies:CardUsed sparx:guid "{1B9C8EB0-69A7-4fe7-8358-0F6067439C42}" . 
 ies:CardUsed rdfs:comment "An EventParticipant where a PaymentArtefact is participant in a TradeEvent" . 
@@ -478,10 +454,6 @@ ies:CinemaTicket rdf:type rdfs:Class .
 ies:CinemaTicket sparx:guid "{7E0C25C9-DD3A-463e-A481-7CA4EA4AC8C5}" . 
 ies:CinemaTicket rdfs:comment "An EntertainmentTicket that permits attendance at a cinema" . 
 ies:CinemaTicket rdfs:subClassOf ies:EntertainmentTicket . 
-ies:ClassOfAccount rdf:type rdfs:Class . 
-ies:ClassOfAccount sparx:guid "{0077DA88-19EF-4c4c-B6C0-D418D5D77256}" . 
-ies:ClassOfAccount rdfs:comment "The powertype of Account" . 
-ies:ClassOfAccount rdfs:subClassOf ies:ClassOfEntity . 
 ies:ClassOfAmountOfMoney rdf:type rdfs:Class . 
 ies:ClassOfAmountOfMoney sparx:guid "{E5C27DA8-7DF1-49ea-A9EC-ABE17AFD2047}" . 
 ies:ClassOfAmountOfMoney rdfs:comment "The powertype of AmountOfMoney" . 
@@ -492,27 +464,19 @@ ies:ClassOfAsset rdfs:comment "The powertype of Asset- i.e. a ClassOfEntity whos
 ies:ClassOfAsset rdfs:subClassOf ies:ClassOfEntity . 
 ies:ClassOfClassOfElement rdf:type rdfs:Class . 
 ies:ClassOfClassOfElement sparx:guid "{85305668-DE1A-454a-87EE-346A221E846C}" . 
-ies:ClassOfClassOfElement rdfs:comment "An rdfs:Class and an ExchangedItem whose instances are classes of classes of Element" . 
-ies:ClassOfClassOfElement rdfs:subClassOf ies:ExchangedItem . 
+ies:ClassOfClassOfElement rdfs:comment "An rdfs:Class and an Thing whose instances are classes of classes of Element" . 
+ies:ClassOfClassOfElement rdfs:subClassOf ies:Thing . 
 ies:ClassOfClassOfElement rdfs:subClassOf rdfs:Class . 
 ies:ClassOfClassOfEntity rdf:type rdfs:Class . 
 ies:ClassOfClassOfEntity sparx:guid "{1F9AC8FE-3862-48d6-A3DC-E429B08D2B26}" . 
 ies:ClassOfClassOfEntity rdfs:comment "The powertype of ClassOfEntity" . 
 ies:ClassOfClassOfEntity rdfs:subClassOf ies:ClassOfClassOfElement . 
-ies:ClassOfCriminalActivity rdf:type rdfs:Class . 
-ies:ClassOfCriminalActivity sparx:guid "{69868D83-C3BD-4877-AB5C-374B4C6F4A7E}" . 
-ies:ClassOfCriminalActivity rdfs:comment "The powertype of CriminalActivityExample instances:* Burglary* Fraud* Murder* Driving sheep across London Bridge if not a freeman of the City* Being Welsh inside the walls of Chester outside daylight hours" . 
-ies:ClassOfCriminalActivity rdfs:subClassOf ies:ClassOfEvent . 
-ies:ClassOfDevice rdf:type rdfs:Class . 
-ies:ClassOfDevice sparx:guid "{09F9136C-9069-47ec-A58E-FC26CF9BA55E}" . 
-ies:ClassOfDevice rdfs:comment "The powertype of Device- i.e. a ClassOfEntity whose instances are classes of DeviceExamples:* Smartphone* Apple iPhone 6S" . 
-ies:ClassOfDevice rdfs:subClassOf ies:ClassOfElement . 
-ies:ClassOfDevice rdfs:subClassOf ies:ClassOfAsset . 
 ies:ClassOfElement rdf:type rdfs:Class . 
 ies:ClassOfElement sparx:guid "{3C13E07D-5796-4d03-9EBC-C75277E87CA4}" . 
-ies:ClassOfElement rdfs:comment "An rdfs:Class and an ExchangedItem whose instances are classes of ElementExamples:	Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);	Political Ideologies	Weapons	Days of the week	Standard procedures	etc." . 
-ies:ClassOfElement rdfs:subClassOf ies:ExchangedItem . 
+ies:ClassOfElement rdfs:comment "An rdfs:Class and an Thing whose instances are classes of Element. Examples:	Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);	Political Ideologies	Weapons	Days of the week	Standard procedures	etc." . 
+ies:ClassOfElement rdfs:subClassOf ies:Thing . 
 ies:ClassOfElement rdfs:subClassOf rdfs:Class . 
+ies:ClassOfElement ies:powertype ies:ClassOfClassOfElement . 
 ies:ClassOfEntity rdf:type rdfs:Class . 
 ies:ClassOfEntity sparx:guid "{D1B2FB30-36CA-4012-B85F-514E270BF541}" . 
 ies:ClassOfEntity rdfs:comment "The powertype of Entity - i.e. a ClassOfElement whose instances are classes of EntityExamples:∑ Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);∑ Weapons∑ Etc." . 
@@ -522,10 +486,6 @@ ies:ClassOfEvent rdf:type rdfs:Class .
 ies:ClassOfEvent sparx:guid "{4EA194C6-BBF9-45ab-85DE-5802D8C3A531}" . 
 ies:ClassOfEvent rdfs:comment "An ClassOfElement whose instances are classes of Event. This is the powertype of Event.Examples:* Conference* Football Match* Annual General Meeting" . 
 ies:ClassOfEvent rdfs:subClassOf ies:ClassOfElement . 
-ies:ClassOfFinancialAccount rdf:type rdfs:Class . 
-ies:ClassOfFinancialAccount sparx:guid "{901334E9-238C-4d05-8F85-FE9A8E537BA1}" . 
-ies:ClassOfFinancialAccount rdfs:comment "The powertype of FinancialAccountExamples:* Savings Account* Current Account* Credit Card Account" . 
-ies:ClassOfFinancialAccount rdfs:subClassOf ies:ClassOfAccount . 
 ies:ClassOfIndividualDocument rdf:type rdfs:Class . 
 ies:ClassOfIndividualDocument sparx:guid "{CCC8FA06-CDA8-491d-BFFC-0A88D6A565B1}" . 
 ies:ClassOfIndividualDocument rdfs:comment "The powertype of IndividualDocument" . 
@@ -534,27 +494,6 @@ ies:ClassOfMeasureValue rdf:type rdfs:Class .
 ies:ClassOfMeasureValue sparx:guid "{4520A91C-D956-46c1-9A81-93C4C0B12880}" . 
 ies:ClassOfMeasureValue rdfs:comment "A ClassOfRepresentation that is the powertype of MeasureValue" . 
 ies:ClassOfMeasureValue rdfs:subClassOf ies:ClassOfRepresentation . 
-ies:ClassOfMoneyTransfer rdf:type rdfs:Class . 
-ies:ClassOfMoneyTransfer sparx:guid "{F1AACA77-BA24-41cb-9AB8-7AF9C1B9971D}" . 
-ies:ClassOfMoneyTransfer rdfs:comment "The powertype of MoneyTransferExamples:* BACS* CHAPS* Paypal payment" . 
-ies:ClassOfMoneyTransfer rdfs:subClassOf ies:ClassOfEvent . 
-ies:ClassOfOnlineService rdf:type rdfs:Class . 
-ies:ClassOfOnlineService sparx:guid "{FBE0CFC1-43C4-47e2-9EFE-20E291A1697C}" . 
-ies:ClassOfOnlineService rdfs:comment "The powertype of OnlineService" . 
-ies:ClassOfOnlineService rdfs:subClassOf ies:ClassOfWebResource . 
-ies:ClassOfOperationalEvent rdf:type rdfs:Class . 
-ies:ClassOfOperationalEvent sparx:guid "{64CE6FEA-7B05-4813-BD55-D56C02A54486}" . 
-ies:ClassOfOperationalEvent rdfs:comment "The powertype of OperationalEventExamples:* Counter-Narcotics Operation* Murder Investigation" . 
-ies:ClassOfOperationalEvent rdfs:subClassOf ies:ClassOfEvent . 
-ies:ClassOfOrganisation rdf:type rdfs:Class . 
-ies:ClassOfOrganisation sparx:guid "{5B21F148-72C1-45e6-A3E3-F2D8B33729D3}" . 
-ies:ClassOfOrganisation rdfs:comment "The powertype of OrganisationNote: care should be exercised when using ClassOfOrganisation - it should only be used for classifications that apply to the whole life of the organisation." . 
-ies:ClassOfOrganisation rdfs:subClassOf ies:ClassOfResponsibleActor . 
-ies:ClassOfPaymentArtefact rdf:type rdfs:Class . 
-ies:ClassOfPaymentArtefact sparx:guid "{46144D4F-5A9F-432b-B533-26C0399DBB34}" . 
-ies:ClassOfPaymentArtefact rdfs:comment "The powertype of PaymentArtefactExamples:* Visa* Oyster* Selfridges Store Card" . 
-ies:ClassOfPaymentArtefact rdfs:subClassOf ies:ClassOfElement . 
-ies:ClassOfPaymentArtefact rdfs:subClassOf ies:ClassOfAsset . 
 ies:ClassOfPerson rdf:type rdfs:Class . 
 ies:ClassOfPerson sparx:guid "{2A62C672-1757-4a2d-874B-C099C9DEC416}" . 
 ies:ClassOfPerson rdfs:comment "The powertype of Person" . 
@@ -579,18 +518,6 @@ ies:ClassOfState rdf:type rdfs:Class .
 ies:ClassOfState sparx:guid "{0358DDAB-D22C-4ee5-8F9A-CF18F3E432BD}" . 
 ies:ClassOfState rdfs:comment "A ClassOfElement whose instances are classes of States. This is the powertype of State.Examples:* Roles" . 
 ies:ClassOfState rdfs:subClassOf ies:ClassOfElement . 
-ies:ClassOfTravelBooking rdf:type rdfs:Class . 
-ies:ClassOfTravelBooking sparx:guid "{44D4DD7C-201A-447d-8BCE-C8B3E3E6A890}" . 
-ies:ClassOfTravelBooking rdfs:comment "The powertype of TravelBookingExamples:INTERNET BookingTELEPHONE Booking" . 
-ies:ClassOfTravelBooking rdfs:subClassOf ies:ClassOfEvent . 
-ies:ClassOfTravelVisa rdf:type rdfs:Class . 
-ies:ClassOfTravelVisa sparx:guid "{2BADCB50-7A19-4d7b-A46E-8369F8B00D57}" . 
-ies:ClassOfTravelVisa rdfs:comment "The powertype of TravelVisa" . 
-ies:ClassOfTravelVisa rdfs:subClassOf ies:ClassOfIndividualDocument . 
-ies:ClassOfWebResource rdf:type rdfs:Class . 
-ies:ClassOfWebResource sparx:guid "{B1AAE4CA-CAB0-475f-B7D3-8CED404B1FC6}" . 
-ies:ClassOfWebResource rdfs:comment "The powertype of WebResource" . 
-ies:ClassOfWebResource rdfs:subClassOf ies:ClassOfEntity . 
 ies:CloseAccount rdf:type rdfs:Class . 
 ies:CloseAccount sparx:guid "{2A5450A7-5B26-4605-A109-5CB26DD9A70F}" . 
 ies:CloseAccount rdfs:comment "An AccountAdminEvent where an Account is shut down." . 
@@ -607,7 +534,7 @@ ies:CoLocation rdfs:comment "An Event where the activity is uncertain, but it is
 ies:CoLocation rdfs:subClassOf ies:Event . 
 ies:Colour rdf:type rdfs:Class . 
 ies:Colour sparx:guid "{B10D22FB-1D6A-47c9-B1C0-E870D43A5C52}" . 
-ies:Colour rdfs:comment "An Characteristic whose members all have the same colour" . 
+ies:Colour rdfs:comment "A Characteristic whose members all have the same colour" . 
 ies:Colour rdfs:subClassOf ies:Characteristic . 
 ies:CommercialOrganisation rdf:type rdfs:Class . 
 ies:CommercialOrganisation sparx:guid "{1456439C-65C9-4a39-A743-09A7D0FBF248}" . 
@@ -782,7 +709,6 @@ ies:currencyAmount rdfs:domain ies:AmountOfMoney .
 ies:currencyDenomination rdf:type owl:ObjectProperty . 
 ies:currencyDenomination sparx:guid "{AE8A5533-9C08-46e7-8131-E3D119F6AAE3}" . 
 ies:currencyDenomination rdfs:comment "The currency in which the AmountOfMoney is denominated" . 
-ies:currencyDenomination rdfs:subPropertyOf ies:relationship . 
 ies:currencyDenomination rdfs:domain ies:AmountOfMoney . 
 ies:currencyDenomination rdfs:range ies:Currency . 
 ies:currencyDenomination rdfs:subPropertyOf rdf:type . 
@@ -934,9 +860,9 @@ ies:distrusts rdfs:range ies:ResponsibleActor .
 ies:distrusts rdfs:domain ies:ResponsibleActorState . 
 ies:documentedBy rdf:type owl:ObjectProperty . 
 ies:documentedBy sparx:guid "{AC7C948A-F19C-4296-AC38-0FEE6A4C5E90}" . 
-ies:documentedBy rdfs:comment "An isRepresentedAs relationship that asserts a WorkOfDocumentation is about an ExchangedItem" . 
+ies:documentedBy rdfs:comment "An isRepresentedAs relationship that asserts a WorkOfDocumentation is about an Thing" . 
 ies:documentedBy rdfs:subPropertyOf ies:isRepresentedAs . 
-ies:documentedBy rdfs:domain ies:ExchangedItem . 
+ies:documentedBy rdfs:domain ies:Thing . 
 ies:documentedBy rdfs:range ies:WorkOfDocumentation . 
 ies:DocumentFormat rdf:type rdfs:Class . 
 ies:DocumentFormat sparx:guid "{ACB44E46-7A30-4911-A9F0-3D5412FB3725}" . 
@@ -990,8 +916,9 @@ ies:ElectricCurrent rdfs:comment "The Measure of the flow of electric chargeNote
 ies:ElectricCurrent rdfs:subClassOf ies:StandardMeasure . 
 ies:Element rdf:type rdfs:Class . 
 ies:Element sparx:guid "{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}" . 
-ies:Element rdfs:comment "An ExchangedItem that has a spatial extent and can have start and end dates" . 
-ies:Element rdfs:subClassOf ies:ExchangedItem . 
+ies:Element rdfs:comment "An Thing that has a spatial extent and can have start and end dates" . 
+ies:Element rdfs:subClassOf ies:Thing . 
+ies:Element ies:powertype ies:ClassOfElement . 
 ies:EmailAccount rdf:type rdfs:Class . 
 ies:EmailAccount sparx:guid "{FCBB35B9-704B-46c1-8054-10B7DA7EB8F8}" . 
 ies:EmailAccount rdfs:comment "A CommunicationsAccount that is used to administer the use of one or more e-mail addresses." . 
@@ -1088,13 +1015,10 @@ ies:EvidentialPhotograph rdf:type rdfs:Class .
 ies:EvidentialPhotograph sparx:guid "{AFFFF30F-B274-4466-B0F2-D2A6A78E1832}" . 
 ies:EvidentialPhotograph rdfs:comment "Relates a Surveillance Event to a Document that is the evidence resulting from the Surveillance" . 
 ies:EvidentialPhotograph rdfs:subClassOf ies:EventParticipant . 
-ies:ExchangedItem rdf:type rdfs:Class . 
-ies:ExchangedItem sparx:guid "{485CBF1A-04FF-4741-8471-46A03D28C406}" . 
-ies:ExchangedItem rdfs:comment "An ExchangedItem is a real world ëthingí about which a sender might retain specific knowledge, some or all of which is needed to be shared (exchanged) with one or more recipients." . 
-ies:ExchangedItem rdfs:subClassOf rdfs:Resource . 
 ies:ExchangePayload rdf:type rdfs:Class . 
 ies:ExchangePayload sparx:guid "{749B002E-37B1-4754-B3B2-96642B3CF4A7}" . 
 ies:ExchangePayload rdfs:comment "A marker object that shall be present in all IES exchange files. This object is the domain for all meta-data about the file.Wherever possible, Dublin-Core meta-data tags should be used on an ExchangePayload. If locally defined properties are needed, then these may also be defined and included in the exchange file. " . 
+ies:ExchangePayload rdfs:subClassOf rdfs:Resource . 
 ies:excludedFrom rdf:type owl:ObjectProperty . 
 ies:excludedFrom sparx:guid "{883B5479-62DD-47a4-BC14-9A11835D820B}" . 
 ies:excludedFrom rdfs:comment "A Relationship between a ResponsibleActorState and a Location they are not allowed to enter.Note: any additional information about how or why the exclusion is in place should be added to the state" . 
@@ -1125,13 +1049,15 @@ ies:FinancialAccount rdf:type rdfs:Class .
 ies:FinancialAccount sparx:guid "{44DAC574-2A2E-44bc-ACD2-236811FA8D29}" . 
 ies:FinancialAccount rdfs:comment "An Account held for financial management purposes." . 
 ies:FinancialAccount rdfs:subClassOf ies:Account . 
-ies:financialAccountType rdf:type owl:ObjectProperty . 
-ies:financialAccountType sparx:guid "{94BC4F7F-3DC3-4e26-8E2B-26E7D9B1A760}" . 
-ies:financialAccountType rdfs:comment "Relates a FinancialAccount to its type. Note, that a given FinancialAccount may have more than one ClassOfFinancialAccount - e.g. a Business Account that is also a Current Account" . 
-ies:financialAccountType rdfs:subPropertyOf ies:relationship . 
-ies:financialAccountType rdfs:subPropertyOf rdf:type . 
-ies:financialAccountType rdfs:range ies:ClassOfFinancialAccount . 
-ies:financialAccountType rdfs:domain ies:FinancialAccount . 
+ies:FiniteClassOfElement rdf:type rdfs:Class . 
+ies:FiniteClassOfElement sparx:guid "{06BAC6F4-F6B2-4be1-95C5-8E31C34796CB}" . 
+ies:FiniteClassOfElement rdfs:comment "A ClassOfElement whose instances are classes with finite, fixed  membership of Elements." . 
+ies:FiniteClassOfElement rdfs:subClassOf ies:ClassOfElement . 
+ies:finiteMembershipCount rdf:type owl:DatatypeProperty . 
+ies:finiteMembershipCount sparx:guid "{FF3DDC24-010C-4cd2-BF97-7464EAF45317}" . 
+ies:finiteMembershipCount rdfs:comment "An integer count of members of a FiniteClassOfElement. " . 
+ies:finiteMembershipCount rdfs:subPropertyOf ies:attribute . 
+ies:finiteMembershipCount rdfs:domain ies:FiniteClassOfElement . 
 ies:FirstLineOfAddress rdf:type rdfs:Class . 
 ies:FirstLineOfAddress sparx:guid "{8B6DD87E-3D76-4836-9201-1244B80CDC69}" . 
 ies:FirstLineOfAddress rdfs:comment "The first line of the Address including the number of the dwelling and the street name." . 
@@ -1235,12 +1161,6 @@ ies:GovernmentOrganisation rdf:type rdfs:Class .
 ies:GovernmentOrganisation sparx:guid "{0D042066-06C8-48d6-8387-500CF8EE2592}" . 
 ies:GovernmentOrganisation rdfs:comment "An Organisation that is part of, or controlled by a national or local Government" . 
 ies:GovernmentOrganisation rdfs:subClassOf ies:Organisation . 
-ies:grantedActivityType rdf:type owl:ObjectProperty . 
-ies:grantedActivityType sparx:guid "{289608A2-3F9D-413a-98AB-25579C370924}" . 
-ies:grantedActivityType rdfs:comment "A relationship linking an GrantOfAuthority to a AuthorisedEventClass that the authorisation grants.For example,  granting authorisation to travel" . 
-ies:grantedActivityType rdfs:subPropertyOf ies:relationship . 
-ies:grantedActivityType rdfs:domain ies:GrantOfAuthority . 
-ies:grantedActivityType rdfs:range ies:AuthorisedEventClass . 
 ies:GrantOfAuthority rdf:type rdfs:Class . 
 ies:GrantOfAuthority sparx:guid "{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}" . 
 ies:GrantOfAuthority rdfs:comment "An AuthorisationStage where a ResponsibleActor grants another ResponsibleActor authority to act." . 
@@ -1255,7 +1175,7 @@ ies:groupName rdfs:comment "A name given to a GroupOfItems" .
 ies:groupName rdfs:domain ies:GroupOfItems . 
 ies:GroupOfItems rdf:type rdfs:Class . 
 ies:GroupOfItems sparx:guid "{04C2111A-D958-4a95-9271-7208B849DDD8}" . 
-ies:GroupOfItems rdfs:comment "A collection of ExchangedItem that have been gathered together for a purpose. Note: The same ExchangedItem can be in more than one GroupOfItems" . 
+ies:GroupOfItems rdfs:comment "A collection of Thing that have been gathered together for a purpose. Note: The same Thing can be in more than one GroupOfItems" . 
 ies:GroupOfItems rdfs:subClassOf rdfs:Resource . 
 ies:Hacking rdf:type rdfs:Class . 
 ies:Hacking sparx:guid "{2AC7FDAB-7BB8-41ee-B558-AEBFE01274F2}" . 
@@ -1265,12 +1185,6 @@ ies:handlingCaveat rdf:type owl:DatatypeProperty .
 ies:handlingCaveat sparx:guid "{1C02B06E-3159-48f6-9575-64B62765498B}" . 
 ies:handlingCaveat rdfs:comment "A textual description of any handling caveats that must be adhered to." . 
 ies:handlingCaveat rdfs:domain ies:SecurityLabel . 
-ies:happensIn rdf:type owl:ObjectProperty . 
-ies:happensIn sparx:guid "{60A37745-8DD5-4e4c-9A4C-6957F71AD971}" . 
-ies:happensIn rdfs:comment "A partOf relationship to indicate an Event takes place within a Location" . 
-ies:happensIn rdfs:subPropertyOf ies:inLocation . 
-ies:happensIn rdfs:domain ies:Event . 
-ies:happensIn rdfs:range ies:Location . 
 ies:hasAccessTo rdf:type owl:ObjectProperty . 
 ies:hasAccessTo sparx:guid "{CB7F872F-7999-4bfd-8274-2C0E0AFE22AB}" . 
 ies:hasAccessTo rdfs:comment "A Relationship between a ResponsibleActorState and an Entity they have access to - e.g. a FinancialAccount, CommunicationsDevice, etc." . 
@@ -1332,9 +1246,9 @@ ies:hasLanguageProficiency rdfs:range ies:LanguageProficiency .
 ies:hasLanguageProficiency rdfs:subPropertyOf rdf:type . 
 ies:hasName rdf:type owl:ObjectProperty . 
 ies:hasName sparx:guid "{C3A36E36-0C73-4af7-88E3-81C9243CE456}" . 
-ies:hasName rdfs:comment "An isRepresentedAs relationship that asserts an ExchangedItem is identified (albeit loosely) by a Name" . 
+ies:hasName rdfs:comment "An isRepresentedAs relationship that asserts an Thing is identified (albeit loosely) by a Name" . 
 ies:hasName rdfs:subPropertyOf ies:isRepresentedAs . 
-ies:hasName rdfs:domain ies:ExchangedItem . 
+ies:hasName rdfs:domain ies:Thing . 
 ies:hasName rdfs:range ies:Name . 
 ies:hasPublisher rdf:type owl:ObjectProperty . 
 ies:hasPublisher sparx:guid "{07FD1DF6-BA77-4657-B3D3-D6D579FD4608}" . 
@@ -1354,15 +1268,9 @@ ies:hasReligion rdfs:comment "A relationship where a PersonState holds or follow
 ies:hasReligion rdfs:subPropertyOf ies:relationship . 
 ies:hasReligion rdfs:domain ies:PersonState . 
 ies:hasReligion rdfs:range ies:Religion . 
-ies:hasRole rdf:type owl:ObjectProperty . 
-ies:hasRole sparx:guid "{5C76592F-C47D-40ee-8D82-497962686D34}" . 
-ies:hasRole rdfs:comment "An rdf:type relationship that asserts a State has a RoleExample - Freds time in Acme as a manager" . 
-ies:hasRole rdfs:subPropertyOf rdf:type . 
-ies:hasRole rdfs:range ies:Role . 
-ies:hasRole rdfs:domain ies:State . 
 ies:hasSourceReference rdf:type owl:ObjectProperty . 
 ies:hasSourceReference sparx:guid "{16480E86-9FE4-4b37-ACFB-9E410F190664}" . 
-ies:hasSourceReference rdfs:comment "A isRepresentedAs relationship that asserts a Representation is the source (information provenance) for an ExchangedItem" . 
+ies:hasSourceReference rdfs:comment "A isRepresentedAs relationship that asserts a Representation is the source (information provenance) for an Thing" . 
 ies:hasSourceReference rdfs:subPropertyOf ies:isRepresentedAs . 
 ies:hasStatedAddress rdf:type owl:ObjectProperty . 
 ies:hasStatedAddress sparx:guid "{0451B5D4-99CB-47a7-BB93-DF4DF6625837}" . 
@@ -1397,15 +1305,13 @@ ies:hasStatedPlaceOfIssue rdfs:domain ies:IdentityDocument .
 ies:hasStatedPlaceOfIssue rdfs:range ies:RegionOfCountry . 
 ies:hasTheme rdf:type owl:ObjectProperty . 
 ies:hasTheme sparx:guid "{654CB83B-75CF-4940-A2CF-C7820141C5AE}" . 
-ies:hasTheme rdfs:comment "A relationship linking an Event (e.g. Communication, Meeting or Investigation) to an ExchangedItem that is a theme (or topic)Examples:* A Event being investigated after it occurred* A general investigation into a Location* A Meeting discussing a new project* A VoiceCall about a Vehicle" . 
+ies:hasTheme rdfs:comment "A relationship linking an Event (e.g. Communication, Meeting or Investigation) to an Thing that is a theme (or topic). Examples:* A Event being investigated after it occurred* A general investigation into a Location* A Meeting discussing a new project* A VoiceCall about a Vehicle" . 
 ies:hasTheme rdfs:subPropertyOf ies:relationship . 
-ies:hasTheme rdfs:domain ies:Investigation . 
-ies:hasTheme rdfs:range ies:ExchangedItem . 
-ies:hasTheme rdfs:domain ies:Meeting . 
-ies:hasTheme rdfs:domain ies:Communication . 
+ies:hasTheme rdfs:range ies:Thing . 
+ies:hasTheme rdfs:domain ies:Event . 
 ies:hasValue rdf:type owl:ObjectProperty . 
 ies:hasValue sparx:guid "{8FD84185-A7CE-4d5d-974B-55F693C4376D}" . 
-ies:hasValue rdfs:comment "An isRepresentedAs relationship that asserts a Measure has a MeasureValueNote: a given Measure may have more than one value (e.g. 1kg or 2.2lbs) in different units of measure" . 
+ies:hasValue rdfs:comment "An isRepresentedAs relationship that asserts a Measure has a MeasureValueNote: a given Measure may have more than one value (e.g. 1kg or 2.2lbs) in different units of measure." . 
 ies:hasValue rdfs:subPropertyOf ies:isRepresentedAs . 
 ies:hasValue rdfs:domain ies:Measure . 
 ies:hasValue rdfs:range ies:MeasureValue . 
@@ -1569,6 +1475,7 @@ ies:IndividualDocument rdf:type rdfs:Class .
 ies:IndividualDocument sparx:guid "{0F327324-6B4E-40b1-B96B-97A334BA5E4A}" . 
 ies:IndividualDocument rdfs:comment "An Asset that is a written, photographed or drawn representation of thoughts. This might include, but not limited to, formal reports, books, legal instruments. Such documents might exist in a wide variety of forms, both printed and in electronic form.Note: this is an individual document  - i.e. physical or (rarely) a specific electronic copy (e.g. on a specific hard disk...told you it was rare). In most cases, we refer to the document in general - WorkOfDocumentation " . 
 ies:IndividualDocument rdfs:subClassOf ies:Asset . 
+ies:IndividualDocument ies:powertype ies:ClassOfIndividualDocument . 
 ies:IndividualDocumentID rdf:type rdfs:Class . 
 ies:IndividualDocumentID sparx:guid "{D68F4E10-957A-4e98-8447-8F2768940DA7}" . 
 ies:IndividualDocumentID rdfs:comment "An Identifier used to uniquely identify an IndividualDocument" . 
@@ -1577,7 +1484,7 @@ ies:influencedBy rdf:type owl:ObjectProperty .
 ies:influencedBy sparx:guid "{411F5C4C-9AD0-462a-BE10-3F43958B7D66}" . 
 ies:influencedBy rdfs:comment "A relationship between a ResponsibleActor and the thing that influences them" . 
 ies:influencedBy rdfs:subPropertyOf ies:relationship . 
-ies:influencedBy rdfs:range ies:ExchangedItem . 
+ies:influencedBy rdfs:range ies:Thing . 
 ies:influencedBy rdfs:domain ies:ResponsibleActorState . 
 ies:informationContent rdf:type owl:ObjectProperty . 
 ies:informationContent sparx:guid "{5BEE4248-DC98-4625-8553-3BB2171A1EDE}" . 
@@ -1587,8 +1494,8 @@ ies:informationContent rdfs:domain ies:WebResourceState .
 ies:informationContent rdfs:range ies:Representation . 
 ies:inGroup rdf:type owl:ObjectProperty . 
 ies:inGroup sparx:guid "{C21D2CA2-6F42-4b7c-9092-8B8C5B7BAF9F}" . 
-ies:inGroup rdfs:comment "A property linking an ExchangedItem to a GroupOfItems indicating that it belongs to that group.Note: An ExchangedItem may be in more than one group and a group may contain more than one ExchangedItem" . 
-ies:inGroup rdfs:domain ies:ExchangedItem . 
+ies:inGroup rdfs:comment "A property linking a Thing to a GroupOfItems indicating that it belongs to that group.Note: A Thing may be in more than one group and a group may contain more than one Thing" . 
+ies:inGroup rdfs:domain ies:Thing . 
 ies:inGroup rdfs:range ies:GroupOfItems . 
 ies:inLanguage rdf:type owl:ObjectProperty . 
 ies:inLanguage sparx:guid "{FF902F8E-6B22-4f17-9C16-48543251D22E}" . 
@@ -1615,8 +1522,9 @@ ies:inPossessionOf rdfs:range ies:Asset .
 ies:inPossessionOf rdfs:subPropertyOf ies:hasAccessTo . 
 ies:InPost rdf:type rdfs:Class . 
 ies:InPost sparx:guid "{6C1949B5-B86B-4940-8912-9008CCD67150}" . 
-ies:InPost rdfs:comment "A temporal state of a ResponsibleActor when they are in a Post" . 
+ies:InPost rdfs:comment "An InstalledState of a ResponsibleActor when they are in a Post." . 
 ies:InPost rdfs:subClassOf ies:ResponsibleActorState . 
+ies:InPost rdfs:subClassOf ies:InstalledState . 
 ies:inRepresentation rdf:type owl:ObjectProperty . 
 ies:inRepresentation sparx:guid "{7238489D-6802-4733-9F7F-9B31D02B3C81}" . 
 ies:inRepresentation rdfs:comment "A relationship that asserts a Representation is part of another Representation" . 
@@ -1633,12 +1541,14 @@ ies:inScheme rdfs:comment "An rdf:type relationship that asserts a Representatio
 ies:inScheme rdfs:subPropertyOf rdf:type . 
 ies:inScheme rdfs:domain ies:Name . 
 ies:inScheme rdfs:range ies:NamingScheme . 
-ies:installedSoftware rdf:type owl:ObjectProperty . 
-ies:installedSoftware sparx:guid "{B37ADF66-D5D0-4144-9539-DA91BA302914}" . 
-ies:installedSoftware rdfs:comment "A relationship indicating Software is installed on a Device" . 
-ies:installedSoftware rdfs:domain ies:DeviceState . 
-ies:installedSoftware rdfs:subPropertyOf ies:relationship . 
-ies:installedSoftware rdfs:range ies:Software . 
+ies:InstalledState rdf:type rdfs:Class . 
+ies:InstalledState sparx:guid "{6B36C428-3A86-493e-9B3B-6D394C567577}" . 
+ies:InstalledState rdfs:comment "A temporal state of an Entity when it fulfils a ReplaceablePart." . 
+ies:InstalledState rdfs:subClassOf ies:State . 
+ies:InstanceOfSoftware rdf:type rdfs:Class . 
+ies:InstanceOfSoftware sparx:guid "{297F9CC1-2ACF-4da0-92D9-0AA9E808CAD8}" . 
+ies:InstanceOfSoftware rdfs:comment "An Asset that is an installed instance of a set of programmatic instructions that control or affect the behaviour of an Asset (usually a Device). " . 
+ies:InstanceOfSoftware rdfs:subClassOf ies:Asset . 
 ies:IntelligenceAgency rdf:type rdfs:Class . 
 ies:IntelligenceAgency sparx:guid "{F87E3B6F-5872-47eb-89F8-6642DD7C8237}" . 
 ies:IntelligenceAgency rdfs:comment "A GovernmentOrganisation that collects, analyses or disseminates intelligence" . 
@@ -1660,7 +1570,7 @@ ies:interestedIn sparx:guid "{7BD2B884-F02C-4da2-AF6A-21B790FBF669}" .
 ies:interestedIn rdfs:comment "A Relationship between a ResponsibleActor (or state thereof) and an Entity they are interested in." . 
 ies:interestedIn rdfs:subPropertyOf ies:relationship . 
 ies:interestedIn rdfs:domain ies:Interested . 
-ies:interestedIn rdfs:range ies:ExchangedItem . 
+ies:interestedIn rdfs:range ies:Thing . 
 ies:InternationalCoalition rdf:type rdfs:Class . 
 ies:InternationalCoalition sparx:guid "{AE70547D-8E7E-474e-B7FD-F0A81F470157}" . 
 ies:InternationalCoalition rdfs:comment "An Organisation formed of Nations who have agreed to pursue a particular course (e.g. a war)" . 
@@ -1716,7 +1626,7 @@ ies:isAuthorisedForUseWithPassport rdfs:range ies:Passport .
 ies:isCentroidOf rdf:type owl:ObjectProperty . 
 ies:isCentroidOf sparx:guid "{44ADC197-D9FA-4889-B6AF-929C3546F4A0}" . 
 ies:isCentroidOf rdfs:comment "An inLocation relationship to indicate a PointOnEarthSurface is the centroid of a Location" . 
-ies:isCentroidOf rdfs:subPropertyOf ies:inLocation . 
+ies:isCentroidOf rdfs:subPropertyOf ies:relationship . 
 ies:isCentroidOf rdfs:domain ies:PointOnEarthSurface . 
 ies:isDisposedTo rdf:type owl:ObjectProperty . 
 ies:isDisposedTo sparx:guid "{B093F8DA-AE08-4819-8E1C-F119EF212566}" . 
@@ -1732,9 +1642,9 @@ ies:isEndOf rdfs:subPropertyOf ies:isStateOf .
 ies:isEndOf rdfs:domain ies:BoundingState . 
 ies:isIdentifiedBy rdf:type owl:ObjectProperty . 
 ies:isIdentifiedBy sparx:guid "{FBA54EEF-91BF-4ba2-8B67-79C899963149}" . 
-ies:isIdentifiedBy rdfs:comment "A hasName relationship that asserts an Identifier identifies an ExchangedItem" . 
+ies:isIdentifiedBy rdfs:comment "A hasName relationship that asserts an Identifier identifies an Thing" . 
 ies:isIdentifiedBy rdfs:subPropertyOf ies:hasName . 
-ies:isIdentifiedBy rdfs:domain ies:ExchangedItem . 
+ies:isIdentifiedBy rdfs:domain ies:Thing . 
 ies:isIdentifiedBy rdfs:range ies:Identifier . 
 ies:isLegalTenderIn rdf:type owl:ObjectProperty . 
 ies:isLegalTenderIn sparx:guid "{2415B865-3C37-4595-9F38-11075EAB5D34}" . 
@@ -1750,13 +1660,17 @@ ies:ISO3166_1Alpha_3 rdf:type rdfs:Class .
 ies:ISO3166_1Alpha_3 sparx:guid "{B92D79E2-9E7D-4df7-8D38-3D884AA09AD2}" . 
 ies:ISO3166_1Alpha_3 rdfs:comment "ISO 3166-1 alpha 3 (3-Letter Country Code)" . 
 ies:ISO3166_1Alpha_3 rdfs:subClassOf ies:GeoIdentity . 
+ies:ISO4217Code rdf:type rdfs:Class . 
+ies:ISO4217Code sparx:guid "{598ACBB6-DF51-4bd9-A5DD-52EDE1895327}" . 
+ies:ISO4217Code rdfs:comment "ISO4217 three-letter currency code (e.g. USD, GBP, EUR, etc.)" . 
+ies:ISO4217Code rdfs:subClassOf ies:Identifier . 
 ies:ISO639-3Code rdf:type rdfs:Class . 
 ies:ISO639-3Code sparx:guid "{ECFED94D-CC69-46b9-B09D-B282D5665787}" . 
 ies:ISO639-3Code rdfs:comment "ISO639-3 three-letter language code" . 
 ies:ISO639-3Code rdfs:subClassOf ies:Identifier . 
 ies:iso8601PeriodRepresentation rdf:type owl:DatatypeProperty . 
 ies:iso8601PeriodRepresentation sparx:guid "{E9372543-434E-45d3-A1F0-8D711952D10A}" . 
-ies:iso8601PeriodRepresentation rdfs:comment "A ISO8601 datetime (as xsd:dateTime if possible) that represents the ParticularPeriod.Note: the representation is also encoded in the URI of the period, this is an additional required attribute to enable querying by dateTime and SPARQL temporal operations." . 
+ies:iso8601PeriodRepresentation rdfs:comment "A ISO8601 datetime (as xsd:dateTime) that represents the ParticularPeriod. This representation is also encoded in the URI of the period, this is an additional required attribute to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: 2007-01-18T15:30:00" . 
 ies:iso8601PeriodRepresentation rdfs:subPropertyOf ies:attribute . 
 ies:iso8601PeriodRepresentation rdfs:domain ies:ParticularPeriod . 
 ies:isParticipantIn rdf:type owl:ObjectProperty . 
@@ -1765,11 +1679,6 @@ ies:isParticipantIn rdfs:comment "An isPartOf that relates an EventParticipant t
 ies:isParticipantIn rdfs:subPropertyOf ies:isPartOf . 
 ies:isParticipantIn rdfs:range ies:Event . 
 ies:isParticipantIn rdfs:domain ies:EventParticipant . 
-ies:isParticipantStateIn rdf:type owl:ObjectProperty . 
-ies:isParticipantStateIn sparx:guid "{A77A19DA-2775-4dfa-A76C-41C158AC582C}" . 
-ies:isParticipantStateIn rdfs:comment "An isParticipantIn and an isStateOf that relates an EventParticipant to the Event it participates, in the case where the participant has the same spatial extent as the Event for that period of time.Note: This is really just a bit of logical plumbing to enable start and end states of Events to be all of the event for a period of time." . 
-ies:isParticipantStateIn rdfs:subPropertyOf ies:isStateOf . 
-ies:isParticipantStateIn rdfs:subPropertyOf ies:isParticipantIn . 
 ies:isParticipationOf rdf:type owl:ObjectProperty . 
 ies:isParticipationOf sparx:guid "{DF9F6056-CCD4-41aa-9A86-536F6150EC25}" . 
 ies:isParticipationOf rdfs:comment "An isStateOf that relates an EventParticipant to the Element that is the participant" . 
@@ -1784,15 +1693,15 @@ ies:isPartOf rdfs:domain ies:Element .
 ies:isPartOf rdfs:range ies:Element . 
 ies:isPrimaryForOrganisation rdf:type owl:ObjectProperty . 
 ies:isPrimaryForOrganisation sparx:guid "{D6974F5E-B24C-4a06-9AC1-DB6299E9BF55}" . 
-ies:isPrimaryForOrganisation rdfs:comment "A relationship linking an ExchangedItem to the ResponsibleActor that prefers the use of that ExchangedItem.This is used when there are more than one state, name, etc. for a given item, and there is a requirement to specify which one is considered primary / preferred by a particular Organisation.Examples:* A primary name for a person (applied to PersonName)* A primary DoB for a person (applied to BirthState)* A primary nationality for a person (applied to the PersonState that links to the Nation)" . 
+ies:isPrimaryForOrganisation rdfs:comment "A relationship linking an Thing to the ResponsibleActor that prefers the use of that Thing. This is used when there are more than one state, name, etc. for a given item, and there is a requirement to specify which one is considered primary / preferred by a particular Organisation.Examples:* A primary name for a person (applied to PersonName)* A primary DoB for a person (applied to BirthState)* A primary nationality for a person (applied to the PersonState that links to the Nation)" . 
 ies:isPrimaryForOrganisation rdfs:subPropertyOf ies:relationship . 
-ies:isPrimaryForOrganisation rdfs:domain ies:ExchangedItem . 
+ies:isPrimaryForOrganisation rdfs:domain ies:Thing . 
 ies:isPrimaryForOrganisation rdfs:range ies:Organisation . 
 ies:isRepresentedAs rdf:type owl:ObjectProperty . 
 ies:isRepresentedAs sparx:guid "{D106A0A9-55C4-454f-9E20-35BA54114036}" . 
-ies:isRepresentedAs rdfs:comment "A relationship that asserts a Representation in someway depicts an ExchangedItem" . 
+ies:isRepresentedAs rdfs:comment "A relationship that asserts a Representation in someway depicts an Thing" . 
 ies:isRepresentedAs rdfs:subPropertyOf ies:relationship . 
-ies:isRepresentedAs rdfs:domain ies:ExchangedItem . 
+ies:isRepresentedAs rdfs:domain ies:Thing . 
 ies:isRepresentedAs rdfs:range ies:Representation . 
 ies:isStartOf rdf:type owl:ObjectProperty . 
 ies:isStartOf sparx:guid "{D9E068B1-2A44-4523-B8FC-F9888212B35C}" . 
@@ -1961,11 +1870,9 @@ ies:MapGridArea rdf:type rdfs:Class .
 ies:MapGridArea sparx:guid "{18A66904-823F-471d-A465-65ECD2D69867}" . 
 ies:MapGridArea rdfs:comment "A Location whose area is specified by a grid on a map.Note this is the actual area, not the map grid. " . 
 ies:MapGridArea rdfs:subClassOf ies:Location . 
-ies:MapGridArea rdfs:subClassOf ies:Asset . 
 ies:Marriage rdf:type rdfs:Class . 
 ies:Marriage sparx:guid "{9DFEDF24-1203-4341-B282-BD37C1B9CDF5}" . 
 ies:Marriage rdfs:comment "An EndToEndActivity covering the entire extent of a two peoples marriage (from the ceremony to either divorce or death)Note: As IES4 does not increase the scope of IES3, Marriage also includes common-law partners and civil partnerships" . 
-ies:Marriage rdfs:subClassOf ies:LawEnforcement . 
 ies:Marriage rdfs:subClassOf ies:EndToEndActivity . 
 ies:Married rdf:type rdfs:Class . 
 ies:Married sparx:guid "{D03A0D8B-79F5-4901-97BC-2767FD46CD5F}" . 
@@ -1995,6 +1902,7 @@ ies:MeasureValue rdf:type rdfs:Class .
 ies:MeasureValue sparx:guid "{3693B7DE-DCE7-4bf9-BC2A-A8914DA4A11E}" . 
 ies:MeasureValue rdfs:comment "A Representation of the value of a MeasureNote: A UnitOfMeasure is almost always required. The reason it is not mandatory is that in some cases (due to partial reporting) we do not have complete information - e.g. we know the value was stated to be 10 but we dont know if thats metres or feet" . 
 ies:MeasureValue rdfs:subClassOf ies:Representation . 
+ies:MeasureValue ies:powertype ies:ClassOfMeasureValue . 
 ies:MediaFile rdf:type rdfs:Class . 
 ies:MediaFile sparx:guid "{CE2E2EB2-17F7-4054-9107-E8DC275B0B11}" . 
 ies:MediaFile rdfs:comment "A DataObject that is a stand-alone file - e.g. a video, image or sound recording" . 
@@ -2009,9 +1917,8 @@ ies:MeetingChair rdfs:comment "An Attendance where the Person involved is the ch
 ies:MeetingChair rdfs:subClassOf ies:Attendance . 
 ies:Message rdf:type rdfs:Class . 
 ies:Message sparx:guid "{70AEDFC7-2B17-43d8-BF49-B5ACF8812317}" . 
-ies:Message rdfs:comment "A Communication or OnlineContentEvent where a message is sent" . 
+ies:Message rdfs:comment "A Communication where a message is sent." . 
 ies:Message rdfs:subClassOf ies:Communication . 
-ies:Message rdfs:subClassOf ies:OnlineContentEvent . 
 ies:messageContent rdf:type owl:DatatypeProperty . 
 ies:messageContent sparx:guid "{E1A85BEA-C374-4727-A189-E536BA248D98}" . 
 ies:messageContent rdfs:comment "An attribute representing the content of a messageExample:messageContent = See you at Waterloo station at 18:15" . 
@@ -2042,10 +1949,6 @@ ies:MobileTelephoneAccount rdf:type rdfs:Class .
 ies:MobileTelephoneAccount sparx:guid "{9F5EDA24-5991-48e7-9303-C86E25A196CF}" . 
 ies:MobileTelephoneAccount rdfs:comment "A TelephoneAccount where the telephones in use connects using a cellular network" . 
 ies:MobileTelephoneAccount rdfs:subClassOf ies:TelephoneAccount . 
-ies:ModelOfDevice rdf:type rdfs:Class . 
-ies:ModelOfDevice sparx:guid "{7A879268-33C2-4f2b-8928-9E78AFF01E69}" . 
-ies:ModelOfDevice rdfs:comment "A ClassOfDevice where the model is specifiedExamples:* Apple iPhone 6S* Ford Focus" . 
-ies:ModelOfDevice rdfs:subClassOf ies:ClassOfDevice . 
 ies:Modifier rdf:type rdfs:Class . 
 ies:Modifier sparx:guid "{21A341AE-9A38-4f45-BCB5-B29B02DC1B90}" . 
 ies:Modifier rdfs:comment "An EventParticipant where a ResponsibleActor participates in a Modify event as a modifier" . 
@@ -2175,10 +2078,6 @@ ies:ObserverStatus rdf:type rdfs:Class .
 ies:ObserverStatus sparx:guid "{FB2FDA67-B258-4b18-9E95-3B9DFAB8FB14}" . 
 ies:ObserverStatus rdfs:comment "When a Government has observer rights at a Summit" . 
 ies:ObserverStatus rdfs:subClassOf ies:EventParticipant . 
-ies:OffenceCode rdf:type rdfs:Class . 
-ies:OffenceCode sparx:guid "{66A24EF2-F417-46c7-A68D-D4540260F64F}" . 
-ies:OffenceCode rdfs:comment "An Identifier for a ClassOfCriminalActivityThe Home Office Offence Classification Index [B] should be used wherever possible to specify the Crime Type" . 
-ies:OffenceCode rdfs:subClassOf ies:Identifier . 
 ies:OfferForSale rdf:type rdfs:Class . 
 ies:OfferForSale sparx:guid "{1D589649-490D-4558-91D5-2D977B2B42DE}" . 
 ies:OfferForSale rdfs:comment "A TradeEvent where one or more Entities of the same type (specified by an ClassOfEntity) are offered for sale or exchange" . 
@@ -2236,7 +2135,7 @@ ies:OnlineContentEvent rdfs:comment "An OnlineEvent where content (text, images,
 ies:OnlineContentEvent rdfs:subClassOf ies:OnlineEvent . 
 ies:OnlineEvent rdf:type rdfs:Class . 
 ies:OnlineEvent sparx:guid "{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}" . 
-ies:OnlineEvent rdfs:comment "An Event on the internet" . 
+ies:OnlineEvent rdfs:comment "An Event on a computer network. This can include events on any network of computer including the internet or other air-gapped or isolated network." . 
 ies:OnlineEvent rdfs:subClassOf ies:Event . 
 ies:OnlineLike rdf:type rdfs:Class . 
 ies:OnlineLike sparx:guid "{5B50EECC-45FC-4e5b-933E-51BC0FEE0FCD}" . 
@@ -2248,6 +2147,11 @@ ies:onlineLikeOf rdfs:comment "Relates an OnlineLike to the OnlineContent that w
 ies:onlineLikeOf rdfs:subPropertyOf ies:relationship . 
 ies:onlineLikeOf rdfs:domain ies:OnlineLike . 
 ies:onlineLikeOf rdfs:range ies:OnlineArtefact . 
+ies:OnlineMessage rdf:type rdfs:Class . 
+ies:OnlineMessage sparx:guid "{067AEA85-D3DD-478c-AF00-FB54F95DF1E2}" . 
+ies:OnlineMessage rdfs:comment "A Message that was sent Online or any other networked system including air-gapped networks." . 
+ies:OnlineMessage rdfs:subClassOf ies:OnlineContentEvent . 
+ies:OnlineMessage rdfs:subClassOf ies:Message . 
 ies:onlinePublisher rdf:type owl:ObjectProperty . 
 ies:onlinePublisher sparx:guid "{34F13F26-7C4E-451a-BDA0-62BA7738039F}" . 
 ies:onlinePublisher rdfs:comment "Relates an OnlineArtefact to the ResponsibleActor that produced it." . 
@@ -2256,7 +2160,7 @@ ies:onlinePublisher rdfs:domain ies:OnlineArtefact .
 ies:onlinePublisher rdfs:range ies:ResponsibleActor . 
 ies:OnlineService rdf:type rdfs:Class . 
 ies:OnlineService sparx:guid "{27BEFD0A-B30B-47db-B863-13E48D1172F9}" . 
-ies:OnlineService rdfs:comment "A service provided on the internet." . 
+ies:OnlineService rdfs:comment "A service provided on a computer network." . 
 ies:OnlineService rdfs:subClassOf ies:WebResource . 
 ies:onlineServiceProvider rdf:type owl:ObjectProperty . 
 ies:onlineServiceProvider sparx:guid "{DEE1404A-AAC3-4d46-9BA3-8E097A55C7F5}" . 
@@ -2264,13 +2168,6 @@ ies:onlineServiceProvider rdfs:comment "Relates an OnlineService to the Responsi
 ies:onlineServiceProvider rdfs:subPropertyOf ies:relationship . 
 ies:onlineServiceProvider rdfs:domain ies:OnlineService . 
 ies:onlineServiceProvider rdfs:range ies:ResponsibleActor . 
-ies:onlineServiceType rdf:type owl:ObjectProperty . 
-ies:onlineServiceType sparx:guid "{2C9CEF7F-FA9A-4a0e-9E2C-AC3D3EB51D5C}" . 
-ies:onlineServiceType rdfs:comment "The class of OnlineService" . 
-ies:onlineServiceType rdfs:subPropertyOf ies:relationship . 
-ies:onlineServiceType rdfs:domain ies:OnlineService . 
-ies:onlineServiceType rdfs:subPropertyOf rdf:type . 
-ies:onlineServiceType rdfs:range ies:ClassOfOnlineService . 
 ies:OnlineShop rdf:type rdfs:Class . 
 ies:OnlineShop sparx:guid "{980404C4-C512-4f36-B3B1-5088CC754DCF}" . 
 ies:OnlineShop rdfs:comment "An EventParticipant where a ResponsibleActor participates in a TradeEvent as an online shop" . 
@@ -2287,7 +2184,6 @@ ies:OperationalEvent rdf:type rdfs:Class .
 ies:OperationalEvent sparx:guid "{59121C21-38E4-4224-8C2D-4D3E94A3A0D9}" . 
 ies:OperationalEvent rdfs:comment "An Event conducted by military or national security actors" . 
 ies:OperationalEvent rdfs:subClassOf ies:Event . 
-ies:OperationalEvent ies:powertype ies:ClassOfOperationalEvent . 
 ies:Operator rdf:type rdfs:Class . 
 ies:Operator sparx:guid "{6730B57A-3E53-4bd2-B784-78C4FB239DBF}" . 
 ies:Operator rdfs:comment "A ResponsibleActors role in an OperationalEvent where they are one of the operators " . 
@@ -2303,12 +2199,6 @@ ies:Organisation sparx:guid "{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}" .
 ies:Organisation rdfs:comment "A ResponsibleActor that is a group of people formed for one or more of purposes ñ e.g. government organisations, educational organisations, terrorists organisations, religious organisations, etc." . 
 ies:Organisation rdfs:subClassOf ies:ResponsibleActor . 
 ies:Organisation rdfs:subClassOf ies:OrganisationState . 
-ies:Organisation ies:powertype ies:ClassOfOrganisation . 
-ies:OrganisationalRole rdf:type rdfs:Class . 
-ies:OrganisationalRole sparx:guid "{C0B7C4B2-C067-4ca8-A9FB-E82782889250}" . 
-ies:OrganisationalRole rdfs:comment "A Role that a ResponsibleActor can have in an Organisation" . 
-ies:OrganisationalRole rdfs:subClassOf ies:Role . 
-ies:OrganisationalRole rdfs:subClassOf ies:ClassOfResponsibleActorState . 
 ies:OrganisationIdentifier rdf:type rdfs:Class . 
 ies:OrganisationIdentifier sparx:guid "{13865B40-B57D-44e7-9658-00C45C8175C8}" . 
 ies:OrganisationIdentifier rdfs:comment "A unique Identifier for an Organisation (more usually an OrganisationState)Example:DUNS numberVAT numberCompanies House NumberRegistered Charity Number" . 
@@ -2362,7 +2252,7 @@ ies:Parked rdfs:comment "A temporal state of a Vehicle where it is not moving. E
 ies:Parked rdfs:subClassOf ies:VehicleState . 
 ies:ParticularPeriod rdf:type rdfs:Class . 
 ies:ParticularPeriod sparx:guid "{2173F463-524C-457c-B106-51322F64F122}" . 
-ies:ParticularPeriod rdfs:comment "A PeriodOfTime that is a specific, contiguous extent of time.IMPORTANT NOTE: The URI of a ParticularPeriod shall be encoded as follows:http://iso8601.iso.org/2007-01-18T15%3A00%3A00Where the content after the / is % encoded (e.g. encodeURIComponent in javascript). In the example above, the unencoded content would be 2007-01-18T15:00:00The reason behind using a URI is that receiving systems can resolve the periods of time and de-duplicate. Examples:Tuesday 28th August 20182016December 1944" . 
+ies:ParticularPeriod rdfs:comment "A PeriodOfTime that is a specific, contiguous extent of time. IMPORTANT NOTE: The URI of a ParticularPeriod shall be encoded in UTC (Coordinated Universal Time) and as follows:http://iso8601.iso.org/20070118T153000Where the content after the / is encoded without punctuation and without the trailing Z. In the example above, the punctuated equivalent would be 2007-01-18T15:30:00ZThe reason behind using a URI is that receiving systems can resolve the periods of time and de-duplicate. Examples:Tuesday 28th August 20182016December 1944" . 
 ies:ParticularPeriod rdfs:subClassOf ies:PeriodOfTime . 
 ies:PartNumber rdf:type rdfs:Class . 
 ies:PartNumber sparx:guid "{772CD8A3-3DCA-4cc7-8BA3-17D1C57E94BC}" . 
@@ -2437,6 +2327,7 @@ ies:Person sparx:guid "{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}" .
 ies:Person rdfs:comment "A human being, living or dead. This also includes what may appear to be a person, but is in fact an Alias" . 
 ies:Person rdfs:subClassOf ies:ResponsibleActor . 
 ies:Person rdfs:subClassOf ies:PersonState . 
+ies:Person ies:powertype ies:ClassOfPerson . 
 ies:PersonalRadioHandset rdf:type rdfs:Class . 
 ies:PersonalRadioHandset sparx:guid "{9D84921F-87A3-4ee9-8A3D-A88F564295FA}" . 
 ies:PersonalRadioHandset rdfs:comment "A CommunicationsDevice for portable radio communications - e.g. a walkie-talkie" . 
@@ -2462,6 +2353,7 @@ ies:PersonState rdf:type rdfs:Class .
 ies:PersonState sparx:guid "{38F8B795-0BCE-4945-8C69-8678ED935C1A}" . 
 ies:PersonState rdfs:comment "A temporal state of a Person" . 
 ies:PersonState rdfs:subClassOf ies:ResponsibleActorState . 
+ies:PersonState ies:powertype ies:ClassOfPersonState . 
 ies:PersonTitle rdf:type rdfs:Class . 
 ies:PersonTitle sparx:guid "{CA36058B-835C-48ef-944A-2507708ADA71}" . 
 ies:PersonTitle rdfs:comment "The title associated with the name of the person." . 
@@ -2589,7 +2481,6 @@ ies:RadioCoverageArea rdf:type rdfs:Class .
 ies:RadioCoverageArea sparx:guid "{7A2CC7C7-6B82-4751-BDBE-A770B3AFBBEB}" . 
 ies:RadioCoverageArea rdfs:comment "A Location whose area is that in which a RadioMast hast viable communications coverage.Note: The RadioMast itself may not be part of this area, as often the immediate area around the base of a RadioMast is a deadspot. Note: Most radio area coverage is complex in shape, and the preferred representation in IES4 is GeoJSON. No attempt is made here to differentiate between signal strength zones. To do this, create multople RadioCoverAreas for the same RadioMast and label them appropriately. " . 
 ies:RadioCoverageArea rdfs:subClassOf ies:Location . 
-ies:RadioCoverageArea rdfs:subClassOf ies:Asset . 
 ies:RadioMast rdf:type rdfs:Class . 
 ies:RadioMast sparx:guid "{F02CFF55-12A7-4308-9A60-E2353DE5BE58}" . 
 ies:RadioMast rdfs:comment "An Device that is placed in a Location to provide either a link from a wired to wireless connection, or to relay between two wireless endpoints." . 
@@ -2623,7 +2514,7 @@ ies:recurrentPeriodRepresentation rdfs:subPropertyOf ies:attribute .
 ies:recurrentPeriodRepresentation rdfs:domain ies:RecurringPeriod . 
 ies:RecurringPeriod rdf:type rdfs:Class . 
 ies:RecurringPeriod sparx:guid "{986E66AC-9092-410b-88AD-30B86EFC32DD}" . 
-ies:RecurringPeriod rdfs:comment "A PeriodOfTime that is composed of regularly recurring periods of time.ISO8601 is used to represent these periods (recurrentPeriod property), using the blanking technique (e.g. blanking the date to give a daily time). The recurrence can be limited using the recurringFrom and recurringUntil properties Examples:Every Tuesday from 28th August 2018 to 2 October 201813:00 to 14:00 on every day from 27th June 2016 to 2 October 2024" . 
+ies:RecurringPeriod rdfs:comment "A PeriodOfTime that is composed of regularly recurring periods of time.ISO8601 is used to represent these periods (recurrentPeriodRepresentation property), using the blanking technique (e.g. blanking the date to give a daily time). The recurrence can be limited using the startsIn and endsIn properties Examples:Every Tuesday from 28th August 2018 to 2 October 201813:00 to 14:00 on every day from 27th June 2016 to 2 October 2024" . 
 ies:RecurringPeriod rdfs:subClassOf ies:ArbitraryPeriod . 
 ies:ReferenceNumber rdf:type rdfs:Class . 
 ies:ReferenceNumber sparx:guid "{A0DC70DD-9237-480b-A712-F5381C5FFA1A}" . 
@@ -2633,12 +2524,6 @@ ies:RegionalConstituency rdf:type rdfs:Class .
 ies:RegionalConstituency sparx:guid "{FC55D479-07C4-4d98-B48C-5032190E493D}" . 
 ies:RegionalConstituency rdfs:comment "The people residing (or entitled to reside / vote in) a particular Location." . 
 ies:RegionalConstituency rdfs:subClassOf ies:Organisation . 
-ies:regionCountry rdf:type owl:ObjectProperty . 
-ies:regionCountry sparx:guid "{B3B6D7F3-F5B0-49d6-886F-F5AF7C56F041}" . 
-ies:regionCountry rdfs:comment "An inLocation relationship to indicate a RegionOfCountry is in a Country" . 
-ies:regionCountry rdfs:subPropertyOf ies:inLocation . 
-ies:regionCountry rdfs:range ies:Country . 
-ies:regionCountry rdfs:domain ies:RegionOfCountry . 
 ies:RegionOfCountry rdf:type rdfs:Class . 
 ies:RegionOfCountry sparx:guid "{65D869DB-19EE-4886-98BA-E579C39C4A68}" . 
 ies:RegionOfCountry rdfs:comment "A Location that is a general subdivision of a Countrye.g. cities, towns, counties, states, etc." . 
@@ -2653,9 +2538,9 @@ ies:RegistrationNumber rdfs:comment "The registration number for the respective 
 ies:RegistrationNumber rdfs:subClassOf ies:Identifier . 
 ies:relationship rdf:type owl:ObjectProperty . 
 ies:relationship sparx:guid "{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}" . 
-ies:relationship rdfs:comment "A relationship represents an association between two Entities" . 
-ies:relationship rdfs:range ies:ExchangedItem . 
-ies:relationship rdfs:domain ies:ExchangedItem . 
+ies:relationship rdfs:comment "A relationship represents an association between two Things" . 
+ies:relationship rdfs:range ies:Thing . 
+ies:relationship rdfs:domain ies:Thing . 
 ies:Religion rdf:type rdfs:Class . 
 ies:Religion sparx:guid "{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B}" . 
 ies:Religion rdfs:comment "An Entity whose extent is all the people (PersonState) who share the same belief.Religions may be part of other religions - e.g. Christianity being made up of Catholic, Protestant, Orthodox, etc. 1. The religion ëpracticedí by the respective Person..2. The religion may be qualified to identity a particular sect.3. The Metropolitan Police standard [F] shall be used as the reference data standard" . 
@@ -2685,6 +2570,10 @@ ies:Renter rdf:type rdfs:Class .
 ies:Renter sparx:guid "{E2FC3A09-EC9D-4ab9-B273-A526CB511B5A}" . 
 ies:Renter rdfs:comment "A PartyToAgreement where a ResponsibleActor rents an Entity from another party" . 
 ies:Renter rdfs:subClassOf ies:PartyToAgreement . 
+ies:ReplaceablePart rdf:type rdfs:Class . 
+ies:ReplaceablePart sparx:guid "{624D6CD1-31D9-46db-B42D-56DAD35BABD8}" . 
+ies:ReplaceablePart rdfs:comment "An Element which is a part of a whole that can be replaced (possibly multiple times) without altering its overall identity. It is coincident with any Element which fulfils its purpose, role or function to the whole.The identity of a RepleacablePart can survive periods when no Element fulfils its purpose.A RepleacablePart does not survive the destruction of the whole it is a part of, though an Element that fulfils the RepleacablePart may do.Examples include:-	Tyres of a car-	CEO of a company-	Simcard in a mobile handset-	A pump in an oil refinery system" . 
+ies:ReplaceablePart rdfs:subClassOf ies:Element . 
 ies:Report rdf:type rdfs:Class . 
 ies:Report sparx:guid "{8D510CB0-C9BF-4de3-A442-9070ABB15732}" . 
 ies:Report rdfs:comment "A WorkOfDocumentation that offers one or more persons view on a particular topic. " . 
@@ -2693,6 +2582,7 @@ ies:Representation rdf:type rdfs:Class .
 ies:Representation sparx:guid "{675A5C23-0746-43d0-96D0-AF0DF72CD697}" . 
 ies:Representation rdfs:comment "An ClassOfEntity whose instances are representations of things in the real worldExamples:* an identifier used for a Person* a document (though not an individual copy of a document)" . 
 ies:Representation rdfs:subClassOf ies:ClassOfEntity . 
+ies:Representation ies:powertype ies:ClassOfRepresentation . 
 ies:representationValue rdf:type owl:DatatypeProperty . 
 ies:representationValue sparx:guid "{AE00F1DE-F42B-4fc0-B07B-21F754F16FD4}" . 
 ies:representationValue rdfs:comment "The examplar text, number, etc. of a Representation" . 
@@ -2702,12 +2592,6 @@ ies:RequestDocument rdf:type rdfs:Class .
 ies:RequestDocument sparx:guid "{C0273975-049B-40f0-817C-DFBFA4A3E5CE}" . 
 ies:RequestDocument rdfs:comment "A WorkOfDocumentation that requests permission" . 
 ies:RequestDocument rdfs:subClassOf ies:WorkOfDocumentation . 
-ies:requestedActivityType rdf:type owl:ObjectProperty . 
-ies:requestedActivityType sparx:guid "{132AFC03-7A64-45fa-9F87-93171BBFBE3D}" . 
-ies:requestedActivityType rdfs:comment "A relationship linking an AuthorisationRequest to a AuthorisedEventClass that the request requires authorisation to do.For example, someone making request authorisation to travel" . 
-ies:requestedActivityType rdfs:subPropertyOf ies:relationship . 
-ies:requestedActivityType rdfs:range ies:AuthorisedEventClass . 
-ies:requestedActivityType rdfs:domain ies:AuthorisationRequest . 
 ies:RequestForQuotation rdf:type rdfs:Class . 
 ies:RequestForQuotation sparx:guid "{300203EC-607A-4d77-AE6F-7EAE7FA44DF2}" . 
 ies:RequestForQuotation rdfs:comment "A TradeEvent where one or more Entities are is required" . 
@@ -2738,6 +2622,7 @@ ies:ResponsibleActorState rdf:type rdfs:Class .
 ies:ResponsibleActorState sparx:guid "{100B93CD-937E-4fdd-8851-02D1DC07F5B6}" . 
 ies:ResponsibleActorState rdfs:comment "A temporal state of a ResponsibleActorNote:  this is the superclass of ResponsibleActor (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. " . 
 ies:ResponsibleActorState rdfs:subClassOf ies:ActorState . 
+ies:ResponsibleActorState ies:powertype ies:ClassOfResponsibleActorState . 
 ies:Retailer rdf:type rdfs:Class . 
 ies:Retailer sparx:guid "{BA2472AB-56F0-462e-9460-F0192ABCD979}" . 
 ies:Retailer rdfs:comment "An EventParticipant where a ResponsibleActor participates in a TradeEvent as a retailer" . 
@@ -2756,10 +2641,6 @@ ies:RoadVehicle rdf:type rdfs:Class .
 ies:RoadVehicle sparx:guid "{830B2164-E880-4bef-A62C-B38CEB6A824D}" . 
 ies:RoadVehicle rdfs:comment "A Vehicle that travels by road (surprisingly enough)" . 
 ies:RoadVehicle rdfs:subClassOf ies:Vehicle . 
-ies:Role rdf:type rdfs:Class . 
-ies:Role sparx:guid "{0066A327-D497-42e0-9F50-D988F522F4A5}" . 
-ies:Role rdfs:comment "An ClassOfState that is the role an Entity has in context (as part of) an Element- e.g. Manager, " . 
-ies:Role rdfs:subClassOf ies:ClassOfState . 
 ies:RoomNumber rdf:type rdfs:Class . 
 ies:RoomNumber sparx:guid "{0B2564A8-9A95-4164-BB49-01900DD530AD}" . 
 ies:RoomNumber rdfs:comment "A GeoIdentity used to identify a PartOfFacility" . 
@@ -2821,6 +2702,7 @@ ies:SeatNumber rdfs:subClassOf ies:Identifier .
 ies:SecurityLabel rdf:type rdfs:Class . 
 ies:SecurityLabel sparx:guid "{CED628E4-8641-486b-BCD7-CB4E147E7AE6}" . 
 ies:SecurityLabel rdfs:comment "A SecurityLabel may be assigned at the statement (triple) level or to the entire ExchangePayload. They provide a mechanism to specify access restrictions and handling instructions for specific triples.Note: In any given IES exchange, a SecurityLabel must be applied to the ExchangePayload. Individual SecurityLabels at the statement level are used to indicate where individual statements deviate from the overall payload SecurityLabel" . 
+ies:SecurityLabel rdfs:subClassOf rdfs:Resource . 
 ies:Sender rdf:type rdfs:Class . 
 ies:Sender sparx:guid "{44C93DB5-8DFA-4585-9060-EEC789E0A5AC}" . 
 ies:Sender rdfs:comment "An PartyInCommunication where the communicating party is the sender of a message" . 
@@ -2942,17 +2824,15 @@ ies:StoreCard rdf:type rdfs:Class .
 ies:StoreCard sparx:guid "{686293F8-123B-478f-9A67-A6074937B528}" . 
 ies:StoreCard rdfs:comment "A PaymentArtefact issued by a retail Organisation that can only be used to pay for items supplied by that Organisation. " . 
 ies:StoreCard rdfs:subClassOf ies:PaymentArtefact . 
-ies:storedIn rdf:type owl:ObjectProperty . 
-ies:storedIn sparx:guid "{2E33B6DC-54D5-4e5e-9894-B2801F174B00}" . 
-ies:storedIn rdfs:comment "A Relationship between an AssetState and a Location where the Asset is/was stored" . 
-ies:storedIn rdfs:subPropertyOf ies:isPartOf . 
-ies:storedIn rdfs:domain ies:AssetState . 
-ies:storedIn rdfs:range ies:Location . 
 ies:strengthOfInterest rdf:type owl:DatatypeProperty . 
 ies:strengthOfInterest sparx:guid "{49B3D340-AADC-4fcd-80CC-283AE0FC85DF}" . 
 ies:strengthOfInterest rdfs:comment "StrengthOfInterest is used in its most general sense and is limited to the following values:∑ Weak∑ Strong∑ Fanatical" . 
 ies:strengthOfInterest rdfs:subPropertyOf ies:attribute . 
 ies:strengthOfInterest rdfs:domain ies:Interested . 
+ies:Stuff rdf:type rdfs:Class . 
+ies:Stuff sparx:guid "{CC9E60AC-B3C8-4c9b-B657-2734538AE2B9}" . 
+ies:Stuff rdfs:comment "An element that is highly dissective or generally uncountable. For example, sand, water, gas and coffee." . 
+ies:Stuff rdfs:subClassOf ies:Element . 
 ies:SubjectOfInterest rdf:type rdfs:Class . 
 ies:SubjectOfInterest sparx:guid "{BFFBC847-AD87-458e-9A86-690D659EB48F}" . 
 ies:SubjectOfInterest rdfs:comment "A State during which an Element is of interest to an investigation" . 
@@ -2998,12 +2878,6 @@ ies:SystemState rdf:type rdfs:Class .
 ies:SystemState sparx:guid "{056DDAD3-9315-48a8-8598-3DD4F783C5CF}" . 
 ies:SystemState rdfs:comment "A temporal state of a System" . 
 ies:SystemState rdfs:subClassOf ies:State . 
-ies:takesplaceIn rdf:type owl:ObjectProperty . 
-ies:takesplaceIn sparx:guid "{5D13DE13-CAAC-4879-9237-D20A6846F4D8}" . 
-ies:takesplaceIn rdfs:comment "An inLocation relationship to indicate an EventParticipant takes place within a Location" . 
-ies:takesplaceIn rdfs:subPropertyOf ies:inLocation . 
-ies:takesplaceIn rdfs:domain ies:EventParticipant . 
-ies:takesplaceIn rdfs:range ies:Location . 
 ies:TargetLocation rdf:type rdfs:Class . 
 ies:TargetLocation sparx:guid "{9BEF1C80-3823-4611-9349-AA1E11E41BE7}" . 
 ies:TargetLocation rdfs:comment "Relates an MilitaryAttack to the location specified for the attack" . 
@@ -3052,6 +2926,10 @@ ies:TheatreTicket rdf:type rdfs:Class .
 ies:TheatreTicket sparx:guid "{5CD50268-582A-426b-B4CC-F6EE308B84A3}" . 
 ies:TheatreTicket rdfs:comment "An EntertainmentTicket for a theatre show" . 
 ies:TheatreTicket rdfs:subClassOf ies:EntertainmentTicket . 
+ies:Thing rdf:type rdfs:Class . 
+ies:Thing sparx:guid "{485CBF1A-04FF-4741-8471-46A03D28C406}" . 
+ies:Thing rdfs:comment "A rdfs:Resource which is a real or possible world thing.Thing and its immediate subclasses are too broad a set of concepts to ever need to instantiate directly.EXAMPLES:- An instance of a class (element)- A class (class of element)" . 
+ies:Thing rdfs:subClassOf rdfs:Resource . 
 ies:Ticket rdf:type rdfs:Class . 
 ies:Ticket sparx:guid "{0BC61540-2AFB-42e6-A845-79771EE0268D}" . 
 ies:Ticket rdfs:comment "Documented authority (paid-for or otherwise) entitling the bearer to some specified activity." . 
@@ -3110,13 +2988,6 @@ ies:TrainTravel rdf:type rdfs:Class .
 ies:TrainTravel sparx:guid "{F2D6CFE4-BCE9-4bce-ADB0-075656038A55}" . 
 ies:TrainTravel rdfs:comment "A TravelService by rail" . 
 ies:TrainTravel rdfs:subClassOf ies:Transit . 
-ies:transferType rdf:type owl:ObjectProperty . 
-ies:transferType sparx:guid "{9574377B-6752-4317-94DC-E075C408442D}" . 
-ies:transferType rdfs:comment "An rdf:type relationship from a MoneyTransfer to a ClassOfMoneyTransfer" . 
-ies:transferType rdfs:subPropertyOf ies:relationship . 
-ies:transferType rdfs:domain ies:MoneyTransfer . 
-ies:transferType rdfs:subPropertyOf rdf:type . 
-ies:transferType rdfs:range ies:ClassOfMoneyTransfer . 
 ies:transferValue rdf:type owl:ObjectProperty . 
 ies:transferValue sparx:guid "{A9D01DAB-281E-48ae-BB33-8518701ABBDE}" . 
 ies:transferValue rdfs:comment "A relationship from a MoneyTransfer to the AmountOfMoney transferred." . 
@@ -3169,19 +3040,6 @@ ies:trusts rdfs:comment "A Relationship between two ResponsibleActor Entities wh
 ies:trusts rdfs:subPropertyOf ies:relationship . 
 ies:trusts rdfs:range ies:ResponsibleActor . 
 ies:trusts rdfs:domain ies:ResponsibleActorState . 
-ies:typeOfCriminality rdf:type owl:ObjectProperty . 
-ies:typeOfCriminality sparx:guid "{07BDCB73-1CDA-4057-9D7E-EC088D304B04}" . 
-ies:typeOfCriminality rdfs:comment "A link to the ClassOfCriminalActivity conducted" . 
-ies:typeOfCriminality rdfs:subPropertyOf ies:relationship . 
-ies:typeOfCriminality rdfs:subPropertyOf rdf:type . 
-ies:typeOfCriminality rdfs:range ies:ClassOfCriminalActivity . 
-ies:typeOfCriminality rdfs:domain ies:CriminalActivity . 
-ies:typicallyTargets rdf:type owl:ObjectProperty . 
-ies:typicallyTargets sparx:guid "{AE6D5097-F555-48af-AFBA-88ECAA31BFF3}" . 
-ies:typicallyTargets rdfs:comment "A relationship linking a ClassOfOperationalEvent to a ClassOfCriminalActivity where the operations are intended to counter or target certain criminal activities.Example: counter-narcotics operations typically target drug dealing" . 
-ies:typicallyTargets rdfs:subPropertyOf ies:relationship . 
-ies:typicallyTargets rdfs:domain ies:ClassOfOperationalEvent . 
-ies:typicallyTargets rdfs:range ies:ClassOfCriminalActivity . 
 ies:UN_LOCODE rdf:type rdfs:Class . 
 ies:UN_LOCODE sparx:guid "{AEA785BB-B625-41aa-8738-FB0F3726A281}" . 
 ies:UN_LOCODE rdfs:comment "A GeoIdentity that is a United Nations Code for Trade and Transport Locations" . 
@@ -3216,7 +3074,7 @@ ies:URL rdfs:comment "An Identifier for a WebResource" .
 ies:URL rdfs:subClassOf ies:Identifier . 
 ies:Username rdf:type rdfs:Class . 
 ies:Username sparx:guid "{9D703CE2-DED0-4aba-BE21-474781670297}" . 
-ies:Username rdfs:comment "The Identity for an account registered with an internet-based service.An email address can be used as an online identifier for a specific domain (like Facebook). Where this is the case it can be considered to be both an instance of an email address and an instance of a username for an online identity." . 
+ies:Username rdfs:comment "The Identity for an account registered with a computer-network-based service e.g. the internet.An email address can be used as an online identifier for a specific domain (like Facebook). Where this is the case it can be considered to be both an instance of an email address and an instance of a username for an online identity." . 
 ies:Username rdfs:subClassOf ies:Identifier . 
 ies:userOf rdf:type owl:ObjectProperty . 
 ies:userOf sparx:guid "{01984617-C96D-48b3-ACDE-25F525719AEF}" . 
@@ -3314,7 +3172,7 @@ ies:venueStatedOnTicket rdfs:domain ies:EntertainmentTicket .
 ies:venueStatedOnTicket rdfs:range ies:Facility . 
 ies:VersionNumber rdf:type rdfs:Class . 
 ies:VersionNumber sparx:guid "{E4C44F5B-5D57-4283-B985-5A2DA87BF212}" . 
-ies:VersionNumber rdfs:comment "The number or code that identifies a VersionOfDocument." . 
+ies:VersionNumber rdfs:comment "The number or code that identifies the version of something." . 
 ies:VersionNumber rdfs:subClassOf ies:Identifier . 
 ies:versionOf rdf:type owl:ObjectProperty . 
 ies:versionOf sparx:guid "{C01F47A2-F545-4fac-A707-469AD32FBF94}" . 
@@ -3336,13 +3194,6 @@ ies:VideoConference rdf:type rdfs:Class .
 ies:VideoConference sparx:guid "{1ED09A3D-7EE9-4b7a-8F0B-8590023C9F81}" . 
 ies:VideoConference rdfs:comment "A TeleConference where parties communicate over video (with audio)" . 
 ies:VideoConference rdfs:subClassOf ies:TeleConference . 
-ies:visaType rdf:type owl:ObjectProperty . 
-ies:visaType sparx:guid "{2ED602C6-C93C-41f3-8A02-10F0CAD0D64A}" . 
-ies:visaType rdfs:comment "The type of the TravelVisaExamples:B1/B2VISA TIER 4" . 
-ies:visaType rdfs:subPropertyOf ies:relationship . 
-ies:visaType rdfs:domain ies:TravelVisa . 
-ies:visaType rdfs:subPropertyOf rdf:type . 
-ies:visaType rdfs:range ies:ClassOfTravelVisa . 
 ies:Visiting rdf:type rdfs:Class . 
 ies:Visiting sparx:guid "{EB558A61-8725-40d0-B87D-D6AA1FC27C89}" . 
 ies:Visiting rdfs:comment "A temporal state of a ResponsibleActorNote:  this is the superclass of ResponsibleActor (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. " . 
@@ -3443,4 +3294,7 @@ ies:worksWith rdfs:domain ies:PersonState .
 ies:worshipsAt rdf:type owl:ObjectProperty . 
 ies:worshipsAt sparx:guid "{475617C7-BEE3-4c5e-8749-9386B68A8DA5}" . 
 ies:worshipsAt rdfs:comment "A visits relationship between a ResponsibleActor and a Location where they undertake religious worshipNote: more often than not, this will be a statement of regular/occasional worship, so the instance of the ResponsibleActorState should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, inLocation would generally be used." . 
-ies:worshipsAt rdfs:subPropertyOf ies:visits .
+ies:worshipsAt rdfs:subPropertyOf ies:visits . 
+ies:pluriverse rdf:type ies:Element . 
+ies:pluriverse sparx:guid "{D3AA70B6-BA62-459a-B3F8-C504C2AF6A0B}" . 
+ies:pluriverse rdfs:comment "An instance of Element which is the sum of all possible worlds including everything in those worlds. Put another way, this is everything in our world and everything in all possible worlds." . 
