@@ -220,7 +220,7 @@ ies:assessedToBeTheSameAs rdfs:comment "A relationship that asserts two Things t
 ies:assessedToBeTheSameAs rdfs:subPropertyOf ies:relationship . 
 ies:Assessment rdf:type rdfs:Class . 
 ies:Assessment sparx:guid "{E4AB33D9-9978-446f-9C39-4F4C41FB3D45}" . 
-ies:Assessment rdfs:comment "An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thing�s possibility, categorisation or other qualitative aspect.Examples include:- Having HIGH confidence that Anne committed the murder.- Assessing a statement made in an internet article as with being true or false.- Assessing a house to having an energy performance of B- Assessing the odds of England winning the World Cup as 20-1" . 
+ies:Assessment rdfs:comment "An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thing�s possibility, categorisation or other qualitative aspect.Examples include:- Having HIGH confidence that Anne committed the murder.- Assessing a statement made in an internet article as being true or false.- Assessing a house to having an energy performance of B- Assessing the odds of England winning the World Cup as 20-1" . 
 ies:Assessment rdfs:subClassOf ies:Event . 
 ies:Assessor rdf:type rdfs:Class . 
 ies:Assessor sparx:guid "{80F9B97D-2C7F-4978-83A3-BE934DD4E1FF}" . 
@@ -534,7 +534,7 @@ ies:CoLocation rdfs:comment "An Event where the activity is uncertain, but it is
 ies:CoLocation rdfs:subClassOf ies:Event . 
 ies:Colour rdf:type rdfs:Class . 
 ies:Colour sparx:guid "{B10D22FB-1D6A-47c9-B1C0-E870D43A5C52}" . 
-ies:Colour rdfs:comment "An Characteristic whose members all have the same colour" . 
+ies:Colour rdfs:comment "A Characteristic whose members all have the same colour" . 
 ies:Colour rdfs:subClassOf ies:Characteristic . 
 ies:CommercialOrganisation rdf:type rdfs:Class . 
 ies:CommercialOrganisation sparx:guid "{1456439C-65C9-4a39-A743-09A7D0FBF248}" . 
@@ -1662,7 +1662,7 @@ ies:ISO3166_1Alpha_3 rdfs:comment "ISO 3166-1 alpha 3 (3-Letter Country Code)" .
 ies:ISO3166_1Alpha_3 rdfs:subClassOf ies:GeoIdentity . 
 ies:ISO4217Code rdf:type rdfs:Class . 
 ies:ISO4217Code sparx:guid "{598ACBB6-DF51-4bd9-A5DD-52EDE1895327}" . 
-ies:ISO4217Code rdfs:comment "ISO4217 three-letter code (e.g. USD, GBP, EUR, etc.)" . 
+ies:ISO4217Code rdfs:comment "ISO4217 three-letter currency code (e.g. USD, GBP, EUR, etc.)" . 
 ies:ISO4217Code rdfs:subClassOf ies:Identifier . 
 ies:ISO639-3Code rdf:type rdfs:Class . 
 ies:ISO639-3Code sparx:guid "{ECFED94D-CC69-46b9-B09D-B282D5665787}" . 
