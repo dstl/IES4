@@ -263,6 +263,7 @@ Otherwise, things to watch out for in the UML are:
 <ul>
 	<li>Removal of <b>hasRole</b>, <b>Role </b>and <b>OrganisationRole </b>(breaking change). Instead use <b>ReplaceablePart</b>/<b>InPost</b> example now provided in the same pattern</li>
 	<li>Update to definition of <b>InPost </b>now that is also a <b>InstalledState</b></li>
+	<li>Corrected relationship between <b>inPost </b>and <b>Post </b>from isPartOf to <b>isStateOf</b></li>
 </ul>
 5. Changes to <b>Assessment </b>pattern:
 <ul>
@@ -2788,7 +2789,7 @@ An Event where an actor makes a subjective judgement against a thing. This can b
 
 Examples include:
 - Having 'HIGH' confidence that Anne committed the murder.
-- Assessing a statement made in an internet article as with being true or false.
+- Assessing a statement made in an internet article as being true or false.
 - Assessing a house to having an energy performance of 'B'
 - Assessing the odds of England winning the World Cup as 20-1
 
@@ -3075,7 +3076,7 @@ An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Ev
 Note: whilst colocation can be easily inferred from data, sometimes it's important to call out specific instances where entities of interest were in the same place at the same time.
 
 ### <a id="{B10D22FB-1D6A-47c9-B1C0-E870D43A5C52}"></a>Colour
-An Characteristic whose members all have the same colour
+A Characteristic whose members all have the same colour
 
 ### <a id="{1456439C-65C9-4a39-A743-09A7D0FBF248}"></a>CommercialOrganisation
 An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that is run for profit
