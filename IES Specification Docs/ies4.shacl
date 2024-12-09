@@ -478,10 +478,6 @@ ies:CinemaTicketShape a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:targetClass ies:CinemaTicket .
 
-ies:ClassOfAccountShape a sh:NodeShape ;
-    sh:severity sh:Warning ;
-    sh:targetClass ies:ClassOfAccount .
-
 ies:ClassOfAmountOfMoneyShape a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:targetClass ies:ClassOfAmountOfMoney .
@@ -518,10 +514,6 @@ ies:ClassOfMeasureValueShape a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:targetClass ies:ClassOfMeasureValue .
 
-ies:ClassOfOnlineServiceShape a sh:NodeShape ;
-    sh:severity sh:Warning ;
-    sh:targetClass ies:ClassOfOnlineService .
-
 ies:ClassOfPersonShape a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:targetClass ies:ClassOfPerson .
@@ -545,10 +537,6 @@ ies:ClassOfResponsibleActorStateShape a sh:NodeShape ;
 ies:ClassOfStateShape a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:targetClass ies:ClassOfState .
-
-ies:ClassOfWebResourceShape a sh:NodeShape ;
-    sh:severity sh:Warning ;
-    sh:targetClass ies:ClassOfWebResource .
 
 ies:CloseAccountShape a sh:NodeShape ;
     sh:severity sh:Warning ;
@@ -2490,16 +2478,6 @@ ies:OnlineServiceProviderRangeShape a sh:NodeShape ;
 ies:OnlineServiceShape a sh:NodeShape ;
     sh:severity sh:Warning ;
     sh:targetClass ies:OnlineService .
-
-ies:OnlineServiceTypeDomainShape a sh:NodeShape ;
-    sh:class ies:OnlineService ;
-    sh:severity sh:Warning ;
-    sh:targetSubjectsOf ies:onlineServiceType .
-
-ies:OnlineServiceTypeRangeShape a sh:NodeShape ;
-    sh:class ies:ClassOfOnlineService ;
-    sh:severity sh:Warning ;
-    sh:targetObjectsOf ies:onlineServiceType .
 
 ies:OnlineShopShape a sh:NodeShape ;
     sh:severity sh:Warning ;
