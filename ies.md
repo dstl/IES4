@@ -1673,7 +1673,7 @@ In the example shown, there are three scenarios. In scenario 1, Fred is assessed
 ### <a id="df5aab67-46eb-40a8-b96e-8f3b5382d145"></a>Authorisation
 ![Authorisation Diagram](Images/EAID_DF5AAB67_46EB_40a8_B96E_8F3B5382D145.png)
 
-#### IES elements in this diagram:
+#### IES elements in this diagram: 
 
 * [Event](#b376370e-f5e8-4287-a3ec-ac35532919b1)
 * [EndToEndActivity](#a88abe99-1d6c-4843-a2e4-7531626d3859)
