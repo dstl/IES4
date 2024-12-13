@@ -272,7 +272,7 @@ Otherwise, things to watch out for in the UML are:
 6. Changes to <b>Location </b>pattern:
 <ul>
 	<li><b>regionCountry</b>, <b>addressRegion </b>deleted. Use <b>inLocation </b>instead</li>
-	<li><b>isCentroidOf </b>corrected to be <b>subProperty </b>of relationship not <b>inLocation</b></li>
+	<li><b>isCentroidOf </b>corrected from being a <b>subProperty </b>of relationship to <b>inLocation</b></li>
 	<li><b>MapGridArea </b>no longer an <b>Asset </b>as well as a <b>Location</b></li>
 	<li><b>RadioCoverageArea </b>no longer an <b>Asset </b>as well as a <b>Location</b></li>
 </ul>
@@ -333,14 +333,14 @@ Otherwise, things to watch out for in the UML are:
 15. Other changes:
 <ul>
 	<li><b>ExchangedItem </b>changed to <b>Thing</b>. Its definition has also been changed.</li>
-	<li><b>VersionOfDocument </b>- update to definition to apply to anything that is identifiable</li>
+	<li><b>VersionNumber </b>- update to definition to apply to anything that is identifiable</li>
 	<li><b>currencyDenomination </b>no longer a subProperty of relationship and rdf:type. Its now just a subtype of rdf:type only.</li>
 	<li><b>isParticipantStateIn </b>deleted. Just use <b>isParticipantIn</b>.</li>
 </ul>
 <ul>
 	<li>Removed all references of PersonOrOrganisation. All updated to <b>ResponsibleActor</b></li>
 	<li><b>Marriage </b>no longer a subClassOf <b>LawEnforcement</b></li>
-	<li><b>Latitude </b>and <b>Longitude </b>specified to be xsd:demical literals</li>
+	<li><b>Latitude </b>and <b>Longitude </b>specified to be xsd:decimal literals</li>
 	<li><b>hasTheme </b>no longer domain as <b>Investigation</b>, <b>Communication </b>and <b>Meeting</b>. Now that of only <b>Event</b></li>
 </ul>
 <ul>
