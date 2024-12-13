@@ -9,4 +9,4 @@ IES was developed by the UK Government with contributions from Dstl, Ministry of
 
 This repo provides public access to the IES for collaboration purposes including the specification itself, sample data/code and supporting documentation. There is also a [private repo](https://github.com/dstl/IES) used for the management of the IES; please get in touch if you require access, for example to submit formal Change Requests. 
 
-© Crown copyright (2023). This information is licensed under the terms of the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) except where otherwise stated
+© Crown copyright (2024). This information is licensed under the terms of the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) except where otherwise stated
