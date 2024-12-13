@@ -1664,7 +1664,7 @@ The Assessment pattern breaks away from the usual IES EventParticipant pattern s
 
 A high, medium, low rating must be provided for all assessments. Whilst it is realised that these values may have different meanings between various parties - e.g. medical, policing, intelligence, etc., there has to be some rough indicator, so hmlConfidence will have to be it. 
 
-A further (e.g. more specific) confidence indicator may also be provided. IES does not mandate how that confidence is measured. 
+A further (e.g. more specific) confidence indicator may also be provided. IES does not mandate how that confidence is measured.  
 
 This model also introduces (new to IES 4.1.0) the idea of a PossibleWorld (as used in ISO15926, IDEAS and Prof Matthew West's guide to high quality data models). A PossibleWorld is a scenario - something that may are may not have occurred, and encompasses a number of events and entities that would have existed in that world. The likelihood of a PossibleWorld is defined using AssessToBeTrue.
 
