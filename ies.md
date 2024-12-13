@@ -3,7 +3,7 @@
 Crown Copyright 2020-2024
 ![Logo](Images/ies-logo.png)
 
-# IES Model version: 4.3.0rc1
+# IES Model version: 4.3.0
 ## Contents
 * Introduction Diagrams
     * [Notation](#{9BEA56CA-2E23-47b6-AF37-991F72D7C4DD})
