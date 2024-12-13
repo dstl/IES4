@@ -316,7 +316,7 @@ Otherwise, things to watch out for in the UML are:
 </ul>
 14. IES 4.2 had ClassOfElements and subProperties of rdf:type which encouraged extending the IES classes via ClassOfElements hierarchy rather than the Elements hierarchy. IES 4.3 prunes some of classes (breaking changes) to discourage this behaviour and encourage one approach of extending IES. This approach is documented in "Extending IES4 2024-03-v1.0 O.pdf". Pruned classes and properties include:
 <ul>
-	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted ï¿½ just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
+	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted – just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
 	<li>From <b>Operational </b>pattern - <b>ClassOfOperationalEvent</b>, <b>ClassOfCriminalActivity </b>and <b>typicallyTargets</b></li>
 	<li>From <b>Criminal </b>pattern - Deleted of <b>special forms of rdf:type</b>, <b>typeOfCriminality. Also deleted</b> <b>OffenceCode</b>.</li>
 	<li>From <b>Financial Account</b> pattern - Deleted special forms of rdf:type, <b>financialAccountType ClassOfFinancialAccount</b></li>
@@ -764,7 +764,7 @@ Dispositions are managed in IES using DispositionalClass - something that was al
 * [isPartOf](#cd85d7f7-783b-4d06-b023-56dbbddc02dc)
 * [isStateOf](#f7cbf87a-6ecc-4c9f-b698-fd3cf3f7980e)
 
-Understanding a thing's parts can be straight-forward at any given time, however that is complicated by changes over time. For example, a carï¿½s components, like its gearbox or tyres, can be replaced when worn. When we replace a carï¿½s tyre, it remains the same car, just with a different tyre. BORO and 4D thinking clarifies this: the extent of the car contains a temporal part of one tyre followed by the temporal part of another tyre. At any one time, the car overlaps with only one tyre; but, over time, it overlaps with two tyres. The two tyres have <b>InstalledStates</b> that are parts of the car.
+Understanding a thing's parts can be straight-forward at any given time, however that is complicated by changes over time. For example, a car’s components, like its gearbox or tyres, can be replaced when worn. When we replace a car’s tyre, it remains the same car, just with a different tyre. BORO and 4D thinking clarifies this: the extent of the car contains a temporal part of one tyre followed by the temporal part of another tyre. At any one time, the car overlaps with only one tyre; but, over time, it overlaps with two tyres. The two tyres have <b>InstalledStates</b> that are parts of the car.
 
 Sometimes it is useful to call out the enduring part of an Element e.g. the tyre of a car whichever actual tyre is installed at a given time. This is what we call a <b>ReplaceablePart</b>.<b> </b>A replaceable part can be substituted or exchanged without altering the overall identity or functionality. Moreover, the identity of a <b>ReplaceablePart</b> can survive periods when nothing fulfils its purpose or role, i.e. its existence is not necessarily continuous.
 
@@ -1569,7 +1569,7 @@ Tickets are IndividualDocuments that authorise access to Events - e.g. travel an
 * [VehicleIdentificationNumber](#ac9ab7b0-6c38-4b08-b2b9-caa8486f0f4b)
 * [Colour](#b10d22fb-1d6a-47c9-b1c0-e870d43a5c52)
 
-A means of transportation ï¿½ e.g. car, aircraft, ship.
+A means of transportation – e.g. car, aircraft, ship.
 
 ### <a id="d97110d9-791e-4e88-a92b-5139286e5f05"></a>All Entities
 ![All Entities Diagram](Images/EAID_D97110D9_791E_4e88_A92B_5139286E5F05.png)
@@ -2644,93 +2644,93 @@ As with the Structural Relationships, Topological Relationships are handled diff
 A Characteristic whose members are people who all share the same national or regional accent
 
 ### <a id="31bfe794-924e-44e3-942e-adc9ed19fba1"></a>Account
-An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> that is the collection of all transactions between a provider and a customer
+An <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> that is the collection of all transactions between a provider and a customer
 
 ### <a id="19e90ca4-f0eb-4245-826e-edc278642b41"></a>AccountAdminEvent
-A <a href="#{94CEDBD1-8E3D-4cb4-8155-FBD621DA6A0D}"><font color="#0000ff"><u>BusinessEvent</u></font></a> that an <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> participates in
+A <a href="#94CEDBD1-8E3D-4cb4-8155-FBD621DA6A0D"><font color="#0000ff"><u>BusinessEvent</u></font></a> that an <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> participates in
 
 ### <a id="7891e893-56db-4d47-80b4-c78a667767f6"></a>accountForCard
-Relates a <a href="#{848A9E0F-F3B4-47c3-AA7E-2FF6BE92170C}"><font color="#0000ff"><u>BankCard</u></font></a> to the <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> which the card is issued against.
+Relates a <a href="#848A9E0F-F3B4-47c3-AA7E-2FF6BE92170C"><font color="#0000ff"><u>BankCard</u></font></a> to the <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> which the card is issued against.
 
 ### <a id="c93379f2-6b01-4100-abfa-bd26098ac1cb"></a>AccountHolder
-A <a href="#{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> when they hold an <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a>
+A <a href="#38F8B795-0BCE-4945-8C69-8678ED935C1A"><font color="#0000ff"><u>PersonState</u></font></a> when they hold an <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a>
 
 ### <a id="942fbf46-a7ef-432b-99dd-1e0e3e874c21"></a>AccountInCommunication
-An <a href="#{0BCDB801-1F3B-4496-B04B-95EF545E9445}"><font color="#0000ff"><u>AccountState</u></font></a> (and an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a>) when an <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> is involved in communicating. 
+An <a href="#0BCDB801-1F3B-4496-B04B-95EF545E9445"><font color="#0000ff"><u>AccountState</u></font></a> (and an <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a>) when an <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> is involved in communicating. 
 
 ### <a id="a72f0ff1-88f2-4b36-a2c4-26b4b0698a2c"></a>AccountNumber
-The account number for the respective <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a>.
+The account number for the respective <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a>.
 
 ### <a id="0f9244c3-b2f5-4b8a-aed2-54b7fdab9578"></a>accountProvider
-The <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that provides the <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a>
+The <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that provides the <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a>
 
 ### <a id="0bcdb801-1f3b-4496-b04b-95ef545e9445"></a>AccountState
-A temporal state of an <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a>
+A temporal state of an <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a>
 
 ### <a id="a4d8a62a-dc98-410c-80d2-57c98c1e95c0"></a>Accused
-A <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a>'s role as the accused in a <a href="#{024133FE-9D0B-4e5d-A97D-A34B5EA01C41}"><font color="#0000ff"><u>Prosecution</u></font></a>
+A <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a>'s role as the accused in a <a href="#024133FE-9D0B-4e5d-A97D-A34B5EA01C41"><font color="#0000ff"><u>Prosecution</u></font></a>
 
 ### <a id="22d9054c-ae5c-4afe-99d9-3c9d65c86cb9"></a>aCopyOf
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a Document is a copy of WorkOfDocumentation
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a Document is a copy of WorkOfDocumentation
 
-Note: Document instances are individual physical documents whereas <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> is the general case of a document - e.g. "War and Peace" vs "my copy of <a href="$element://{D4F568F5-7BC4-489d-94BC-AE1305E5C0C2}"><font color="#0000ff"><u>War</u></font></a> and Peace"
+Note: Document instances are individual physical documents whereas <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> is the general case of a document - e.g. "War and Peace" vs "my copy of <a href="$element://{D4F568F5-7BC4-489d-94BC-AE1305E5C0C2}"><font color="#0000ff"><u>War</u></font></a> and Peace"
 
 ### <a id="3360dcc9-d39b-4280-8872-2fe122240407"></a>ActiveEventParticipant
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where the participant is "actively" engaged in the <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a>.
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where the participant is "actively" engaged in the <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a>.
 
 Note: In BORO, EventParticipant would be "Involvement" and ActiveEventParticipant would be "Participation".
 
 ### <a id="b2b15802-9ce9-4a9d-9de0-8289d8474e9b"></a>Actor
-An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> that is capable of performing functions - i.e. actively participating in an Event.
+An <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> that is capable of performing functions - i.e. actively participating in an Event.
 
 ### <a id="7ed8bc7c-a85f-4ed5-ac6f-d640f2df4b7b"></a>ActorState
-A temporal state of an <a href="#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B}"><font color="#0000ff"><u>Actor</u></font></a>
+A temporal state of an <a href="#B2B15802-9CE9-4a9d-9DE0-8289D8474E9B"><font color="#0000ff"><u>Actor</u></font></a>
 
 ### <a id="c90267b5-77a3-4b79-bd0d-7c50c3f4c333"></a>Address
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that can be specified by a postal address
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that can be specified by a postal address
 
 ### <a id="d779f547-c1fb-4d48-9bb8-cb37b9d2f82c"></a>AdministeredAccount
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> is administered
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> is administered
 
 ### <a id="fa4ddf04-16da-4b5c-ae9a-6ab8cd07dcdb"></a>after
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking two Elements where one ends before the other starts
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking two Elements where one ends before the other starts
 
 ### <a id="93f71faf-aef4-4e41-8ceb-fc6447b20428"></a>AgreementExecution
-An <a href="#{422B4F1C-DA90-400b-8FFD-43C90B4F10F4}"><font color="#0000ff"><u>AgreementStage</u></font></a> which includes all the ongoing activities that conform to the agreement reached
+An <a href="#422B4F1C-DA90-400b-8FFD-43C90B4F10F4"><font color="#0000ff"><u>AgreementStage</u></font></a> which includes all the ongoing activities that conform to the agreement reached
 
 ### <a id="7a750064-e711-4871-afc3-39057342fb9e"></a>AgreementName
-A <a href="#{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a> that is used to refer to an <a href="#{1B39630B-B00F-4def-9C65-48082C4AD2E0}"><font color="#0000ff"><u>EndToEndAgreement</u></font></a>.
+A <a href="#7D7CC966-56EB-4220-A650-A993E598F2E2"><font color="#0000ff"><u>Name</u></font></a> that is used to refer to an <a href="#1B39630B-B00F-4def-9C65-48082C4AD2E0"><font color="#0000ff"><u>EndToEndAgreement</u></font></a>.
 
 ### <a id="422b4f1c-da90-400b-8ffd-43c90b4f10f4"></a>AgreementStage
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> which is part of an <a href="#{1B39630B-B00F-4def-9C65-48082C4AD2E0}"><font color="#0000ff"><u>EndToEndAgreement</u></font></a>
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> which is part of an <a href="#1B39630B-B00F-4def-9C65-48082C4AD2E0"><font color="#0000ff"><u>EndToEndAgreement</u></font></a>
 
 ### <a id="01a64a84-7a14-45a5-aaf2-f1aa614d5f30"></a>Aircraft
-A <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> that travels by air
+A <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> that travels by air
 
 ### <a id="82e3793f-d0d1-40ca-927c-7a6fef913503"></a>Airport
-A <a href="#{57860A04-0128-4c7e-9BFD-83D3BA432F8C}"><font color="#0000ff"><u>Port</u></font></a> used for air travel
+A <a href="#57860A04-0128-4c7e-9BFD-83D3BA432F8C"><font color="#0000ff"><u>Port</u></font></a> used for air travel
 
 ### <a id="81a1e70d-6adb-4843-bca6-c0a710e7716b"></a>allHaveCharacteristic
-An rdfs:subClassOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts that all instances of a ClassOfElement share a particular Characteristic or Measure
+An rdfs:subClassOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts that all instances of a ClassOfElement share a particular Characteristic or Measure
 
 e.g. all London buses being red, all heavyweight boxers weighing more than 200lbs
 
 ### <a id="6f8504e0-e03c-43fa-aa81-c3341ca551e3"></a>allHaveDisposition
-An rdfs:subClassOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts that all instances of a ClassOfElement share a disposition
+An rdfs:subClassOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts that all instances of a ClassOfElement share a disposition
 
 e.g. all Eurofighters being cable of Mach 2
 
 ### <a id="3d83e15f-aca8-48e4-8c7b-84580807e06f"></a>Alliance
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> made up of allies - these could be people or organisations, and the alliance may be quite loose.
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> made up of allies - these could be people or organisations, and the alliance may be quite loose.
 
 ### <a id="7f818f57-2c3b-4629-8eec-f5f8310ae655"></a>alliedTo
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is allied to the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is allied to the other.
 
 ### <a id="518e9b39-58c0-4e89-831d-b6099c3b9892"></a>allocatedSeatNumber
 The seat number associated with the ticket
 
 ### <a id="51b6f4c5-0da3-437d-9507-38514bc2abcd"></a>Altitude
-The Length that is the distance above (or below in the case of negative numbers) the surface of the WGS84 spheroid of the respective <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> 
+The Length that is the distance above (or below in the case of negative numbers) the surface of the WGS84 spheroid of the respective <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> 
 
 ### <a id="0df94de5-68b7-45b4-a106-a11ce06c31b8"></a>AmountOfMoney
 A specific amount of a given currency
@@ -2739,7 +2739,7 @@ A specific amount of a given currency
 The Measure of the stoichiometric quantity of substance (usually measured in moles)
 
 ### <a id="15388c46-262d-4f70-8f65-83758a5aeaf5"></a>ancestorOf
-A Relationship between two <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is and ancestor of the other
+A Relationship between two <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is and ancestor of the other
 
 Note: was called "relative of" in IES 3.x, but was really only about ancestry, so is changed here. 
 
@@ -2751,10 +2751,10 @@ Allowable Values:
 See EDH Standard
 
 ### <a id="f8fabf60-63d3-42ae-ba6a-54cfd0c036bf"></a>ArbitraryOverlap
-An <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> whose extent is defined by being the shared overlap of two or more Elements
+An <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> whose extent is defined by being the shared overlap of two or more Elements
 
 ### <a id="68ba678c-dca8-453e-bfcc-d9fb48339d99"></a>ArbitraryPeriod
-A <a href="#{3FDFA898-C340-4279-8B3C-275359D5B02D}"><font color="#0000ff"><u>PeriodOfTime</u></font></a> for which is not delineated by a particular clock period - e.g. not a year, not a month, not a day, not an hour, etc. Instead it is one which is most clearly specified in terms of start and end that are <a href="#{2173F463-524C-457c-B106-51322F64F122}"><font color="#0000ff"><u>ParticularPeriods</u></font></a>.
+A <a href="#3FDFA898-C340-4279-8B3C-275359D5B02D"><font color="#0000ff"><u>PeriodOfTime</u></font></a> for which is not delineated by a particular clock period - e.g. not a year, not a month, not a day, not an hour, etc. Instead it is one which is most clearly specified in terms of start and end that are <a href="#2173F463-524C-457c-B106-51322F64F122"><font color="#0000ff"><u>ParticularPeriods</u></font></a>.
 
 ### <a id="c6ba7464-c00e-4ff6-ae7b-9ce9d4e08fdf"></a>areaOfCoverage
 The area over which the TravelCard is valid 
@@ -2765,29 +2765,29 @@ London - Zone 1
 London - All Zones
 
 ### <a id="d8d7184c-2f7b-4a5d-aa8f-7ee7b5a04f94"></a>Arrest
-A <a href="#{3876B81C-E316-4e11-A6C4-8024E52F769B}"><font color="#0000ff"><u>LawEnforcement</u></font></a> <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is arrested
+A <a href="#3876B81C-E316-4e11-A6C4-8024E52F769B"><font color="#0000ff"><u>LawEnforcement</u></font></a> <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is arrested
 
 ### <a id="b870a3b5-32fa-4aaf-86f1-7db674585f3a"></a>Arrested
-A <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>'s role when arrested
+A <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>'s role when arrested
 
 ### <a id="5b3f41c3-91cc-442f-a4f8-615e77751734"></a>ArrestingOfficer
-A <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>'s role as arresting officer
+A <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>'s role as arresting officer
 
 ### <a id="f2c03da3-b554-4bde-a0de-efb5bee19c56"></a>Arrival
-A <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the end of a <a href="#{95B5ACC4-956A-4b29-AB9E-BDCD12EF319F}"><font color="#0000ff"><u>Movement</u></font></a> event
+A <a href="#892345CD-9FA7-4982-978D-B6D3ABAE839C"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the end of a <a href="#95B5ACC4-956A-4b29-AB9E-BDCD12EF319F"><font color="#0000ff"><u>Movement</u></font></a> event
 
-The date/time of the arrival can be specified using the <a href="#{2F08EF25-A5C8-48ad-85E3-903DB008AA19}"><font color="#0000ff"><i><u>inPeriod</u></i></font></a><i> </i>relationship. 
+The date/time of the arrival can be specified using the <a href="#2F08EF25-A5C8-48ad-85E3-903DB008AA19"><font color="#0000ff"><i><u>inPeriod</u></i></font></a><i> </i>relationship. 
 
 ### <a id="669e3cd0-cd9d-496c-a711-ecde3f589012"></a>assessed
 An owl:objectProperty that links an AssesToBeTrue to the rdfs:Resource that is assessed to be true.
 
 ### <a id="6a1c6c65-d671-4ea3-9184-044ae2a802cf"></a>assessedToBeTheSameAs
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts two Things that may have been previously judged to be different are in fact the same thing. 
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts two Things that may have been previously judged to be different are in fact the same thing. 
 
-WARNING:  by "the same" we mean they occupy the same space for the same period of time - i.e. not two different things in the same place at different times, and not the same physical item at two different periods of time. The <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> and <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> patterns should do most of what is needed here, and it is <i>extremely rare </i>that this would ever be needed. Do not use unless absolutely necessary. 
+WARNING:  by "the same" we mean they occupy the same space for the same period of time - i.e. not two different things in the same place at different times, and not the same physical item at two different periods of time. The <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> and <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> patterns should do most of what is needed here, and it is <i>extremely rare </i>that this would ever be needed. Do not use unless absolutely necessary. 
 
 ### <a id="e4ab33d9-9978-446f-9c39-4f4c41fb3d45"></a>Assessment
-An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thingï¿½s possibility, categorisation or other qualitative aspect.
+An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thing’s possibility, categorisation or other qualitative aspect.
 
 Examples include:
 - Having 'HIGH' confidence that Anne committed the murder.
@@ -2796,21 +2796,21 @@ Examples include:
 - Assessing the odds of England winning the World Cup as 20-1
 
 ### <a id="80f9b97d-2c7f-4978-83a3-be934dd4e1ff"></a>Assessor
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an Actor assesses something to be true.
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an Actor assesses something to be true.
 
 ### <a id="7150208d-a02e-45ed-8279-44843f4da897"></a>AssessToBeTrue
-An Assessment where a fact is assessed to be true by a Actor (i.e. a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> or Device)
+An Assessment where a fact is assessed to be true by a Actor (i.e. a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> or Device)
 
-An AssessToBeTrue shall have one and only one <a href="#{04F797E7-9B5C-48c5-A50D-A14CFF7725DE}"><font color="#0000ff"><u>hmlConfidence</u></font></a> attribute (i.e. this is mandatory)
+An AssessToBeTrue shall have one and only one <a href="#04F797E7-9B5C-48c5-A50D-A14CFF7725DE"><font color="#0000ff"><u>hmlConfidence</u></font></a> attribute (i.e. this is mandatory)
 
 ### <a id="40231334-5acc-4dd4-a8c1-05012e2170e0"></a>Asset
-An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> that is either man-made (or defined - see <a href="#{487778E0-4BD7-4d9a-B7F7-63731478E1A2}"><font color="#0000ff"><u>Rights</u></font></a>) or whose extent is defined in such a way as to specify ownership - e.g. a parcel of real estate
+An <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> that is either man-made (or defined - see <a href="#487778E0-4BD7-4d9a-B7F7-63731478E1A2"><font color="#0000ff"><u>Rights</u></font></a>) or whose extent is defined in such a way as to specify ownership - e.g. a parcel of real estate
 
 ### <a id="ca196722-9531-4eb4-a8cf-b9a5145cdcfd"></a>AssetState
-A temporal state of an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a>
+A temporal state of an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a>
 
 ### <a id="2e464c7f-fc0b-4dcc-9b1c-5dca87b4ce3a"></a>associatedCarrier
-The Organisation that provides the transport specified on the <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a>
+The Organisation that provides the transport specified on the <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a>
 
 ### <a id="022535de-2100-420b-b4bc-10465deeec3c"></a>associatedPersonName
 The name of the Person which is associated with the Entity
@@ -2823,12 +2823,12 @@ nameOnLicense, etc. on IdentityDocument
 ticketHolderName on Ticket
 
 ### <a id="73d38c0e-3291-4de9-8920-f37980cb3a9e"></a>Attacker
-Relates a <a href="#{8787BE51-8FE0-4d76-97B4-608311434F5B}"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> conducting the attack
+Relates a <a href="#8787BE51-8FE0-4d76-97B4-608311434F5B"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> conducting the attack
 
 ### <a id="626d5f2c-9153-40f4-9f2a-393b6db072d3"></a>Attendance
-A <a href="#{8404464D-3904-4c59-AE0E-B3FAFB46AC4E}"><font color="#0000ff"><u>Presence</u></font></a> where the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is present
+A <a href="#8404464D-3904-4c59-AE0E-B3FAFB46AC4E"><font color="#0000ff"><u>Presence</u></font></a> where the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is present
 
-Note - we may not know the identity of the person, so would just create only the <a href="#{626D5F2C-9153-40f4-9F2A-393B6DB072D3}"><font color="#0000ff"><u>Attendance</u></font></a> (<a href="$element://{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a>). This allows the <a href="$element://{98BDD06F-1BD7-42b8-B338-20A198BCF90A}"><font color="#0000ff"><u>model</u></font></a> to grow as more information is discovered without recourse to using sameAs relationships.
+Note - we may not know the identity of the person, so would just create only the <a href="#626D5F2C-9153-40f4-9F2A-393B6DB072D3"><font color="#0000ff"><u>Attendance</u></font></a> (<a href="$element://{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a>). This allows the <a href="$element://{98BDD06F-1BD7-42b8-B338-20A198BCF90A}"><font color="#0000ff"><u>model</u></font></a> to grow as more information is discovered without recourse to using sameAs relationships.
 
 ### <a id="4a8e5877-32df-428f-9a60-6ac3d083ffca"></a>attribute
 A feature or property of a Thing.
@@ -2836,53 +2836,53 @@ A feature or property of a Thing.
 Note: In IES4 it is important to distinguish between names and attributes - attribute should never be used to identify or name something - for that, use Name or Identifier.
 
 ### <a id="89953404-8a71-46ef-8f7b-90c12ee286fd"></a>AtWar
-An <a href="#{F12D45EA-66D5-4016-BDF7-E1CD8F48CCF5}"><font color="#0000ff"><u>InDisagreement</u></font></a> where the parties have declared war
+An <a href="#F12D45EA-66D5-4016-BDF7-E1CD8F48CCF5"><font color="#0000ff"><u>InDisagreement</u></font></a> where the parties have declared war
 
 ### <a id="8177a2fb-ca54-4dc5-9884-33fba660b174"></a>AuthorisationDocument
-A <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that provides permission
+A <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that provides permission
 
 ### <a id="1d6bae08-b8f1-4eee-928e-991b3b46eadf"></a>AuthorisationRequest
-An <a href="#{2D5069F2-FE77-477f-A607-FA6458E64173}"><font color="#0000ff"><u>AuthorisationStage</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> requests authorisation to act from another <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a>
+An <a href="#2D5069F2-FE77-477f-A607-FA6458E64173"><font color="#0000ff"><u>AuthorisationStage</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> requests authorisation to act from another <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a>
 
 ### <a id="81bf6ea6-996d-4148-8f5d-8b41156637f6"></a>AuthorisationRequester
-An <a href="#{3360DCC9-D39B-4280-8872-2FE122240407}"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> requests authority to act 
+An <a href="#3360DCC9-D39B-4280-8872-2FE122240407"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> requests authority to act 
 
 ### <a id="8e4cc036-c4c5-4222-8532-9b6c53eec56e"></a>AuthorisationReviewer
-An <a href="#{3360DCC9-D39B-4280-8872-2FE122240407}"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> reviews an <a href="#{1D6BAE08-B8F1-4eee-928E-991B3B46EADF}"><font color="#0000ff"><u>AuthorisationRequest</u></font></a>
+An <a href="#3360DCC9-D39B-4280-8872-2FE122240407"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> reviews an <a href="#1D6BAE08-B8F1-4eee-928E-991B3B46EADF"><font color="#0000ff"><u>AuthorisationRequest</u></font></a>
 
 ### <a id="2d5069f2-fe77-477f-a607-fa6458e64173"></a>AuthorisationStage
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> which is part of an <a href="#{D75F18D1-95D6-481b-84D5-F8D7F3A5A389}"><font color="#0000ff"><u>EndToEndAuthorisation</u></font></a>
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> which is part of an <a href="#D75F18D1-95D6-481b-84D5-F8D7F3A5A389"><font color="#0000ff"><u>EndToEndAuthorisation</u></font></a>
 
 ### <a id="f69279d2-ba11-4a31-8739-0d91ef5b9bef"></a>AuthorisedActor
-An <a href="#{3360DCC9-D39B-4280-8872-2FE122240407}"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is granted authority to act in a <a href="#{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> 
+An <a href="#3360DCC9-D39B-4280-8872-2FE122240407"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is granted authority to act in a <a href="#F5EAAEEE-C0B2-469f-9048-3E0731ED8342"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> 
 
 ### <a id="466dcdfb-b642-468b-a47a-e83291a86c6b"></a>Authoriser
-An <a href="#{3360DCC9-D39B-4280-8872-2FE122240407}"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> acts as the authoriser (sign off) in a <a href="#{F5EAAEEE-C0B2-469f-9048-3E0731ED8342}"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> 
+An <a href="#3360DCC9-D39B-4280-8872-2FE122240407"><font color="#0000ff"><u>ActiveEventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> acts as the authoriser (sign off) in a <a href="#F5EAAEEE-C0B2-469f-9048-3E0731ED8342"><font color="#0000ff"><u>GrantOfAuthority</u></font></a> 
 
 ### <a id="a2da918d-843c-43c9-a974-4795601e9d65"></a>authorisesAccessTo
 The Event for which the respective Ticket applies.
 
 ### <a id="4e10343e-8350-4354-b3db-a7f74b4535ef"></a>Bank
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that holds a banking license and can conduct financial transactions on behalf of customers
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that holds a banking license and can conduct financial transactions on behalf of customers
 
 ### <a id="02e3c3b8-8650-4867-8390-823e4b3360e6"></a>BankBranch
-An operating division of a <a href="#{4E10343E-8350-4354-B3DB-A7F74B4535EF}"><font color="#0000ff"><u>Bank</u></font></a>, usually a high street branch, but might also be the online arm of a Bank
+An operating division of a <a href="#4E10343E-8350-4354-B3DB-A7F74B4535EF"><font color="#0000ff"><u>Bank</u></font></a>, usually a high street branch, but might also be the online arm of a Bank
 
 ### <a id="848a9e0f-f3b4-47c3-aa7e-2ff6be92170c"></a>BankCard
-A <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a> that is a physical card used for making financial transactions.
+A <a href="#9882D901-1B22-4b89-81D1-031F840A20D0"><font color="#0000ff"><u>PaymentArtefact</u></font></a> that is a physical card used for making financial transactions.
 
 Note: when used online, the accompanying Fan
 
 ### <a id="2c441f0a-635d-41ef-b8cc-96aa07958f8e"></a>beginBoundOfClass
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking a <a href="#{E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A}"><font color="#0000ff"><u>TimeBoundedClass</u></font></a> to the <a href="#{2173F463-524C-457c-B106-51322F64F122}"><font color="#0000ff"><u>ParticularPeriod</u></font></a> that marks the beginning bound date of its instances
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking a <a href="#E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A"><font color="#0000ff"><u>TimeBoundedClass</u></font></a> to the <a href="#2173F463-524C-457c-B106-51322F64F122"><font color="#0000ff"><u>ParticularPeriod</u></font></a> that marks the beginning bound date of its instances
 
 ### <a id="4457e8af-edbd-4ef1-b62b-59037829b961"></a>BirthCertificate
-An <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> issued to prove the data and place of birth of a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
+An <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> issued to prove the data and place of birth of a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>
 
 ### <a id="cfe53096-32fc-47c8-98ba-950ee6f988cb"></a>BirthState
-A <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the beginning of a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>'s life.
+A <a href="#892345CD-9FA7-4982-978D-B6D3ABAE839C"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the beginning of a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>'s life.
 
-The location of the birth can be specified using <a href="#{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><i><u>inLocation</u></i></font></a>
+The location of the birth can be specified using <a href="#463F9B14-2D14-4364-B4F0-658A20DFCBFA"><font color="#0000ff"><i><u>inLocation</u></i></font></a>
 
 The date/time of the birth can be specified using the <a href="$element://{2F08EF25-A5C8-48ad-85E3-903DB008AA19}"><font color="#0000ff"><i><u>inPeriod</u></i></font></a><i> </i>relationship. 
 
@@ -2890,31 +2890,31 @@ The date/time of the birth can be specified using the <a href="$element://{2F08E
 The number of the boarding card issued to the Passenger. 
 
 ### <a id="22ab6ea2-b088-4ef6-ae3a-5843fba5c8ae"></a>Book
-A <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that is a published book
+A <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that is a published book
 
 ### <a id="53c6bca9-4d66-4bac-b946-0a8541cf510a"></a>BookedPassenger
-A <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>'s involvement as a booked traveller in a <a href="#{76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB}"><font color="#0000ff"><u>TravelBooking</u></font></a>
+A <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>'s involvement as a booked traveller in a <a href="#76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB"><font color="#0000ff"><u>TravelBooking</u></font></a>
 
 ### <a id="0af87601-5b3e-4c5e-8149-d0d3c0073c42"></a>BookingAgent
-A <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a>'s involvement as the facilitator of a <a href="#{76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB}"><font color="#0000ff"><u>TravelBooking</u></font></a>
+A <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a>'s involvement as the facilitator of a <a href="#76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB"><font color="#0000ff"><u>TravelBooking</u></font></a>
 
 ### <a id="61bdeba6-be87-44e3-a1c7-246d0ce60adc"></a>BookingPayment
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}"><font color="#0000ff"><u>AmountOfMoney</u></font></a> in cash is used as payment in a <a href="#{76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB}"><font color="#0000ff"><u>TravelBooking</u></font></a>.
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#0DF94DE5-68B7-45b4-A106-A11CE06C31B8"><font color="#0000ff"><u>AmountOfMoney</u></font></a> in cash is used as payment in a <a href="#76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB"><font color="#0000ff"><u>TravelBooking</u></font></a>.
 
 When neither card nor cash is used, there will be an accompanying <a href="$element://{D94ED70F-8CCA-4c6e-8AE5-65450BBA62D7}"><font color="#0000ff"><u>MoneyTransfer</u></font></a>
 
 ### <a id="d31e959a-6354-40e7-8370-1fe5246624ad"></a>BookingReference
-An <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> that is  notionally unique number that is allocated to a <a href="#{76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB}"><font color="#0000ff"><u>TravelBooking</u></font></a>.
+An <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> that is  notionally unique number that is allocated to a <a href="#76DC9A0C-F6E8-4ff4-ADD6-072DC1EBE3AB"><font color="#0000ff"><u>TravelBooking</u></font></a>.
 
 Note that Booking Reference Numbers are recycled and so are not unique in their own right. When combined with the BookingDate it is potentially possible to identify a specific booking.
 
 ### <a id="892345cd-9fa7-4982-978d-b6d3abae839c"></a>BoundingState
-A <a href="#{6E5AF4BB-BB7F-4387-A7BB-476B81FEC103}"><font color="#0000ff"><u>ContinuousState</u></font></a> that occurs at the beginning or end of an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> 
+A <a href="#6E5AF4BB-BB7F-4387-A7BB-476B81FEC103"><font color="#0000ff"><u>ContinuousState</u></font></a> that occurs at the beginning or end of an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> 
 
-The date/time of the state can be specified using the <a href="#{2F08EF25-A5C8-48ad-85E3-903DB008AA19}"><font color="#0000ff"><i><u>inPeriod</u></i></font></a><i> </i>relationship. 
+The date/time of the state can be specified using the <a href="#2F08EF25-A5C8-48ad-85E3-903DB008AA19"><font color="#0000ff"><i><u>inPeriod</u></i></font></a><i> </i>relationship. 
 
 ### <a id="012f7f29-4f8e-4263-8224-126050ee175f"></a>BranchCode
-In identifier for a <a href="#{02E3C3B8-8650-4867-8390-823E4B3360E6}"><font color="#0000ff"><u>BankBranch</u></font></a> - In the UK this is often referred to as the Sort Code.
+In identifier for a <a href="#02E3C3B8-8650-4867-8390-823E4B3360E6"><font color="#0000ff"><u>BankBranch</u></font></a> - In the UK this is often referred to as the Sort Code.
 
 ### <a id="62675b63-9169-4f05-9993-e1b17540a6c1"></a>branding
 A brand or logo that is represented on an Entity
@@ -2922,16 +2922,16 @@ A brand or logo that is represented on an Entity
 e.g. some bank cards are branded by a car manufacturer, etc. but actually operated by a bank
 
 ### <a id="94cedbd1-8e3d-4cb4-8155-fbd621da6a0d"></a>BusinessEvent
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> that is commercial or administrative in nature
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> that is commercial or administrative in nature
 
 ### <a id="f50bad6d-ebe0-4fd8-b54c-3e24a62491a6"></a>Callee
-An <a href="#{A5713B2C-E098-4dd2-BD46-42DA51899FEA}"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is called in an <a href="#{6D5E11EE-C61A-4e38-913F-BBAF2A34A288}"><font color="#0000ff"><u>InteractiveCommunication</u></font></a>
+An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is called in an <a href="#6D5E11EE-C61A-4e38-913F-BBAF2A34A288"><font color="#0000ff"><u>InteractiveCommunication</u></font></a>
 
 ### <a id="03ddc2f5-f961-47c2-b8f8-b27a752aec34"></a>Caller
-An <a href="#{A5713B2C-E098-4dd2-BD46-42DA51899FEA}"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the caller in an <a href="#{6D5E11EE-C61A-4e38-913F-BBAF2A34A288}"><font color="#0000ff"><u>InteractiveCommunication</u></font></a>
+An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the caller in an <a href="#6D5E11EE-C61A-4e38-913F-BBAF2A34A288"><font color="#0000ff"><u>InteractiveCommunication</u></font></a>
 
 ### <a id="25f4f685-3931-4cdc-af43-1a9194bbe15d"></a>Callsign
-In broadcasting and radio communications, a call sign (also known as a call name or call letters ï¿½ and historically as a call signal) is a unique designation for a transmitting station.
+In broadcasting and radio communications, a call sign (also known as a call name or call letters – and historically as a call signal) is a unique designation for a transmitting station.
 
 ### <a id="91d62f08-ed05-4558-9321-368712a34a30"></a>Capability
 A DispositionalClass where all the instances share the same capability
@@ -2939,60 +2939,60 @@ A DispositionalClass where all the instances share the same capability
 Example: Vehicles capable of Mach 2
 
 ### <a id="087f3453-b1d7-41e6-b79f-31b123ed0d68"></a>CardNumber
-An <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> that is the long number on the face of the card (<a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a>)
+An <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> that is the long number on the face of the card (<a href="#9882D901-1B22-4b89-81D1-031F840A20D0"><font color="#0000ff"><u>PaymentArtefact</u></font></a>)
 
 ### <a id="1b9c8eb0-69a7-4fe7-8358-0f6067439c42"></a>CardUsed
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a> is participant in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#9882D901-1B22-4b89-81D1-031F840A20D0"><font color="#0000ff"><u>PaymentArtefact</u></font></a> is participant in a <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a>
 
 ### <a id="91dc18f6-3e35-411c-814d-5acee83be316"></a>Carrier
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{F428ADA5-2349-4cd0-815F-8F768B08C6E6}"><font color="#0000ff"><u>Delivery</u></font></a> as a carrier
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#F428ADA5-2349-4cd0-815F-8F768B08C6E6"><font color="#0000ff"><u>Delivery</u></font></a> as a carrier
 
 ### <a id="76c31798-780c-41b0-a985-0ae3b1c3a478"></a>carrierService
-The Organisation that provides the transport specified on the <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a>
+The Organisation that provides the transport specified on the <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a>
 
 ### <a id="f5e2bcd3-4529-42f2-9ed9-95801b42ed3f"></a>CarTravel
-A <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> by car
+A <a href="#3D0FC30A-CF82-44f2-970E-BFD04EADBA74"><font color="#0000ff"><u>TravelService</u></font></a> by car
 
 ### <a id="62a9aa44-6c36-448b-805f-e13203cfb4fc"></a>CashPayment
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}"><font color="#0000ff"><u>AmountOfMoney</u></font></a> in cash is used as payment in a <a href="#{0A9A9F7D-A6F1-4629-BD2B-7990D2D36493}"><font color="#0000ff"><u>Purchase</u></font></a>.
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#0DF94DE5-68B7-45b4-A106-A11CE06C31B8"><font color="#0000ff"><u>AmountOfMoney</u></font></a> in cash is used as payment in a <a href="#0A9A9F7D-A6F1-4629-BD2B-7990D2D36493"><font color="#0000ff"><u>Purchase</u></font></a>.
 
 When neither card nor cash is used, there will be an accompanying <a href="$element://{D94ED70F-8CCA-4c6e-8AE5-65450BBA62D7}"><font color="#0000ff"><u>MoneyTransfer</u></font></a>
 
 ### <a id="61d00f47-977e-43f6-bd30-77cbaaa74cc1"></a>Casualty
-Relates a <a href="#{8787BE51-8FE0-4d76-97B4-608311434F5B}"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> who was injured or killed in the attack
+Relates a <a href="#8787BE51-8FE0-4d76-97B4-608311434F5B"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> who was injured or killed in the attack
 
 ### <a id="18eb7b22-5927-4b0e-98a8-638d28bdcf87"></a>CBRadioHandset
-A <a href="#{18EB7B22-5927-4b0e-98A8-638D28BDCF87}"><font color="#0000ff"><u>CommunicationsDevice</u></font></a> used to hold radio conversations on frequencies allocated as "Citizen Band"
+A <a href="#18EB7B22-5927-4b0e-98A8-638D28BDCF87"><font color="#0000ff"><u>CommunicationsDevice</u></font></a> used to hold radio conversations on frequencies allocated as "Citizen Band"
 
 ### <a id="9d4a1395-8687-4f0b-bc5d-61a756210b4d"></a>CellularBaseStation
-A <a href="#{F02CFF55-12A7-4308-9A60-E2353DE5BE58}"><font color="#0000ff"><u>RadioMast</u></font></a> that is used for cellular communication
+A <a href="#F02CFF55-12A7-4308-9A60-E2353DE5BE58"><font color="#0000ff"><u>RadioMast</u></font></a> that is used for cellular communication
 
 
 
 ### <a id="7fa15f56-86c4-47f4-9032-999c17703368"></a>ChangeOfGovernment
-A <a href="#{3A0E6FDD-5B3B-4092-9549-C05E8A5FED41}"><font color="#0000ff"><u>PoliticalEvent</u></font></a> where one <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> is replaced by another.
+A <a href="#3A0E6FDD-5B3B-4092-9549-C05E8A5FED41"><font color="#0000ff"><u>PoliticalEvent</u></font></a> where one <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> is replaced by another.
 
 ### <a id="a7f266e8-b1cb-4b9b-8af1-1ef2a7d8f5ee"></a>Characteristic
 A ClassOfElement whose instances all share a common property - e.g. they are all the same colour, mass, etc. 
 
 ### <a id="48223a62-12e6-4953-8f80-8c7a48151825"></a>charters
-A Relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and the <a href="#{7693D2C9-0F06-4005-BB8D-B5B572B2281A}"><font color="#0000ff"><u>Transit</u></font></a> they have chartered.
+A Relationship between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and the <a href="#7693D2C9-0F06-4005-BB8D-B5B572B2281A"><font color="#0000ff"><u>Transit</u></font></a> they have chartered.
 
 ### <a id="87308a03-5c79-4d94-99e1-660042ac7929"></a>CheckIn
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> checks in to a hotel or <a href="#{7693D2C9-0F06-4005-BB8D-B5B572B2281A}"><font color="#0000ff"><u>Transit</u></font></a>. This also includes swiping tickets to use public transport
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> checks in to a hotel or <a href="#7693D2C9-0F06-4005-BB8D-B5B572B2281A"><font color="#0000ff"><u>Transit</u></font></a>. This also includes swiping tickets to use public transport
 
 The location of the <a href="$element://{87308A03-5C79-4d94-99E1-660042AC7929}"><font color="#0000ff"><u>CheckIn</u></font></a> is specified using a <a href="$element://{60A37745-8DD5-4e4c-9A4C-6957F71AD971}"><font color="#0000ff"><u>happensIn</u></font></a> relationship.
 
 The CheckIn may be part of another Event - e.g. an <a href="$element://{78C33499-CD14-43cb-82AE-93A0F8CF022B}"><font color="#0000ff"><u>EntertainmentEvent</u></font></a> or <a href="$element://{7693D2C9-0F06-4005-BB8D-B5B572B2281A}"><font color="#0000ff"><u>Transit</u></font></a> event. Simply use the <a href="$element://{CD85D7F7-783B-4d06-B023-56DBBDDC02DC}"><font color="#0000ff"><u>isPartOf</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to specify this.
 
 ### <a id="7e0c25c9-dd3a-463e-a481-7ca4ea4ac8c5"></a>CinemaTicket
-An <a href="#{96989C30-99CC-4606-A8D4-DFD9421F0E34}"><font color="#0000ff"><u>EntertainmentTicket</u></font></a> that permits attendance at a cinema
+An <a href="#96989C30-99CC-4606-A8D4-DFD9421F0E34"><font color="#0000ff"><u>EntertainmentTicket</u></font></a> that permits attendance at a cinema
 
 ### <a id="e5c27da8-7df1-49ea-a9ec-abe17afd2047"></a>ClassOfAmountOfMoney
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}"><font color="#0000ff"><u>AmountOfMoney</u></font></a>
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#0DF94DE5-68B7-45b4-A106-A11CE06C31B8"><font color="#0000ff"><u>AmountOfMoney</u></font></a>
 
 ### <a id="f999f59a-7c7b-40f3-8f86-5b2592889e95"></a>ClassOfAsset
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a>- i.e. a <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are classes of Asset
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a>- i.e. a <a href="#D1B2FB30-36CA-4012-B85F-514E270BF541"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are classes of Asset
 
 Examples:
 
@@ -3001,13 +3001,13 @@ Examples:
 * Apple iPhone 6S
 
 ### <a id="85305668-de1a-454a-87ee-346a221e846c"></a>ClassOfClassOfElement
-An <a href="#{58C6DE35-5E57-4009-A6CE-69C889B31D82}"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <font color="#0000ff"><u>Thing</u></font> whose instances are classes of classes of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a>
+An <a href="#58C6DE35-5E57-4009-A6CE-69C889B31D82"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <font color="#0000ff"><u>Thing</u></font> whose instances are classes of classes of <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a>
 
 ### <a id="1f9ac8fe-3862-48d6-a3dc-e429b08d2b26"></a>ClassOfClassOfEntity
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a>
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#D1B2FB30-36CA-4012-B85F-514E270BF541"><font color="#0000ff"><u>ClassOfEntity</u></font></a>
 
 ### <a id="3c13e07d-5796-4d03-9ebc-c75277e87ca4"></a>ClassOfElement
-An <a href="#{58C6DE35-5E57-4009-A6CE-69C889B31D82}"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a> whose instances are classes of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a>
+An <a href="#58C6DE35-5E57-4009-A6CE-69C889B31D82"><font color="#0000ff"><u>rdfs:Class</u></font></a> and an <a href="#485CBF1A-04FF-4741-8471-46A03D28C406"><font color="#0000ff"><u>Thing</u></font></a> whose instances are classes of <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a>
 
 Examples:
 &nbsp;
@@ -3021,16 +3021,16 @@ Examples:
 </ul>
 
 ### <a id="d1b2fb30-36ca-4012-b85f-514e270bf541"></a>ClassOfEntity
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Entity</u></font></a> - i.e. a <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of Entity
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Entity</u></font></a> - i.e. a <a href="#3C13E07D-5796-4d03-9EBC-C75277E87CA4"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of Entity
 
 Examples:
 
-ï¿½ Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);
-ï¿½ Weapons
-ï¿½ Etc.
+· Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);
+· Weapons
+· Etc.
 
 ### <a id="4ea194c6-bbf9-45ab-85de-5802d8c3a531"></a>ClassOfEvent
-An <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a>. This is the <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of Event.
+An <a href="#3C13E07D-5796-4d03-9EBC-C75277E87CA4"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a>. This is the <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of Event.
 
 Examples:
 
@@ -3039,41 +3039,41 @@ Examples:
 * Annual General <a href="$element://{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a>
 
 ### <a id="ccc8fa06-cda8-491d-bffc-0a88d6a565b1"></a>ClassOfIndividualDocument
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{0F327324-6B4E-40b1-B96B-97A334BA5E4A}"><font color="#0000ff"><u>IndividualDocument</u></font></a>
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#0F327324-6B4E-40b1-B96B-97A334BA5E4A"><font color="#0000ff"><u>IndividualDocument</u></font></a>
 
 ### <a id="4520a91c-d956-46c1-9a81-93c4c0b12880"></a>ClassOfMeasureValue
 A ClassOfRepresentation that is the powertype of MeasureValue
 
 ### <a id="2a62c672-1757-4a2d-874b-c099c9dec416"></a>ClassOfPerson
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>
 
 ### <a id="92cdc810-9dfa-476b-a2e7-33121f65905b"></a>ClassOfPersonState
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a>
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#38F8B795-0BCE-4945-8C69-8678ED935C1A"><font color="#0000ff"><u>PersonState</u></font></a>
 
 ### <a id="4ffeb84d-b823-4829-9a3a-ade51ef0f0f5"></a>ClassOfRepresentation
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a>
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a>
 
 ### <a id="9fc2431d-63a4-4e1b-8d31-2bcd125853d9"></a>ClassOfResponsibleActor
-The <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> 
+The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> 
 
 ### <a id="9cef4f29-5619-4d8f-a9de-8cb43270c7f5"></a>ClassOfResponsibleActorState
-A <a href="#{0358DDAB-D22C-4ee5-8F9A-CF18F3E432BD}"><font color="#0000ff"><u>ClassOfState</u></font></a> that is the <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> 
+A <a href="#0358DDAB-D22C-4ee5-8F9A-CF18F3E432BD"><font color="#0000ff"><u>ClassOfState</u></font></a> that is the <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> 
 
 ### <a id="0358ddab-d22c-4ee5-8f9a-cf18f3e432bd"></a>ClassOfState
-A <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of States. This is the <a href="#{D4BD48E8-76B8-4d3c-AB83-E653DB89170D}"><font color="#0000ff"><u>powertype</u></font></a> of State.
+A <a href="#3C13E07D-5796-4d03-9EBC-C75277E87CA4"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of States. This is the <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of State.
 
 Examples:
 
 * Roles
 
 ### <a id="2a5450a7-5b26-4605-a109-5cb26dd9a70f"></a>CloseAccount
-An <a href="#{19E90CA4-F0EB-4245-826E-EDC278642B41}"><font color="#0000ff"><u>AccountAdminEvent</u></font></a> where an <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> is shut down.
+An <a href="#19E90CA4-F0EB-4245-826E-EDC278642B41"><font color="#0000ff"><u>AccountAdminEvent</u></font></a> where an <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> is shut down.
 
 ### <a id="9e413787-42c8-4cd4-b7b1-63e38f6a02d9"></a>coercedBy
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one (range) coerces the other (domain).
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one (range) coerces the other (domain).
 
 ### <a id="3524d10d-d9b0-416d-aded-d5aaeb99dd09"></a>CoLocation
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where the activity is uncertain, but it is known that some Entities were present
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where the activity is uncertain, but it is known that some Entities were present
 
 Note: whilst colocation can be easily inferred from data, sometimes it's important to call out specific instances where entities of interest were in the same place at the same time.
 
@@ -3081,40 +3081,40 @@ Note: whilst colocation can be easily inferred from data, sometimes it's importa
 A Characteristic whose members all have the same colour
 
 ### <a id="1456439c-65c9-4a39-a743-09a7d0fbf248"></a>CommercialOrganisation
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that is run for profit
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that is run for profit
 
 ### <a id="6698805f-f492-4f1f-954c-e1eb3c53e148"></a>Communication
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where two or more parties interact and exchange information
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where two or more parties interact and exchange information
 
 ### <a id="8300451c-1df9-4545-9174-d8aa69c58ccd"></a>CommunicationsAccount
-An <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> of the communications transactions provided to a customer
+An <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> of the communications transactions provided to a customer
 
 ### <a id="20bb42f0-3f2d-4bb7-88dd-f4d05377d59b"></a>CommunicationsAccountState
-A temporal state of a <a href="#{8300451C-1DF9-4545-9174-D8AA69C58CCD}"><font color="#0000ff"><u>CommunicationsAccount</u></font></a>
+A temporal state of a <a href="#8300451C-1DF9-4545-9174-D8AA69C58CCD"><font color="#0000ff"><u>CommunicationsAccount</u></font></a>
 
 ### <a id="32eb46a5-0fa4-44e9-a9e9-9424e80bde91"></a>CommunicationsDevice
-A <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a> that provides an endpoint for communications ï¿½ e.g. mobile telephone, landline, satellite phone, CB Radio, etc.
+A <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> that provides an endpoint for communications – e.g. mobile telephone, landline, satellite phone, CB Radio, etc.
 
 ### <a id="a82378b9-9774-46b9-9845-cc75be882f06"></a>CommunicationsIdentifier
-An <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> for the end-point of a communication 
+An <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> for the end-point of a communication 
 
 ### <a id="df388418-f296-46a5-a2a3-4297f084dd07"></a>CommunicationsIdentifierRange
 A specified range of identifiers for the end-points of a communication.
 
 ### <a id="98421510-0a8a-4942-9743-191ea0dca9e6"></a>Competition
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where the participants are competing with each other
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where the participants are competing with each other
 
 ### <a id="763c82f1-5ce0-4652-8a93-d56d93de1544"></a>Competitor
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is in competition
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is in competition
 
 ### <a id="8ff9de7f-137b-4a03-ab24-7d84fcfb99c0"></a>ConcertTicket
-An <a href="#{96989C30-99CC-4606-A8D4-DFD9421F0E34}"><font color="#0000ff"><u>EntertainmentTicket</u></font></a> where the <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> is a concert
+An <a href="#96989C30-99CC-4606-A8D4-DFD9421F0E34"><font color="#0000ff"><u>EntertainmentTicket</u></font></a> where the <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> is a concert
 
 ### <a id="b59ab165-6d9c-423f-9cb2-85b4e1b37d93"></a>ConferenceHost
-A <a href="#{5C76FE3F-FE06-4abc-B495-0D4F35FB5252}"><font color="#0000ff"><u>ConferenceParticipant</u></font></a> that is in the role of host
+A <a href="#5C76FE3F-FE06-4abc-B495-0D4F35FB5252"><font color="#0000ff"><u>ConferenceParticipant</u></font></a> that is in the role of host
 
 ### <a id="5c76fe3f-fe06-4abc-b495-0d4f35fb5252"></a>ConferenceParticipant
-An <a href="#{A5713B2C-E098-4dd2-BD46-42DA51899FEA}"><font color="#0000ff"><u>PartyInCommunication</u></font></a> that is a participant in a <a href="#{6EAC8930-3D16-4e44-9706-989BDF6564A5}"><font color="#0000ff"><u>TeleConference</u></font></a>
+An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> that is a participant in a <a href="#6EAC8930-3D16-4e44-9706-989BDF6564A5"><font color="#0000ff"><u>TeleConference</u></font></a>
 
 ### <a id="45fe24b3-b146-4199-b760-c1150cef9ab2"></a>confidence
 A qualitative or quantitative indication of the confidence of an AssessToBeTrue 
@@ -3122,10 +3122,10 @@ A qualitative or quantitative indication of the confidence of an AssessToBeTrue
 ### <a id="b54bb629-e007-4099-bc01-b512894f1e89"></a>contactDetailsOnBooking
 The contact details of the Person making the booking as recorded on the actual Travel Booking.
 
-Note that if these details can be parsed to identify the contact telephone number, contact email address etc. then they should be mapped as instances of <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to the respective <a href="#{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> (TelephoneNumber, EmailAddress, etc.).
+Note that if these details can be parsed to identify the contact telephone number, contact email address etc. then they should be mapped as instances of <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to the respective <a href="#A82378B9-9774-46b9-9845-CC75BE882F06"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> (TelephoneNumber, EmailAddress, etc.).
 
 ### <a id="8ca5551a-eaeb-4145-a75f-2e7d7dad5a57"></a>ContentCategory
-An <a href="#{1F9AC8FE-3862-48d6-A3DC-E429B08D2B26}"><font color="#0000ff"><u>ClassOfClassOfEntity</u></font></a> whose instances collect together all Representations that have similar content.
+An <a href="#1F9AC8FE-3862-48d6-A3DC-E429B08D2B26"><font color="#0000ff"><u>ClassOfClassOfEntity</u></font></a> whose instances collect together all Representations that have similar content.
 
 Examples:
 
@@ -3135,79 +3135,79 @@ Examples:
 * Extremist Media
 
 ### <a id="6e5af4bb-bb7f-4387-a7bb-476b81fec103"></a>ContinuousState
-A <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> that is temporally continuous - i.e. it is not a <a href="#{52DB371E-71AC-4812-B3CF-0FD7D73F1BB0}"><font color="#0000ff"><u>DiscontinuousState</u></font></a>
+A <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> that is temporally continuous - i.e. it is not a <a href="#52DB371E-71AC-4812-B3CF-0FD7D73F1BB0"><font color="#0000ff"><u>DiscontinuousState</u></font></a>
 
 ### <a id="0876ae1f-7202-41d9-a00f-208b118bbf79"></a>contractedTo
-A <a href="#{181AAC84-26CE-4531-AC32-A73B8FD8B858}"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (domain) is contracted to another ResponsibleActor (range).
+A <a href="#181AAC84-26CE-4531-AC32-A73B8FD8B858"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (domain) is contracted to another ResponsibleActor (range).
 
 ### <a id="c81b6ead-8494-45ca-928c-21cb6d395c39"></a>Cookie
-An <a href="#{54500458-51CF-46b5-A5A3-14B1D5C7F755}"><font color="#0000ff"><u>OnlineArtefact</u></font></a> that is stored on a <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a> to enable continuity of session, log-in, or simply to track activity online.
+An <a href="#54500458-51CF-46b5-A5A3-14B1D5C7F755"><font color="#0000ff"><u>OnlineArtefact</u></font></a> that is stored on a <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> to enable continuity of session, log-in, or simply to track activity online.
 
-Cookies tend to be ephemeral, an unique to a device, so no states are required. Simply use <a href="#{76D8EA41-E338-4db5-BB30-D642CF0F90EB}"><font color="#0000ff"><u>cookieOnDevice</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> mark the stand and end BoundingStates of the Cookie. 
+Cookies tend to be ephemeral, an unique to a device, so no states are required. Simply use <a href="#76D8EA41-E338-4db5-BB30-D642CF0F90EB"><font color="#0000ff"><u>cookieOnDevice</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> mark the stand and end BoundingStates of the Cookie. 
 
 ### <a id="76d8ea41-e338-4db5-bb30-d642cf0f90eb"></a>cookieOnDevice
-Relates a <a href="#{C81B6EAD-8494-45ca-928C-21CB6D395C39}"><font color="#0000ff"><u>Cookie</u></font></a> to the <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a> it is installed on.
+Relates a <a href="#C81B6EAD-8494-45ca-928C-21CB6D395C39"><font color="#0000ff"><u>Cookie</u></font></a> to the <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> it is installed on.
 
 Note: there is usually no need for states here as the Cookie itself has begin and end times.
 
 ### <a id="24e8b958-284f-4be2-aacd-a7b2a94b97d4"></a>cookieOriginSite
-Relates a <a href="#{C81B6EAD-8494-45ca-928C-21CB6D395C39}"><font color="#0000ff"><u>Cookie</u></font></a> to the <a href="#{79098C74-E063-4c45-886D-D0B88A48E954}"><font color="#0000ff"><u>Webpage</u></font></a> from which it originated.
+Relates a <a href="#C81B6EAD-8494-45ca-928C-21CB6D395C39"><font color="#0000ff"><u>Cookie</u></font></a> to the <a href="#79098C74-E063-4c45-886D-D0B88A48E954"><font color="#0000ff"><u>Webpage</u></font></a> from which it originated.
 
 ### <a id="f650b9e3-2669-455e-b20c-92737cfd9a08"></a>Cooperation
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where the participants are cooperating with each other
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where the participants are cooperating with each other
 
 ### <a id="2b96182a-9363-4c6a-be62-132b072a7520"></a>Cooperator
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is in <a href="#{F650B9E3-2669-455e-B20C-92737CFD9A08}"><font color="#0000ff"><u>Cooperation</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is in <a href="#F650B9E3-2669-455e-B20C-92737CFD9A08"><font color="#0000ff"><u>Cooperation</u></font></a>
 
 ### <a id="92eba9b9-48c2-4082-9fe5-603977bd6846"></a>Country
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> whose land extent / borders are recognised as a <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> by the International Standards <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> (ISO)
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> whose land extent / borders are recognised as a <a href="#92EBA9B9-48C2-4082-9FE5-603977BD6846"><font color="#0000ff"><u>Country</u></font></a> by the International Standards <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> (ISO)
 
 Note: this is simply the land, any buildings on it, and the airspace and ground beneath as recognised by the ISO definition. It does not include the nationals of the Country, its Government, etc. 
 
 ### <a id="d33498ed-b6a0-41ea-864f-ce95e2b1e010"></a>countryOfRegistration
-The Country in which the respective <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is registered / recognised.
+The Country in which the respective <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is registered / recognised.
 
 ### <a id="8c3f2c71-c7a2-414a-85c2-dfcd2d91d8e5"></a>countryUsingDialCode
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{79C84EC1-83EC-45a8-A3CE-F88CFFBF9434}"><font color="#0000ff"><u>TelephoneCountryCode</u></font></a> and a <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> that uses that code.
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#79C84EC1-83EC-45a8-A3CE-F88CFFBF9434"><font color="#0000ff"><u>TelephoneCountryCode</u></font></a> and a <a href="#92EBA9B9-48C2-4082-9FE5-603977BD6846"><font color="#0000ff"><u>Country</u></font></a> that uses that code.
 
 Note:  more than one Country may use the same code, and in rare cases a given Country may have more than one code.
 
 ### <a id="32a625fa-3159-4b36-b551-3742ba11c7a8"></a>cousinOf
-A Relationship between two <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the cousin of the other
+A Relationship between two <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the cousin of the other
 
 ### <a id="af60517b-e4ef-48ca-be0f-56e0a89660fd"></a>Create
-A <a href="#{FA07AB7A-0EE8-4258-BE8B-260F9A1192A7}"><font color="#0000ff"><u>LifecycleEvent</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is brought into existence.
+A <a href="#FA07AB7A-0EE8-4258-BE8B-260F9A1192A7"><font color="#0000ff"><u>LifecycleEvent</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is brought into existence.
 
 ### <a id="46de5d1f-b3ce-4858-a6d1-64a0b891a00f"></a>Created
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is created
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is created
 
 The date/time of the creation can be specified using the <i>inPeriod </i>relationship. 
 
 ### <a id="1ebc6375-b26c-4506-b4de-85b74e476362"></a>CreatedContent
-A <a href="#{AF60517B-E4EF-48ca-BE0F-56E0A89660FD}"><font color="#0000ff"><u>Create</u></font></a> <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where online content is created
+A <a href="#AF60517B-E4EF-48ca-BE0F-56E0A89660FD"><font color="#0000ff"><u>Create</u></font></a> <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where online content is created
 
 ### <a id="850db6d5-c8e8-4aa8-87a0-4e7680ff854a"></a>Creator
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{AF60517B-E4EF-48ca-BE0F-56E0A89660FD}"><font color="#0000ff"><u>Create</u></font></a> event as a creator
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#AF60517B-E4EF-48ca-BE0F-56E0A89660FD"><font color="#0000ff"><u>Create</u></font></a> event as a creator
 
 ### <a id="c2174205-c96f-4427-a401-19c1def0e4af"></a>CreditCard
-A <a href="#{848A9E0F-F3B4-47c3-AA7E-2FF6BE92170C}"><font color="#0000ff"><u>BankCard</u></font></a> that allows the customer to carry a line of credit
+A <a href="#848A9E0F-F3B4-47c3-AA7E-2FF6BE92170C"><font color="#0000ff"><u>BankCard</u></font></a> that allows the customer to carry a line of credit
 
 ### <a id="43e58528-16e4-48b3-8f13-10500879ea83"></a>CriminalActivity
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> which is illegal within the laws of the jurisdiction in which it takes place.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> which is illegal within the laws of the jurisdiction in which it takes place.
 
-Note: If the <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a> falls into one of the Home Office Offence Classification Index codes, then this should be provided using the offenceCode attribute.
+Note: If the <a href="#43E58528-16E4-48b3-8F13-10500879EA83"><font color="#0000ff"><u>CriminalActivity</u></font></a> falls into one of the Home Office Offence Classification Index codes, then this should be provided using the offenceCode attribute.
 
 ### <a id="3cefb37c-d5ee-4c9d-848d-c8e2db206482"></a>CriminalOrganisation
-An <a href="#{F3DB6A59-B2DE-4743-A9A8-7DA9CCC68638}"><font color="#0000ff"><u>OrganisationState</u></font></a> that is assessed to be breaking the law in an organised manner
+An <a href="#F3DB6A59-B2DE-4743-A9A8-7DA9CCC68638"><font color="#0000ff"><u>OrganisationState</u></font></a> that is assessed to be breaking the law in an organised manner
 
 ### <a id="b85f065a-6a18-433e-9195-7b6bcbb91c7c"></a>Crossing
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> and an <a href="#{F8FABF60-63D3-42ae-BA6A-54CFD0C036BF}"><font color="#0000ff"><u>ArbitraryOverlap</u></font></a> whose extent is defined by the shared overlap of two or more Locations
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> and an <a href="#F8FABF60-63D3-42ae-BA6A-54CFD0C036BF"><font color="#0000ff"><u>ArbitraryOverlap</u></font></a> whose extent is defined by the shared overlap of two or more Locations
 
 ### <a id="5a0e8f10-ee46-49bd-8e25-a67040d4a40b"></a>crossingOf
-A partOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> (range) has a <a href="#{B85F065A-6A18-433e-9195-7B6BCBB91C7C}"><font color="#0000ff"><u>Crossing</u></font></a> (domain)
+A partOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> (range) has a <a href="#B85F065A-6A18-433e-9195-7B6BCBB91C7C"><font color="#0000ff"><u>Crossing</u></font></a> (domain)
 
 ### <a id="a06ee74f-9a66-4b63-8dc3-3b1c2b362862"></a>Currency
-A <a href="#{E5C27DA8-7DF1-49ea-A9EC-ABE17AFD2047}"><font color="#0000ff"><u>ClassOfAmountOfMoney</u></font></a> that is the denomination as currency.
+A <a href="#E5C27DA8-7DF1-49ea-A9EC-ABE17AFD2047"><font color="#0000ff"><u>ClassOfAmountOfMoney</u></font></a> that is the denomination as currency.
 
 The identifier should be specified as an ISO4217 three-letter code (e.g. USD, GBP, EUR, etc.)
 
@@ -3217,24 +3217,24 @@ A number that represents the amount of currency.
 Note: sometimes the number and/or the currency may be unknown and therefore not instantiated
 
 ### <a id="ae8a5533-9c08-46e7-8131-e3d119f6aae3"></a>currencyDenomination
-The currency in which the <a href="#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}"><font color="#0000ff"><u>AmountOfMoney</u></font></a> is denominated
+The currency in which the <a href="#0DF94DE5-68B7-45b4-A106-A11CE06C31B8"><font color="#0000ff"><u>AmountOfMoney</u></font></a> is denominated
 
 ### <a id="76689446-5969-49d3-8e7e-a92c86c244d5"></a>Customer
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is the customer for the <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> - i.e. the Event has been conducted as a service to them, or in production of goods for them.
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is the customer for the <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> - i.e. the Event has been conducted as a service to them, or in production of goods for them.
 
 ### <a id="43560c95-66a3-4d69-a743-f0a166de51fc"></a>CustomerIdentifier
 The customer identifier associated with the Financial Account.
 
-A single <a href="#{76689446-5969-49d3-8E7E-A92C86C244D5}"><font color="#0000ff"><u>Customer</u></font></a> Identity could be associated with more than one Financial <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> managed by the same provider.
+A single <a href="#76689446-5969-49d3-8E7E-A92C86C244D5"><font color="#0000ff"><u>Customer</u></font></a> Identity could be associated with more than one Financial <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> managed by the same provider.
 
 ### <a id="8cf52fb7-69f2-4ef2-8074-fb90ee924139"></a>CyberStalking
-A form of <a href="#{9B232210-27A3-410a-A713-EFDE7922C61C}"><font color="#0000ff"><u>Stalking</u></font></a> which takes place online.
+A form of <a href="#9B232210-27A3-410a-A713-EFDE7922C61C"><font color="#0000ff"><u>Stalking</u></font></a> which takes place online.
 
 ### <a id="3099b032-4b0a-4aec-abcd-3e862c4c1979"></a>Database
-A <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a> that is the contents of an entire database (note this is still a class, as there may be many copies of the database)
+A <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> that is the contents of an entire database (note this is still a class, as there may be many copies of the database)
 
 ### <a id="73f8d96c-a9ec-4301-9968-0f7bf9826c45"></a>DatabaseItem
-A <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a> that is part of the data in a Database
+A <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> that is part of the data in a Database
 
 Examples:
 
@@ -3244,92 +3244,92 @@ Examples:
 * named graph in a graph db
 
 ### <a id="1f23eb62-323b-402d-84bd-b4d417ed1a73"></a>DatabaseRow
-A <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a> that is an entire row of a table in a database (note this is still a class, as there may be many copies of the database)
+A <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> that is an entire row of a table in a database (note this is still a class, as there may be many copies of the database)
 
 ### <a id="d9e56caa-4668-4248-b087-c041363816dd"></a>DatabaseTable
-A <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a> that is the entire contents of a table in a database (note this is still a class, as there may be many copies of the database)
+A <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> that is the entire contents of a table in a database (note this is still a class, as there may be many copies of the database)
 
 ### <a id="2d88de83-f87f-48ad-a485-9ffa79ed90d8"></a>DataKey
-A unique key (usually only unique within a Database, though it could be a GUID) that identifies a <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a>
+A unique key (usually only unique within a Database, though it could be a GUID) that identifies a <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a>
 
 ### <a id="cac97eb4-e0e8-4576-9637-1fbed5f9fef2"></a>DataObject
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> which might contain internal structure that can be exploited using bespoke tools and/or applications. Data objects might be geoobjects, video files, audio files, etc.
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> which might contain internal structure that can be exploited using bespoke tools and/or applications. Data objects might be geoobjects, video files, audio files, etc.
 
 ### <a id="f6173d27-d86d-40f8-a5b0-36dccf85d396"></a>DeathState
-A <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the end of a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>'s life
+A <a href="#892345CD-9FA7-4982-978D-B6D3ABAE839C"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the end of a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>'s life
 
 The location of the death can be specified using inLocation
 
 The date/time of the death can be specified using the <i>inPeriod </i>relationship. 
 
 ### <a id="f0c846e7-76b9-4ab6-988e-3694c95818e7"></a>DebitCard
-A <a href="#{848A9E0F-F3B4-47c3-AA7E-2FF6BE92170C}"><font color="#0000ff"><u>BankCard</u></font></a> where transactions debit from a bank account
+A <a href="#848A9E0F-F3B4-47c3-AA7E-2FF6BE92170C"><font color="#0000ff"><u>BankCard</u></font></a> where transactions debit from a bank account
 
 ### <a id="5e25dc95-e376-420f-9991-f5175476b386"></a>DeclarationOfWar
-A <a href="#{53D5957B-E4B6-4cbb-8CE9-887F7152820F}"><font color="#0000ff"><u>PoliticalAnnouncement</u></font></a> marking the start of a <a href="#{D4F568F5-7BC4-489d-94BC-AE1305E5C0C2}"><font color="#0000ff"><u>War</u></font></a>
+A <a href="#53D5957B-E4B6-4cbb-8CE9-887F7152820F"><font color="#0000ff"><u>PoliticalAnnouncement</u></font></a> marking the start of a <a href="#D4F568F5-7BC4-489d-94BC-AE1305E5C0C2"><font color="#0000ff"><u>War</u></font></a>
 
 ### <a id="19b808bb-348e-4ea3-b62e-ed6356f7d4a0"></a>DeclaredTarget
-The <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> against which <a href="#{D4F568F5-7BC4-489d-94BC-AE1305E5C0C2}"><font color="#0000ff"><u>War</u></font></a> has been declared
+The <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> against which <a href="#D4F568F5-7BC4-489d-94BC-AE1305E5C0C2"><font color="#0000ff"><u>War</u></font></a> has been declared
 
 ### <a id="82139547-0ca1-448d-997f-3386efdf049c"></a>DeclaringParty
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> makes an Announcement
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> makes an Announcement
 
 Note: this also covers GoverningParty from IES 3.2
 
 ### <a id="f428ada5-2349-4cd0-815f-8f768b08c6e6"></a>Delivery
-A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities are delivered to the receiving party
+A <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities are delivered to the receiving party
 
 ### <a id="096f83d3-f25e-4d48-96e8-566731c06db1"></a>DeliveryAddress
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{C90267B5-77A3-4b79-BD0D-7C50C3F4C333}"><font color="#0000ff"><u>Address</u></font></a> participates in a <a href="#{F428ADA5-2349-4cd0-815F-8F768B08C6E6}"><font color="#0000ff"><u>Delivery</u></font></a> as a the location to which the delivery is made
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#C90267B5-77A3-4b79-BD0D-7C50C3F4C333"><font color="#0000ff"><u>Address</u></font></a> participates in a <a href="#F428ADA5-2349-4cd0-815F-8F768B08C6E6"><font color="#0000ff"><u>Delivery</u></font></a> as a the location to which the delivery is made
 
 ### <a id="63289363-a4d6-4abf-be19-6dcddcf9b28f"></a>DeliveryRecipient
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{F428ADA5-2349-4cd0-815F-8F768B08C6E6}"><font color="#0000ff"><u>Delivery</u></font></a> as a recipient
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#F428ADA5-2349-4cd0-815F-8F768B08C6E6"><font color="#0000ff"><u>Delivery</u></font></a> as a recipient
 
 ### <a id="33c68a39-af9c-4f37-97ea-1de4bac4f7fb"></a>DemocraticChangeOfGovernment
-A <a href="#{7FA15F56-86C4-47f4-9032-999C17703368}"><font color="#0000ff"><u>ChangeOfGovernment</u></font></a> that comes about by democratic means
+A <a href="#7FA15F56-86C4-47f4-9032-999C17703368"><font color="#0000ff"><u>ChangeOfGovernment</u></font></a> that comes about by democratic means
 
 ### <a id="6c7891c7-e095-41f4-a894-aa0c6a22f5d2"></a>Department
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that is part of another Organisation - usually part of a <a href="#{1456439C-65C9-4a39-A743-09A7D0FBF248}"><font color="#0000ff"><u>CommercialOrganisation</u></font></a>, though other Organisations have departments
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that is part of another Organisation - usually part of a <a href="#1456439C-65C9-4a39-A743-09A7D0FBF248"><font color="#0000ff"><u>CommercialOrganisation</u></font></a>, though other Organisations have departments
 
 ### <a id="0fcbda68-1b1c-40e1-9c5b-0e225ca827db"></a>Departure
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> and a <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the start of a Travel event
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> and a <a href="#892345CD-9FA7-4982-978D-B6D3ABAE839C"><font color="#0000ff"><u>BoundingState</u></font></a> that marks the start of a Travel event
 
 The date/time of the departure can be specified using the <i>inPeriod </i>relationship. 
 
 ### <a id="27000bba-f3f9-4355-b466-92ce04477c9b"></a>Destroy
-A <a href="#{FA07AB7A-0EE8-4258-BE8B-260F9A1192A7}"><font color="#0000ff"><u>LifecycleEvent</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is destroyed
+A <a href="#FA07AB7A-0EE8-4258-BE8B-260F9A1192A7"><font color="#0000ff"><u>LifecycleEvent</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is destroyed
 
 ### <a id="e70ca8cd-51dc-4f77-982c-c233f9493ff9"></a>Destroyed
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is destroyed
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is destroyed
 
 ### <a id="c029299d-5946-48dd-94cb-80ec23a56300"></a>Destroyer
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{27000BBA-F3F9-4355-B466-92CE04477C9B}"><font color="#0000ff"><u>Destroy</u></font></a> event as a destroyer
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#27000BBA-F3F9-4355-B466-92CE04477C9B"><font color="#0000ff"><u>Destroy</u></font></a> event as a destroyer
 
 ### <a id="115f2f9b-21f3-4903-8eaa-ab3aefe97461"></a>Device
-An <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> that is man-made and performs one or more functions - i.e. it is also an <a href="#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B}"><font color="#0000ff"><u>Actor</u></font></a>
+An <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> that is man-made and performs one or more functions - i.e. it is also an <a href="#B2B15802-9CE9-4a9d-9DE0-8289D8474E9B"><font color="#0000ff"><u>Actor</u></font></a>
 
 ### <a id="0073bd83-64cb-433c-bf4d-a6bb01862f14"></a>DeviceInCommunication
-A <a href="#{6107EEA5-1A13-46e4-83FB-14740437B814}"><font color="#0000ff"><u><a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a>State</u></font></a> (and an EventParticipant) when a Device is communicating. 
+A <a href="#6107EEA5-1A13-46e4-83FB-14740437B814"><font color="#0000ff"><u><a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a>State</u></font></a> (and an EventParticipant) when a Device is communicating. 
 
 ### <a id="700bc564-35e1-4921-8759-5dafa51b4e83"></a>DeviceOnline
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a> participates in an <a href="#{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}"><font color="#0000ff"><u>OnlineEvent</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> participates in an <a href="#24499751-7D9B-4f2e-B880-8D5BC4FCEF30"><font color="#0000ff"><u>OnlineEvent</u></font></a>
 
 ### <a id="6107eea5-1a13-46e4-83fb-14740437b814"></a>DeviceState
-A temporalState of a <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a>
+A temporalState of a <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a>
 
 ### <a id="73f2438b-77f5-49ee-b70d-84d5d50b378f"></a>dialInNumber
-The number dialed to take part in the <a href="#{6EAC8930-3D16-4e44-9706-989BDF6564A5}"><font color="#0000ff"><u>TeleConference</u></font></a>
+The number dialed to take part in the <a href="#6EAC8930-3D16-4e44-9706-989BDF6564A5"><font color="#0000ff"><u>TeleConference</u></font></a>
 
 ### <a id="e73c74a9-b356-40a4-bdbb-40567592bbd0"></a>Disagreement
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> that covers the end-to-end disagreement between parties
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> that covers the end-to-end disagreement between parties
 
 ### <a id="52db371e-71ac-4812-b3cf-0fd7d73f1bb0"></a>DiscontinuousState
-A <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> that is temporally dissected - i.e. it is not a continuous state, but in fact a fusion of states (which may or may not be specified)
+A <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> that is temporally dissected - i.e. it is not a continuous state, but in fact a fusion of states (which may or may not be specified)
 
-This is used for managing situations where something happens from time to time, and we don't always know when it happens. For example, if a vehicle is usually parked in a street, we would use a <a href="#{52DB371E-71AC-4812-B3CF-0FD7D73F1BB0}"><font color="#0000ff"><u>DiscontinuousState</u></font></a> of the vehicle that would be inLocation.
+This is used for managing situations where something happens from time to time, and we don't always know when it happens. For example, if a vehicle is usually parked in a street, we would use a <a href="#52DB371E-71AC-4812-B3CF-0FD7D73F1BB0"><font color="#0000ff"><u>DiscontinuousState</u></font></a> of the vehicle that would be inLocation.
 
 ### <a id="30a0f2da-db31-40fd-8723-88a24b2f8448"></a>Dislikes
-A <a href="#{B1D011F9-9585-49eb-97C4-86E82D6F0BCF}"><font color="#0000ff"><u>Interested</u></font></a> state where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> dislikes something
+A <a href="#B1D011F9-9585-49eb-97C4-86E82D6F0BCF"><font color="#0000ff"><u>Interested</u></font></a> state where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> dislikes something
 
 ### <a id="2855af50-eee4-4ced-b499-ae42423a4de3"></a>DispositionalClass
 A ClassOfElement whose instances all share the same disposition - e.g. capability or tendency
@@ -3337,39 +3337,39 @@ A ClassOfElement whose instances all share the same disposition - e.g. capabilit
 Example: Vehicles capable of Mach 2
 
 ### <a id="369d2ca7-bffd-4bc3-941f-47262c3dbf1f"></a>disrespectfulOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is disrespectful of the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is disrespectful of the other.
 
 Note: this should not be considered a bi-directional relationship. Just because one person disrespects another person does not necessarily mean the feeling is reciprocated. 
 
 ### <a id="3499fb8a-aa42-4367-bbbc-79a69338bd70"></a>distrusts
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one <a href="#{3499FB8A-AA42-4367-BBBC-79A69338BD70}"><font color="#0000ff"><u>distrusts</u></font></a> the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one <a href="#3499FB8A-AA42-4367-BBBC-79A69338BD70"><font color="#0000ff"><u>distrusts</u></font></a> the other.
 
 Note: this should not be considered a bi-directional relationship. Just because one person distrusts another person does not necessarily mean the feeling is reciprocated. 
 
 ### <a id="ac7c948a-f19c-4296-ac38-0fee6a4c5e90"></a>documentedBy
-An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> is about an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a>
+An <a href="#D106A0A9-55C4-454f-9E20-35BA54114036"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> is about an <a href="$element://{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a>
 
 ### <a id="acb44e46-7a30-4911-a9f0-3d5412fb3725"></a>DocumentFormat
-A <a href="#{CCC8FA06-CDA8-491d-BFFC-0A88D6A565B1}"><font color="#0000ff"><u>ClassOfIndividualDocument</u></font></a> whose members are all of the same document <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> - e.g.
+A <a href="#CCC8FA06-CDA8-491d-BFFC-0A88D6A565B1"><font color="#0000ff"><u>ClassOfIndividualDocument</u></font></a> whose members are all of the same document <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> - e.g.
 
 PDF
 MS Word
 
 ### <a id="2f8738a6-5eba-4d80-980b-aa9e6f28b81a"></a>documentIdentifies
-Links an <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> to the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> it identifies.
+Links an <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> to the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> it identifies.
 
 Note: was "Is associated with" in IES3
 
 ### <a id="19fe20ba-d898-46d4-8916-3e73bc059d54"></a>DocumentSection
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> that is a section/chapter/paragraph in a <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a>
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> that is a section/chapter/paragraph in a <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a>
 
 Note: inRepresentation should be used to associate the DocumentSection with the WorkOfDocumentation or other DocumentSection it is part of.
 
 ### <a id="42ffb9ac-2d28-453a-80a0-2a271da32eb5"></a>DomainName
-A <a href="#{DF388418-F296-46a5-A2A3-4297F084DD07}"><font color="#0000ff"><u>CommunicationsIdentifierRange</u></font></a> that defines a realm of administrative autonomy, authority or control within the internet.  [from wikipedia]
+A <a href="#DF388418-F296-46a5-A2A3-4297F084DD07"><font color="#0000ff"><u>CommunicationsIdentifierRange</u></font></a> that defines a realm of administrative autonomy, authority or control within the internet.  [from wikipedia]
 
 ### <a id="44c1dd59-354b-405a-9755-417240802de4"></a>DrivingLicence
-An <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> that permits a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> to drive a <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> in the <a href="$element://{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> of issue. 
+An <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> that permits a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> to drive a <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> in the <a href="$element://{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> of issue. 
 
 ### <a id="7852a5e5-8684-49f2-82ae-3368032163b1"></a>Duration
 The Measure of an Element's temporal extent
@@ -3378,16 +3378,16 @@ The Measure of an Element's temporal extent
 The GeoIdentity that is a representation of the eastward componrnent of cartesian point on a map - i.e. on a 2D projection of the globe such as a mercator projection.
 
 ### <a id="f30d350c-848d-4b02-aea5-86575ceeefb3"></a>EducationalOrganisation
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that provides education
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that provides education
 
 ### <a id="7d9e328d-345e-43f5-8163-9657e4d016bd"></a>Election
-A <a href="#{3A0E6FDD-5B3B-4092-9549-C05E8A5FED41}"><font color="#0000ff"><u>PoliticalEvent</u></font></a> where the population vote for their preferred <a href="#{E035D766-CB68-49c3-AC69-A56F3487C625}"><font color="#0000ff"><u>ElectoralCandidate</u></font></a> to become their representative. 
+A <a href="#3A0E6FDD-5B3B-4092-9549-C05E8A5FED41"><font color="#0000ff"><u>PoliticalEvent</u></font></a> where the population vote for their preferred <a href="#E035D766-CB68-49c3-AC69-A56F3487C625"><font color="#0000ff"><u>ElectoralCandidate</u></font></a> to become their representative. 
 
 ### <a id="e035d766-cb68-49c3-ac69-a56f3487c625"></a>ElectoralCandidate
-A <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> standing for elected office
+A <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> standing for elected office
 
 ### <a id="515468c2-b4d9-449d-8ac4-575973efbf6b"></a>ElectoralRegion
-The <a href="#{FC55D479-07C4-4d98-B48C-5032190E493D}"><font color="#0000ff"><u>RegionalConstituency</u></font></a> being decided in an <a href="#{7D9E328D-345E-43f5-8163-9657E4D016BD}"><font color="#0000ff"><u>Election</u></font></a>
+The <a href="#FC55D479-07C4-4d98-B48C-5032190E493D"><font color="#0000ff"><u>RegionalConstituency</u></font></a> being decided in an <a href="#7D9E328D-345E-43f5-8163-9657E4D016BD"><font color="#0000ff"><u>Election</u></font></a>
 
 ### <a id="9442c4e6-a52b-4c93-b942-8b93d90b3b14"></a>ElectricCurrent
 The Measure of the flow of electric charge.
@@ -3396,78 +3396,78 @@ The Measure of the flow of electric charge.
 Note: whilst this is a tricky Measure in a 4D ontology, it should be used in a niaive manner - i.e. a measure of a State of an Entity when the current is flowing through it.
 
 ### <a id="97edc90f-3b36-4da8-ae77-d5fdbdea2b21"></a>Element
-An <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing</u></font></a> that has a spatial extent and can have start and end dates
+An <a href="#485CBF1A-04FF-4741-8471-46A03D28C406"><font color="#0000ff"><u>Thing</u></font></a> that has a spatial extent and can have start and end dates
 
 ### <a id="fcbb35b9-704b-46c1-8054-10b7da7eb8f8"></a>EmailAccount
-A <a href="#{8300451C-1DF9-4545-9174-D8AA69C58CCD}"><font color="#0000ff"><u>CommunicationsAccount</u></font></a> that is used to administer the use of one or more e-mail addresses.
+A <a href="#8300451C-1DF9-4545-9174-D8AA69C58CCD"><font color="#0000ff"><u>CommunicationsAccount</u></font></a> that is used to administer the use of one or more e-mail addresses.
 
 ### <a id="36f61edf-6e6e-4d8d-9e75-275a820f6d96"></a>EmailAddress
-A <a href="#{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> that uniquely identifiers an email account.
+A <a href="#A82378B9-9774-46b9-9845-CC75BE882F06"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> that uniquely identifiers an email account.
 
 Format: local-part@domain
 
 ### <a id="74721df1-18d6-4c1b-93cc-71c888c6d405"></a>employedBy
-A <a href="#{181AAC84-26CE-4531-AC32-A73B8FD8B858}"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where the worker is employed.
+A <a href="#181AAC84-26CE-4531-AC32-A73B8FD8B858"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> where the worker is employed.
 
 ### <a id="8af1db0b-9beb-4a33-a459-7ef2be309e81"></a>EncodedData
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> which is external data according to a data format that is not in IES format. 
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> which is external data according to a data format that is not in IES format. 
 
 ### <a id="f8109922-1cb1-490d-bbb5-fd5b76e19fd1"></a>endBoundOfClass
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking a <a href="#{E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A}"><font color="#0000ff"><u>TimeBoundedClass</u></font></a> to the <a href="#{2173F463-524C-457c-B106-51322F64F122}"><font color="#0000ff"><u>ParticularPeriod</u></font></a> that marks the end bound date of its instances
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking a <a href="#E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A"><font color="#0000ff"><u>TimeBoundedClass</u></font></a> to the <a href="#2173F463-524C-457c-B106-51322F64F122"><font color="#0000ff"><u>ParticularPeriod</u></font></a> that marks the end bound date of its instances
 
 ### <a id="6767dfcd-3fcb-42cc-bee3-9fa9a324df0b"></a>endsIn
 An xsd:DateTime for the end of the period
 
 ### <a id="a88abe99-1d6c-4843-a2e4-7531626d3859"></a>EndToEndActivity
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> (usually of long duration) that is composed of a number of other Events.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> (usually of long duration) that is composed of a number of other Events.
 
 ### <a id="1b39630b-b00f-4def-9c65-48082c4ad2e0"></a>EndToEndAgreement
-An <a href="#{A88ABE99-1D6C-4843-A2E4-7531626D3859}"><font color="#0000ff"><u>EndToEndActivity</u></font></a> which is the overall process of agreeing something, including all the events that take place under that agreement, such as the negotiation, signing, delivery of service, etc.
+An <a href="#A88ABE99-1D6C-4843-A2E4-7531626D3859"><font color="#0000ff"><u>EndToEndActivity</u></font></a> which is the overall process of agreeing something, including all the events that take place under that agreement, such as the negotiation, signing, delivery of service, etc.
 
 ### <a id="d75f18d1-95d6-481b-84d5-f8d7f3a5a389"></a>EndToEndAuthorisation
-An <a href="#{A88ABE99-1D6C-4843-A2E4-7531626D3859}"><font color="#0000ff"><u>EndToEndActivity</u></font></a> which is the overall process of requesting, receiving authority to act, and the conduct of activities under that authorisation until the period of authorisation ends. 
+An <a href="#A88ABE99-1D6C-4843-A2E4-7531626D3859"><font color="#0000ff"><u>EndToEndActivity</u></font></a> which is the overall process of requesting, receiving authority to act, and the conduct of activities under that authorisation until the period of authorisation ends. 
 
 ### <a id="911eb3de-a001-493d-850d-3cf5a848791d"></a>EndToEndTransaction
-An <a href="#{A88ABE99-1D6C-4843-A2E4-7531626D3859}"><font color="#0000ff"><u>EndToEndActivity</u></font></a> covering the lifecycle of the trade
+An <a href="#A88ABE99-1D6C-4843-A2E4-7531626D3859"><font color="#0000ff"><u>EndToEndActivity</u></font></a> covering the lifecycle of the trade
 
 ### <a id="7f1a6a06-5223-4bf9-b903-1061a127d62c"></a>enemyOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is the enemy of the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is the enemy of the other.
 
 Note: this should not be considered a bi-directional relationship. Just because one person considers another person their enemy does not necessarily mean the feeling is reciprocated. 
 
 ### <a id="78c33499-cd14-43cb-82ae-93a0f8cf022b"></a>EntertainmentEvent
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where entertainment (sporting, music, theatre, etc.) is provided
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where entertainment (sporting, music, theatre, etc.) is provided
 
 ### <a id="96989c30-99cc-4606-a8d4-dfd9421f0e34"></a>EntertainmentTicket
-A <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> to an <a href="#{78C33499-CD14-43cb-82AE-93A0F8CF022B}"><font color="#0000ff"><u>EntertainmentEvent</u></font></a>
+A <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> to an <a href="#78C33499-CD14-43cb-82AE-93A0F8CF022B"><font color="#0000ff"><u>EntertainmentEvent</u></font></a>
 
 ### <a id="f4ede167-6f5a-417d-9984-0221ccdf752c"></a>Entity
-An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> typically represents a tangible thing like a Person, a Communications Device, or a Location.
+An <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> typically represents a tangible thing like a Person, a Communications Device, or a Location.
 
 ### <a id="74169219-a47c-48ce-a25f-3948e7e873b6"></a>EntityInTransit
-A <a href="#{55384377-146A-47c9-8706-18A1343A219C}"><font color="#0000ff"><u>TravelLeg</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is moving in <a href="#{7693D2C9-0F06-4005-BB8D-B5B572B2281A}"><font color="#0000ff"><u>Transit</u></font></a>
+A <a href="#55384377-146A-47c9-8706-18A1343A219C"><font color="#0000ff"><u>TravelLeg</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is moving in <a href="#7693D2C9-0F06-4005-BB8D-B5B572B2281A"><font color="#0000ff"><u>Transit</u></font></a>
 
 ### <a id="8ac946a4-4c03-463c-9f32-37ea8593988a"></a>Ethnicity
-A <a href="#{2A62C672-1757-4a2d-874B-C099C9DEC416}"><font color="#0000ff"><u>ClassOfPerson</u></font></a> whose members all share the same ethnicity
+A <a href="#2A62C672-1757-4a2d-874B-C099C9DEC416"><font color="#0000ff"><u>ClassOfPerson</u></font></a> whose members all share the same ethnicity
 
 ### <a id="b376370e-f5e8-4287-a3ec-ac35532919b1"></a>Event
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> represents an activity or incident, involving one or more participating entities, that occurred/started at a specific point in time ï¿½ e.g. a meeting, or a telephone call.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> represents an activity or incident, involving one or more participating entities, that occurred/started at a specific point in time – e.g. a meeting, or a telephone call.
 
 ### <a id="07dcd4fc-938c-438d-abe6-f7f64e66a255"></a>eventDateTime
 The date/time of the performance to which the ticket is valid.
 
 ### <a id="c5ab420c-1ab6-479a-97e1-4f2fd37725cb"></a>EventParticipant
-A <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> which is the participating role of an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> in an Event.
+A <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> which is the participating role of an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> in an Event.
 
 Note: this includes inactive participation (e.g. something that is being repaired). If the participation is known to be active then ActiveEventPartipant (or one of its subtypes) should be used. In BORO, EventParticipant would be "Involvement" and ActiveEventParticipant would be "Participation".
 
 ### <a id="fe668c24-d25c-4273-872a-eb77cb09341d"></a>EventState
-A temporal state of an <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a>
+A temporal state of an <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a>
 
 Note: care must be taken with using this in a 4D, extensional model such as IES. States such as "Ended" would not be appropriate, for example - in such a case, the temporal extent of the Event or the presence of a BoundingState to end it would be correct. 
 
 ### <a id="affff30f-b274-4466-b0f2-d2a6a78e1832"></a>EvidentialPhotograph
-Relates a <a href="#{AD0F575E-5C28-4594-B346-50E9F22C2A8E}"><font color="#0000ff"><u>Surveillance</u></font></a> <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> to a Document that is the evidence resulting from the Surveillance
+Relates a <a href="#AD0F575E-5C28-4594-B346-50E9F22C2A8E"><font color="#0000ff"><u>Surveillance</u></font></a> <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> to a Document that is the evidence resulting from the Surveillance
 
 ### <a id="749b002e-37b1-4754-b3b2-96642b3cf4a7"></a>ExchangePayload
 A marker object that shall be present in all IES exchange files. This object is the domain for all meta-data about the file.
@@ -3475,32 +3475,32 @@ A marker object that shall be present in all IES exchange files. This object is 
 Wherever possible, Dublin-Core meta-data tags should be used on an ExchangePayload. If locally defined properties are needed, then these may also be defined and included in the exchange file. 
 
 ### <a id="883b5479-62dd-47a4-bc14-9a11835d820b"></a>excludedFrom
-A Relationship between a <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> they are not allowed to enter.
+A Relationship between a <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> they are not allowed to enter.
 
 Note: any additional information about how or why the exclusion is in place should be added to the state
 
 ### <a id="9cd2c1b1-85b1-4579-9376-07827ad68461"></a>Facility
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is man-made, but is typically larger than an <a href="#{C90267B5-77A3-4b79-BD0D-7C50C3F4C333}"><font color="#0000ff"><u>Address</u></font></a> (i.e. it may have more than one postal address)
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that is man-made, but is typically larger than an <a href="#C90267B5-77A3-4b79-BD0D-7C50C3F4C333"><font color="#0000ff"><u>Address</u></font></a> (i.e. it may have more than one postal address)
 
 Examples:
 
 Military camps, factories, sports facilities, airports, etc.
 
 ### <a id="3aa26ac6-206d-4b6d-bdec-c9e2b4814be7"></a>familiallyRelatedTo
-A Relationship between <a href="#{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> (which may be a Person, or just a temporal state of Person) and another <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> to indicate they have a familial relationship.
+A Relationship between <a href="#38F8B795-0BCE-4945-8C69-8678ED935C1A"><font color="#0000ff"><u>PersonState</u></font></a> (which may be a Person, or just a temporal state of Person) and another <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> to indicate they have a familial relationship.
 
 Note:  some relationships will be temporal (e.g. spouseOf) and therefore related a state to a Person. Others will be for life (i.e. from the birth of the youngest until one of them dies) and therefore between two whole-life Person entities.
 
 ### <a id="a589f81d-dc15-4b71-80b5-ba4cd46b2e41"></a>fearfulOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is fearful of the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is fearful of the other.
 
 Note: this should not be considered a bi-directional relationship. Just because one person considers another person a threat does not necessarily mean the feeling is reciprocated. 
 
 ### <a id="b2ed961f-245e-4e74-a32f-6b9cf1bbdf2b"></a>FerryTicket
-A <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> that is used to travel by sea
+A <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> that is used to travel by sea
 
 ### <a id="44dac574-2a2e-44bc-acd2-236811fa8d29"></a>FinancialAccount
-An <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> held for financial management purposes.
+An <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> held for financial management purposes.
 
 ### <a id="06bac6f4-f6b2-4be1-95c5-8e31c34796cb"></a>FiniteClassOfElement
 A ClassOfElement whose instances are classes with finite, fixed  membership of Elements.
@@ -3512,21 +3512,21 @@ An integer count of members of a FiniteClassOfElement.
 The first line of the Address including the number of the dwelling and the street name.
 
 ### <a id="375b0887-712f-43f0-bbf4-5c544d75ac39"></a>Flight
-A <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> by air
+A <a href="#3D0FC30A-CF82-44f2-970E-BFD04EADBA74"><font color="#0000ff"><u>TravelService</u></font></a> by air
 
 ### <a id="3a9a1ba9-465f-4f6d-bd55-9f3f8ae40ae0"></a>FlightTicket
-A <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> that is used to travel by air
+A <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> that is used to travel by air
 
 ### <a id="da626f73-5748-47db-813f-e1813577f41b"></a>FootballMatchTicket
 An EntertainmentTicket for a football match
 
 ### <a id="78686d99-2aac-4f5b-8ee0-456bdcc6f99e"></a>Forgery
-A <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a> that is the creation of fake items
+A <a href="#43E58528-16E4-48b3-8F13-10500879EA83"><font color="#0000ff"><u>CriminalActivity</u></font></a> that is the creation of fake items
 
 (also a subclass of Create). 
 
 ### <a id="ef2c13d4-7106-4799-bb72-7cd47714f257"></a>format
-The <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> of the respective WorkOfDocumentation.
+The <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> of the respective WorkOfDocumentation.
 
 Examples:
 
@@ -3534,7 +3534,7 @@ PDF
 MS Word
 
 ### <a id="f1f94713-6d95-4928-b537-4fba55d09e34"></a>formatOfIndividualDocument
-The <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> of the respective IndividualDocument.
+The <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> of the respective IndividualDocument.
 
 Examples:
 
@@ -3545,9 +3545,9 @@ Printed
 A Create Event where an Organisation is founded
 
 ### <a id="13eb3439-497f-49ad-a7f4-def8a600f640"></a>friendOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is the friend of the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one is the friend of the other.
 
-Note: this should not be considered a bi-directional relationship. Just because one person considers another person their friend does not necessarily mean the feeling is reciprocated. Not that I'm bitter or anything. See also <a href="#{9B232210-27A3-410a-A713-EFDE7922C61C}"><font color="#0000ff"><u>Stalking</u></font></a> if you must. 
+Note: this should not be considered a bi-directional relationship. Just because one person considers another person their friend does not necessarily mean the feeling is reciprocated. Not that I'm bitter or anything. See also <a href="#9B232210-27A3-410a-A713-EFDE7922C61C"><font color="#0000ff"><u>Stalking</u></font></a> if you must. 
 
 ### <a id="8b4db18e-df46-4419-b0ed-0159a25f2319"></a>Gender
 A ClassOfPerson whose members all share the same gender
@@ -3559,7 +3559,7 @@ A Location that is a naturally occurring feature on the earth.
 A unique Identifier attributed to the respective Location
 
 ### <a id="417c1f4e-6a5d-4631-b275-8e982252791a"></a>GeoJSON
-<a href="#{417C1F4E-6A5D-4631-B275-8E982252791A}"><font color="#0000ff"><u>GeoJSON</u></font></a> is an open standard <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> designed for representing simple geographical features, along with their non-spatial attributes. It is based on JSON, the JavaScript Object Notation.
+<a href="#417C1F4E-6A5D-4631-B275-8E982252791A"><font color="#0000ff"><u>GeoJSON</u></font></a> is an open standard <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> designed for representing simple geographical features, along with their non-spatial attributes. It is based on JSON, the JavaScript Object Notation.
 
 GeoJSON mandates use of WGS 84 coordinate system - see IETF RFC 7946
 
@@ -3567,27 +3567,27 @@ GeoJSON mandates use of WGS 84 coordinate system - see IETF RFC 7946
 A DataObject and a GeoRepresentation that contains geographical information
 
 ### <a id="9a9467c3-d5fc-4964-8943-fe63adf38914"></a>GeoPoint
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is a point (mathematically speaking, of vanishing volume) on, below or above the surface of the WGS84 spheroid. The distance from the spheroid surface is given by the altitudeInMetres attribute.
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that is a point (mathematically speaking, of vanishing volume) on, below or above the surface of the WGS84 spheroid. The distance from the spheroid surface is given by the altitudeInMetres attribute.
 
 ### <a id="a8c07233-5d62-4ad4-b405-2d15cfc37497"></a>GeoRepresentation
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> for a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> - e.g. a point, a polyline, etc.
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> for a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> - e.g. a point, a polyline, etc.
 
 ### <a id="a01a5045-b09c-4bea-8c96-881c29f2ee60"></a>GivenName
 A PersonName that is one of the given names of a Person
 
 Note:
-A GivenName will often be applied to a <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of the Person, as names tend to change over time
+A GivenName will often be applied to a <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> of the Person, as names tend to change over time
 
 ### <a id="ae59cb88-3178-4bad-9f43-1276337c7944"></a>GML
-The Geography-Markup-Language (GML) is the XML grammar defined by the Open Geospatial Consortium (OGC) to express geographical features. <a href="#{AE59CB88-3178-4bad-9F43-1276337C7944}"><font color="#0000ff"><u>GML</u></font></a> serves as a modeling language for geographic systems as well as an open interchange <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> for geographic transactions on the Internet. 
+The Geography-Markup-Language (GML) is the XML grammar defined by the Open Geospatial Consortium (OGC) to express geographical features. <a href="#AE59CB88-3178-4bad-9F43-1276337C7944"><font color="#0000ff"><u>GML</u></font></a> serves as a modeling language for geographic systems as well as an open interchange <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> for geographic transactions on the Internet. 
 
 Key to GML's utility is its ability to integrate all forms of geographic information, including not only conventional "vector" or discrete objects, but coverages (see also GMLJP2) and sensor data.
 
 ### <a id="917c549c-259f-4850-9cfd-35e05485bf63"></a>governedPopulation
-Relates a <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> to the RegionalPopulation that it governs. 
+Relates a <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> to the RegionalPopulation that it governs. 
 
 ### <a id="72dc3e90-53ce-434d-a5f3-89bdce08a201"></a>governedRegion
-The <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> which the respective <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> is in charge of.
+The <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> which the respective <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> is in charge of.
 
 See also goverenedPopulation - sometimes Locations have no people, and sometimes people reside outside the region in which they are legally citizens.
 
@@ -3597,10 +3597,10 @@ Note: A Government instance has a start and end date corresponding to its time i
 An Organisation that is (usually) elected to run a governedRegion
 
 ### <a id="0d042066-06c8-48d6-8387-500cf8ee2592"></a>GovernmentOrganisation
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that is part of, or controlled by a national or local Government
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that is part of, or controlled by a national or local Government
 
 ### <a id="f5eaaeee-c0b2-469f-9048-3e0731ed8342"></a>GrantOfAuthority
-An <a href="#{2D5069F2-FE77-477f-A607-FA6458E64173}"><font color="#0000ff"><u>AuthorisationStage</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> grants another <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> authority to act.
+An <a href="#2D5069F2-FE77-477f-A607-FA6458E64173"><font color="#0000ff"><u>AuthorisationStage</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> grants another <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> authority to act.
 
 ### <a id="2f618a01-5d5f-483c-8652-8b81196aa086"></a>groupDescription
 A simple text description of a GroupOfItems
@@ -3611,75 +3611,75 @@ A name given to a GroupOfItems
 ### <a id="04c2111a-d958-4a95-9271-7208b849ddd8"></a>GroupOfItems
 A collection of <font color="#0000ff"><u>Thing</u></font> that have been gathered together for a purpose. 
 
-Note: The same Thing can be in more than one <a href="#{04C2111A-D958-4a95-9271-7208B849DDD8}"><font color="#0000ff"><u>GroupOfItems</u></font></a>
+Note: The same Thing can be in more than one <a href="#04C2111A-D958-4a95-9271-7208B849DDD8"><font color="#0000ff"><u>GroupOfItems</u></font></a>
 
 ### <a id="2ac7fdab-7bb8-41ee-b558-aebfe01274f2"></a>Hacking
-A <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a> where computer equipment is interfered with without the owners permission
+A <a href="#43E58528-16E4-48b3-8F13-10500879EA83"><font color="#0000ff"><u>CriminalActivity</u></font></a> where computer equipment is interfered with without the owners permission
 
 ### <a id="1c02b06e-3159-48f6-9575-64b62765498b"></a>handlingCaveat
 A textual description of any handling caveats that must be adhered to.
 
 ### <a id="cb7f872f-7999-4bfd-8274-2c0e0afe22ab"></a>hasAccessTo
-A Relationship between a <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> they have access to - e.g. a FinancialAccount, CommunicationsDevice, etc.
+A Relationship between a <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> they have access to - e.g. a FinancialAccount, CommunicationsDevice, etc.
 
 ### <a id="9464d864-e76f-4e09-89e1-d3b2d3e63f3b"></a>hasAuthor
 The author of the respective document.
 
 ### <a id="720d0aa3-81f7-4220-a7a5-34304e33b72f"></a>hasCharacteristic
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an Element has a Characteristic or Measure
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts an Element has a Characteristic or Measure
 
 ### <a id="e7500475-8c4f-47a3-8aab-c5679621fae8"></a>hasCountryOfIssue
-The country in which the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> or <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a> was issued.
+The country in which the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> or <a href="#9882D901-1B22-4b89-81D1-031F840A20D0"><font color="#0000ff"><u>PaymentArtefact</u></font></a> was issued.
 
 ### <a id="0aaf6757-aac9-43c4-8b43-cb3358eadca4"></a>hasEmergencyContactAddress
-The address of an emergency contact as printed on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+The address of an emergency contact as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="bc3185ce-53f4-45de-a6d4-dac8343b4d1c"></a>hasEthnicity
-The ethnic group that the respective <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> belongs to.
+The ethnic group that the respective <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> belongs to.
 
 The Metropolitan Police standard shall be used as the reference data standard.
 
 ### <a id="8914e7df-443b-4a3a-a945-aad11b82a86a"></a>hasGeneticGender
-The gender the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> was born with (sex) and which would result from a DNA test.
+The gender the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> was born with (sex) and which would result from a DNA test.
 
 ### <a id="7640dbfc-b520-458c-a7c1-16651ddf217f"></a>hasIdentifiedGender
-The gender the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> chooses to identify as
+The gender the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> chooses to identify as
 
 ### <a id="2065b9a0-dcad-45be-9f0d-bd4398261a7f"></a>hasLanguageProficiency
-A language spoken by the respective <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> at a stage (PersonState) in their life
+A language spoken by the respective <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> at a stage (PersonState) in their life
 
 ### <a id="c3a36e36-0c73-4af7-88e3-81c9243ce456"></a>hasName
-An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{485CBF1A-04FF-4741-8471-46A03D28C406}"><font color="#0000ff"><u>Thing </u></font></a>is identified (albeit loosely) by a <a href="$element://{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a>
+An <a href="#D106A0A9-55C4-454f-9E20-35BA54114036"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#485CBF1A-04FF-4741-8471-46A03D28C406"><font color="#0000ff"><u>Thing </u></font></a>is identified (albeit loosely) by a <a href="$element://{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a>
 
 ### <a id="07fd1df6-ba77-4657-b3d3-d6d579fd4608"></a>hasPublisher
 The publisher of the document.
 
 ### <a id="e076afb8-f6f8-4b06-82b3-7ed568d1ee73"></a>hasRegisteredCommsID
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> and the <a href="#{20BB42F0-3F2D-4bb7-88DD-F4D05377D59B}"><font color="#0000ff"><u>CommunicationsAccountState</u></font></a> of the account to which the identifier is registered
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#A82378B9-9774-46b9-9845-CC75BE882F06"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> and the <a href="#20BB42F0-3F2D-4bb7-88DD-F4D05377D59B"><font color="#0000ff"><u>CommunicationsAccountState</u></font></a> of the account to which the identifier is registered
 
 ### <a id="6d1839a4-342a-4e34-823c-bdb392483048"></a>hasReligion
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> holds or follows a <a href="#{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B}"><font color="#0000ff"><u>Religion</u></font></a>
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#38F8B795-0BCE-4945-8C69-8678ED935C1A"><font color="#0000ff"><u>PersonState</u></font></a> holds or follows a <a href="#BD538820-CE91-4b9a-ADB8-C105FE0F2E7B"><font color="#0000ff"><u>Religion</u></font></a>
 
 ### <a id="16480e86-9fe4-4b37-acfb-9e410f190664"></a>hasSourceReference
-A <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is the source (information provenance) for an <font color="#0000ff"><u>Thing</u></font>
+A <a href="#D106A0A9-55C4-454f-9E20-35BA54114036"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> is the source (information provenance) for an <font color="#0000ff"><u>Thing</u></font>
 
 ### <a id="0451b5d4-99cb-47a7-bb93-df4df6625837"></a>hasStatedAddress
-The address of the owner/user as recorded on the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> or PaymentArtefact.
+The address of the owner/user as recorded on the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> or PaymentArtefact.
 
 ### <a id="9a4eb722-0bda-4ba7-b895-7a4e273865c9"></a>hasStatedCountryOfResidence
-The country of residence as printed on the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> 
+The country of residence as printed on the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> 
 
 ### <a id="c8ab9a91-97ed-4868-8167-44e71f40afe7"></a>hasStatedNationality
-The <a href="#{45CDA5C1-624D-4f2f-81F6-EF19300820A9}"><font color="#0000ff"><u>nationality</u></font></a> of the identity holder as specified on the IdentityDocument.
+The <a href="#45CDA5C1-624D-4f2f-81F6-EF19300820A9"><font color="#0000ff"><u>nationality</u></font></a> of the identity holder as specified on the IdentityDocument.
 
 ### <a id="f95710a9-b0a7-4f7b-adaa-08a2dcbd9c35"></a>hasStatedPlaceOfBirth
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to the place of birth as recorded on the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to the place of birth as recorded on the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="644b75e8-92a0-4f16-861e-3b4fdfdf572e"></a>hasStatedPlaceOfIssue
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to the place of issue as specified on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to the place of issue as specified on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="654cb83b-75cf-4940-a2cf-c7820141c5ae"></a>hasTheme
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> (e.g. Communication, <a href="#{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a> or Investigation) to an <font color="#0000ff"><u>Thing</u></font> that is a theme (or topic)
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> (e.g. Communication, <a href="#6445E51F-3DDF-4dcf-ABDF-3ED123D53188"><font color="#0000ff"><u>Meeting</u></font></a> or Investigation) to an <font color="#0000ff"><u>Thing</u></font> that is a theme (or topic)
 
 Examples:
 
@@ -3689,13 +3689,13 @@ Examples:
 * A <a href="$element://{F186E39F-A251-4b84-85E9-577C7290F6D9}"><font color="#0000ff"><u>VoiceCall</u></font></a> about a <a href="$element://{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a>
 
 ### <a id="8fd84185-a7ce-4d5d-974b-55f693c4376d"></a>hasValue
-An <a href="#{D106A0A9-55C4-454f-9E20-35BA54114036}"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a Measure has a MeasureValue
+An <a href="#D106A0A9-55C4-454f-9E20-35BA54114036"><font color="#0000ff"><u>isRepresentedAs</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a Measure has a MeasureValue
 
 
 Note: a given Measure may have more than one value (e.g. 1kg or 2.2lbs) in different units of measure.
 
 ### <a id="6939ae2f-d74d-4446-8a88-5c26669689ba"></a>Hates
-An <a href="#{B1D011F9-9585-49eb-97C4-86E82D6F0BCF}"><font color="#0000ff"><u>Interested</u></font></a> state where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> hates something
+An <a href="#B1D011F9-9585-49eb-97C4-86E82D6F0BCF"><font color="#0000ff"><u>Interested</u></font></a> state where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> hates something
 
 ### <a id="fbccd717-e163-4129-b270-966f5d404260"></a>HealthServiceIdentifier
 A NationalIdentityNumber used for managing a citizen's through-life healthcare
@@ -3708,16 +3708,16 @@ A confidence whose value must be one of "HIGH", "MEDIUM", or "LOW"
 This is a mandatory attribute for AssessToBeTrue
 
 ### <a id="6314a9b0-4578-42a8-a553-1fddf35ac7f1"></a>holdsAccount
-Relates an <a href="#{C93379F2-6B01-4100-ABFA-BD26098AC1CB}"><font color="#0000ff"><u>AccountHolder</u></font></a> (PersonState) to the <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> they hold
+Relates an <a href="#C93379F2-6B01-4100-ABFA-BD26098AC1CB"><font color="#0000ff"><u>AccountHolder</u></font></a> (PersonState) to the <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> they hold
 
 ### <a id="f5c27e55-623e-4fa7-95c3-dd0a722d1035"></a>hostedOn
-Relates a <a href="#{3BE61CCF-DCD0-411d-9D43-5DEABF8381F2}"><font color="#0000ff"><u>WebResourceState</u></font></a> to the <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a> that hosts it
+Relates a <a href="#3BE61CCF-DCD0-411d-9D43-5DEABF8381F2"><font color="#0000ff"><u>WebResourceState</u></font></a> to the <a href="#27BEFD0A-B30B-47db-B863-13E48D1172F9"><font color="#0000ff"><u>OnlineService</u></font></a> that hosts it
 
 ### <a id="aa530bce-02f2-4195-a431-573d13a5b41c"></a>IATACode
 A GeoIdentity that is administered by the International Air Transport Associate for airport identification
 
 ### <a id="40e59970-04ce-4961-83fc-179739c4dec3"></a>IBAN
-An Identifier that is an International <a href="#{4E10343E-8350-4354-B3DB-A7F74B4535EF}"><font color="#0000ff"><u>Bank</u></font></a> <a href="#{31BFE794-924E-44e3-942E-ADC9ED19FBA1}"><font color="#0000ff"><u>Account</u></font></a> Number
+An Identifier that is an International <a href="#4E10343E-8350-4354-B3DB-A7F74B4535EF"><font color="#0000ff"><u>Bank</u></font></a> <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Account</u></font></a> Number
 
 See ISO 13616:2007
 
@@ -3736,50 +3736,50 @@ Unknown
 The Date of Birth as specified on the respective IdentityDocument.
 
 ### <a id="acac12ad-16c3-480d-8149-c026f8be9f81"></a>idDateOfIssue
-The date that the respective Identity Document was actually issued ï¿½ this is different from the ValidFromDate on EphemeralIdDocuments.
+The date that the respective Identity Document was actually issued – this is different from the ValidFromDate on EphemeralIdDocuments.
 
 ### <a id="96b7c774-1fe0-4307-bb62-b5899f953ff2"></a>idEmergencyContactName
-The name of an emergency contact as printed on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+The name of an emergency contact as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="0198c1be-43a0-4841-925e-fa5c47991ac3"></a>idEmergencyContactTelNo
-The telephone number of an emergency contact as printed on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+The telephone number of an emergency contact as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="315e6ad3-f2da-4f69-864f-da2b95121e2e"></a>Identifier
-A <a href="#{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a> that is unique within the specified context
+A <a href="#7D7CC966-56EB-4220-A650-A993E598F2E2"><font color="#0000ff"><u>Name</u></font></a> that is unique within the specified context
 
 ### <a id="bdf4ebd9-7f41-4d90-91a7-571177330c1b"></a>IdentityDocument
-An IndividualDocument used to confirm the identity of the bearer (and often enables a particular activity ï¿½ e.g. a passport enables the bearer to travel across international borders).
+An IndividualDocument used to confirm the identity of the bearer (and often enables a particular activity – e.g. a passport enables the bearer to travel across international borders).
 
 ### <a id="ccd1f7fe-c42a-4503-bf24-00e8805bd5dd"></a>idFamilyName
-The family name as printed on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+The family name as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="d5b27630-c222-45be-87c2-5c4f8592487b"></a>idGender
-The gender as recorded on the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+The gender as recorded on the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="77ca0c8d-71f0-4cb9-8621-407396fac5a1"></a>idGivenNames
-The given names as printed on the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+The given names as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="6c79ce89-8e17-4ee7-aba8-dda5d4afc78b"></a>idLowerRange
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{DF388418-F296-46a5-A2A3-4297F084DD07}"><font color="#0000ff"><u>CommunicationsIdentifierRange</u></font></a> and the <a href="#{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> that is the lower limit of the identifier range 
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#DF388418-F296-46a5-A2A3-4297F084DD07"><font color="#0000ff"><u>CommunicationsIdentifierRange</u></font></a> and the <a href="#A82378B9-9774-46b9-9845-CC75BE882F06"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> that is the lower limit of the identifier range 
 
 ### <a id="92d9b068-f8d4-4cbc-ad57-1da39d5cc1c7"></a>idOnCard
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{F2CF8705-DA4A-4131-AB60-CF1AC33BED95}"><font color="#0000ff"><u>NationalIdentityNumber</u></font></a> (which identifies a person) is featured on a <a href="#{843EDE77-78C4-4a09-9866-DBCC726AD5E6}"><font color="#0000ff"><u>NationalIdentityCard</u></font></a>
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#F2CF8705-DA4A-4131-AB60-CF1AC33BED95"><font color="#0000ff"><u>NationalIdentityNumber</u></font></a> (which identifies a person) is featured on a <a href="#843EDE77-78C4-4a09-9866-DBCC726AD5E6"><font color="#0000ff"><u>NationalIdentityCard</u></font></a>
 
 ### <a id="7615fb07-e0c5-4734-afc8-fd52688dd2cc"></a>idUpperRange
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{DF388418-F296-46a5-A2A3-4297F084DD07}"><font color="#0000ff"><u>CommunicationsIdentifierRange</u></font></a> and the <a href="#{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> that is the upper limit of the identifier range 
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#DF388418-F296-46a5-A2A3-4297F084DD07"><font color="#0000ff"><u>CommunicationsIdentifierRange</u></font></a> and the <a href="#A82378B9-9774-46b9-9845-CC75BE882F06"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> that is the upper limit of the identifier range 
 
 ### <a id="f481c966-058b-4caf-a427-9e492cad0d63"></a>IdUsedInCheckIn
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> is used in a <a href="#{87308A03-5C79-4d94-99E1-660042AC7929}"><font color="#0000ff"><u>CheckIn</u></font></a> event
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> is used in a <a href="#87308A03-5C79-4d94-99E1-660042AC7929"><font color="#0000ff"><u>CheckIn</u></font></a> event
 
 ### <a id="471cf113-1728-47fd-a763-d1fa69226fc4"></a>ilrProficiency
-The Proficiency qualifier is specified using the Interagency <a href="#{82652FF5-258F-459c-BC7F-6DAC65E1ECA1}"><font color="#0000ff"><u>Language</u></font></a> Roundtable (ILR) scale [E].
+The Proficiency qualifier is specified using the Interagency <a href="#82652FF5-258F-459c-BC7F-6DAC65E1ECA1"><font color="#0000ff"><u>Language</u></font></a> Roundtable (ILR) scale [E].
 
-(a) ILR Level 0 ï¿½ No proficiency
-(b) ILR Level 1 ï¿½ Elementary Proficiency
-(c) ILR Level 2 ï¿½ Limited Working Proficiency
-(d) ILR Level 3 ï¿½ Professional Working Proficiency
-(e) ILR Level 4 ï¿½ Full Professional Proficiency
-(f) ILR Level 5 ï¿½ Native or Bilingual Proficiency
+(a) ILR Level 0 – No proficiency
+(b) ILR Level 1 – Elementary Proficiency
+(c) ILR Level 2 – Limited Working Proficiency
+(d) ILR Level 3 – Professional Working Proficiency
+(e) ILR Level 4 – Full Professional Proficiency
+(f) ILR Level 5 – Native or Bilingual Proficiency
 
 ### <a id="3987794e-6e2e-4457-8bf7-47813b51b139"></a>IMEI
 The International Mobile Equipment Identity used to identify GSM, WCDMA and iDEN mobile phone handsets, as well as some satellite phones.
@@ -3794,9 +3794,9 @@ Example Value:
 The International Mobile Subscriber Number
 Historically, this is stored as a 64-bit number on the SIM Card (it is NOT identity of the SIM Card itself), but now can be a software assigned identifier to any mobile subscriber interface. 
 
-An <a href="#{C817C1ED-863B-41f0-B5C1-14117E926A94}"><font color="#0000ff"><u>IMSI</u></font></a> is usually presented as a 15-digit number, but it can be shorter.
+An <a href="#C817C1ED-863B-41f0-B5C1-14117E926A94"><font color="#0000ff"><u>IMSI</u></font></a> is usually presented as a 15-digit number, but it can be shorter.
 
-The first three digits are the Mobile <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> Code (MCC), followed by a 2 or 3 digit Mobile Network Code (MNC) and the remaining digits are the Mobile Subscription Identification Number (MSIN).
+The first three digits are the Mobile <a href="#92EBA9B9-48C2-4082-9FE5-603977BD6846"><font color="#0000ff"><u>Country</u></font></a> Code (MCC), followed by a 2 or 3 digit Mobile Network Code (MNC) and the remaining digits are the Mobile Subscription Identification Number (MSIN).
 
 For the example shown this would be:
 - 404=India,
@@ -3804,55 +3804,55 @@ For the example shown this would be:
 - 1234567890=Subscriber ID
 
 ### <a id="321cb600-140f-452f-96b7-640de8289ecf"></a>IncarceratingOrganisation
-An Organisations's role in incarcerating a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
+An Organisations's role in incarcerating a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>
 
 ### <a id="06972684-050b-4f36-9393-b8790d510f5c"></a>Incarceration
-A <a href="#{3876B81C-E316-4e11-A6C4-8024E52F769B}"><font color="#0000ff"><u>LawEnforcement</u></font></a> <a href="#{A88ABE99-1D6C-4843-A2E4-7531626D3859}"><font color="#0000ff"><u>EndToEndActivity</u></font></a> where a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is incarcerated
+A <a href="#3876B81C-E316-4e11-A6C4-8024E52F769B"><font color="#0000ff"><u>LawEnforcement</u></font></a> <a href="#A88ABE99-1D6C-4843-A2E4-7531626D3859"><font color="#0000ff"><u>EndToEndActivity</u></font></a> where a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is incarcerated
 
 ### <a id="b5c15382-451a-4446-bbe6-c67fbdb04402"></a>IncarcerationFacility
 A Facility used for incarceration - e.g. a prison, detention centre, or remand facility
 
 ### <a id="d10b4b95-5bf1-4e3f-a2a8-8f52f045c31a"></a>inCategory
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> belongs to a <a href="$element://{8CA5551A-EAEB-4145-A75F-2E7D7DAD5A57}"><font color="#0000ff"><u>ContentCategory</u></font></a>
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> belongs to a <a href="$element://{8CA5551A-EAEB-4145-A75F-2E7D7DAD5A57}"><font color="#0000ff"><u>ContentCategory</u></font></a>
 
 ### <a id="bc752c7e-611b-47d6-ba89-05e58cd23803"></a>IncomingGovernment
-The <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> that took power after a ChangeOfGovernment
+The <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> that took power after a ChangeOfGovernment
 
 ### <a id="5c4c2871-5f61-4704-83d0-9f8cf42890bf"></a>IncumbentRepresentative
-A <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> in-office prior to the <a href="#{7D9E328D-345E-43f5-8163-9657E4D016BD}"><font color="#0000ff"><u>Election</u></font></a> being decided
+A <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> in-office prior to the <a href="#7D9E328D-345E-43f5-8163-9657E4D016BD"><font color="#0000ff"><u>Election</u></font></a> being decided
 
 ### <a id="f12d45ea-66d5-4016-bdf7-e1cd8f48ccf5"></a>InDisagreement
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is in disagreement
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is in disagreement
 
 ### <a id="0f327324-6b4e-40b1-b96b-97a334ba5e4a"></a>IndividualDocument
 An Asset that is a written, photographed or drawn representation of thoughts. This might include, but not limited to, formal reports, books, legal instruments. Such documents might exist in a wide variety of forms, both printed and in electronic form.
 
-Note: this is an individual document  - i.e. physical or (rarely) a specific electronic copy (e.g. on a specific hard disk...told you it was rare). In most cases, we refer to the document in general - <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> 
+Note: this is an individual document  - i.e. physical or (rarely) a specific electronic copy (e.g. on a specific hard disk...told you it was rare). In most cases, we refer to the document in general - <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> 
 
 ### <a id="d68f4e10-957a-4e98-8447-8f2768940da7"></a>IndividualDocumentID
-An Identifier used to uniquely identify an <a href="#{0F327324-6B4E-40b1-B96B-97A334BA5E4A}"><font color="#0000ff"><u>IndividualDocument</u></font></a>
+An Identifier used to uniquely identify an <a href="#0F327324-6B4E-40b1-B96B-97A334BA5E4A"><font color="#0000ff"><u>IndividualDocument</u></font></a>
 
 ### <a id="411f5c4c-9ad0-462a-be10-3f43958b7d66"></a>influencedBy
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and the thing that influences them
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and the thing that influences them
 
 ### <a id="5bee4248-dc98-4625-8553-3bb2171a1ede"></a>informationContent
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a WebResourceState and a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> that asserts the Representation is the content of the WebResource
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a WebResourceState and a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> that asserts the Representation is the content of the WebResource
 
 Note: a state is used here as the content may change over time even though the WebResource persists
 
 ### <a id="c21d2ca2-6f42-4b7c-9092-8b8c5b7baf9f"></a>inGroup
-A property linking a <font color="#0000ff"><u>Thing</u></font> to a <a href="#{04C2111A-D958-4a95-9271-7208B849DDD8}"><font color="#0000ff"><u>GroupOfItems</u></font></a> indicating that it belongs to that group.
+A property linking a <font color="#0000ff"><u>Thing</u></font> to a <a href="#04C2111A-D958-4a95-9271-7208B849DDD8"><font color="#0000ff"><u>GroupOfItems</u></font></a> indicating that it belongs to that group.
 
 Note: A Thing may be in more than one group and a group may contain more than one Thing
 
 ### <a id="ff902f8e-6b22-4f17-9c16-48543251d22e"></a>inLanguage
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is in a particular <a href="$element://{82652FF5-258F-459c-BC7F-6DAC65E1ECA1}"><font color="#0000ff"><u>Language</u></font></a>
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> is in a particular <a href="$element://{82652FF5-258F-459c-BC7F-6DAC65E1ECA1}"><font color="#0000ff"><u>Language</u></font></a>
 
 ### <a id="463f9b14-2d14-4364-b4f0-658a20dfcbfa"></a>inLocation
-A partOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> is entirely within a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
+A partOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to indicate an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> is entirely within a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a>
 
 ### <a id="2f08ef25-a5c8-48ad-85e3-903db008aa19"></a>inPeriod
-A partOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate an Element's lifetime is entirely within a PeriodOfTime
+A partOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to indicate an Element's lifetime is entirely within a PeriodOfTime
 
 Example:
 
@@ -3861,33 +3861,33 @@ Fred's birth is in May 1978
 
 
 ### <a id="0a28624b-c5e3-461e-b84a-e55b550b5dd6"></a>inPossessionOf
-A Relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> they have in their possession.
+A Relationship between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> they have in their possession.
 
-Note: this is separate to ownership - e.g. the possessor may well be the owner (use the <a href="#{FDD94D9F-F343-4c1b-9688-752C896A3C7C}"><font color="#0000ff"><u>owns</u></font></a> relationship) but may also be a result of borrowing, theft, temporary custodianship, 
+Note: this is separate to ownership - e.g. the possessor may well be the owner (use the <a href="#FDD94D9F-F343-4c1b-9688-752C896A3C7C"><font color="#0000ff"><u>owns</u></font></a> relationship) but may also be a result of borrowing, theft, temporary custodianship, 
 
 ### <a id="6c1949b5-b86b-4940-8912-9008ccd67150"></a>InPost
-An <a href="#{6B36C428-3A86-493e-9B3B-6D394C567577}"><font color="#0000ff"><u>InstalledState</u></font></a> of a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> when they are in a <a href="#{7C28E83C-1895-4901-ABF8-9D78C9C12C62}"><font color="#0000ff"><u>Post</u></font></a>.
+An <a href="#6B36C428-3A86-493e-9B3B-6D394C567577"><font color="#0000ff"><u>InstalledState</u></font></a> of a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> when they are in a <a href="#7C28E83C-1895-4901-ABF8-9D78C9C12C62"><font color="#0000ff"><u>Post</u></font></a>.
 
 ### <a id="7238489d-6802-4733-9f7f-9b31d02b3c81"></a>inRepresentation
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is part of another Representation
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> is part of another Representation
 
 ### <a id="1fdb4a8f-e28c-4e36-a085-935c20256f52"></a>InResidence
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="7eb9fe85-127c-4918-ac56-62e1be1de825"></a>inScheme
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> is a member of a RepresentationScheme
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> is a member of a RepresentationScheme
 
 ### <a id="6b36c428-3a86-493e-9b3b-6d394c567577"></a>InstalledState
 A temporal state of an Entity when it fulfils a ReplaceablePart.
 
 
 ### <a id="297f9cc1-2acf-4da0-92d9-0aa9e808cad8"></a>InstanceOfSoftware
-An <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> that is an installed instance of a set of programmatic instructions that control or affect the behaviour of an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> (usually a Device). 
+An <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> that is an installed instance of a set of programmatic instructions that control or affect the behaviour of an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> (usually a Device). 
 
 ### <a id="f87e3b6f-5872-47eb-89f8-6642dd7c8237"></a>IntelligenceAgency
-A <a href="#{0D042066-06C8-48d6-8387-500CF8EE2592}"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that collects, analyses or disseminates intelligence
+A <a href="#0D042066-06C8-48d6-8387-500CF8EE2592"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that collects, analyses or disseminates intelligence
 
 ### <a id="a0a9cd13-a4b4-415b-9187-64c9b72e2f4e"></a>IntelligenceOperation
 An OperationalEvent that involves the gathering, analysis or dissemination of intelligence
@@ -3896,32 +3896,32 @@ An OperationalEvent that involves the gathering, analysis or dissemination of in
 A Communication that occurs synchronously - e.g. a video or voice call
 
 ### <a id="b1d011f9-9585-49eb-97c4-86e82d6f0bcf"></a>Interested
-A <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> where the <a href="#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B}"><font color="#0000ff"><u>Actor</u></font></a> is interested in something
+A <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> where the <a href="#B2B15802-9CE9-4a9d-9DE0-8289D8474E9B"><font color="#0000ff"><u>Actor</u></font></a> is interested in something
 
 ### <a id="7bd2b884-f02c-4da2-af6a-21b790fbf669"></a>interestedIn
-A Relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (or state thereof) and an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> they are interested in.
+A Relationship between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (or state thereof) and an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> they are interested in.
 
 ### <a id="ae70547d-8e7e-474e-b7fd-f0a81f470157"></a>InternationalCoalition
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> formed of Nations who have agreed to pursue a particular course (e.g. a war)
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> formed of Nations who have agreed to pursue a particular course (e.g. a war)
 
 ### <a id="39d0ac05-01db-423a-861a-26e6125df906"></a>intimidatedBy
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one (range) intimidates the other (domain).
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one (range) intimidates the other (domain).
 
 ### <a id="2912e599-436d-4b79-b94f-02fa2319f201"></a>Investigation
 An IntelligenceOperation that researches a particular threat, or theme. 
 
 ### <a id="3525f314-87ed-43c8-9a84-68edcd203b30"></a>Investigator
-An <a href="#{6730B57A-3E53-4bd2-B784-78C4FB239DBF}"><font color="#0000ff"><u>Operator</u></font></a> role where a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is an investigator
+An <a href="#6730B57A-3E53-4bd2-B784-78C4FB239DBF"><font color="#0000ff"><u>Operator</u></font></a> role where a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is an investigator
 
 ### <a id="82b189f4-9800-4b44-b10d-521b038455f1"></a>InWork
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="4d914ab7-e337-4ff2-9154-9ca0bf7156eb"></a>InWorship
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="451c4c40-4183-4130-b67c-6f746b8b8bca"></a>IPAddress
 An Identifier that is an Internet Protocol address.
@@ -3936,10 +3936,10 @@ The IPv4 address range is all the IPv4 addresses between the &lt;lower address&g
 
 Both examples here represent the same address range (but in different notations).
 
-The Dot Decimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Decimal form ï¿½ where
+The Dot Decimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Decimal form – where
 each of these 32-bit IPv4 addresses are expressed as four octets expressed individually in decimal and separated by periods.
 
-The Dot Hexadecimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Hexadecimal form ï¿½ where each of these 32-bit IPv4 addresses are expressed as four octets where each octet is prefixed with 0x, expressed individually in hexadecimal and separated by periods.
+The Dot Hexadecimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Hexadecimal form – where each of these 32-bit IPv4 addresses are expressed as four octets where each octet is prefixed with 0x, expressed individually in hexadecimal and separated by periods.
 
 ### <a id="0b494f4a-9e82-4667-89ad-3d22fc9b5742"></a>IPPhoneHandset
 A CommunicationsDevice that is a telephone using internet protocols
@@ -3953,30 +3953,30 @@ An IPAddress conforming to v6 of the standard
 ### <a id="1ca57828-3b6b-450b-b477-c59a196eae34"></a>isAuthorisedForUseWithPassport
 The passport associated with the Visa.
 
-Note: if the IES data does not already contain the associated passport, a <a href="#{13ABC7CA-915E-4069-8EA7-FD205A5336C5}"><font color="#0000ff"><u>Passport</u></font></a> instance must be created, and the appropriate passport number specified.
+Note: if the IES data does not already contain the associated passport, a <a href="#13ABC7CA-915E-4069-8EA7-FD205A5336C5"><font color="#0000ff"><u>Passport</u></font></a> instance must be created, and the appropriate passport number specified.
 
 ### <a id="44adc197-d9fa-4889-b6af-929c3546f4a0"></a>isCentroidOf
-An <a href="#{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#{9A9467C3-D5FC-4964-8943-FE63ADF38914}"><font color="#0000ff"><u>PointOnEarthSurface</u></font></a> is the centroid of a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
+An <a href="#463F9B14-2D14-4364-B4F0-658A20DFCBFA"><font color="#0000ff"><u>inLocation</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#9A9467C3-D5FC-4964-8943-FE63ADF38914"><font color="#0000ff"><u>PointOnEarthSurface</u></font></a> is the centroid of a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
 
 ### <a id="b093f8da-ae08-4819-8e1c-f119ef212566"></a>isDisposedTo
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an Element is a member of a DispositionalClass - i.e. it is disposed to (capable of, tends to, etc.) the specified disposition.
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts an Element is a member of a DispositionalClass - i.e. it is disposed to (capable of, tends to, etc.) the specified disposition.
 
 ### <a id="ea859d48-5ba4-40b3-a52d-1465d1765262"></a>isEndOf
-An <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates a <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> to the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> it marks the end of
+An <a href="#F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E"><font color="#0000ff"><u>isStateOf</u></font></a> that relates a <a href="#892345CD-9FA7-4982-978D-B6D3ABAE839C"><font color="#0000ff"><u>BoundingState</u></font></a> to the <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> it marks the end of
 
 ### <a id="fba54eef-91bf-4ba2-8b67-79c899963149"></a>isIdentifiedBy
-A <a href="#{C3A36E36-0C73-4af7-88E3-81C9243CE456}"><font color="#0000ff"><u>hasName</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{315E6AD3-F2DA-4f69-864F-DA2B95121E2E}"><font color="#0000ff"><u>Identifier</u></font></a> identifies an <font color="#0000ff"><u>Thing</u></font>
+A <a href="#C3A36E36-0C73-4af7-88E3-81C9243CE456"><font color="#0000ff"><u>hasName</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> identifies an <font color="#0000ff"><u>Thing</u></font>
 
 ### <a id="2415b865-3c37-4595-9f38-11075eab5d34"></a>isLegalTenderIn
-The <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> in which a <a href="#{A06EE74F-9A66-4b63-8DC3-3B1C2B362862}"><font color="#0000ff"><u>Currency</u></font></a> is legal tender
+The <a href="#92EBA9B9-48C2-4082-9FE5-603977BD6846"><font color="#0000ff"><u>Country</u></font></a> in which a <a href="#A06EE74F-9A66-4b63-8DC3-3B1C2B362862"><font color="#0000ff"><u>Currency</u></font></a> is legal tender
 
 ### <a id="22b79cfd-deda-42e1-8864-e8421d36cf19"></a>ISO19125-WKT
-A <a href="#{A8C07233-5D62-4ad4-B405-2D15CFC37497}"><font color="#0000ff"><u>GeoRepresentation</u></font></a> using Well-Known-Text encoding for ISO19125 simple features.
+A <a href="#A8C07233-5D62-4ad4-B405-2D15CFC37497"><font color="#0000ff"><u>GeoRepresentation</u></font></a> using Well-Known-Text encoding for ISO19125 simple features.
 
 Note: the WKT must include the coordinate reference system used - e.g WGS 84
 
 ### <a id="b92d79e2-9e7d-4df7-8d38-3d884aa09ad2"></a>ISO3166_1Alpha_3
-ISO 3166-1 alpha 3 (3-Letter <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> Code)
+ISO 3166-1 alpha 3 (3-Letter <a href="#92EBA9B9-48C2-4082-9FE5-603977BD6846"><font color="#0000ff"><u>Country</u></font></a> Code)
 
 ### <a id="598acbb6-df51-4bd9-a5dd-52ede1895327"></a>ISO4217Code
 ISO4217 three-letter currency code (e.g. USD, GBP, EUR, etc.)
@@ -3985,18 +3985,18 @@ ISO4217 three-letter currency code (e.g. USD, GBP, EUR, etc.)
 ISO639-3 three-letter language code
 
 ### <a id="e9372543-434e-45d3-a1f0-8d711952d10a"></a>iso8601PeriodRepresentation
-A ISO8601 datetime (as <a href="#{57843280-4451-47eb-9616-B0843FE4E2C5}"><font color="#0000ff"><u>xsd:dateTime</u></font></a>) that represents the ParticularPeriod. 
+A ISO8601 datetime (as <a href="#57843280-4451-47eb-9616-B0843FE4E2C5"><font color="#0000ff"><u>xsd:dateTime</u></font></a>) that represents the ParticularPeriod. 
 
-This representation is also encoded in the URI of the period, this is an additional required <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: "2007-01-18T15:30:00"
+This representation is also encoded in the URI of the period, this is an additional required <a href="#4A8E5877-32DF-428f-9A60-6AC3D083FFCA"><font color="#0000ff"><u>attribute</u></font></a> to enable querying by dateTime and SPARQL temporal operations. The literal string shall be encoded in UTC (Coordinated Universal Time) but unlike the URI, it must be punctuated. For example: "2007-01-18T15:30:00"
 
 ### <a id="baea86d9-c90e-4f8d-96f5-a01bb0c49711"></a>isParticipantIn
-An <a href="#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC}"><font color="#0000ff"><u>isPartOf</u></font></a> that relates an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> it participates in.
+An <a href="#CD85D7F7-783B-4d06-B023-56DBBDDC02DC"><font color="#0000ff"><u>isPartOf</u></font></a> that relates an <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> it participates in.
 
 ### <a id="df9f6056-ccd4-41aa-9a86-536f6150ec25"></a>isParticipationOf
-An <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates an <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> that is the participant
+An <a href="#F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E"><font color="#0000ff"><u>isStateOf</u></font></a> that relates an <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> to the <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> that is the participant
 
 ### <a id="cd85d7f7-783b-4d06-b023-56dbbddc02dc"></a>isPartOf
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> to another that it is part of.
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> to another that it is part of.
 
 Examples:
 
@@ -4004,7 +4004,7 @@ London partOf UK
 My Arm partOf Me
 
 ### <a id="d6974f5e-b24c-4a06-9ac1-db6299e9bf55"></a>isPrimaryForOrganisation
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <font color="#0000ff"><u>Thing</u></font> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that prefers the use of that Thing.
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking an <font color="#0000ff"><u>Thing</u></font> to the <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that prefers the use of that Thing.
 
 This is used when there are more than one state, name, etc. for a given item, and there is a requirement to specify which one is considered primary / preferred by a particular Organisation.
 
@@ -4012,77 +4012,77 @@ Examples:
 
 * A primary name for a person (applied to PersonName)
 * A primary DoB for a person (applied to BirthState)
-* A primary <a href="#{45CDA5C1-624D-4f2f-81F6-EF19300820A9}"><font color="#0000ff"><u>nationality</u></font></a> for a person (applied to the <a href="$element://{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> that links to the Nation)
+* A primary <a href="#45CDA5C1-624D-4f2f-81F6-EF19300820A9"><font color="#0000ff"><u>nationality</u></font></a> for a person (applied to the <a href="$element://{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> that links to the Nation)
 
 ### <a id="d106a0a9-55c4-454f-9e20-35ba54114036"></a>isRepresentedAs
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> in someway depicts an <font color="#0000ff"><u>Thing</u></font>
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> in someway depicts an <font color="#0000ff"><u>Thing</u></font>
 
 ### <a id="d9e068b1-2a44-4523-b8fc-f9888212b35c"></a>isStartOf
-An <a href="#{F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E}"><font color="#0000ff"><u>isStateOf</u></font></a> that relates a <a href="#{892345CD-9FA7-4982-978D-B6D3ABAE839C}"><font color="#0000ff"><u>BoundingState</u></font></a> to the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> it marks the start of
+An <a href="#F7CBF87A-6ECC-4c9f-B698-FD3CF3F7980E"><font color="#0000ff"><u>isStateOf</u></font></a> that relates a <a href="#892345CD-9FA7-4982-978D-B6D3ABAE839C"><font color="#0000ff"><u>BoundingState</u></font></a> to the <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> it marks the start of
 
 ### <a id="f7cbf87a-6ecc-4c9f-b698-fd3cf3f7980e"></a>isStateOf
-An <a href="#{CD85D7F7-783B-4d06-B023-56DBBDDC02DC}"><font color="#0000ff"><u>isPartOf</u></font></a> linking an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> to a temporal <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of that Element 
+An <a href="#CD85D7F7-783B-4d06-B023-56DBBDDC02DC"><font color="#0000ff"><u>isPartOf</u></font></a> linking an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> to a temporal <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> of that Element 
 
 Examples:
 
 You, you yesterday
 
 ### <a id="5e353b12-2503-429f-a683-f7c77e0dfbad"></a>issuerIdentificationNumber
-The IIN is a number that uniquely identifies the issuer of the <a href="#{4E10343E-8350-4354-B3DB-A7F74B4535EF}"><font color="#0000ff"><u>Bank</u></font></a> Card.
+The IIN is a number that uniquely identifies the issuer of the <a href="#4E10343E-8350-4354-B3DB-A7F74B4535EF"><font color="#0000ff"><u>Bank</u></font></a> Card.
 
 An ISO/IEC 7812 number contains a single-digit <i>major industry identifier </i>(MII), a six-digit <i>issuer identification number </i>(IIN), an <i>individual account identification </i>number, and a single digit checksum.
 
 ### <a id="74d86486-8e18-474a-8930-b92e759bbe06"></a>issuingAgency
-The <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that issued the ticket ï¿½ this might be different from the travel provider.
+The <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that issued the ticket – this might be different from the travel provider.
 
 ### <a id="b8650a61-3b08-4f62-8eab-0f9d007b20ce"></a>isTeacherOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities that indicates one teaches the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities that indicates one teaches the other.
 
-In the case where the teaching is occasional / ad-hoc (i.e. there isn't an ongoing course) then the instance of the <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of <a href="#{52DB371E-71AC-4812-B3CF-0FD7D73F1BB0}"><font color="#0000ff"><u>DiscontinuousState</u></font></a>
+In the case where the teaching is occasional / ad-hoc (i.e. there isn't an ongoing course) then the instance of the <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of <a href="#52DB371E-71AC-4812-B3CF-0FD7D73F1BB0"><font color="#0000ff"><u>DiscontinuousState</u></font></a>
 
 ### <a id="ad17e3d9-cab2-4a60-99c9-109f4496f92f"></a>JointAccount
-A <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> held by more than one person
+A <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> held by more than one person
 
 ### <a id="8b571665-0aa1-40be-a7a0-a35be86b7192"></a>Journey
-A <a href="#{95B5ACC4-956A-4b29-AB9E-BDCD12EF319F}"><font color="#0000ff"><u>Movement</u></font></a> which is made up of two or more TravelLegs
+A <a href="#95B5ACC4-956A-4b29-AB9E-BDCD12EF319F"><font color="#0000ff"><u>Movement</u></font></a> which is made up of two or more TravelLegs
 
-Note:  this may include a number of legs to the journey (i.e. instances of <a href="#{55384377-146A-47c9-8706-18A1343A219C}"><font color="#0000ff"><u>TravelLeg</u></font></a> that are part of the Journey)
+Note:  this may include a number of legs to the journey (i.e. instances of <a href="#55384377-146A-47c9-8706-18A1343A219C"><font color="#0000ff"><u>TravelLeg</u></font></a> that are part of the Journey)
 
 ### <a id="6a9a065c-a31a-42be-b7e2-275f076dca9d"></a>JsonData
-An <a href="#{8AF1DB0B-9BEB-4a33-A459-7EF2BE309E81}"><font color="#0000ff"><u>EncodedData</u></font></a> which is in JSON format
+An <a href="#8AF1DB0B-9BEB-4a33-A459-7EF2BE309E81"><font color="#0000ff"><u>EncodedData</u></font></a> which is in JSON format
 
 ### <a id="62ef76b2-4ab0-4e1e-98c4-61c3a85bf980"></a>jurisdictionOfRights
-A Relationship between <a href="#{487778E0-4BD7-4d9a-B7F7-63731478E1A2}"><font color="#0000ff"><u>Rights</u></font></a> and the <a href="#{6AE6F8A5-F427-4ea6-BABD-5720F07430F5}"><font color="#0000ff"><u>Nation</u></font></a> under whose laws the Rights are established
+A Relationship between <a href="#487778E0-4BD7-4d9a-B7F7-63731478E1A2"><font color="#0000ff"><u>Rights</u></font></a> and the <a href="#6AE6F8A5-F427-4ea6-BABD-5720F07430F5"><font color="#0000ff"><u>Nation</u></font></a> under whose laws the Rights are established
 
 ### <a id="57f3607c-0204-4590-9442-24f372a35931"></a>knownAssociateOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where both are known to know each other but the extent to which they interact (e.g. friendship, work, criminal activity, etc.) is not known.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where both are known to know each other but the extent to which they interact (e.g. friendship, work, criminal activity, etc.) is not known.
 
 ### <a id="57c9f8df-afe6-4374-9403-acacac26fce4"></a>LandlineHandset
 A CommunicationsDevice that connects using fixed line telecommunications
 
 ### <a id="d7f83a2d-6428-4211-964d-e1e8a8089083"></a>LandlineTelephoneAccount
-A <a href="#{593AE684-C2E9-4e40-A7FD-549BFA64900D}"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the telephones in use connect using a wired network and operate only in a specific location
+A <a href="#593AE684-C2E9-4e40-A7FD-549BFA64900D"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the telephones in use connect using a wired network and operate only in a specific location
 
 ### <a id="82652ff5-258f-459c-bc7f-6dac65e1eca1"></a>Language
 A ClassOfRepresentation that is a spoken or written form of human communication
 
 ### <a id="eb73ab32-8232-4b58-8271-640ddddcc7de"></a>LanguageProficiency
-A <a href="#{92CDC810-9DFA-476b-A2E7-33121F65905B}"><font color="#0000ff"><u>ClassOfPersonState</u></font></a> indicating the proficiency a person has in a particular language at that state in their life.
+A <a href="#92CDC810-9DFA-476b-A2E7-33121F65905B"><font color="#0000ff"><u>ClassOfPersonState</u></font></a> indicating the proficiency a person has in a particular language at that state in their life.
 
 
 
 ### <a id="bd14ef81-ddbc-4bdf-bc40-e5fae937ada6"></a>Latitude
-A GeoIdentity that is a decimal representation of an angle of latitude of a <a href="#{9A9467C3-D5FC-4964-8943-FE63ADF38914}"><font color="#0000ff"><u>PointOnEarthSurface</u></font></a> (WGS84)
+A GeoIdentity that is a decimal representation of an angle of latitude of a <a href="#9A9467C3-D5FC-4964-8943-FE63ADF38914"><font color="#0000ff"><u>PointOnEarthSurface</u></font></a> (WGS84)
 
 ### <a id="3876b81c-e316-4e11-a6c4-8024e52f769b"></a>LawEnforcement
 An Event that involves the application of criminal law
 
 ### <a id="15806699-2f00-4891-b2a0-8a211cedfc10"></a>LawEnforcementOrganisation
-A <a href="#{0D042066-06C8-48d6-8387-500CF8EE2592}"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that investigates crimes and brings the perpetrators to justice. 
+A <a href="#0D042066-06C8-48d6-8387-500CF8EE2592"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that investigates crimes and brings the perpetrators to justice. 
 Wikipedia definition: Law enforcement is any system by which some members of society act in an organized manner to enforce the law by discovering, deterring, rehabilitating, or punishing people who violate the rules and norms governing that society.
 
 ### <a id="e1af7afe-fa2f-40f7-88a3-ca6988bc2e0d"></a>LeadInvestigator
-An <a href="#{3525F314-87ED-43c8-9A84-68EDCD203B30}"><font color="#0000ff"><u>Investigator</u></font></a> who is charge of an <a href="#{2912E599-436D-4b79-B94F-02FA2319F201}"><font color="#0000ff"><u>Investigation</u></font></a>
+An <a href="#3525F314-87ED-43c8-9A84-68EDCD203B30"><font color="#0000ff"><u>Investigator</u></font></a> who is charge of an <a href="#2912E599-436D-4b79-B94F-02FA2319F201"><font color="#0000ff"><u>Investigation</u></font></a>
 
 ### <a id="5c21de93-329f-4209-87ff-19610cb0d367"></a>Length
 The Measure of distance as specified by the International System of Quantities
@@ -4091,7 +4091,7 @@ The Measure of distance as specified by the International System of Quantities
 An Event that brings about change to its environment or another Element - e.g. creation, destruction or modification
 
 ### <a id="b292748f-d41e-4c3b-9335-04d4b06a1f34"></a>Likes
-An <a href="#{B1D011F9-9585-49eb-97C4-86E82D6F0BCF}"><font color="#0000ff"><u>Interested</u></font></a> <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> likes something
+An <a href="#B1D011F9-9585-49eb-97C4-86E82D6F0BCF"><font color="#0000ff"><u>Interested</u></font></a> <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> likes something
 
 ### <a id="e0d8895d-2230-4c80-8b06-351581c53436"></a>LineOfAddress
 A line in an Address. There may be any number of these.
@@ -4099,28 +4099,28 @@ A line in an Address. There may be any number of these.
 ### <a id="ecc6e85e-cb08-464d-81a4-ba3ecdcb784c"></a>LiveCast
 An OnlineArtefact that is video or audio streamed online in real time.
 
-Note: the begin and end dates for a <a href="#{ECC6E85E-CB08-464d-81A4-BA3ECDCB784C}"><font color="#0000ff"><u>LiveCast</u></font></a> instance mark its life online rather than the <a href="#{5382F9B3-0A28-4245-8EEB-BF3CEFFD4058}"><font color="#0000ff"><u>duration</u></font></a> of the actual recording. The recording itself should be tracked using an <a href="#{DB70D7EE-5076-4eb2-950B-63C71A3C8859}"><font color="#0000ff"><u>OnlineContentCreation</u></font></a> Event.
+Note: the begin and end dates for a <a href="#ECC6E85E-CB08-464d-81A4-BA3ECDCB784C"><font color="#0000ff"><u>LiveCast</u></font></a> instance mark its life online rather than the <a href="#5382F9B3-0A28-4245-8EEB-BF3CEFFD4058"><font color="#0000ff"><u>duration</u></font></a> of the actual recording. The recording itself should be tracked using an <a href="#DB70D7EE-5076-4eb2-950B-63C71A3C8859"><font color="#0000ff"><u>OnlineContentCreation</u></font></a> Event.
 
 ### <a id="e1a494ed-d493-44ab-8bf9-abc6889d4d9a"></a>Location
 An Entity that is a geographic place which specifies a point or an area on the Earth's surface or elsewhere.
 
 ### <a id="7cafacd0-94f9-400e-b20e-e4ece31943e5"></a>LocationState
-A temporal state of a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
+A temporal state of a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a>
 
 ### <a id="8010625f-ba25-457a-93cf-7ec1e99261d7"></a>Logoff
-A OnlineEvent where an <a href="#{E95170B9-2599-46dc-BEDC-012B08F09D43}"><font color="#0000ff"><u>OnlineAccount</u></font></a> logs out of an <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a>
+A OnlineEvent where an <a href="#E95170B9-2599-46dc-BEDC-012B08F09D43"><font color="#0000ff"><u>OnlineAccount</u></font></a> logs out of an <a href="#27BEFD0A-B30B-47db-B863-13E48D1172F9"><font color="#0000ff"><u>OnlineService</u></font></a>
 
 ### <a id="43cdb7f8-e77e-4eba-a92e-c6a74af954ca"></a>Logon
-A OnlineEvent where an <a href="#{E95170B9-2599-46dc-BEDC-012B08F09D43}"><font color="#0000ff"><u>OnlineAccount</u></font></a> logs onto an <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a>
+A OnlineEvent where an <a href="#E95170B9-2599-46dc-BEDC-012B08F09D43"><font color="#0000ff"><u>OnlineAccount</u></font></a> logs onto an <a href="#27BEFD0A-B30B-47db-B863-13E48D1172F9"><font color="#0000ff"><u>OnlineService</u></font></a>
 
 ### <a id="b2c5522f-ea60-455a-b00f-9cc87a76e5b0"></a>Longitude
-The GeoIdentity that is a decimal representation of an angle of longitude of a <a href="#{9A9467C3-D5FC-4964-8943-FE63ADF38914}"><font color="#0000ff"><u>PointOnEarthSurface</u></font></a> (WGS84)
+The GeoIdentity that is a decimal representation of an angle of longitude of a <a href="#9A9467C3-D5FC-4964-8943-FE63ADF38914"><font color="#0000ff"><u>PointOnEarthSurface</u></font></a> (WGS84)
 
 ### <a id="e543978a-06d0-4c79-bccd-a62de9294a85"></a>Loves
-A <a href="#{7BD2B884-F02C-4da2-AF6A-21B790FBF669}"><font color="#0000ff"><u>interestedIn</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> loves another Person
+A <a href="#7BD2B884-F02C-4da2-AF6A-21B790FBF669"><font color="#0000ff"><u>interestedIn</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> where a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> loves another Person
 
 ### <a id="96717346-1df4-4eae-a7cf-e389b4454b47"></a>lowerBound
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> a MeasureRange to the Measure that is its lower bound
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> a MeasureRange to the Measure that is its lower bound
 
 ### <a id="8431c546-b6f9-406f-9ecd-383fe985d115"></a>LuminousIntensity
 The Measure of radiated light
@@ -4131,34 +4131,34 @@ A CommunicationsIdentifier that is used to identify network interface controller
 Various forms of the MAC address can be used:
 (a) six groups of two hexadecimal digits, separated by hyphens (-) or colons (:), in transmission order
 (b) three groups of four hexadecimal digits separated by dots (.) again in transmission order.
-2. The <a href="#{E0036B31-8D73-4268-8959-6E9A5EE55BB2}"><font color="#0000ff"><u>make</u></font></a> &amp; <a href="#{98BDD06F-1BD7-42b8-B338-20A198BCF90A}"><font color="#0000ff"><u>model</u></font></a> of the network interface is encoded within the MAC address.
+2. The <a href="#E0036B31-8D73-4268-8959-6E9A5EE55BB2"><font color="#0000ff"><u>make</u></font></a> &amp; <a href="#98BDD06F-1BD7-42b8-B338-20A198BCF90A"><font color="#0000ff"><u>model</u></font></a> of the network interface is encoded within the MAC address.
 
 ### <a id="727175d4-0998-49a0-baee-6b8f1f1fd8d4"></a>maintains
-A Relationship between a <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> they maintain
+A Relationship between a <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> they maintain
 
 ### <a id="e0036b31-8d73-4268-8959-6e9a5ee55bb2"></a>make
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> from the device to its "make" - i.e. organisation that brands it (even if the manufacture is contracted-out)
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> from the device to its "make" - i.e. organisation that brands it (even if the manufacture is contracted-out)
 
-Example - an iPhone 6S has <a href="#{E0036B31-8D73-4268-8959-6E9A5EE55BB2}"><font color="#0000ff"><u>make</u></font></a> Apple
+Example - an iPhone 6S has <a href="#E0036B31-8D73-4268-8959-6E9A5EE55BB2"><font color="#0000ff"><u>make</u></font></a> Apple
 
 ### <a id="f0c08ade-7ee5-4392-9877-5fd8fb4076e9"></a>MaliciousAccountUse
-An OnlineAccountInUse where the account is used to conduct a <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a> online
+An OnlineAccountInUse where the account is used to conduct a <a href="#43E58528-16E4-48b3-8F13-10500879EA83"><font color="#0000ff"><u>CriminalActivity</u></font></a> online
 
 ### <a id="8991d995-1915-47b7-b180-d9ebc4a1fd1f"></a>managedBy
-A <a href="#{181AAC84-26CE-4531-AC32-A73B8FD8B858}"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where the managed <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> (domain) is managed by another <a href="$element://{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (range).
+A <a href="#181AAC84-26CE-4531-AC32-A73B8FD8B858"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> where the managed <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> (domain) is managed by another <a href="$element://{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (range).
 
 ### <a id="18a66904-823f-471d-a465-65ecd2d69867"></a>MapGridArea
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> whose area is specified by a grid on a map.
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> whose area is specified by a grid on a map.
 
 Note this is the actual area, not the map grid. 
 
 ### <a id="9dfedf24-1203-4341-b282-bd37c1b9cdf5"></a>Marriage
-An <a href="#{A88ABE99-1D6C-4843-A2E4-7531626D3859}"><font color="#0000ff"><u>EndToEndActivity</u></font></a> covering the entire extent of a two people's marriage (from the ceremony to either divorce or death)
+An <a href="#A88ABE99-1D6C-4843-A2E4-7531626D3859"><font color="#0000ff"><u>EndToEndActivity</u></font></a> covering the entire extent of a two people's marriage (from the ceremony to either divorce or death)
 
-Note: As IES4 does not increase the scope of IES3, <a href="#{9DFEDF24-1203-4341-B282-BD37C1B9CDF5}"><font color="#0000ff"><u>Marriage</u></font></a> also includes common-law partners and civil partnerships
+Note: As IES4 does not increase the scope of IES3, <a href="#9DFEDF24-1203-4341-B282-BD37C1B9CDF5"><font color="#0000ff"><u>Marriage</u></font></a> also includes common-law partners and civil partnerships
 
 ### <a id="d03a0d8b-79f5-4901-97bc-2767fd46cd5f"></a>Married
-A <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> when a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is married to another person
+A <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> when a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is married to another person
 
 ### <a id="ae8fc416-9650-472d-99c6-f0a46b7359eb"></a>Mass
 The Measure of an Entity's resistance to acceleration as specified by the International System of Quantities
@@ -4170,10 +4170,10 @@ An Characteristic which is measurable on a scale
 A Measure specified by upper and lower bound Measures
 
 ### <a id="161079f3-8089-4124-a67a-5d6a7a4ea511"></a>measureUnit
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a Measure is represented using a particular UnitOfMeasure
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a Measure is represented using a particular UnitOfMeasure
 
 ### <a id="3693b7de-dce7-4bf9-bc2a-a8914da4a11e"></a>MeasureValue
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> of the value of a Measure
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> of the value of a Measure
 
 
 Note: A UnitOfMeasure is almost always required. The reason it is not mandatory is that in some cases (due to partial reporting) we do not have complete information - e.g. we know the value was stated to be 10 but we don't know if that's metres or feet
@@ -4182,13 +4182,13 @@ Note: A UnitOfMeasure is almost always required. The reason it is not mandatory 
 A DataObject that is a stand-alone file - e.g. a video, image or sound recording
 
 ### <a id="6445e51f-3ddf-4dcf-abdf-3ed123d53188"></a>Meeting
-A <a href="#{3524D10D-D9B0-416d-ADED-D5AAEB99DD09}"><font color="#0000ff"><u>CoLocation</u></font></a> where the attendees (Presence) communicate with each other
+A <a href="#3524D10D-D9B0-416d-ADED-D5AAEB99DD09"><font color="#0000ff"><u>CoLocation</u></font></a> where the attendees (Presence) communicate with each other
 
 ### <a id="b499c172-310d-4c5f-ba92-93b1c7874eeb"></a>MeetingChair
-An Attendance where the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> involved is the chair of a <a href="#{6445E51F-3DDF-4dcf-ABDF-3ED123D53188}"><font color="#0000ff"><u>Meeting</u></font></a>
+An Attendance where the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> involved is the chair of a <a href="#6445E51F-3DDF-4dcf-ABDF-3ED123D53188"><font color="#0000ff"><u>Meeting</u></font></a>
 
 ### <a id="70aedfc7-2b17-43d8-bf49-b5acf8812317"></a>Message
-A <a href="#{6698805F-F492-4f1f-954C-E1EB3C53E148}"><font color="#0000ff"><u>Communication</u></font></a> where a message is sent.
+A <a href="#6698805F-F492-4f1f-954C-E1EB3C53E148"><font color="#0000ff"><u>Communication</u></font></a> where a message is sent.
 
 ### <a id="e1a85bea-c374-4727-a189-e536ba248d98"></a>messageContent
 An attribute representing the content of a message
@@ -4205,7 +4205,7 @@ Note: was called "Attack" in v3.x - now called "MilitaryAttack" to distinguish f
 An OperationalEvent that involves military staff
 
 ### <a id="492ab59a-342e-4d74-b85b-e6ca95bbc3b2"></a>MilitaryOrganisation
-A <a href="#{0D042066-06C8-48d6-8387-500CF8EE2592}"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that conducts warfighting, peacekeeping and emergency civil support functions
+A <a href="#0D042066-06C8-48d6-8387-500CF8EE2592"><font color="#0000ff"><u>GovernmentOrganisation</u></font></a> that conducts warfighting, peacekeeping and emergency civil support functions
 
 ### <a id="a6ded556-12b8-45b7-a69c-a6a3d813269b"></a>missionPurpose
 A short description of why an IntelligenceOperation was carried out used for legal justification
@@ -4216,27 +4216,27 @@ Agencies that work in the intelligence domain may wish to standardise these desc
 A CommunicationsDevice that is a portable telephone using cellular networks
 
 ### <a id="9f5eda24-5991-48e7-9303-c86e25a196cf"></a>MobileTelephoneAccount
-A <a href="#{593AE684-C2E9-4e40-A7FD-549BFA64900D}"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the telephones in use connects using a cellular network
+A <a href="#593AE684-C2E9-4e40-A7FD-549BFA64900D"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the telephones in use connects using a cellular network
 
 ### <a id="21a341ae-9a38-4f45-bcb5-b29b02dc1b90"></a>Modifier
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{3EF09CE4-79B0-42be-9AA1-12B97611BF2B}"><font color="#0000ff"><u>Modify</u></font></a> event as a modifier
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#3EF09CE4-79B0-42be-9AA1-12B97611BF2B"><font color="#0000ff"><u>Modify</u></font></a> event as a modifier
 
 ### <a id="3ef09ce4-79b0-42be-9aa1-12b97611bf2b"></a>Modify
 A LifecycleEvent where something is changed
 
 ### <a id="d94ed70f-8cca-4c6e-8ae5-65450bba62d7"></a>MoneyTransfer
-A <a href="#{94CEDBD1-8E3D-4cb4-8155-FBD621DA6A0D}"><font color="#0000ff"><u>BusinessEvent</u></font></a> where an <a href="#{0DF94DE5-68B7-45b4-A106-A11CE06C31B8}"><font color="#0000ff"><u>AmountOfMoney</u></font></a> is moved from one <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> to another.
+A <a href="#94CEDBD1-8E3D-4cb4-8155-FBD621DA6A0D"><font color="#0000ff"><u>BusinessEvent</u></font></a> where an <a href="#0DF94DE5-68B7-45b4-A106-A11CE06C31B8"><font color="#0000ff"><u>AmountOfMoney</u></font></a> is moved from one <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> to another.
 
-Usually a Money Transfer event will involve two accounts but we might not know both, or it might be a cash transfer ï¿½ in which case only one of the participants might be specified.
+Usually a Money Transfer event will involve two accounts but we might not know both, or it might be a cash transfer – in which case only one of the participants might be specified.
 
 ### <a id="95b5acc4-956a-4b29-ab9e-bdcd12ef319f"></a>Movement
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> moves from one place to another.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> moves from one place to another.
 
 ### <a id="d06c3801-f91c-436d-9d7f-dfde29b48e5c"></a>Moving
-An EventParticipant in which an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> moves from one <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> to another
+An EventParticipant in which an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> moves from one <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> to another
 
 ### <a id="7d7cc966-56eb-4220-a650-a993e598f2e2"></a>Name
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> that is used to refer to something, usually in context of a NamingScheme
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> that is used to refer to something, usually in context of a NamingScheme
 
 Examples:
 
@@ -4245,10 +4245,10 @@ GB - the FIPS two-letter code for the United Kingdom
 "Michael Caine"  - stage name for Maurice Micklewhite
 
 ### <a id="222534a5-25c8-4ecd-be55-27da1534d402"></a>NamingScheme
-An <a href="#{1F9AC8FE-3862-48d6-A3DC-E429B08D2B26}"><font color="#0000ff"><u>ClassOfClassOfEntity</u></font></a> whose instances collect together all Names that belong to a particular scheme - i.e. an organisational identity scheme, a systems primary key format, etc.
+An <a href="#1F9AC8FE-3862-48d6-A3DC-E429B08D2B26"><font color="#0000ff"><u>ClassOfClassOfEntity</u></font></a> whose instances collect together all Names that belong to a particular scheme - i.e. an organisational identity scheme, a systems primary key format, etc.
 
 ### <a id="6ae6f8a5-f427-4ea6-babd-5720f07430f5"></a>Nation
-The people of a <a href="#{92EBA9B9-48C2-4082-9FE5-603977BD6846}"><font color="#0000ff"><u>Country</u></font></a> (or group of Countries recognised as a Nation).
+The people of a <a href="#92EBA9B9-48C2-4082-9FE5-603977BD6846"><font color="#0000ff"><u>Country</u></font></a> (or group of Countries recognised as a Nation).
 
 Note: this is distinct to a Country which is the land mass under control by the Nation, though ISO Country codes are regularly used to also identify Nations. 
 
@@ -4259,50 +4259,50 @@ An IdentityDocument issued by a Government to identify a Person
 An Identifier of a Person that is specified by a GovernmentOrganisation 
 
 ### <a id="45cda5c1-624d-4f2f-81f6-ef19300820a9"></a>nationality
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to a <a href="#{6AE6F8A5-F427-4ea6-BABD-5720F07430F5}"><font color="#0000ff"><u>Nation</u></font></a> which recognises the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> (or <a href="$element://{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of Person, as it is possible to renounce a nationality) as one of their nationals.
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to a <a href="#6AE6F8A5-F427-4ea6-BABD-5720F07430F5"><font color="#0000ff"><u>Nation</u></font></a> which recognises the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> (or <a href="$element://{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of Person, as it is possible to renounce a nationality) as one of their nationals.
 
 ### <a id="0c0728af-b9f2-418f-a03e-107689f0aca0"></a>natureOfInterest
 NatureOfInterest is limited to the following values:
-ï¿½ Personal
-ï¿½ Professional
-ï¿½ Academic
+· Personal
+· Professional
+· Academic
 
 ### <a id="e3bb8b07-9cc5-407a-8cc7-e2b0e1b69476"></a>nearTo
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> to another Entity it is proximate to in space
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> to another Entity it is proximate to in space
 
 ### <a id="fb2ea8ae-164a-4642-82e3-d2622dc6fccb"></a>Negotiation
-An <a href="#{422B4F1C-DA90-400b-8FFD-43C90B4F10F4}"><font color="#0000ff"><u>AgreementStage</u></font></a> where parties are trying to find agreement
+An <a href="#422B4F1C-DA90-400b-8FFD-43C90B4F10F4"><font color="#0000ff"><u>AgreementStage</u></font></a> where parties are trying to find agreement
 
 ### <a id="d4b25aaf-f083-45ba-8188-25de9d86013d"></a>Negotiator
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> negotiates an agreement
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> negotiates an agreement
 
 ### <a id="1995033d-7af2-468c-998d-61e86fb51b16"></a>nephewOrNieceOf
-A Relationship between two <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the nephew or niece of the other.
+A Relationship between two <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the nephew or niece of the other.
 
 Note: people can become nephews or nieces at different stages in their lives (e.g. as people marry) so PersonState should be used in cases where someone has not always been related in this way (i.e. not from birth)
 
 ### <a id="c544ccac-91c5-4e82-b5d9-7a1b8d48e771"></a>NetworkInterface
-An <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a> (usually part of another Device) that provides wired or wireless access to a network.
+An <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> (usually part of another Device) that provides wired or wireless access to a network.
 
 Network interfaces can often be removable. To model this, create DeviceStates of the NetworkInterface and make them part of the Device which hosts the interface for that period of time. 
 
 ### <a id="f33caaa7-85a7-4e41-b0d4-3eac4e6f73cc"></a>nextTo
-A <a href="#{E3BB8B07-9CC5-407a-8CC7-E2B0E1B69476}"><font color="#0000ff"><u>nearTo</u></font></a> linking an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> to another Entity it is immediately proximate to (i.e. touching) in space
+A <a href="#E3BB8B07-9CC5-407a-8CC7-E2B0E1B69476"><font color="#0000ff"><u>nearTo</u></font></a> linking an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> to another Entity it is immediately proximate to (i.e. touching) in space
 
 ### <a id="ba4b97ee-58e2-4796-949c-f62eaaae56c9"></a>Nickname
 A PersonName that is an unofficial or casual name
 
 Note:
-An nickname will often be applied to a <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of the Person, as these tend to be non-permanent names
+An nickname will often be applied to a <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> of the Person, as these tend to be non-permanent names
 
 ### <a id="672c510d-8836-4a41-8921-c732df430278"></a>NonDisclosureAgreement
-An <a href="#{1B39630B-B00F-4def-9C65-48082C4AD2E0}"><font color="#0000ff"><u>EndToEndAgreement</u></font></a> where parties agree not to disclose certain information
+An <a href="#1B39630B-B00F-4def-9C65-48082C4AD2E0"><font color="#0000ff"><u>EndToEndAgreement</u></font></a> where parties agree not to disclose certain information
 
 ### <a id="09649fe9-ddd7-4493-b9ec-7a716b0fc616"></a>Northing
 The GeoIdentity that is a representation of the northward componrnent of cartesian point on a map - i.e. on a 2D projection of the globe such as a mercator projection.
 
 ### <a id="c2b4a066-e4a7-4cf5-bd1f-8381364f5d30"></a>NotForProfitOrganisation
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> where all income is reinvested, or distributed - i.e. no profit is made.
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> where all income is reinvested, or distributed - i.e. no profit is made.
 
 ### <a id="15ef63e0-1223-4874-a2d4-43f75acf5315"></a>Notify
 An OnlineContentEvent where a notification is raised - i.e.  an application-generated event (not a user-generated event)
@@ -4310,37 +4310,37 @@ An OnlineContentEvent where a notification is raised - i.e.  an application-gene
 ### <a id="222fbd07-dccf-40c6-bd15-4adbc64a8aa5"></a>objectContent
 The content of the data object.
 
-Whenever a <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a> is exchanged it must include either the ObjectContent or an ObjectContentReference or both.
+Whenever a <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> is exchanged it must include either the ObjectContent or an ObjectContentReference or both.
 
 The ContentStandard qualifier specifies the standard (either by name or by reference) that is applicable to the content of the DataObject.
 
-The ContentFormat qualifier specifies the <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> of the content of the DataObject.
+The ContentFormat qualifier specifies the <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> of the content of the DataObject.
 
 ### <a id="6b06abdd-05cf-485c-a483-563c5e85f189"></a>objectContentReference
-An ObjectContentReference is a resolvable reference to the ï¿½contentï¿½ of the respective DataObject.
+An ObjectContentReference is a resolvable reference to the ‘content’ of the respective DataObject.
 
-Whenever a <a href="#{CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2}"><font color="#0000ff"><u>DataObject</u></font></a> is exchanged it must include either the ObjectContent or an ObjectContentReference or both.
+Whenever a <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> is exchanged it must include either the ObjectContent or an ObjectContentReference or both.
 
 ### <a id="9a372833-b327-4cb0-9950-786a2fbf7cc3"></a>ObjectName
 A Name given to a DataObject.
 
 ### <a id="8ca40ccf-a099-49fd-80cb-ca6da733fab4"></a>Observation
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> (Event or Entity) is observed by an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> (i.e. a <a href="$element://{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> or Device)
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> (Event or Entity) is observed by an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> (i.e. a <a href="$element://{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> or Device)
 
 ### <a id="cc05abd0-7bab-4484-8e8c-ed07c1aa3c93"></a>Observed
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> is <a href="#{CC05ABD0-7BAB-4484-8E8C-ED07C1AA3C93}"><font color="#0000ff"><u>Observed</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> is <a href="#CC05ABD0-7BAB-4484-8E8C-ED07C1AA3C93"><font color="#0000ff"><u>Observed</u></font></a>
 
 ### <a id="c58a1ab4-19e2-48d0-b606-3bdfc5dd3860"></a>Observer
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> observes another Entity or <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> observes another Entity or <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a>
 
 ### <a id="fb2fda67-b258-4b18-9e95-3b9dfab8fb14"></a>ObserverStatus
-When a <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> has observer rights at a <a href="#{78D65599-BCBB-491a-8C34-75B9F7AB60D5}"><font color="#0000ff"><u>Summit</u></font></a>
+When a <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> has observer rights at a <a href="#78D65599-BCBB-491a-8C34-75B9F7AB60D5"><font color="#0000ff"><u>Summit</u></font></a>
 
 ### <a id="1d589649-490d-4558-91d5-2d977b2b42de"></a>OfferForSale
-A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities of the same type (specified by an ClassOfEntity) are offered for sale or exchange
+A <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities of the same type (specified by an ClassOfEntity) are offered for sale or exchange
 
 ### <a id="80afd655-a969-46be-be72-035c053c1c4f"></a>OnJourney
-An EventParticipant in which an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is on a <a href="#{8B571665-0AA1-40be-A7A0-A35BE86B7192}"><font color="#0000ff"><u>Journey</u></font></a> (i.e. a multi-part journey)
+An EventParticipant in which an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is on a <a href="#8B571665-0AA1-40be-A7A0-A35BE86B7192"><font color="#0000ff"><u>Journey</u></font></a> (i.e. a multi-part journey)
 
 ### <a id="e95170b9-2599-46dc-bedc-012b08f09d43"></a>OnlineAccount
 An Account that enables a person, organisation or other entity to participate within a particular online domain.
@@ -4348,29 +4348,29 @@ An Account that enables a person, organisation or other entity to participate wi
 Note: was called "OnlineIdentifier" in previous versions of IES
 
 ### <a id="bcfd5bed-785d-4c5d-b004-2c8a5c7b40c3"></a>OnlineAccountInUse
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{E95170B9-2599-46dc-BEDC-012B08F09D43}"><font color="#0000ff"><u>OnlineAccount</u></font></a> participates in an <a href="#{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}"><font color="#0000ff"><u>OnlineEvent</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#E95170B9-2599-46dc-BEDC-012B08F09D43"><font color="#0000ff"><u>OnlineAccount</u></font></a> participates in an <a href="#24499751-7D9B-4f2e-B880-8D5BC4FCEF30"><font color="#0000ff"><u>OnlineEvent</u></font></a>
 
 ### <a id="2cf1b157-a2f6-41c8-8a87-7b82eeb71f40"></a>onlineAccountProvider
-Relates an <a href="#{E95170B9-2599-46dc-BEDC-012B08F09D43}"><font color="#0000ff"><u>OnlineAccount</u></font></a> to the <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a> that provides and administers the account.
+Relates an <a href="#E95170B9-2599-46dc-BEDC-012B08F09D43"><font color="#0000ff"><u>OnlineAccount</u></font></a> to the <a href="#27BEFD0A-B30B-47db-B863-13E48D1172F9"><font color="#0000ff"><u>OnlineService</u></font></a> that provides and administers the account.
 
 Note:  was called "Domain" in previous IES versions
 
 ### <a id="4c0d1724-b820-4a87-ad36-08c0612ce21e"></a>OnlineAccountState
-A temporal state of an <a href="#{E95170B9-2599-46dc-BEDC-012B08F09D43}"><font color="#0000ff"><u>OnlineAccount</u></font></a>
+A temporal state of an <a href="#E95170B9-2599-46dc-BEDC-012B08F09D43"><font color="#0000ff"><u>OnlineAccount</u></font></a>
 
 ### <a id="54500458-51cf-46b5-a5a3-14b1d5c7f755"></a>OnlineArtefact
 A WebResource which is any kind of media presented online that is more granular than a webpage, and user-generated - e.g. a blog post, tweet, facebook post, etc.
 
-Note: when applying begin and end states (and periods of time) to OnlineArtefact, the times should correspond to the life of the content, not the <a href="#{5382F9B3-0A28-4245-8EEB-BF3CEFFD4058}"><font color="#0000ff"><u>duration</u></font></a> of the posting activity.
+Note: when applying begin and end states (and periods of time) to OnlineArtefact, the times should correspond to the life of the content, not the <a href="#5382F9B3-0A28-4245-8EEB-BF3CEFFD4058"><font color="#0000ff"><u>duration</u></font></a> of the posting activity.
 
 ### <a id="fe21e354-7770-4e6b-a7ea-e012f759e835"></a>OnlineArtefactInEvent
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{54500458-51CF-46b5-A5A3-14B1D5C7F755}"><font color="#0000ff"><u>OnlineArtefact</u></font></a> participates in an <a href="#{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}"><font color="#0000ff"><u>OnlineEvent</u></font></a>
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#54500458-51CF-46b5-A5A3-14B1D5C7F755"><font color="#0000ff"><u>OnlineArtefact</u></font></a> participates in an <a href="#24499751-7D9B-4f2e-B880-8D5BC4FCEF30"><font color="#0000ff"><u>OnlineEvent</u></font></a>
 
 ### <a id="ff216817-5b58-4db5-88c5-20ae6a466265"></a>OnlineComment
 An OnlineArtefact that is a comment on an existing OnlineArtefact instance
 
 ### <a id="0a4c12e6-ca4c-43f1-9c6c-fbe23197975f"></a>onlineCommentOn
-Relates an <a href="#{FF216817-5B58-4db5-88C5-20AE6A466265}"><font color="#0000ff"><u>OnlineComment</u></font></a> to the OnlineContent that was commented on
+Relates an <a href="#FF216817-5B58-4db5-88C5-20AE6A466265"><font color="#0000ff"><u>OnlineComment</u></font></a> to the OnlineContent that was commented on
 
 ### <a id="db70d7ee-5076-4eb2-950b-63c71a3c8859"></a>OnlineContentCreation
 An OnlineContentEvent where a "post" is made.
@@ -4383,51 +4383,51 @@ Examples:
 * A Facebook, LinkedIn, Instagram, etc. post
 
 ### <a id="2176deae-6b5a-4906-ae37-fc76b0a50c0d"></a>OnlineContentEvent
-An <a href="#{24499751-7D9B-4f2e-B880-8D5BC4FCEF30}"><font color="#0000ff"><u>OnlineEvent</u></font></a> where content (text, images, video, etc.) is uploaded, downloaded or viewed
+An <a href="#24499751-7D9B-4f2e-B880-8D5BC4FCEF30"><font color="#0000ff"><u>OnlineEvent</u></font></a> where content (text, images, video, etc.) is uploaded, downloaded or viewed
 
 ### <a id="24499751-7d9b-4f2e-b880-8d5bc4fcef30"></a>OnlineEvent
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> on a computer network. This can include events on any network of computer including the internet or other air-gapped or isolated network.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> on a computer network. This can include events on any network of computer including the internet or other air-gapped or isolated network.
 
 ### <a id="5b50eecc-45fc-4e5b-933e-51bc0fee0fcd"></a>OnlineLike
 OnlineArtefact that is a "like" of an existing OnlineArtefact instance
 
 ### <a id="4a3f24c6-eec9-48ce-93fb-26ff64e1268a"></a>onlineLikeOf
-Relates an <a href="#{5B50EECC-45FC-4e5b-933E-51BC0FEE0FCD}"><font color="#0000ff"><u>OnlineLike</u></font></a> to the OnlineContent that was "liked"
+Relates an <a href="#5B50EECC-45FC-4e5b-933E-51BC0FEE0FCD"><font color="#0000ff"><u>OnlineLike</u></font></a> to the OnlineContent that was "liked"
 
 ### <a id="067aea85-d3dd-478c-af00-fb54f95df1e2"></a>OnlineMessage
-A <a href="#{70AEDFC7-2B17-43d8-BF49-B5ACF8812317}"><font color="#0000ff"><u>Message</u></font></a> that was sent Online or any other networked system including air-gapped networks.
+A <a href="#70AEDFC7-2B17-43d8-BF49-B5ACF8812317"><font color="#0000ff"><u>Message</u></font></a> that was sent Online or any other networked system including air-gapped networks.
 
 ### <a id="34f13f26-7c4e-451a-bda0-62ba7738039f"></a>onlinePublisher
-Relates an <a href="#{54500458-51CF-46b5-A5A3-14B1D5C7F755}"><font color="#0000ff"><u>OnlineArtefact</u></font></a> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that produced it.
+Relates an <a href="#54500458-51CF-46b5-A5A3-14B1D5C7F755"><font color="#0000ff"><u>OnlineArtefact</u></font></a> to the <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that produced it.
 
 ### <a id="27befd0a-b30b-47db-b863-13e48d1172f9"></a>OnlineService
 A service provided on a computer network.
 
 ### <a id="dee1404a-aac3-4d46-9ba3-8e097a55c7f5"></a>onlineServiceProvider
-Relates an <a href="#{27BEFD0A-B30B-47db-B863-13E48D1172F9}"><font color="#0000ff"><u>OnlineService</u></font></a> to the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that owns/runs it
+Relates an <a href="#27BEFD0A-B30B-47db-B863-13E48D1172F9"><font color="#0000ff"><u>OnlineService</u></font></a> to the <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that owns/runs it
 
 ### <a id="980404c4-c512-4f36-b3b1-5088cc754dcf"></a>OnlineShop
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> as an online shop
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> as an online shop
 
 ### <a id="a8b06392-a9a3-4de4-93fb-24f08a546434"></a>OpenAccount
 An AccountAdminEvent where a new Account is opened
 
 ### <a id="4f83d781-7e46-4ad4-b2a5-ecd27565ea49"></a>OperatingSystem
-<a href="#{B6014BB6-FD82-4748-8DFF-65401770515C}"><font color="#0000ff"><u>Software</u></font></a> that provides the basic access layer to hardware
+<a href="#B6014BB6-FD82-4748-8DFF-65401770515C"><font color="#0000ff"><u>Software</u></font></a> that provides the basic access layer to hardware
 
 ### <a id="59121c21-38e4-4224-8c2d-4d3e94a3a0d9"></a>OperationalEvent
 An Event conducted by military or national security actors
 
 ### <a id="6730b57a-3e53-4bd2-b784-78c4fb239dbf"></a>Operator
-A ResponsibleActor's role in an <a href="#{59121C21-38E4-4224-8C2D-4D3E94A3A0D9}"><font color="#0000ff"><u>OperationalEvent</u></font></a> where they are one of the operators 
+A ResponsibleActor's role in an <a href="#59121C21-38E4-4224-8C2D-4D3E94A3A0D9"><font color="#0000ff"><u>OperationalEvent</u></font></a> where they are one of the operators 
 
 ### <a id="436e6abb-c1e3-484e-b15b-63e700b27ea8"></a>opposedTo
-A coupling between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (or state thereof) and an <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>ClassOfElement</u></font></a> to which they are opposed
+A coupling between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (or state thereof) and an <a href="#3C13E07D-5796-4d03-9EBC-C75277E87CA4"><font color="#0000ff"><u>ClassOfElement</u></font></a> to which they are opposed
 
 Examples: an organisation that is opposed to Nuclear Weapons
 
 ### <a id="1ecb4c6e-6a30-4dc5-a4ac-9a9df5b6a54f"></a>Organisation
-A ResponsibleActor that is a group of people formed for one or more of purposes ï¿½ e.g. government organisations, educational organisations, terrorists organisations, religious organisations, etc.
+A ResponsibleActor that is a group of people formed for one or more of purposes – e.g. government organisations, educational organisations, terrorists organisations, religious organisations, etc.
 
 ### <a id="13865b40-b57d-44e7-9658-00c45c8175c8"></a>OrganisationIdentifier
 A unique Identifier for an Organisation (more usually an OrganisationState)
@@ -4439,10 +4439,10 @@ Companies House Number
 Registered Charity Number
 
 ### <a id="065c9b64-96e2-47f5-9769-e7942c1a208f"></a>OrganisationName
-A <a href="#{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a> used to identify an <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a>
+A <a href="#7D7CC966-56EB-4220-A650-A993E598F2E2"><font color="#0000ff"><u>Name</u></font></a> used to identify an <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a>
 
 ### <a id="f3db6a59-b2de-4743-a9a8-7da9ccc68638"></a>OrganisationState
-A temporal state of an <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a>
+A temporal state of an <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a>
 
 ### <a id="71249792-e0af-4f98-86ed-17115f1734a7"></a>orGroup
 The groups (if any) which the requesting user must be a member of at least one of in order to access the item. See the EDH specification for further details.
@@ -4452,25 +4452,25 @@ Allowable Values:
 See EDH Standard
 
 ### <a id="d4a003a3-7fef-409c-8935-743cd97299e7"></a>originatingSystem
-The <a href="#{F682A265-1AFE-4287-A9CD-0D4C83F54C52}"><font color="#0000ff"><u>System</u></font></a> that produced the dataset
+The <a href="#F682A265-1AFE-4287-A9CD-0D4C83F54C52"><font color="#0000ff"><u>System</u></font></a> that produced the dataset
 
 ### <a id="4978d7f3-e686-4b30-9356-f0c4dc7a158d"></a>originator
-The <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that produced the dataset
+The <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> that produced the dataset
 
 ### <a id="697eaa12-8fd3-49e0-a4a2-a045b4570550"></a>OSGridReference
 A GeoIdentity that is an Ordnance Survey Grid Reference - i.e. pertaining to Great Britain.
 
 ### <a id="a5516cd2-940b-4827-b38a-ad86af934e99"></a>OutgoingGovernment
-The <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> that left power following a ChangeOfGovernment
+The <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> that left power following a ChangeOfGovernment
 
 ### <a id="fdd94d9f-f343-4c1b-9688-752c896a3c7c"></a>owns
-A Relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> they legally own
+A Relationship between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> they legally own
 
 ### <a id="6f13083c-505a-473e-9edb-b0e534a341fb"></a>parentOf
-A Relationship between two <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the parent of the other
+A Relationship between two <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the parent of the other
 
 ### <a id="b6a503e5-3fc4-4a45-8dc0-994ea31a895a"></a>Parked
-A temporal state of a <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> where it is not moving. 
+A temporal state of a <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> where it is not moving. 
 
 Examples:
 * A car parked on the roadside
@@ -4478,13 +4478,13 @@ Examples:
 * An aircraft parked on the tarmac or in a hangar
 
 ### <a id="2173f463-524c-457c-b106-51322f64f122"></a>ParticularPeriod
-A <a href="#{3FDFA898-C340-4279-8B3C-275359D5B02D}"><font color="#0000ff"><u>PeriodOfTime</u></font></a> that is a specific, contiguous extent of time.
+A <a href="#3FDFA898-C340-4279-8B3C-275359D5B02D"><font color="#0000ff"><u>PeriodOfTime</u></font></a> that is a specific, contiguous extent of time.
 
-IMPORTANT NOTE: The URI of a <a href="#{2173F463-524C-457c-B106-51322F64F122}"><font color="#0000ff"><u>ParticularPeriod</u></font></a> shall be encoded in UTC (Coordinated Universal Time) and as follows:
+IMPORTANT NOTE: The URI of a <a href="#2173F463-524C-457c-B106-51322F64F122"><font color="#0000ff"><u>ParticularPeriod</u></font></a> shall be encoded in UTC (Coordinated Universal Time) and as follows:
 
 http://iso8601.iso.org/20070118T153000
 
-Where the content <a href="#{FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB}"><font color="#0000ff"><u>after</u></font></a> the / is encoded without punctuation and without the trailing "Z". In the example above, the punctuated equivalent would be "2007-01-18T15:30:00Z"
+Where the content <a href="#FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB"><font color="#0000ff"><u>after</u></font></a> the / is encoded without punctuation and without the trailing "Z". In the example above, the punctuated equivalent would be "2007-01-18T15:30:00Z"
 
 The reason behind using a URI is that receiving systems can resolve the periods of time and de-duplicate. 
 
@@ -4497,23 +4497,23 @@ December 1944
 ### <a id="772cd8a3-3dca-4cc7-8ba3-17d1c57e94bc"></a>PartNumber
 A unique Identifier for the a ModelOfDevice
 
-Note:  this is different to a serial number which is unique to each <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a>
+Note:  this is different to a serial number which is unique to each <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a>
 
 ### <a id="3efea421-6b88-4e51-9b20-4ffa22e8c5ca"></a>PartOfFacility
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is contained within a Facility - e.g. a room, laboratory, floor, etc.
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that is contained within a Facility - e.g. a room, laboratory, floor, etc.
 
 ### <a id="a5713b2c-e098-4dd2-bd46-42da51899fea"></a>PartyInCommunication
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> that is part of (usually one end of) a <a href="#{6698805F-F492-4f1f-954C-E1EB3C53E148}"><font color="#0000ff"><u>Communication</u></font></a> Event.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> that is part of (usually one end of) a <a href="#6698805F-F492-4f1f-954C-E1EB3C53E148"><font color="#0000ff"><u>Communication</u></font></a> Event.
 
-Sometimes, all we know about a <a href="#{A5713B2C-E098-4dd2-BD46-42DA51899FEA}"><font color="#0000ff"><u>PartyInCommunication</u></font></a> is their <a href="$element://{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> (phone number, e-mail address, maybe even just an IP address) so the <a href="$element://{FBA54EEF-91BF-4ba2-8B67-79C899963149}"><font color="#0000ff"><u>isIdentifiedBy</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> may be applied to PartyInCommunication
+Sometimes, all we know about a <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> is their <a href="$element://{A82378B9-9774-46b9-9845-CC75BE882F06}"><font color="#0000ff"><u>CommunicationsIdentifier</u></font></a> (phone number, e-mail address, maybe even just an IP address) so the <a href="$element://{FBA54EEF-91BF-4ba2-8B67-79C899963149}"><font color="#0000ff"><u>isIdentifiedBy</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> may be applied to PartyInCommunication
 
 ### <a id="af57e842-9bf7-4f6e-b180-ddeacb0f5386"></a>PartyToAgreement
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is party to an EndToEndAgreement
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is party to an EndToEndAgreement
 
 Note:  this includes EndToEndAgreements that were never ratified - i.e. they got to the negotiation stage but were never put into force
 
 ### <a id="d6d07656-1866-4cb4-97a7-fc4c1cb65416"></a>Passenger
-A <a href="#{9888A3F3-7E9B-4806-BD4E-2FC4D87A5902}"><font color="#0000ff"><u>PersonInTransit</u></font></a> where the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> travelling is a <a href="#{D6D07656-1866-4cb4-97A7-FC4C1CB65416}"><font color="#0000ff"><u>Passenger</u></font></a> on a <a href="$element://{7693D2C9-0F06-4005-BB8D-B5B572B2281A}"><font color="#0000ff"><u>Transit</u></font></a>
+A <a href="#9888A3F3-7E9B-4806-BD4E-2FC4D87A5902"><font color="#0000ff"><u>PersonInTransit</u></font></a> where the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> travelling is a <a href="#D6D07656-1866-4cb4-97A7-FC4C1CB65416"><font color="#0000ff"><u>Passenger</u></font></a> on a <a href="$element://{7693D2C9-0F06-4005-BB8D-B5B572B2281A}"><font color="#0000ff"><u>Transit</u></font></a>
 
 ### <a id="e5c1270d-35ad-4f86-b0e4-1dc0039174e3"></a>PassengerName
 The Name of the Person being used for Travel - it may not be known if this is the actual Name the Person travelling, as someone else may be using their ticket.
@@ -4522,14 +4522,14 @@ The Name of the Person being used for Travel - it may not be known if this is th
 An IdentityDocument that confirms a Person's nationality and permits them to cross national boundaries
 
 ### <a id="10deb6b8-80cc-4bfc-b10f-1830b559c21f"></a>payloadContents
-A link from an <a href="#{749B002E-37B1-4754-B3B2-96642B3CF4A7}"><font color="#0000ff"><u>ExchangePayload</u></font></a> to an rdfs:Resource that is in that payload.
+A link from an <a href="#749B002E-37B1-4754-B3B2-96642B3CF4A7"><font color="#0000ff"><u>ExchangePayload</u></font></a> to an rdfs:Resource that is in that payload.
 
 If there is no payloadContents link, then it is assumed that all the contents of the file are in the ExchangePayload. Under this circumstance, more than one ExchangePayload would be an error. 
 
 The payloadContents link will usually refer to a named graph, but it can also be used to refer to individual rdf:Statements and rdfs:Resources.
 
 ### <a id="259167e4-d0b3-4f03-9653-cad778f5f6f3"></a>payloadLabel
-A mandatory link from an <a href="#{749B002E-37B1-4754-B3B2-96642B3CF4A7}"><font color="#0000ff"><u>ExchangePayload</u></font></a> to the <a href="#{CED628E4-8641-486b-BCD7-CB4E147E7AE6}"><font color="#0000ff"><u>SecurityLabel</u></font></a> that provides the default access control for all statements in the payload.
+A mandatory link from an <a href="#749B002E-37B1-4754-B3B2-96642B3CF4A7"><font color="#0000ff"><u>ExchangePayload</u></font></a> to the <a href="#CED628E4-8641-486b-BCD7-CB4E147E7AE6"><font color="#0000ff"><u>SecurityLabel</u></font></a> that provides the default access control for all statements in the payload.
 
 Note: individual statements may deviate from the default by applying their own SecurityLabels
 
@@ -4537,13 +4537,13 @@ Note: individual statements may deviate from the default by applying their own S
 An Asset that is means of payment
 
 ### <a id="c793e699-c27b-49cc-9358-c4a0e17e609e"></a>paymentArtefactProvider
-The <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that provided the <a href="#{9882D901-1B22-4b89-81D1-031F840A20D0}"><font color="#0000ff"><u>PaymentArtefact</u></font></a>
+The <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that provided the <a href="#9882D901-1B22-4b89-81D1-031F840A20D0"><font color="#0000ff"><u>PaymentArtefact</u></font></a>
 
 ### <a id="10fbbf98-4604-46d9-ad12-211597532b9e"></a>PeaceTreaty
-A <a href="#{59599C4B-F3DE-49a0-B76F-BE4CB1293CBA}"><font color="#0000ff"><u>Treaty</u></font></a> that formalises the end of hostilities in a <a href="#{D4F568F5-7BC4-489d-94BC-AE1305E5C0C2}"><font color="#0000ff"><u>War</u></font></a>
+A <a href="#59599C4B-F3DE-49a0-B76F-BE4CB1293CBA"><font color="#0000ff"><u>Treaty</u></font></a> that formalises the end of hostilities in a <a href="#D4F568F5-7BC4-489d-94BC-AE1305E5C0C2"><font color="#0000ff"><u>War</u></font></a>
 
 ### <a id="3fdfa898-c340-4279-8b3c-275359d5b02d"></a>PeriodOfTime
-A <a href="#{3FDFA898-C340-4279-8B3C-275359D5B02D}"><font color="#0000ff"><u>PeriodOfTime</u></font></a> is an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> whose spatial extent is everywhere, but whose temporal extent is limited. 
+A <a href="#3FDFA898-C340-4279-8B3C-275359D5B02D"><font color="#0000ff"><u>PeriodOfTime</u></font></a> is an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> whose spatial extent is everywhere, but whose temporal extent is limited. 
 
 ### <a id="fa623989-b6a4-40e2-a956-b8ffea478895"></a>permittedNationality
 The nationalities of those who are permitted to access the item. See the EDH specification for further details.
@@ -4560,7 +4560,7 @@ Allowable Values:
 See EDH Standard
 
 ### <a id="d625b538-7d72-4d7d-ba50-d79712a264ed"></a>Perpetrator
-An <a href="#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B}"><font color="#0000ff"><u>Actor</u></font></a> where the <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> conducts a <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a>
+An <a href="#B2B15802-9CE9-4a9d-9DE0-8289D8474E9B"><font color="#0000ff"><u>Actor</u></font></a> where the <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> conducts a <a href="#43E58528-16E4-48b3-8F13-10500879EA83"><font color="#0000ff"><u>CriminalActivity</u></font></a>
 
 ### <a id="5d5c5b9b-5e90-4100-8353-8ee9f3d772e2"></a>Person
 A human being, living or dead. This also includes what may appear to be a person, but is in fact an Alias
@@ -4572,31 +4572,31 @@ A CommunicationsDevice for portable radio communications - e.g. a walkie-talkie
 The Length that is the height of a PersonState
 
 ### <a id="0383d09b-8c40-417d-8c1a-75220eaf496e"></a>PersonInCommunication
-A <a href="#{38F8B795-0BCE-4945-8C69-8678ED935C1A}"><font color="#0000ff"><u>PersonState</u></font></a> (and an EventParticipant) when a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is involved in communicating. 
+A <a href="#38F8B795-0BCE-4945-8C69-8678ED935C1A"><font color="#0000ff"><u>PersonState</u></font></a> (and an EventParticipant) when a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is involved in communicating. 
 
 ### <a id="9888a3f3-7e9b-4806-bd4e-2fc4d87a5902"></a>PersonInTransit
-An <a href="#{74169219-A47C-48ce-A25F-3948E7E873B6}"><font color="#0000ff"><u>EntityInTransit</u></font></a> where the <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
+An <a href="#74169219-A47C-48ce-A25F-3948E7E873B6"><font color="#0000ff"><u>EntityInTransit</u></font></a> where the <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>
 
 ### <a id="f114f86c-3ba8-4be7-a686-a1d80002df28"></a>PersonName
-A <a href="#{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a> used to identify / refer to a Person
+A <a href="#7D7CC966-56EB-4220-A650-A993E598F2E2"><font color="#0000ff"><u>Name</u></font></a> used to identify / refer to a Person
 
 Note: this is the full name as known to the organisation managing the NamingScheme. For first names, surnames, etc. use a subtype of PersonName
 
-A <a href="#{F114F86C-3BA8-4be7-A686-A1D80002DF28}"><font color="#0000ff"><u>PersonName</u></font></a> may be composed of Surname, GivenName, etc. using the <a href="#{7238489D-6802-4733-9F7F-9B31D02B3C81}"><font color="#0000ff"><u>inRepresentation</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a>
+A <a href="#F114F86C-3BA8-4be7-A686-A1D80002DF28"><font color="#0000ff"><u>PersonName</u></font></a> may be composed of Surname, GivenName, etc. using the <a href="#7238489D-6802-4733-9F7F-9B31D02B3C81"><font color="#0000ff"><u>inRepresentation</u></font></a> <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a>
 
 ### <a id="38f8b795-0bce-4945-8c69-8678ed935c1a"></a>PersonState
-A temporal state of a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>
+A temporal state of a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>
 
 ### <a id="ca36058b-835c-48ef-944a-2507708ada71"></a>PersonTitle
 The title associated with the name of the person.
 
 ### <a id="37db1a2c-9382-4dac-8ae8-9dec5a337e16"></a>PlaceName
-A <a href="#{7D7CC966-56EB-4220-A650-A993E598F2E2}"><font color="#0000ff"><u>Name</u></font></a> that is used to refer to a Location.
+A <a href="#7D7CC966-56EB-4220-A650-A993E598F2E2"><font color="#0000ff"><u>Name</u></font></a> that is used to refer to a Location.
 
-Note:  the naming pattern is used here as different parties (even standards bodies !) may have different names for the same <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a>
+Note:  the naming pattern is used here as different parties (even standards bodies !) may have different names for the same <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a>
 
 ### <a id="a11a426e-ed15-4aaf-b9a5-02a4060533aa"></a>PointOnEarthSurface
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is a point (mathematically speaking, of vanishing area) on the surface of the WGS84 spheroid
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that is a point (mathematically speaking, of vanishing area) on the surface of the WGS84 spheroid
 
 ### <a id="345e8f46-ac41-452b-b2f9-694dbed556fd"></a>PolicyAnnouncement
 A PoliticalAnnouncement about policy
@@ -4615,7 +4615,7 @@ Note: was called Announcement in IES 3.x, but that was confusing for business an
 An Event related to democratic processes or party politics
 
 ### <a id="57860a04-0128-4c7e-9bfd-83d3ba432f8c"></a>Port
-A <a href="#{9CD2C1B1-85B1-4579-9376-07827AD68461}"><font color="#0000ff"><u>Facility</u></font></a> which is a recognised terminus for international travel
+A <a href="#9CD2C1B1-85B1-4579-9376-07827AD68461"><font color="#0000ff"><u>Facility</u></font></a> which is a recognised terminus for international travel
 
 ### <a id="15e93b86-6969-47f2-8036-0b7b96e9bda2"></a>PossibleWorld
 An Element that encompasses a number of Events, Entities and States that may occur / have occurred. A PossibleWorld is used for scenario planning and forensics.  
@@ -4623,29 +4623,29 @@ An Element that encompasses a number of Events, Entities and States that may occ
 This is a very simple placeholder for an area of IES that is likely to grow in the future. For now, it can be used to group together a number of elements (using isPartOf relationship) to assert that they share the same truth - i.e. in one possible scenario, all of them were true. The same Element may exist in more than one PossibleWorld - i.e. scenarios may share elements. For version 4.1.0 of IES, PossibleWorld is to be used with AssessToBeTrue in order to specify a level of confidence or probability. More work is needed on this in later IES versions. 
 
 ### <a id="7c28e83c-1895-4901-abf8-9d78c9c12c62"></a>Post
-A part of an <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that has particular responsibilities
+A part of an <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that has particular responsibilities
 
 ### <a id="6a0385e2-3fb1-4a42-a254-bc382d92e27a"></a>PostalCode
 A GeoIdentity used to (partially) identify and address
 
 ### <a id="2b02ef33-e12a-42ec-b047-533f6d8f159d"></a>postModificationState
-A partOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> just <a href="$element://{FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB}"><font color="#0000ff"><u>after</u></font></a> the <a href="$element://{3EF09CE4-79B0-42be-9AA1-12B97611BF2B}"><font color="#0000ff"><u>Modify</u></font></a> event
+A partOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> of an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> just <a href="$element://{FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB}"><font color="#0000ff"><u>after</u></font></a> the <a href="$element://{3EF09CE4-79B0-42be-9AA1-12B97611BF2B}"><font color="#0000ff"><u>Modify</u></font></a> event
 
 Note: For BORO purists, this means the post State is part of the Modify <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> (i.e. the extent of the Modify Event includes the State)
 
 ### <a id="db51b007-e3e8-431f-9c23-3c0a7e83fb11"></a>PostState
-A temporal state of a <a href="#{7C28E83C-1895-4901-ABF8-9D78C9C12C62}"><font color="#0000ff"><u>Post</u></font></a>
+A temporal state of a <a href="#7C28E83C-1895-4901-ABF8-9D78C9C12C62"><font color="#0000ff"><u>Post</u></font></a>
 
 ### <a id="d4bd48e8-76b8-4d3c-ab83-e653db89170d"></a>powertype
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts one Class is the powerset of the other (see Cantor's theorem).
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts one Class is the powerset of the other (see Cantor's theorem).
 
 ### <a id="4e954855-d50a-42ab-9401-4b1c890542ad"></a>preModificationState
-A partOf <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> just prior to the <a href="$element://{3EF09CE4-79B0-42be-9AA1-12B97611BF2B}"><font color="#0000ff"><u>Modify</u></font></a> event
+A partOf <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to indicate a <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> of an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> just prior to the <a href="$element://{3EF09CE4-79B0-42be-9AA1-12B97611BF2B}"><font color="#0000ff"><u>Modify</u></font></a> event
 
 Note: For BORO purists, this means the pre State is part of the Modify <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> (i.e. the extent of the Modify Event includes the State)
 
 ### <a id="8404464d-3904-4c59-ae0e-b3fafb46ac4e"></a>Presence
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is CoLocated with other Entities of interest
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is CoLocated with other Entities of interest
 
 ### <a id="885ea1c2-29d7-4b7c-b479-d43e4f77b5bd"></a>Prisoner
 A person's role when incarcerated
@@ -4670,10 +4670,10 @@ TOP SECRET
 The date of publication of the respective document.
 
 ### <a id="0a9a9f7d-a6f1-4629-bd2b-7990d2d36493"></a>Purchase
-A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is bought
+A <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is bought
 
 ### <a id="b10a694d-31aa-456c-8c51-b7b5f101a39f"></a>Purchaser
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> as a purchaser
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> as a purchaser
 
 Note: in the case of a RequestForQuotation, the purchaser is the person or organisation issuing the RfQ
 
@@ -4689,40 +4689,40 @@ The number of Entities (of the same type) that are being offered for sale
 The number of Entities (of the same type) that were purchased
 
 ### <a id="3b5e5043-30c2-4e67-86c8-f59f55aeba90"></a>radioCoverage
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking a RadioMast to its RadioCoverageArea
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking a RadioMast to its RadioCoverageArea
 
 ### <a id="7a2cc7c7-6b82-4751-bdbe-a770b3afbbeb"></a>RadioCoverageArea
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> whose area is that in which a <a href="#{F02CFF55-12A7-4308-9A60-E2353DE5BE58}"><font color="#0000ff"><u>RadioMast</u></font></a> hast viable communications coverage.
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> whose area is that in which a <a href="#F02CFF55-12A7-4308-9A60-E2353DE5BE58"><font color="#0000ff"><u>RadioMast</u></font></a> hast viable communications coverage.
 
 Note: The RadioMast itself may not be part of this area, as often the immediate area around the base of a RadioMast is a deadspot. 
 
-Note: Most radio area coverage is complex in shape, and the preferred representation in IES4 is <a href="#{417C1F4E-6A5D-4631-B275-8E982252791A}"><font color="#0000ff"><u>GeoJSON</u></font></a>. No attempt is made here to differentiate between signal strength zones. To do this, create multople RadioCoverAreas for the same RadioMast and label them appropriately. 
+Note: Most radio area coverage is complex in shape, and the preferred representation in IES4 is <a href="#417C1F4E-6A5D-4631-B275-8E982252791A"><font color="#0000ff"><u>GeoJSON</u></font></a>. No attempt is made here to differentiate between signal strength zones. To do this, create multople RadioCoverAreas for the same RadioMast and label them appropriately. 
 
 ### <a id="f02cff55-12a7-4308-9a60-e2353de5be58"></a>RadioMast
-An <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a> that is placed in a Location to provide either a link from a wired to wireless connection, or to relay between two wireless endpoints.
+An <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> that is placed in a Location to provide either a link from a wired to wireless connection, or to relay between two wireless endpoints.
 
 
 
 ### <a id="31977608-5432-4d6f-aee0-19838197c813"></a>Ratification
-An <a href="#{422B4F1C-DA90-400b-8FFD-43C90B4F10F4}"><font color="#0000ff"><u>AgreementStage</u></font></a> where parties have arrived at a consensus and approve the agreement
+An <a href="#422B4F1C-DA90-400b-8FFD-43C90B4F10F4"><font color="#0000ff"><u>AgreementStage</u></font></a> where parties have arrived at a consensus and approve the agreement
 
 ### <a id="8e0df17f-34ee-43c6-8da4-30f698384fd3"></a>RealEstate
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> (and an Asset) that has been defined or constructed for the purpose of ownership
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> (and an Asset) that has been defined or constructed for the purpose of ownership
 
 ### <a id="25965198-3fe0-4bb9-bca9-808e15a3ee49"></a>ReceivingAccount
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> receives money
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> receives money
 
 ### <a id="aac709fb-0b88-4517-b5bb-fe2320992073"></a>Recipient
-An <a href="#{A5713B2C-E098-4dd2-BD46-42DA51899FEA}"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the recipient of a message
+An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the recipient of a message
 
 ### <a id="88e8f5e6-afe5-4376-8112-ec294a673923"></a>Reconnaisance
 An IntelligenceOperation where an Entity or Event is observed for the purposes of planning
 
 ### <a id="442ac7f0-ae57-4090-88d6-55a3825eceaa"></a>recurrentPeriodRepresentation
-A modified ISO8601 <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> (hence use of xsd:string) where elements of the time/date are blanked with ?? characters. The purpose of this is to be able to specify e.g.  a time of day with no date - i.e. all recurrences of that time of day.
+A modified ISO8601 <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> (hence use of xsd:string) where elements of the time/date are blanked with ?? characters. The purpose of this is to be able to specify e.g.  a time of day with no date - i.e. all recurrences of that time of day.
 
 ### <a id="986e66ac-9092-410b-88ad-30b86efc32dd"></a>RecurringPeriod
-A <a href="#{3FDFA898-C340-4279-8B3C-275359D5B02D}"><font color="#0000ff"><u>PeriodOfTime</u></font></a> that is composed of regularly recurring periods of time.
+A <a href="#3FDFA898-C340-4279-8B3C-275359D5B02D"><font color="#0000ff"><u>PeriodOfTime</u></font></a> that is composed of regularly recurring periods of time.
 
 ISO8601 is used to represent these periods (<i>recurrentPeriodRepresentation </i>property), using the blanking technique (e.g. blanking the date to give a daily time). The recurrence can be limited using the <i>startsIn </i>and <i>endsIn </i>properties 
 Examples:
@@ -4737,17 +4737,17 @@ An Identifier used to uniquely identity a document.
 The people residing (or entitled to reside / vote in) a particular Location.
 
 ### <a id="65d869db-19ee-4886-98ba-e579c39c4a68"></a>RegionOfCountry
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is a general subdivision of a Country
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that is a general subdivision of a Country
 
 e.g. cities, towns, counties, states, etc.
 
 ### <a id="18c405ce-cc09-4e02-a44d-0fb00c6f6b37"></a>RegionOfWorld
-A <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> that is a general subdivision of the world - e.g. continents, sub-continents, economic areas, etc.
+A <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> that is a general subdivision of the world - e.g. continents, sub-continents, economic areas, etc.
 
 Regions of the world may sometimes be spatially separated (e.g. economic areas)
 
 ### <a id="1e784b9c-1a5d-4035-b134-67a758fb869d"></a>RegistrationNumber
-The registration number for the respective <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> (with or without spaces).
+The registration number for the respective <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> (with or without spaces).
 
 For road vehicles this is often referred to as the VRN (vehicle registration number).
 
@@ -4757,34 +4757,34 @@ For aircraft the tail number is often used as a means of identification and/or r
 A relationship represents an association between two Things
 
 ### <a id="bd538820-ce91-4b9a-adb8-c105fe0f2e7b"></a>Religion
-An <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> whose extent is all the people (PersonState) who share the same belief.
+An <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> whose extent is all the people (PersonState) who share the same belief.
 
 Religions may be part of other religions - e.g. Christianity being made up of Catholic, Protestant, Orthodox, etc. 
 
-1. The religion ï¿½practicedï¿½ by the respective Person..
+1. The religion ‘practiced’ by the respective Person..
 2. The religion may be qualified to identity a particular sect.
 3. The Metropolitan Police standard [F] shall be used as the reference data standard
 
 ### <a id="e7b02f98-c52e-4db0-af32-3d5131710ee7"></a>ReligionState
-A temporal state of an <a href="#{BD538820-CE91-4b9a-ADB8-C105FE0F2E7B}"><font color="#0000ff"><u>Religion</u></font></a>
+A temporal state of an <a href="#BD538820-CE91-4b9a-ADB8-C105FE0F2E7B"><font color="#0000ff"><u>Religion</u></font></a>
 
 ### <a id="2978340b-c4aa-4331-a68d-54a158798dac"></a>ReligiousOrganisation
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> formed around a particular religious belief
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> formed around a particular religious belief
 
 ### <a id="f38d2e58-c29a-4e3c-93bf-c33800969720"></a>RentalAgreement
-An <a href="#{1B39630B-B00F-4def-9C65-48082C4AD2E0}"><font color="#0000ff"><u>EndToEndAgreement</u></font></a> where one Party rents an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> to another
+An <a href="#1B39630B-B00F-4def-9C65-48082C4AD2E0"><font color="#0000ff"><u>EndToEndAgreement</u></font></a> where one Party rents an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> to another
 
 ### <a id="8ecc64a4-ced0-4122-ab54-64ea870837fc"></a>RentalProvider
-A <a href="#{AF57E842-9BF7-4f6e-B180-DDEACB0F5386}"><font color="#0000ff"><u>PartyToAgreement</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> provides an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> to rent
+A <a href="#AF57E842-9BF7-4f6e-B180-DDEACB0F5386"><font color="#0000ff"><u>PartyToAgreement</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> provides an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> to rent
 
 ### <a id="e5c65cab-65be-4502-8b46-5c5cc3c73b00"></a>Rented
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is rented
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is rented
 
 ### <a id="e2fc3a09-ec9d-4ab9-b273-a526cb511b5a"></a>Renter
-A <a href="#{AF57E842-9BF7-4f6e-B180-DDEACB0F5386}"><font color="#0000ff"><u>PartyToAgreement</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> rents an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> from another party
+A <a href="#AF57E842-9BF7-4f6e-B180-DDEACB0F5386"><font color="#0000ff"><u>PartyToAgreement</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> rents an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> from another party
 
 ### <a id="624d6cd1-31d9-46db-b42d-56dad35babd8"></a>ReplaceablePart
-An <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> which is a part of a whole that can be replaced (possibly multiple times) without altering its overall identity. It is coincident with any Element which fulfils its purpose, role or function to the whole.
+An <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> which is a part of a whole that can be replaced (possibly multiple times) without altering its overall identity. It is coincident with any Element which fulfils its purpose, role or function to the whole.
 
 The identity of a RepleacablePart can survive periods when no Element fulfils its purpose.
 
@@ -4801,51 +4801,51 @@ Examples include:
 A WorkOfDocumentation that offers one or more persons view on a particular topic. 
 
 ### <a id="675a5c23-0746-43d0-96d0-af0df72cd697"></a>Representation
-An <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are representations of things in the real world
+An <a href="#D1B2FB30-36CA-4012-B85F-514E270BF541"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are representations of things in the real world
 
 Examples:
 * an identifier used for a Person
 * a document (though not an individual copy of a document)
 
 ### <a id="ae00f1de-f42b-4fc0-b07b-21f754f16fd4"></a>representationValue
-The examplar text, number, etc. of a <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a>
+The examplar text, number, etc. of a <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a>
 
 ### <a id="c0273975-049b-40f0-817c-dfbfa4a3e5ce"></a>RequestDocument
-A <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that requests permission
+A <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> that requests permission
 
 ### <a id="300203ec-607a-4d77-ae6f-7eae7fa44df2"></a>RequestForQuotation
-A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities are is required
+A <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> where one or more Entities are is required
 
 ### <a id="cdf94674-d458-4996-9a99-6cbfff3907eb"></a>Reservation
-<a href="#{487778E0-4BD7-4d9a-B7F7-63731478E1A2}"><font color="#0000ff"><u>Rights</u></font></a> where the rights holder has reserved some future event - e.g. hotel reservation, travel reservation, delivery, etc.
+<a href="#487778E0-4BD7-4d9a-B7F7-63731478E1A2"><font color="#0000ff"><u>Rights</u></font></a> where the rights holder has reserved some future event - e.g. hotel reservation, travel reservation, delivery, etc.
 
 ### <a id="6bc3ddd8-477e-4c8a-b85d-e637cf9db6df"></a>residesIn
-A Relationship between a <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> at which they registered as a resident.
+A Relationship between a <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> and a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> at which they registered as a resident.
 
 Note this is legal / administrative construct. See also StaysAt
 
 ### <a id="eebce0a4-4882-4c95-9c2d-93ce5eb7a275"></a>respectfulOf
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one respects the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one respects the other.
 
 Note: this should not be considered a bi-directional relationship. Just because one person respects another person does not necessarily mean the feeling is reciprocated. 
 
 ### <a id="d09ede21-e862-4ec1-bc0f-045cce5454a9"></a>ResponsibleActor
-An <a href="#{B2B15802-9CE9-4a9d-9DE0-8289D8474E9B}"><font color="#0000ff"><u>Actor</u></font></a> that can be held legally responsible for their actions - generally a <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> or an Organisation. This also includes Posts which may be filled by people or organisations.
+An <a href="#B2B15802-9CE9-4a9d-9DE0-8289D8474E9B"><font color="#0000ff"><u>Actor</u></font></a> that can be held legally responsible for their actions - generally a <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> or an Organisation. This also includes Posts which may be filled by people or organisations.
 
-Note: there are many situations (mostly due to the law) where a Person or <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> can be the subject of a <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> or <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> interchangeably. Hence the need for a parent class in the IES ontology. 
+Note: there are many situations (mostly due to the law) where a Person or <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> can be the subject of a <a href="$element://{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> or <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> interchangeably. Hence the need for a parent class in the IES ontology. 
 
 ### <a id="100b93cd-937e-4fdd-8851-02d1dc07f5b6"></a>ResponsibleActorState
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="ba2472ab-56f0-462e-9460-f0192abcd979"></a>Retailer
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> as a retailer
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> as a retailer
 
 ### <a id="487778e0-4bd7-4d9a-b7f7-63731478e1a2"></a>Rights
-An <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> which encompasses the legal rights to an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> 
+An <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> which encompasses the legal rights to an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> 
 
-Strictly speaking, all property (therefore most Assets) are a question of rights. No-one actually <a href="#{FDD94D9F-F343-4c1b-9688-752C896A3C7C}"><font color="#0000ff"><u>owns</u></font></a> something, they have a legal right of that thing. In most cases, we can deal with this just using Asset. However in more complex cases, rights can be bought and sold (and of course owned) to things which aren't generally viewed as assets - e.g. paying a delivery cost, owning the leasehold to a property, etc. 
+Strictly speaking, all property (therefore most Assets) are a question of rights. No-one actually <a href="#FDD94D9F-F343-4c1b-9688-752C896A3C7C"><font color="#0000ff"><u>owns</u></font></a> something, they have a legal right of that thing. In most cases, we can deal with this just using Asset. However in more complex cases, rights can be bought and sold (and of course owned) to things which aren't generally viewed as assets - e.g. paying a delivery cost, owning the leasehold to a property, etc. 
 
 Examples:
 
@@ -4853,7 +4853,7 @@ Examples:
 * The rights to purchase currency at a pre-agreed rate in the future
 
 ### <a id="04a80ef0-8e34-4bdb-8a8e-31d89028f9b6"></a>rightsTo
-A Relationship between <a href="#{487778E0-4BD7-4d9a-B7F7-63731478E1A2}"><font color="#0000ff"><u>Rights</u></font></a> and the <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> to which the Rights apply 
+A Relationship between <a href="#487778E0-4BD7-4d9a-B7F7-63731478E1A2"><font color="#0000ff"><u>Rights</u></font></a> and the <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> to which the Rights apply 
 
 Example:
 
@@ -4861,32 +4861,32 @@ Example:
 * Rights to a parcel of land
 
 ### <a id="830b2164-e880-4bef-a62c-b38ceb6a824d"></a>RoadVehicle
-A <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> that travels by road (surprisingly enough)
+A <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> that travels by road (surprisingly enough)
 
 ### <a id="0b2564a8-9a95-4164-bb49-01900dd530ad"></a>RoomNumber
 A GeoIdentity used to identify a PartOfFacility
 
 ### <a id="803af0e7-01ec-4123-b888-3fb6369c840f"></a>Sailing
-A <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> by sea
+A <a href="#3D0FC30A-CF82-44f2-970E-BFD04EADBA74"><font color="#0000ff"><u>TravelService</u></font></a> by sea
 
 ### <a id="3634dbf3-aa3a-402e-9d08-906c06fafedb"></a>SatellitePhoneHandset
 A CommunicationsDevice that communicates via satellite. 
 
 ### <a id="6bc73189-2b25-4e1c-a935-eda8106f3eb3"></a>scheduledArrivalPort
-The <a href="#{57860A04-0128-4c7e-9BFD-83D3BA432F8C}"><font color="#0000ff"><u>Port</u></font></a> from which the <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> is scheduled to arrive
+The <a href="#57860A04-0128-4c7e-9BFD-83D3BA432F8C"><font color="#0000ff"><u>Port</u></font></a> from which the <a href="#3D0FC30A-CF82-44f2-970E-BFD04EADBA74"><font color="#0000ff"><u>TravelService</u></font></a> is scheduled to arrive
 
 ### <a id="db3878d9-ff24-4069-a8dd-c24f5d074c0c"></a>scheduledArrivalTime
 The date/time on which the service was scheduled to arrive
 
-The <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> of this <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> is a restricted string based upon the ISO 8601 Extended Format.
+The <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> of this <a href="#4A8E5877-32DF-428f-9A60-6AC3D083FFCA"><font color="#0000ff"><u>attribute</u></font></a> is a restricted string based upon the ISO 8601 Extended Format.
 
 ### <a id="1312d263-f609-4df3-a1db-aa0557b3b94b"></a>scheduledDeparturePort
-The <a href="#{57860A04-0128-4c7e-9BFD-83D3BA432F8C}"><font color="#0000ff"><u>Port</u></font></a> from which the <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> is scheduled to depart
+The <a href="#57860A04-0128-4c7e-9BFD-83D3BA432F8C"><font color="#0000ff"><u>Port</u></font></a> from which the <a href="#3D0FC30A-CF82-44f2-970E-BFD04EADBA74"><font color="#0000ff"><u>TravelService</u></font></a> is scheduled to depart
 
 ### <a id="340cf0cc-ba75-40b7-8b8a-167cd65c1830"></a>scheduledDepartureTime
 The date/time on which the service was scheduled to depart
 
-The <a href="#{EF2C13D4-7106-4799-BB72-7CD47714F257}"><font color="#0000ff"><u>format</u></font></a> of this <a href="#{4A8E5877-32DF-428f-9A60-6AC3D083FFCA}"><font color="#0000ff"><u>attribute</u></font></a> is a restricted string based upon the ISO 8601 Extended Format.
+The <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> of this <a href="#4A8E5877-32DF-428f-9A60-6AC3D083FFCA"><font color="#0000ff"><u>attribute</u></font></a> is a restricted string based upon the ISO 8601 Extended Format.
 
 ### <a id="d3375bb5-6773-40e1-8ca2-b393dd02b98c"></a>SchemaObject
 A DataObject that is a standardised plan or outline for something.
@@ -4894,10 +4894,10 @@ A DataObject that is a standardised plan or outline for something.
 e.g. Bristol City Street Furniture Schema
 
 ### <a id="c2c5ff87-189c-478a-b3bf-4706d798087f"></a>schemeMasteredIn
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#{222534A5-25C8-4ecd-BE55-27DA1534D402}"><font color="#0000ff"><u>NamingScheme</u></font></a> is owned by a <a href="#{F682A265-1AFE-4287-A9CD-0D4C83F54C52}"><font color="#0000ff"><u>System</u></font></a> that is the master for its names / identifiers - i.e. the uniqueness of the name/identifier is limited to the system.
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a <a href="#222534A5-25C8-4ecd-BE55-27DA1534D402"><font color="#0000ff"><u>NamingScheme</u></font></a> is owned by a <a href="#F682A265-1AFE-4287-A9CD-0D4C83F54C52"><font color="#0000ff"><u>System</u></font></a> that is the master for its names / identifiers - i.e. the uniqueness of the name/identifier is limited to the system.
 
 ### <a id="8d42b4a8-30d3-459d-a729-f5c8fe16d418"></a>schemeOwner
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts a RepresentationScheme is governed and used by a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> 
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts a RepresentationScheme is governed and used by a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> 
 
 ### <a id="8c1321b7-8686-4a21-b99a-6c4a98b411a7"></a>ScreenName
 A display Name used by the account which may be non-unique, and may not be the same as the username
@@ -4908,13 +4908,13 @@ The number of the seat that the Passenger should be travelling in. Whilst this p
 ### <a id="ced628e4-8641-486b-bcd7-cb4e147e7ae6"></a>SecurityLabel
 A SecurityLabel may be assigned at the statement (triple) level or to the entire ExchangePayload. They provide a mechanism to specify access restrictions and handling instructions for specific triples.
 
-Note: In any given IES exchange, a <a href="#{CED628E4-8641-486b-BCD7-CB4E147E7AE6}"><font color="#0000ff"><u>SecurityLabel</u></font></a> must be applied to the ExchangePayload. Individual SecurityLabels at the statement level are used to indicate where individual statements deviate from the overall payload SecurityLabel
+Note: In any given IES exchange, a <a href="#CED628E4-8641-486b-BCD7-CB4E147E7AE6"><font color="#0000ff"><u>SecurityLabel</u></font></a> must be applied to the ExchangePayload. Individual SecurityLabels at the statement level are used to indicate where individual statements deviate from the overall payload SecurityLabel
 
 ### <a id="44c93db5-8dfa-4585-9060-eec789e0a5ac"></a>Sender
-An <a href="#{A5713B2C-E098-4dd2-BD46-42DA51899FEA}"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the sender of a message
+An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the sender of a message
 
 ### <a id="f7172876-85f6-4d29-b11f-a1b36616416a"></a>SendingAccount
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{44DAC574-2A2E-44bc-ACD2-236811FA8D29}"><font color="#0000ff"><u>FinancialAccount</u></font></a> sends money
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> sends money
 
 ### <a id="51f79bc9-9bb5-47d6-973b-6f86f289b5fb"></a>SerialNumber
 An Identifier for Device that has been assigned at manufacture.
@@ -4926,46 +4926,46 @@ Example Value:
 ### <a id="8f8428ba-8586-4e34-9c75-fba7a647b8ea"></a>ServiceName
 The Name of the OnlineService
 
-This should not be confused with a webpage (see the <a href="#{79098C74-E063-4c45-886D-D0B88A48E954}"><font color="#0000ff"><u>Webpage</u></font></a> entity type). The Online Service may be provided via a webpage.
+This should not be confused with a webpage (see the <a href="#79098C74-E063-4c45-886D-D0B88A48E954"><font color="#0000ff"><u>Webpage</u></font></a> entity type). The Online Service may be provided via a webpage.
 
 ### <a id="496683c9-eb89-46ac-87d0-4864f1b54ed4"></a>ServiceProvider
-The role of an <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> in providing a Service (e.g. a TeleConference)
+The role of an <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> in providing a Service (e.g. a TeleConference)
 
 ### <a id="cb4023bb-4b36-43a3-bced-a7715fd597b0"></a>ServiceUser
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="14098560-1ff3-4599-b9a5-41167861538b"></a>Ship
-A <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> that travels on water
+A <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> that travels on water
 
 ### <a id="a0d40c4f-b513-4c9f-8d4a-79d0fa7cef50"></a>siblingOf
-A Relationship between two <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the sibling of the other
+A Relationship between two <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> Entities that indicates one is the sibling of the other
 
 ### <a id="c55a12c9-cf85-4b7c-b422-1d41054e9570"></a>Signatory
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> ratifies an agreement
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> ratifies an agreement
 
 ### <a id="3244f6b1-8636-4895-b3b1-283cf057f826"></a>SIMCard
 A CommunicationsDevice that holds data about a IMSI
 
 ### <a id="a4b13044-00fd-4868-8147-1a3c9e84daab"></a>SimilarEntities
-An <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are considered similar
+An <a href="#D1B2FB30-36CA-4012-B85F-514E270BF541"><font color="#0000ff"><u>ClassOfEntity</u></font></a> whose instances are considered similar
 
 ### <a id="333e73ad-563f-443c-a9b3-ca122fdf75b9"></a>similarEntity
-An <a href="#{BBC06281-340F-458f-A057-82193F32C9DD}"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is similar to other Entities that are also related to the same <a href="$element://{A4B13044-00FD-4868-8147-1A3C9E84DAAB}"><font color="#0000ff"><u>SimilarEntities</u></font></a> class.
+An <a href="#BBC06281-340F-458f-A057-82193F32C9DD"><font color="#0000ff"><u>rdf:type</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> that asserts an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is similar to other Entities that are also related to the same <a href="$element://{A4B13044-00FD-4868-8147-1A3C9E84DAAB}"><font color="#0000ff"><u>SimilarEntities</u></font></a> class.
 
 ### <a id="4c19e163-710b-4ccb-9f1c-569f8e348bdc"></a>SMS
 A Message (text and images) sent over a cellular network
 
 ### <a id="1d9f0978-efd2-4e27-9242-219637c574ef"></a>socialisesAt
-A <a href="#{92FC2C35-D40B-4393-BA0B-88849743FEB6}"><font color="#0000ff"><u>visits</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> they socialise in.
+A <a href="#92FC2C35-D40B-4393-BA0B-88849743FEB6"><font color="#0000ff"><u>visits</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> they socialise in.
 
 Note: more often than not, this will be a statement of occasional socialising, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, <a href="$element://{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> would generally be used.
 
 ### <a id="439817ea-5973-45ab-9c01-9d75ed7d88b8"></a>Socialising
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="3dc012c3-e273-4ec2-a462-cedeb27262c1"></a>SocialMediaPage
 An OnlineArtefact that is user-created - e.g. a facebook timeline, twitter feed, etc. 
@@ -4973,7 +4973,7 @@ An OnlineArtefact that is user-created - e.g. a facebook timeline, twitter feed,
 ### <a id="4b3ae19c-6369-49d0-b7b5-949714fffc95"></a>SocialMediaPost
 An OnlineArtefact that is part of a SocialMediaPage
 
-Note: the content may be created by a different account to the one which created the <a href="#{3DC012C3-E273-4ec2-A462-CEDEB27262C1}"><font color="#0000ff"><u>SocialMediaPage</u></font></a>
+Note: the content may be created by a different account to the one which created the <a href="#3DC012C3-E273-4ec2-A462-CEDEB27262C1"><font color="#0000ff"><u>SocialMediaPage</u></font></a>
 
 ### <a id="df17458a-3bb8-4851-b88a-1e08c2efa697"></a>SocialServicesIdentifier
 An NationalIdentityNumber used for managing a citizen's access to social services
@@ -4981,9 +4981,9 @@ An NationalIdentityNumber used for managing a citizen's access to social service
 In UK, this would be an NI number, in the US, it would be the social security number
 
 ### <a id="b6014bb6-fd82-4748-8dff-65401770515c"></a>Software
-A <a href="#{F999F59A-7C7B-40f3-8F86-5B2592889E95}"><font color="#0000ff"><u>ClassOfAsset</u></font></a> that is programmatic instructions that control or affect the behaviour of an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> (usually a Device). 
+A <a href="#F999F59A-7C7B-40f3-8F86-5B2592889E95"><font color="#0000ff"><u>ClassOfAsset</u></font></a> that is programmatic instructions that control or affect the behaviour of an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> (usually a Device). 
 
-Note that <a href="#{B6014BB6-FD82-4748-8DFF-65401770515C}"><font color="#0000ff"><u>Software</u></font></a> is a class, as the same Software may be installed in multiple locations.
+Note that <a href="#B6014BB6-FD82-4748-8DFF-65401770515C"><font color="#0000ff"><u>Software</u></font></a> is a class, as the same Software may be installed in multiple locations.
 
 ### <a id="fa149043-ea61-4497-a036-589da1fd312e"></a>spokenLanguage
 The language in which someone is proficient
@@ -5003,17 +5003,17 @@ An xsd:DateTime for the start of the period
 ### <a id="47301d66-cbd5-4d10-9481-b66966a3f3a2"></a>State
 A temporal state of an Element
 
-Note: IES requires that any <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> must be related to its whole-life Element. In some cases, the identity of the whole-life element may be unknown (or of unknown type) but a whole-life element must still be created and related to the State.
+Note: IES requires that any <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> must be related to its whole-life Element. In some cases, the identity of the whole-life element may be unknown (or of unknown type) but a whole-life element must still be created and related to the State.
 
 Note: When Events are decomposed into temporal parts, those parts are often Events themselves. The exception is when the temporal part is arbitrary (e.g. the 11th second of a meeting) when a State should be used. These are rare though.
 
 ### <a id="7ec7fcee-7c60-4233-8938-d6320bd951f2"></a>statementLabel
-A link from an <a href="#{23C7BEF3-23D3-4d16-9401-16E537BE9B35}"><font color="#0000ff"><u>rdf:Statement</u></font></a> (see W3C guidance on RDF reification) to the <a href="#{CED628E4-8641-486b-BCD7-CB4E147E7AE6}"><font color="#0000ff"><u>SecurityLabel</u></font></a> that provides the access control for that statement.
+A link from an <a href="#23C7BEF3-23D3-4d16-9401-16E537BE9B35"><font color="#0000ff"><u>rdf:Statement</u></font></a> (see W3C guidance on RDF reification) to the <a href="#CED628E4-8641-486b-BCD7-CB4E147E7AE6"><font color="#0000ff"><u>SecurityLabel</u></font></a> that provides the access control for that statement.
 
-Note: All exchanges should have a default <a href="#{259167E4-D0B3-4f03-9653-CAD778F5F6F3}"><font color="#0000ff"><u>payloadLabel</u></font></a> specified. The use of <a href="$element://{7EC7FCEE-7C60-4233-8938-D6320BD951F2}"><font color="#0000ff"><u>statementLabel</u></font></a> is required when individual statements deviate from the default in terms of their access control.
+Note: All exchanges should have a default <a href="#259167E4-D0B3-4f03-9653-CAD778F5F6F3"><font color="#0000ff"><u>payloadLabel</u></font></a> specified. The use of <a href="$element://{7EC7FCEE-7C60-4233-8938-D6320BD951F2}"><font color="#0000ff"><u>statementLabel</u></font></a> is required when individual statements deviate from the default in terms of their access control.
 
 ### <a id="90332c00-0188-4773-8a71-f9ed15f5ed33"></a>staysAt
-A <a href="#{92FC2C35-D40B-4393-BA0B-88849743FEB6}"><font color="#0000ff"><u>visits</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where the person stays at the Location. This should not be confused with residesIn which is an assertion of legal residence. 
+A <a href="#92FC2C35-D40B-4393-BA0B-88849743FEB6"><font color="#0000ff"><u>visits</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where the person stays at the Location. This should not be confused with residesIn which is an assertion of legal residence. 
 Note: more often than not, this will be a statement of regular/occasional stays, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, <a href="$element://{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> would generally be used.
 
 ### <a id="686293f8-123b-478f-9a67-a6074937b528"></a>StoreCard
@@ -5021,18 +5021,18 @@ A PaymentArtefact issued by a retail Organisation that can only be used to pay f
 
 ### <a id="49b3d340-aadc-4fcd-80cc-283ae0fc85df"></a>strengthOfInterest
 StrengthOfInterest is used in its most general sense and is limited to the following values:
-ï¿½ Weak
-ï¿½ Strong
-ï¿½ Fanatical
+· Weak
+· Strong
+· Fanatical
 
 ### <a id="cc9e60ac-b3c8-4c9b-b657-2734538ae2b9"></a>Stuff
 An element that is highly dissective <font color="#272727">or generally uncountable. For example, sand, water, gas and coffee.</font>
 
 ### <a id="bffbc847-ad87-458e-9a86-690d659eb48f"></a>SubjectOfInterest
-A <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> during which an <a href="#{97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21}"><font color="#0000ff"><u>Element</u></font></a> is of interest to an investigation
+A <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> during which an <a href="#97EDC90F-3B36-4da8-AE77-D5FDBDEA2B21"><font color="#0000ff"><u>Element</u></font></a> is of interest to an investigation
 
 ### <a id="11f2a275-650f-407d-8e86-f99ddef4aaaf"></a>SubjectOfOperation
-An EventParticipant where an <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> is the subject of an OperationalEvent
+An EventParticipant where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> is the subject of an OperationalEvent
 
 Examples:
 
@@ -5041,46 +5041,46 @@ Examples:
 * subject of surveillance
 
 ### <a id="bec84e4f-f407-4a20-bc68-ad1723a3f860"></a>successorTo
-An <a href="#{FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB}"><font color="#0000ff"><u>after</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> linking two Elements where one ends and the other comes after as a replacement
+An <a href="#FA4DDF04-16DA-4b5c-AE9A-6AB8CD07DCDB"><font color="#0000ff"><u>after</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking two Elements where one ends and the other comes after as a replacement
 
 ### <a id="78d65599-bcbb-491a-8c34-75b9f7ab60d5"></a>Summit
 A PoliticalEvent where senior leaders assemble to discuss and agree policy or treaties
 
 ### <a id="e4d44720-dbee-434e-a61e-35fe8b66a4be"></a>Supplier
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> as a supplier
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> participates in a <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> as a supplier
 
 ### <a id="4f013d3f-e237-489a-96d5-5e9e54c6a388"></a>supplierTo
-A <a href="#{181AAC84-26CE-4531-AC32-A73B8FD8B858}"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> where the supplier (domain) is contracted to deliver goods or services to client (range)
+A <a href="#181AAC84-26CE-4531-AC32-A73B8FD8B858"><font color="#0000ff"><u>worksFor</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> where the supplier (domain) is contracted to deliver goods or services to client (range)
 
 ### <a id="b5a0c08a-39b3-4bd1-9d19-ce87e0f7debb"></a>Surname
 A PersonName that is their inherited or married name
 
 Note:
-A surname will often be applied to a <a href="#{47301D66-CBD5-4d10-9481-B66966A3F3A2}"><font color="#0000ff"><u>State</u></font></a> of the Person, as names tend to change over time
+A surname will often be applied to a <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> of the Person, as names tend to change over time
 
 ### <a id="ad0f575e-5c28-4594-b346-50e9f22c2a8e"></a>Surveillance
 An IntelligenceOperation that involves the continued observation of a Person or Location
 
 ### <a id="a86ec717-55af-456c-bec4-e1ba295d0227"></a>SurveillanceWarrant
-Relates a <a href="#{AD0F575E-5C28-4594-B346-50E9F22C2A8E}"><font color="#0000ff"><u>Surveillance</u></font></a> <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> to a Document that is the warrant for the Surveillance
+Relates a <a href="#AD0F575E-5C28-4594-B346-50E9F22C2A8E"><font color="#0000ff"><u>Surveillance</u></font></a> <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> to a Document that is the warrant for the Surveillance
 
 ### <a id="f682a265-1afe-4287-a9cd-0d4c83f54c52"></a>System
-An <a href="#{115F2F9B-21F3-4903-8EAA-AB3AEFE97461}"><font color="#0000ff"><u>Device</u></font></a>  comprising software and hardware brought together for a purpose. The Devices may or may not be removable / replaceable
+An <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a>  comprising software and hardware brought together for a purpose. The Devices may or may not be removable / replaceable
 
 ### <a id="056ddad3-9315-48a8-8598-3dd4f783c5cf"></a>SystemState
-A temporal state of a <a href="#{F682A265-1AFE-4287-A9CD-0D4C83F54C52}"><font color="#0000ff"><u>System</u></font></a>
+A temporal state of a <a href="#F682A265-1AFE-4287-A9CD-0D4C83F54C52"><font color="#0000ff"><u>System</u></font></a>
 
 ### <a id="9bef1c80-3823-4611-9349-aa1e11e41be7"></a>TargetLocation
-Relates an <a href="#{8787BE51-8FE0-4d76-97B4-608311434F5B}"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the location specified for the attack
+Relates an <a href="#8787BE51-8FE0-4d76-97B4-608311434F5B"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the location specified for the attack
 
 ### <a id="7b20ec37-6d66-4cd9-97df-2a30b324c421"></a>Team
-An <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> formed around a particular pursuit or task
+An <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> formed around a particular pursuit or task
 
 ### <a id="6eac8930-3d16-4e44-9706-989bdf6564a5"></a>TeleConference
 An InteractiveCommunication where 2 or more parties communicate using audio
 
 ### <a id="593ae684-c2e9-4e40-a7fd-549bfa64900d"></a>TelephoneAccount
-A <a href="#{8300451C-1DF9-4545-9174-D8AA69C58CCD}"><font color="#0000ff"><u>CommunicationsAccount</u></font></a> that is used to administer the use of one or more telephone numbers.
+A <a href="#8300451C-1DF9-4545-9174-D8AA69C58CCD"><font color="#0000ff"><u>CommunicationsAccount</u></font></a> that is used to administer the use of one or more telephone numbers.
 
 ### <a id="79c84ec1-83ec-45a8-a3ce-f88cffbf9434"></a>TelephoneCountryCode
 The dialing code for a country as specified by the ITU
@@ -5103,7 +5103,7 @@ Example: People who tend to violence
 A CriminalActivity that is politically motivated and designed to cause terror
 
 ### <a id="6467a4ef-46ba-401c-a5c7-668bafb6e228"></a>TerroristOrganisation
-An <a href="#{F3DB6A59-B2DE-4743-A9A8-7DA9CCC68638}"><font color="#0000ff"><u>OrganisationState</u></font></a> that is assessed to be conducting acts of terror to achieve a political or religious goal.
+An <a href="#F3DB6A59-B2DE-4743-A9A8-7DA9CCC68638"><font color="#0000ff"><u>OrganisationState</u></font></a> that is assessed to be conducting acts of terror to achieve a political or religious goal.
 
 
 ### <a id="5cd50268-582a-426b-b4cc-f6ee308b84a3"></a>TheatreTicket
@@ -5129,12 +5129,12 @@ The arrival location as stated on the ticket.
 The departure location as stated on the ticket.
 
 ### <a id="92470c59-dfa6-47f7-a525-50cdabc8f852"></a>TicketUsedInCheckIn
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where a Ricket is used in a <a href="#{87308A03-5C79-4d94-99E1-660042AC7929}"><font color="#0000ff"><u>CheckIn</u></font></a> event
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where a Ricket is used in a <a href="#87308A03-5C79-4d94-99E1-660042AC7929"><font color="#0000ff"><u>CheckIn</u></font></a> event
 
 e.g. a London Underground ticket being used at a barrier, or a concert ticket being scanned on arrival at the venue
 
 ### <a id="e7a659a5-9059-4ea5-8fab-8a29afc47d9a"></a>TimeBoundedClass
-A <a href="#{3C13E07D-5796-4d03-9EBC-C75277E87CA4}"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances all begin and end within the bounds specified for the Class. In other words, a class that is defined by the temporal extent of its members. 
+A <a href="#3C13E07D-5796-4d03-9EBC-C75277E87CA4"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances all begin and end within the bounds specified for the Class. In other words, a class that is defined by the temporal extent of its members. 
 
 Note, if either the begin or end bound are missing, it is taken to be indeterminate. For example, if the begin bound is 1st Jan 2018, the class has instances that all started after that date, and their end is irrelevant. 
 
@@ -5147,13 +5147,13 @@ The title of the respective document.
 ### <a id="79d9049d-e63f-4c94-b348-49506a75b9f8"></a>TOID
 TOIDs (TOpographic IDentifiers) are unique and persistent identifiers created and managed by Ordnance Survey Great Britain to identify topographic objects in OS datasets. 
 
-Example: the <a href="#{79D9049D-E63F-4c94-B348-49506A75B9F8}"><font color="#0000ff"><u>TOID</u></font></a> for the Tower of London is osgb1000006032892.
+Example: the <a href="#79D9049D-E63F-4c94-B348-49506A75B9F8"><font color="#0000ff"><u>TOID</u></font></a> for the Tower of London is osgb1000006032892.
 
 ### <a id="54a4e900-7e8e-49fd-91f4-23adddf2da60"></a>TradeAgreement
 A PoliticalAgreement that sets tariffs and standards for trade between nations. 
 
 ### <a id="57adbc97-c089-4d1a-a334-a9c44eaec38a"></a>TradedAsset
-An <a href="#{C5AB420C-1AB6-479a-97E1-4F2FD37725CB}"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> is participant in a TradeEvent
+An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>EventParticipant</u></font></a> where an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> is participant in a TradeEvent
 
 This could be a specific Asset (e.g. serial numbered item) being offered for sale (as opposed to a type of Asset) or an Asset being delivered, withdrawn from sale, etc.
 
@@ -5162,24 +5162,24 @@ The type of entity involved in the TradeEvent
 
 e.g. "Dyson Animal Mk3"
 
-Note: there may be no more than one itemType for a given <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> - i.e. a new TradeEvent must be instantiated for each <a href="#{D1B2FB30-36CA-4012-B85F-514E270BF541}"><font color="#0000ff"><u>ClassOfEntity</u></font></a> sold, offered, delivered, etc.
+Note: there may be no more than one itemType for a given <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> - i.e. a new TradeEvent must be instantiated for each <a href="#D1B2FB30-36CA-4012-B85F-514E270BF541"><font color="#0000ff"><u>ClassOfEntity</u></font></a> sold, offered, delivered, etc.
 
 Note: was "ItemType" in IES 3.2
 
 ### <a id="ca86862b-da7e-487c-907b-26fa5d0564cd"></a>TradeEvent
-An <a href="#{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> where something is offered, bought or exchanged
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where something is offered, bought or exchanged
 
 ### <a id="a8715447-3583-45d0-9550-625cf96b3e2e"></a>TrainTicket
-A <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> that is used to travel by rail
+A <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> that is used to travel by rail
 
 ### <a id="f2d6cfe4-bce9-4bce-adb0-075656038a55"></a>TrainTravel
-A <a href="#{3D0FC30A-CF82-44f2-970E-BFD04EADBA74}"><font color="#0000ff"><u>TravelService</u></font></a> by rail
+A <a href="#3D0FC30A-CF82-44f2-970E-BFD04EADBA74"><font color="#0000ff"><u>TravelService</u></font></a> by rail
 
 ### <a id="a9d01dab-281e-48ae-bb33-8518701abbde"></a>transferValue
 A relationship from a MoneyTransfer to the AmountOfMoney transferred.
 
 ### <a id="7693d2c9-0f06-4005-bb8d-b5b572b2281a"></a>Transit
-A <a href="#{95B5ACC4-956A-4b29-AB9E-BDCD12EF319F}"><font color="#0000ff"><u>Movement</u></font></a> that is an individual transportation - e.g. an individual flight, sailing, etc.
+A <a href="#95B5ACC4-956A-4b29-AB9E-BDCD12EF319F"><font color="#0000ff"><u>Movement</u></font></a> that is an individual transportation - e.g. an individual flight, sailing, etc.
 
 ### <a id="76dc9a0c-f6e8-4ff4-add6-072dc1ebe3ab"></a>TravelBooking
 The Purchase of planned travel arrangements.
@@ -5190,24 +5190,24 @@ The Purchase of planned travel arrangements.
 A PaymentArtefact that permits travel on public transport
 
 ### <a id="55384377-146a-47c9-8706-18a1343a219c"></a>TravelLeg
-An EventParticipant in which a <a href="#{F4EDE167-6F5A-417d-9984-0221CCDF752C}"><font color="#0000ff"><u>Entity</u></font></a> travels. That travel may be part of a Journey.
+An EventParticipant in which a <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> travels. That travel may be part of a Journey.
 
-The <a href="#{55384377-146A-47c9-8706-18A1343A219C}"><font color="#0000ff"><u>TravelLeg</u></font></a> may be part of a <a href="#{8B571665-0AA1-40be-A7A0-A35BE86B7192}"><font color="#0000ff"><u>Journey</u></font></a> (i.e. the Journey has one of more legs).
+The <a href="#55384377-146A-47c9-8706-18A1343A219C"><font color="#0000ff"><u>TravelLeg</u></font></a> may be part of a <a href="#8B571665-0AA1-40be-A7A0-A35BE86B7192"><font color="#0000ff"><u>Journey</u></font></a> (i.e. the Journey has one of more legs).
 
 ### <a id="8b290363-239e-415e-9f2d-8267d1ba2ecb"></a>TravelReservation
-A <a href="#{57ADBC97-C089-4d1a-A334-A9C44EAEC38A}"><font color="#0000ff"><u>TradedAsset</u></font></a> where the asset is a <a href="#{CDF94674-D458-4996-9A99-6CBFFF3907EB}"><font color="#0000ff"><u>Reservation</u></font></a>
+A <a href="#57ADBC97-C089-4d1a-A334-A9C44EAEC38A"><font color="#0000ff"><u>TradedAsset</u></font></a> where the asset is a <a href="#CDF94674-D458-4996-9A99-6CBFFF3907EB"><font color="#0000ff"><u>Reservation</u></font></a>
 
 ### <a id="3d0fc30a-cf82-44f2-970e-bfd04eadba74"></a>TravelService
-A transportation service, often provided as a public service ï¿½ e.g. a scheduled flight, rail journey, ferry crossing, etc.
+A transportation service, often provided as a public service – e.g. a scheduled flight, rail journey, ferry crossing, etc.
 
 ### <a id="680fd822-c1f6-4d09-94d5-5d586c947de1"></a>TravelServiceIdentifier
-The Identifier for the respective Travel Service ï¿½ this is how humans would usually refer to the service 
+The Identifier for the respective Travel Service – this is how humans would usually refer to the service 
 
-Note however that often this identifier does not, on its own, uniquely identify any given instance of a travel service ï¿½ e.g. <a href="#{375B0887-712F-43f0-BBF4-5C544D75AC39}"><font color="#0000ff"><u>Flight</u></font></a> BA0010 is reused on a daily basis to refer to the flight between London Heathrow and Los Angeles. As such, to uniquely identify any given instance of a Travel Service you would need to combine it with other attributes ï¿½ typically departure date/time.
+Note however that often this identifier does not, on its own, uniquely identify any given instance of a travel service – e.g. <a href="#375B0887-712F-43f0-BBF4-5C544D75AC39"><font color="#0000ff"><u>Flight</u></font></a> BA0010 is reused on a daily basis to refer to the flight between London Heathrow and Los Angeles. As such, to uniquely identify any given instance of a Travel Service you would need to combine it with other attributes – typically departure date/time.
 
 For Flights, this will be the Flight Number.
 
-For Ferry Sailings this is typically the name of the vessel that is scheduled to <a href="#{E0036B31-8D73-4268-8959-6E9A5EE55BB2}"><font color="#0000ff"><u>make</u></font></a> that sailing and, when combined with the departure date/time can be used to uniquely identify that sailing. Note that if the actual vessel that makes the sailing is different to that which was scheduled (e.g. as result of the scheduled vessel being out of commission), this identifier is not modified.
+For Ferry Sailings this is typically the name of the vessel that is scheduled to <a href="#E0036B31-8D73-4268-8959-6E9A5EE55BB2"><font color="#0000ff"><u>make</u></font></a> that sailing and, when combined with the departure date/time can be used to uniquely identify that sailing. Note that if the actual vessel that makes the sailing is different to that which was scheduled (e.g. as result of the scheduled vessel being out of commission), this identifier is not modified.
 
 ### <a id="6c669bef-9267-4612-9f29-b28918b203f5"></a>TravelTicket
 A Ticket that permits travel on a particular route or set of routes
@@ -5216,10 +5216,10 @@ A Ticket that permits travel on a particular route or set of routes
 An IdentityDocument, usually attached to a Passport, which allows a Person to remain in a Country for a set period of time. 
 
 ### <a id="59599c4b-f3de-49a0-b76f-be4cb1293cba"></a>Treaty
-An <a href="#{1B39630B-B00F-4def-9C65-48082C4AD2E0}"><font color="#0000ff"><u>EndToEndAgreement</u></font></a> that is between Nations and subject to international law
+An <a href="#1B39630B-B00F-4def-9C65-48082C4AD2E0"><font color="#0000ff"><u>EndToEndAgreement</u></font></a> that is between Nations and subject to international law
 
 ### <a id="37ceea2e-93e7-446d-a181-a55a091c3b22"></a>trusts
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one <a href="#{37CEEA2E-93E7-446d-A181-A55A091C3B22}"><font color="#0000ff"><u>trusts</u></font></a> the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities where one <a href="#37CEEA2E-93E7-446d-A181-A55A091C3B22"><font color="#0000ff"><u>trusts</u></font></a> the other.
 
 Note: this should not be considered a bi-directional relationship. Just because one person trusts another person does not necessarily mean the feeling is reciprocated. 
 
@@ -5233,7 +5233,7 @@ A ClassOfMeasureValue that is used to quantify a Measure on a standard scale
 An AccountAdminEvent where an Account is modified
 
 ### <a id="d700fe64-4100-4ade-93ce-6219a7bc0bcb"></a>upperBound
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> a MeasureRange to the Measure that is its upper bound
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> a MeasureRange to the Measure that is its upper bound
 
 ### <a id="d97141bd-f6cf-4b10-b4e5-b1ecf6df5178"></a>uriScheme
 URI scheme is the top level of the uniform resource identifier (URI) naming structure. All URIs and absolute URI references are formed with a scheme name, followed by a colon character (":"), and the remainder of the URI called the <i>scheme-specific part</i>.
@@ -5253,17 +5253,17 @@ The Identity for an account registered with a computer-network-based service e.g
 An email address can be used as an online identifier for a specific domain (like Facebook). Where this is the case it can be considered to be both an instance of an email address and an instance of a username for an online identity.
 
 ### <a id="01984617-c96d-48b3-acde-25f525719aef"></a>userOf
-A hasAccessTo relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and an <a href="#{40231334-5ACC-4dd4-A8C1-05012E2170E0}"><font color="#0000ff"><u>Asset</u></font></a> they use.
+A hasAccessTo relationship between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and an <a href="#40231334-5ACC-4dd4-A8C1-05012E2170E0"><font color="#0000ff"><u>Asset</u></font></a> they use.
 
-Note: more often than not, this will be a statement of occasional use, so the instance of the <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous use, but generally this would be modelled with the appropriate type of <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> and EventParticipants
+Note: more often than not, this will be a statement of occasional use, so the instance of the <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous use, but generally this would be modelled with the appropriate type of <a href="$element://{B376370E-F5E8-4287-A3EC-AC35532919B1}"><font color="#0000ff"><u>Event</u></font></a> and EventParticipants
 
 ### <a id="958e4d57-8a19-4855-b9b3-6bb2f93f77b7"></a>usesServicesAt
-A <a href="#{92FC2C35-D40B-4393-BA0B-88849743FEB6}"><font color="#0000ff"><u>visits</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where they use services - e.g. banking, shopping, etc..
+A <a href="#92FC2C35-D40B-4393-BA0B-88849743FEB6"><font color="#0000ff"><u>visits</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where they use services - e.g. banking, shopping, etc..
 
 Note: more often than not, this will be a statement of regular/occasional use, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, <a href="$element://{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> would generally be used.
 
 ### <a id="fce0d994-4838-48fa-a274-57db092a2960"></a>UsuallyParked
-A temporal state of a <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> which is the fusion of all its <a href="#{B6A503E5-3FC4-4a45-8DC0-994EA31A895A}"><font color="#0000ff"><u>Parked</u></font></a> states
+A temporal state of a <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> which is the fusion of all its <a href="#B6A503E5-3FC4-4a45-8DC0-994EA31A895A"><font color="#0000ff"><u>Parked</u></font></a> states
 
 Examples:
 * A car that is usually parked in Acacia Avenue
@@ -5274,10 +5274,10 @@ Examples:
 The Visa Application Form (VAF) number.
 
 ### <a id="6acc2acc-46f2-4a02-a3e7-d16be8eb723b"></a>validFromDate
-The date that the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> or <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> is valid from.
+The date that the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> or <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> is valid from.
 
 ### <a id="680f737d-a8ab-4410-9f1d-fad7bdc98447"></a>validToDate
-The date that the respective <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a> or <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> is valid to.
+The date that the respective <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a> or <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> is valid to.
 
 ### <a id="0c682ba6-23ab-459c-b8ff-a114aa27650b"></a>ValueInAmperes
 A StandardMeasureValue for ElectricCurrent in amperes
@@ -5301,22 +5301,22 @@ A StandardMeasureValue for AmountOfSubstance in moles
 A StandardMeasureValue for Duration in seconds
 
 ### <a id="3b916f09-f3f4-43e9-9c84-99009c685396"></a>Vehicle
-An Asset that is a means of transportation ï¿½ e.g. car, aircraft, ship.
+An Asset that is a means of transportation – e.g. car, aircraft, ship.
 
 ### <a id="93a816a9-eb7b-4250-8a1a-8919488029a7"></a>VehicleController
-A <a href="#{9888A3F3-7E9B-4806-BD4E-2FC4D87A5902}"><font color="#0000ff"><u>PersonInTransit</u></font></a> where the <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> is in control of the Transit
+A <a href="#9888A3F3-7E9B-4806-BD4E-2FC4D87A5902"><font color="#0000ff"><u>PersonInTransit</u></font></a> where the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is in control of the Transit
 
 e.g. driver of a car, pilot of plane, captain of a ship
 
 ### <a id="ac9ab7b0-6c38-4b08-b2b9-caa8486f0f4b"></a>VehicleIdentificationNumber
-VIN ï¿½ <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> Identification Number.
+VIN – <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> Identification Number.
 
 For road vehicles this is often directly referred to as the VIN, but this can also be applied in a generic fashion to other vehicle types.
 
 ISO 3833 for road vehicles (17-digits)
 
 ### <a id="9d24b4be-2ad4-42d6-a906-8f6efda23ec5"></a>VehicleName
-The Name of the respective <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> (if applicable) ï¿½ often this only applies to ships/boats. 
+The Name of the respective <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> (if applicable) – often this only applies to ships/boats. 
 
 Examples:
 
@@ -5324,13 +5324,13 @@ The Saucy Sue
 The Bountiful Blumpkin
 
 ### <a id="d3275233-7381-483e-b2d2-77f13d73a52e"></a>VehicleState
-A temporal state of a <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a>
+A temporal state of a <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a>
 
 ### <a id="2202f5b0-df49-4db5-a8f9-31fc2cc89005"></a>VehicleUsed
-An EventParticipant in which a <a href="#{3B916F09-F3F4-43e9-9C84-99009C685396}"><font color="#0000ff"><u>Vehicle</u></font></a> is used to transport Entities
+An EventParticipant in which a <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> is used to transport Entities
 
 ### <a id="3345aeca-925e-4bfc-820e-2294d5921e71"></a>venueStatedOnTicket
-The venue of the event the <a href="#{0BC61540-2AFB-42e6-A845-79771EE0268D}"><font color="#0000ff"><u>Ticket</u></font></a> is for.
+The venue of the event the <a href="#0BC61540-2AFB-42e6-A845-79771EE0268D"><font color="#0000ff"><u>Ticket</u></font></a> is for.
 
 Note: venues change, and the actual event may not run at the stated venue. 
 
@@ -5341,21 +5341,21 @@ The number or code that identifies the version of something.
 A relationship between a VersionOfDocument and the WorkOfDocumentation it is a version of.
 
 ### <a id="adb16761-4981-4476-bc53-2843587d1c02"></a>VersionOfDocument
-A <a href="#{F0B48978-D4E4-45a4-8238-091A5B714D82}"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> and a <a href="#{E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A}"><font color="#0000ff"><u>TimeBoundedClass</u></font></a> that is a versionOf a WorkOfDocumentation
+A <a href="#F0B48978-D4E4-45a4-8238-091A5B714D82"><font color="#0000ff"><u>WorkOfDocumentation</u></font></a> and a <a href="#E7A659A5-9059-4ea5-8FAB-8A29AFC47D9A"><font color="#0000ff"><u>TimeBoundedClass</u></font></a> that is a versionOf a WorkOfDocumentation
 
 ### <a id="3b47fcd0-e7d1-4b2b-bc07-c96d3f07abc3"></a>Victim
-An EventParticipant where a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is the victim of a <a href="#{43E58528-16E4-48b3-8F13-10500879EA83}"><font color="#0000ff"><u>CriminalActivity</u></font></a>
+An EventParticipant where a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> is the victim of a <a href="#43E58528-16E4-48b3-8F13-10500879EA83"><font color="#0000ff"><u>CriminalActivity</u></font></a>
 
 ### <a id="1ed09a3d-7ee9-4b7a-8f0b-8590023c9f81"></a>VideoConference
-A <a href="#{6EAC8930-3D16-4e44-9706-989BDF6564A5}"><font color="#0000ff"><u>TeleConference</u></font></a> where parties communicate over video (with audio)
+A <a href="#6EAC8930-3D16-4e44-9706-989BDF6564A5"><font color="#0000ff"><u>TeleConference</u></font></a> where parties communicate over video (with audio)
 
 ### <a id="eb558a61-8725-40d0-b87d-d6aa1fc27c89"></a>Visiting
 A temporal state of a ResponsibleActor
 
-Note:  this is the superclass of <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
+Note:  this is the superclass of <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. 
 
 ### <a id="92fc2c35-d40b-4393-ba0b-88849743feb6"></a>visits
-A Relationship and in <a href="#{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="#{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> they visit.
+A Relationship and in <a href="#463F9B14-2D14-4364-B4F0-658A20DFCBFA"><font color="#0000ff"><u>inLocation</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="#E1A494ED-D493-44ab-8BF9-ABC6889D4D9A"><font color="#0000ff"><u>Location</u></font></a> they visit.
 
 Note: more often than not, this will be a statement of occasional visiting, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, inLocation would generally be used.
 
@@ -5363,25 +5363,25 @@ Note: more often than not, this will be a statement of occasional visiting, so t
 An InteractiveCommunication by voice
 
 ### <a id="2db8231f-0673-4788-ae41-3f52a3702a2b"></a>VoipAccount
-A <a href="#{593AE684-C2E9-4e40-A7FD-549BFA64900D}"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the voice communication is over IP. This may also include video communication, screen sharing, etc. 
+A <a href="#593AE684-C2E9-4e40-A7FD-549BFA64900D"><font color="#0000ff"><u>TelephoneAccount</u></font></a> where the voice communication is over IP. This may also include video communication, screen sharing, etc. 
 
 ### <a id="b94ff143-3681-41eb-8264-d3e85c558efc"></a>VotingAttendee
-When a <a href="#{D62DDBB8-53FC-405a-BC43-89CA337563A0}"><font color="#0000ff"><u>Government</u></font></a> has voting rights at a <a href="#{78D65599-BCBB-491a-8C34-75B9F7AB60D5}"><font color="#0000ff"><u>Summit</u></font></a>
+When a <a href="#D62DDBB8-53FC-405a-BC43-89CA337563A0"><font color="#0000ff"><u>Government</u></font></a> has voting rights at a <a href="#78D65599-BCBB-491a-8C34-75B9F7AB60D5"><font color="#0000ff"><u>Summit</u></font></a>
 
 ### <a id="d4f568f5-7bc4-489d-94bc-ae1305e5c0c2"></a>War
-A <a href="#{E73C74A9-B356-40a4-BDBB-40567592BBD0}"><font color="#0000ff"><u>Disagreement</u></font></a> where at least one party has declared war
+A <a href="#E73C74A9-B356-40a4-BDBB-40567592BBD0"><font color="#0000ff"><u>Disagreement</u></font></a> where at least one party has declared war
 
 ### <a id="4cad884a-1ea7-473d-9881-8b76ebf8526f"></a>Warrant
-An <a href="#{8177A2FB-CA54-4dc5-9884-33FBA660B174}"><font color="#0000ff"><u>AuthorisationDocument</u></font></a> that provides legal permission, usually for something that would be considered illegal or intrusive otherwise
+An <a href="#8177A2FB-CA54-4dc5-9884-33FBA660B174"><font color="#0000ff"><u>AuthorisationDocument</u></font></a> that provides legal permission, usually for something that would be considered illegal or intrusive otherwise
 
 ### <a id="ca2023c6-1677-4d24-a1e6-22bc4d595e6f"></a>Warrantry
 An EndToEndAuthorisation where the process involves legal warrants. 
 
 ### <a id="7a58c9ad-c198-4a61-8244-de5bbc591416"></a>wasAuthorisedBy
-A <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> to the <a href="#{1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F}"><font color="#0000ff"><u>Organisation</u></font></a> that was the authorising agency for the <a href="#{BDF4EBD9-7F41-4d90-91A7-571177330C1B}"><font color="#0000ff"><u>IdentityDocument</u></font></a>
+A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> to the <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that was the authorising agency for the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
 
 ### <a id="b513f0d8-e527-4548-8453-d905775e3a4f"></a>WeaponLocation
-Relates an <a href="#{8787BE51-8FE0-4d76-97B4-608311434F5B}"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the location of the attacking weapon system
+Relates an <a href="#8787BE51-8FE0-4d76-97B4-608311434F5B"><font color="#0000ff"><u>MilitaryAttack</u></font></a> to the location of the attacking weapon system
 
 ### <a id="79098c74-e063-4c45-886d-d0b88a48e954"></a>Webpage
 An OnlineArtefact that is a page on the web.
@@ -5390,7 +5390,7 @@ An OnlineArtefact that is a page on the web.
 Any http presence on the web
 
 ### <a id="3be61ccf-dcd0-411d-9d43-5deabf8381f2"></a>WebResourceState
-A temporal state of an <a href="#{46D508B4-F1CC-45d7-9E4B-BA8A3C88D82A}"><font color="#0000ff"><u>WebResource</u></font></a>
+A temporal state of an <a href="#46D508B4-F1CC-45d7-9E4B-BA8A3C88D82A"><font color="#0000ff"><u>WebResource</u></font></a>
 
 ### <a id="b2262900-bf01-4691-8de1-46a726a6d1cb"></a>What3words
 A GeoIdentity that is a what3words Location specifier
@@ -5398,36 +5398,36 @@ A GeoIdentity that is a what3words Location specifier
 (see what3words.com)
 
 ### <a id="9fc35e2c-3d28-4f21-8ff7-3baa51860958"></a>WinningCandidate
-The <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a> who won the <a href="#{7D9E328D-345E-43f5-8163-9657E4D016BD}"><font color="#0000ff"><u>Election</u></font></a>
+The <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> who won the <a href="#7D9E328D-345E-43f5-8163-9657E4D016BD"><font color="#0000ff"><u>Election</u></font></a>
 
 ### <a id="9416f72a-9bf9-4c99-839c-76905f02b63b"></a>WithdrawFromSale
-A <a href="#{CA86862B-DA7E-487c-907B-26FA5D0564CD}"><font color="#0000ff"><u>TradeEvent</u></font></a> where a type of entity is withdrawn from sale
+A <a href="#CA86862B-DA7E-487c-907B-26FA5D0564CD"><font color="#0000ff"><u>TradeEvent</u></font></a> where a type of entity is withdrawn from sale
 
 ### <a id="9c9ed058-4bb5-43d0-a311-ff7a532ed6d6"></a>Witness
-A <a href="#{5D5C5B9B-5E90-4100-8353-8EE9F3D772E2}"><font color="#0000ff"><u>Person</u></font></a>'s role as a witness in a trial
+A <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a>'s role as a witness in a trial
 
 ### <a id="f0b48978-d4e4-45a4-8238-091a5b714d82"></a>WorkOfDocumentation
-A <a href="#{675A5C23-0746-43d0-96D0-AF0DF72CD697}"><font color="#0000ff"><u>Representation</u></font></a> that is the general case of a document - i.e. "War and Peace" as opposed to "My copy of <a href="#{D4F568F5-7BC4-489d-94BC-AE1305E5C0C2}"><font color="#0000ff"><u>War</u></font></a> and Peace"
+A <a href="#675A5C23-0746-43d0-96D0-AF0DF72CD697"><font color="#0000ff"><u>Representation</u></font></a> that is the general case of a document - i.e. "War and Peace" as opposed to "My copy of <a href="#D4F568F5-7BC4-489d-94BC-AE1305E5C0C2"><font color="#0000ff"><u>War</u></font></a> and Peace"
 
 ### <a id="55161540-8869-4af9-b159-51857e0b0bdb"></a>worksAt
-A <a href="#{92FC2C35-D40B-4393-BA0B-88849743FEB6}"><font color="#0000ff"><u>visits</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> they work in.
+A <a href="#92FC2C35-D40B-4393-BA0B-88849743FEB6"><font color="#0000ff"><u>visits</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> they work in.
 
 Note: more often than not, this will be a statement of occasional presence, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous presence, but in that case, <a href="$element://{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> would generally be used.
 
 ### <a id="181aac84-26ce-4531-ac32-a73b8fd8b858"></a>worksFor
-A Relationship between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (range - employer) and a <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> (domain- employed) that indicates one works for the other.
+A Relationship between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> (range - employer) and a <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> (domain- employed) that indicates one works for the other.
 
-In the case where the work is occasional / ad-hoc (i.e. there isn't an ongoing work contract) then the instance of the ResponsibleActorState should also be an instance of <a href="#{52DB371E-71AC-4812-B3CF-0FD7D73F1BB0}"><font color="#0000ff"><u>DiscontinuousState</u></font></a>
+In the case where the work is occasional / ad-hoc (i.e. there isn't an ongoing work contract) then the instance of the ResponsibleActorState should also be an instance of <a href="#52DB371E-71AC-4812-B3CF-0FD7D73F1BB0"><font color="#0000ff"><u>DiscontinuousState</u></font></a>
 
 ### <a id="25dd07e3-2500-4b9b-af50-446eec927ad2"></a>worksWith
-A Relationship between two <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities that indicates one works with the other.
+A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities that indicates one works with the other.
 
-In the case where the work is occasional / ad-hoc (i.e. there isn't an ongoing job) then the instance of the <a href="#{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState
+In the case where the work is occasional / ad-hoc (i.e. there isn't an ongoing job) then the instance of the <a href="#100B93CD-937E-4fdd-8851-02D1DC07F5B6"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState
 
-Note: this <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> should only be used when it is not known who the two people work for (in which case create an organisation and used employedBy) or when the working relationship is rather loose - e.g. in cases of criminal cooperation.
+Note: this <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> should only be used when it is not known who the two people work for (in which case create an organisation and used employedBy) or when the working relationship is rather loose - e.g. in cases of criminal cooperation.
 
 ### <a id="475617c7-bee3-4c5e-8749-9386b68a8da5"></a>worshipsAt
-A <a href="#{92FC2C35-D40B-4393-BA0B-88849743FEB6}"><font color="#0000ff"><u>visits</u></font></a> <a href="#{DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A}"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#{D09EDE21-E862-4ec1-BC0F-045CCE5454A9}"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where they undertake religious worship
+A <a href="#92FC2C35-D40B-4393-BA0B-88849743FEB6"><font color="#0000ff"><u>visits</u></font></a> <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> and a <a href="$element://{E1A494ED-D493-44ab-8BF9-ABC6889D4D9A}"><font color="#0000ff"><u>Location</u></font></a> where they undertake religious worship
 
 Note: more often than not, this will be a statement of regular/occasional worship, so the instance of the <a href="$element://{100B93CD-937E-4fdd-8851-02D1DC07F5B6}"><font color="#0000ff"><u>ResponsibleActorState</u></font></a> should also be an instance of DiscontinuousState. In rarer occasions, it may be used to highlight a single, continuous visit, but in that case, <a href="$element://{463F9B14-2D14-4364-B4F0-658A20DFCBFA}"><font color="#0000ff"><u>inLocation</u></font></a> would generally be used.
 
