@@ -316,7 +316,7 @@ Otherwise, things to watch out for in the UML are:
 </ul>
 14. IES 4.2 had ClassOfElements and subProperties of rdf:type which encouraged extending the IES classes via ClassOfElements hierarchy rather than the Elements hierarchy. IES 4.3 prunes some of classes (breaking changes) to discourage this behaviour and encourage one approach of extending IES. This approach is documented in "Extending IES4 2024-03-v1.0 O.pdf". Pruned classes and properties include:
 <ul>
-	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted – just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
+	<li>From <b>Authorisation pattern - AuthorisationEventClass </b>deleted ï¿½ just use subclasses of <b>AuthorisationRequest </b>or <b>GrantOfAuthority</b>. Also <b>requestedActivity</b>, <b>grantedActivityType </b>and <b>allAuthorisedAgainst</b> deleted</li>
 	<li>From <b>Operational </b>pattern - <b>ClassOfOperationalEvent</b>, <b>ClassOfCriminalActivity </b>and <b>typicallyTargets</b></li>
 	<li>From <b>Criminal </b>pattern - Deleted of <b>special forms of rdf:type</b>, <b>typeOfCriminality. Also deleted</b> <b>OffenceCode</b>.</li>
 	<li>From <b>Financial Account</b> pattern - Deleted special forms of rdf:type, <b>financialAccountType ClassOfFinancialAccount</b></li>
@@ -764,7 +764,7 @@ Dispositions are managed in IES using DispositionalClass - something that was al
 * [isPartOf](#cd85d7f7-783b-4d06-b023-56dbbddc02dc)
 * [isStateOf](#f7cbf87a-6ecc-4c9f-b698-fd3cf3f7980e)
 
-Understanding a thing's parts can be straight-forward at any given time, however that is complicated by changes over time. For example, a car’s components, like its gearbox or tyres, can be replaced when worn. When we replace a car’s tyre, it remains the same car, just with a different tyre. BORO and 4D thinking clarifies this: the extent of the car contains a temporal part of one tyre followed by the temporal part of another tyre. At any one time, the car overlaps with only one tyre; but, over time, it overlaps with two tyres. The two tyres have <b>InstalledStates</b> that are parts of the car.
+Understanding a thing's parts can be straight-forward at any given time, however that is complicated by changes over time. For example, a carï¿½s components, like its gearbox or tyres, can be replaced when worn. When we replace a carï¿½s tyre, it remains the same car, just with a different tyre. BORO and 4D thinking clarifies this: the extent of the car contains a temporal part of one tyre followed by the temporal part of another tyre. At any one time, the car overlaps with only one tyre; but, over time, it overlaps with two tyres. The two tyres have <b>InstalledStates</b> that are parts of the car.
 
 Sometimes it is useful to call out the enduring part of an Element e.g. the tyre of a car whichever actual tyre is installed at a given time. This is what we call a <b>ReplaceablePart</b>.<b> </b>A replaceable part can be substituted or exchanged without altering the overall identity or functionality. Moreover, the identity of a <b>ReplaceablePart</b> can survive periods when nothing fulfils its purpose or role, i.e. its existence is not necessarily continuous.
 
@@ -1569,7 +1569,7 @@ Tickets are IndividualDocuments that authorise access to Events - e.g. travel an
 * [VehicleIdentificationNumber](#ac9ab7b0-6c38-4b08-b2b9-caa8486f0f4b)
 * [Colour](#b10d22fb-1d6a-47c9-b1c0-e870d43a5c52)
 
-A means of transportation – e.g. car, aircraft, ship.
+A means of transportation ï¿½ e.g. car, aircraft, ship.
 
 ### <a id="d97110d9-791e-4e88-a92b-5139286e5f05"></a>All Entities
 ![All Entities Diagram](Images/EAID_D97110D9_791E_4e88_A92B_5139286E5F05.png)
@@ -2787,7 +2787,7 @@ A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relat
 WARNING:  by "the same" we mean they occupy the same space for the same period of time - i.e. not two different things in the same place at different times, and not the same physical item at two different periods of time. The <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> and <a href="#47301D66-CBD5-4d10-9481-B66966A3F3A2"><font color="#0000ff"><u>State</u></font></a> patterns should do most of what is needed here, and it is <i>extremely rare </i>that this would ever be needed. Do not use unless absolutely necessary. 
 
 ### <a id="e4ab33d9-9978-446f-9c39-4f4c41fb3d45"></a>Assessment
-An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thing’s possibility, categorisation or other qualitative aspect.
+An Event where an actor makes a subjective judgement against a thing. This can be a judgement of belief in a thingï¿½s possibility, categorisation or other qualitative aspect.
 
 Examples include:
 - Having 'HIGH' confidence that Anne committed the murder.
@@ -2931,7 +2931,7 @@ An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>Part
 An <a href="#A5713B2C-E098-4dd2-BD46-42DA51899FEA"><font color="#0000ff"><u>PartyInCommunication</u></font></a> where the communicating party is the caller in an <a href="#6D5E11EE-C61A-4e38-913F-BBAF2A34A288"><font color="#0000ff"><u>InteractiveCommunication</u></font></a>
 
 ### <a id="25f4f685-3931-4cdc-af43-1a9194bbe15d"></a>Callsign
-In broadcasting and radio communications, a call sign (also known as a call name or call letters – and historically as a call signal) is a unique designation for a transmitting station.
+In broadcasting and radio communications, a call sign (also known as a call name or call letters ï¿½ and historically as a call signal) is a unique designation for a transmitting station.
 
 ### <a id="91d62f08-ed05-4558-9321-368712a34a30"></a>Capability
 A DispositionalClass where all the instances share the same capability
@@ -3025,9 +3025,9 @@ The <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>pow
 
 Examples:
 
-· Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);
-· Weapons
-· Etc.
+ï¿½ Human groupings (e.g. Nigerian Women, British Men, Righthanded people, English Speakers);
+ï¿½ Weapons
+ï¿½ Etc.
 
 ### <a id="4ea194c6-bbf9-45ab-85de-5802d8c3a531"></a>ClassOfEvent
 An <a href="#3C13E07D-5796-4d03-9EBC-C75277E87CA4"><font color="#0000ff"><u>ClassOfElement</u></font></a> whose instances are classes of <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a>. This is the <a href="#D4BD48E8-76B8-4d3c-AB83-E653DB89170D"><font color="#0000ff"><u>powertype</u></font></a> of Event.
@@ -3093,7 +3093,7 @@ An <a href="#31BFE794-924E-44e3-942E-ADC9ED19FBA1"><font color="#0000ff"><u>Acco
 A temporal state of a <a href="#8300451C-1DF9-4545-9174-D8AA69C58CCD"><font color="#0000ff"><u>CommunicationsAccount</u></font></a>
 
 ### <a id="32eb46a5-0fa4-44e9-a9e9-9424e80bde91"></a>CommunicationsDevice
-A <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> that provides an endpoint for communications – e.g. mobile telephone, landline, satellite phone, CB Radio, etc.
+A <a href="#115F2F9B-21F3-4903-8EAA-AB3AEFE97461"><font color="#0000ff"><u>Device</u></font></a> that provides an endpoint for communications ï¿½ e.g. mobile telephone, landline, satellite phone, CB Radio, etc.
 
 ### <a id="a82378b9-9774-46b9-9845-cc75be882f06"></a>CommunicationsIdentifier
 An <a href="#315E6AD3-F2DA-4f69-864F-DA2B95121E2E"><font color="#0000ff"><u>Identifier</u></font></a> for the end-point of a communication 
@@ -3451,7 +3451,7 @@ A <a href="#55384377-146A-47c9-8706-18A1343A219C"><font color="#0000ff"><u>Trave
 A <a href="#2A62C672-1757-4a2d-874B-C099C9DEC416"><font color="#0000ff"><u>ClassOfPerson</u></font></a> whose members all share the same ethnicity
 
 ### <a id="b376370e-f5e8-4287-a3ec-ac35532919b1"></a>Event
-An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> represents an activity or incident, involving one or more participating entities, that occurred/started at a specific point in time – e.g. a meeting, or a telephone call.
+An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> represents an activity or incident, involving one or more participating entities, that occurred/started at a specific point in time ï¿½ e.g. a meeting, or a telephone call.
 
 ### <a id="07dcd4fc-938c-438d-abe6-f7f64e66a255"></a>eventDateTime
 The date/time of the performance to which the ticket is valid.
@@ -3736,7 +3736,7 @@ Unknown
 The Date of Birth as specified on the respective IdentityDocument.
 
 ### <a id="acac12ad-16c3-480d-8149-c026f8be9f81"></a>idDateOfIssue
-The date that the respective Identity Document was actually issued – this is different from the ValidFromDate on EphemeralIdDocuments.
+The date that the respective Identity Document was actually issued ï¿½ this is different from the ValidFromDate on EphemeralIdDocuments.
 
 ### <a id="96b7c774-1fe0-4307-bb62-b5899f953ff2"></a>idEmergencyContactName
 The name of an emergency contact as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
@@ -3748,7 +3748,7 @@ The telephone number of an emergency contact as printed on the <a href="#BDF4EBD
 A <a href="#7D7CC966-56EB-4220-A650-A993E598F2E2"><font color="#0000ff"><u>Name</u></font></a> that is unique within the specified context
 
 ### <a id="bdf4ebd9-7f41-4d90-91a7-571177330c1b"></a>IdentityDocument
-An IndividualDocument used to confirm the identity of the bearer (and often enables a particular activity – e.g. a passport enables the bearer to travel across international borders).
+An IndividualDocument used to confirm the identity of the bearer (and often enables a particular activity ï¿½ e.g. a passport enables the bearer to travel across international borders).
 
 ### <a id="ccd1f7fe-c42a-4503-bf24-00e8805bd5dd"></a>idFamilyName
 The family name as printed on the <a href="#BDF4EBD9-7F41-4d90-91A7-571177330C1B"><font color="#0000ff"><u>IdentityDocument</u></font></a>
@@ -3774,12 +3774,12 @@ An <a href="#C5AB420C-1AB6-479a-97E1-4F2FD37725CB"><font color="#0000ff"><u>Even
 ### <a id="471cf113-1728-47fd-a763-d1fa69226fc4"></a>ilrProficiency
 The Proficiency qualifier is specified using the Interagency <a href="#82652FF5-258F-459c-BC7F-6DAC65E1ECA1"><font color="#0000ff"><u>Language</u></font></a> Roundtable (ILR) scale [E].
 
-(a) ILR Level 0 – No proficiency
-(b) ILR Level 1 – Elementary Proficiency
-(c) ILR Level 2 – Limited Working Proficiency
-(d) ILR Level 3 – Professional Working Proficiency
-(e) ILR Level 4 – Full Professional Proficiency
-(f) ILR Level 5 – Native or Bilingual Proficiency
+(a) ILR Level 0 ï¿½ No proficiency
+(b) ILR Level 1 ï¿½ Elementary Proficiency
+(c) ILR Level 2 ï¿½ Limited Working Proficiency
+(d) ILR Level 3 ï¿½ Professional Working Proficiency
+(e) ILR Level 4 ï¿½ Full Professional Proficiency
+(f) ILR Level 5 ï¿½ Native or Bilingual Proficiency
 
 ### <a id="3987794e-6e2e-4457-8bf7-47813b51b139"></a>IMEI
 The International Mobile Equipment Identity used to identify GSM, WCDMA and iDEN mobile phone handsets, as well as some satellite phones.
@@ -3936,10 +3936,10 @@ The IPv4 address range is all the IPv4 addresses between the &lt;lower address&g
 
 Both examples here represent the same address range (but in different notations).
 
-The Dot Decimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Decimal form – where
+The Dot Decimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Decimal form ï¿½ where
 each of these 32-bit IPv4 addresses are expressed as four octets expressed individually in decimal and separated by periods.
 
-The Dot Hexadecimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Hexadecimal form – where each of these 32-bit IPv4 addresses are expressed as four octets where each octet is prefixed with 0x, expressed individually in hexadecimal and separated by periods.
+The Dot Hexadecimal Range notation specifies the &lt;lower address&gt; and the &lt;upper address&gt; in Dot Hexadecimal form ï¿½ where each of these 32-bit IPv4 addresses are expressed as four octets where each octet is prefixed with 0x, expressed individually in hexadecimal and separated by periods.
 
 ### <a id="0b494f4a-9e82-4667-89ad-3d22fc9b5742"></a>IPPhoneHandset
 A CommunicationsDevice that is a telephone using internet protocols
@@ -4033,7 +4033,7 @@ The IIN is a number that uniquely identifies the issuer of the <a href="#4E10343
 An ISO/IEC 7812 number contains a single-digit <i>major industry identifier </i>(MII), a six-digit <i>issuer identification number </i>(IIN), an <i>individual account identification </i>number, and a single digit checksum.
 
 ### <a id="74d86486-8e18-474a-8930-b92e759bbe06"></a>issuingAgency
-The <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that issued the ticket – this might be different from the travel provider.
+The <a href="#1ECB4C6E-6A30-4dc5-A4AC-9A9DF5B6A54F"><font color="#0000ff"><u>Organisation</u></font></a> that issued the ticket ï¿½ this might be different from the travel provider.
 
 ### <a id="b8650a61-3b08-4f62-8eab-0f9d007b20ce"></a>isTeacherOf
 A Relationship between two <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color="#0000ff"><u>ResponsibleActor</u></font></a> Entities that indicates one teaches the other.
@@ -4227,7 +4227,7 @@ A LifecycleEvent where something is changed
 ### <a id="d94ed70f-8cca-4c6e-8ae5-65450bba62d7"></a>MoneyTransfer
 A <a href="#94CEDBD1-8E3D-4cb4-8155-FBD621DA6A0D"><font color="#0000ff"><u>BusinessEvent</u></font></a> where an <a href="#0DF94DE5-68B7-45b4-A106-A11CE06C31B8"><font color="#0000ff"><u>AmountOfMoney</u></font></a> is moved from one <a href="#44DAC574-2A2E-44bc-ACD2-236811FA8D29"><font color="#0000ff"><u>FinancialAccount</u></font></a> to another.
 
-Usually a Money Transfer event will involve two accounts but we might not know both, or it might be a cash transfer – in which case only one of the participants might be specified.
+Usually a Money Transfer event will involve two accounts but we might not know both, or it might be a cash transfer ï¿½ in which case only one of the participants might be specified.
 
 ### <a id="95b5acc4-956a-4b29-ab9e-bdcd12ef319f"></a>Movement
 An <a href="#B376370E-F5E8-4287-A3EC-AC35532919B1"><font color="#0000ff"><u>Event</u></font></a> where an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> moves from one place to another.
@@ -4263,9 +4263,9 @@ A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relat
 
 ### <a id="0c0728af-b9f2-418f-a03e-107689f0aca0"></a>natureOfInterest
 NatureOfInterest is limited to the following values:
-· Personal
-· Professional
-· Academic
+ï¿½ Personal
+ï¿½ Professional
+ï¿½ Academic
 
 ### <a id="e3bb8b07-9cc5-407a-8cc7-e2b0e1b69476"></a>nearTo
 A <a href="#DCE662F5-7BDB-457e-AE7E-2E5FE43DBA1A"><font color="#0000ff"><u>relationship</u></font></a> linking an <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Entity</u></font></a> to another Entity it is proximate to in space
@@ -4317,7 +4317,7 @@ The ContentStandard qualifier specifies the standard (either by name or by refer
 The ContentFormat qualifier specifies the <a href="#EF2C13D4-7106-4799-BB72-7CD47714F257"><font color="#0000ff"><u>format</u></font></a> of the content of the DataObject.
 
 ### <a id="6b06abdd-05cf-485c-a483-563c5e85f189"></a>objectContentReference
-An ObjectContentReference is a resolvable reference to the ‘content’ of the respective DataObject.
+An ObjectContentReference is a resolvable reference to the ï¿½contentï¿½ of the respective DataObject.
 
 Whenever a <a href="#CAC97EB4-E0E8-4576-9637-1FBED5F9FEF2"><font color="#0000ff"><u>DataObject</u></font></a> is exchanged it must include either the ObjectContent or an ObjectContentReference or both.
 
@@ -4427,7 +4427,7 @@ A coupling between a <a href="#D09EDE21-E862-4ec1-BC0F-045CCE5454A9"><font color
 Examples: an organisation that is opposed to Nuclear Weapons
 
 ### <a id="1ecb4c6e-6a30-4dc5-a4ac-9a9df5b6a54f"></a>Organisation
-A ResponsibleActor that is a group of people formed for one or more of purposes – e.g. government organisations, educational organisations, terrorists organisations, religious organisations, etc.
+A ResponsibleActor that is a group of people formed for one or more of purposes ï¿½ e.g. government organisations, educational organisations, terrorists organisations, religious organisations, etc.
 
 ### <a id="13865b40-b57d-44e7-9658-00c45c8175c8"></a>OrganisationIdentifier
 A unique Identifier for an Organisation (more usually an OrganisationState)
@@ -4761,7 +4761,7 @@ An <a href="#F4EDE167-6F5A-417d-9984-0221CCDF752C"><font color="#0000ff"><u>Enti
 
 Religions may be part of other religions - e.g. Christianity being made up of Catholic, Protestant, Orthodox, etc. 
 
-1. The religion ‘practiced’ by the respective Person..
+1. The religion ï¿½practicedï¿½ by the respective Person..
 2. The religion may be qualified to identity a particular sect.
 3. The Metropolitan Police standard [F] shall be used as the reference data standard
 
@@ -5021,9 +5021,9 @@ A PaymentArtefact issued by a retail Organisation that can only be used to pay f
 
 ### <a id="49b3d340-aadc-4fcd-80cc-283ae0fc85df"></a>strengthOfInterest
 StrengthOfInterest is used in its most general sense and is limited to the following values:
-· Weak
-· Strong
-· Fanatical
+ï¿½ Weak
+ï¿½ Strong
+ï¿½ Fanatical
 
 ### <a id="cc9e60ac-b3c8-4c9b-b657-2734538ae2b9"></a>Stuff
 An element that is highly dissective <font color="#272727">or generally uncountable. For example, sand, water, gas and coffee.</font>
@@ -5198,12 +5198,12 @@ The <a href="#55384377-146A-47c9-8706-18A1343A219C"><font color="#0000ff"><u>Tra
 A <a href="#57ADBC97-C089-4d1a-A334-A9C44EAEC38A"><font color="#0000ff"><u>TradedAsset</u></font></a> where the asset is a <a href="#CDF94674-D458-4996-9A99-6CBFFF3907EB"><font color="#0000ff"><u>Reservation</u></font></a>
 
 ### <a id="3d0fc30a-cf82-44f2-970e-bfd04eadba74"></a>TravelService
-A transportation service, often provided as a public service – e.g. a scheduled flight, rail journey, ferry crossing, etc.
+A transportation service, often provided as a public service ï¿½ e.g. a scheduled flight, rail journey, ferry crossing, etc.
 
 ### <a id="680fd822-c1f6-4d09-94d5-5d586c947de1"></a>TravelServiceIdentifier
-The Identifier for the respective Travel Service – this is how humans would usually refer to the service 
+The Identifier for the respective Travel Service ï¿½ this is how humans would usually refer to the service 
 
-Note however that often this identifier does not, on its own, uniquely identify any given instance of a travel service – e.g. <a href="#375B0887-712F-43f0-BBF4-5C544D75AC39"><font color="#0000ff"><u>Flight</u></font></a> BA0010 is reused on a daily basis to refer to the flight between London Heathrow and Los Angeles. As such, to uniquely identify any given instance of a Travel Service you would need to combine it with other attributes – typically departure date/time.
+Note however that often this identifier does not, on its own, uniquely identify any given instance of a travel service ï¿½ e.g. <a href="#375B0887-712F-43f0-BBF4-5C544D75AC39"><font color="#0000ff"><u>Flight</u></font></a> BA0010 is reused on a daily basis to refer to the flight between London Heathrow and Los Angeles. As such, to uniquely identify any given instance of a Travel Service you would need to combine it with other attributes ï¿½ typically departure date/time.
 
 For Flights, this will be the Flight Number.
 
@@ -5301,7 +5301,7 @@ A StandardMeasureValue for AmountOfSubstance in moles
 A StandardMeasureValue for Duration in seconds
 
 ### <a id="3b916f09-f3f4-43e9-9c84-99009c685396"></a>Vehicle
-An Asset that is a means of transportation – e.g. car, aircraft, ship.
+An Asset that is a means of transportation ï¿½ e.g. car, aircraft, ship.
 
 ### <a id="93a816a9-eb7b-4250-8a1a-8919488029a7"></a>VehicleController
 A <a href="#9888A3F3-7E9B-4806-BD4E-2FC4D87A5902"><font color="#0000ff"><u>PersonInTransit</u></font></a> where the <a href="#5D5C5B9B-5E90-4100-8353-8EE9F3D772E2"><font color="#0000ff"><u>Person</u></font></a> is in control of the Transit
@@ -5309,14 +5309,14 @@ A <a href="#9888A3F3-7E9B-4806-BD4E-2FC4D87A5902"><font color="#0000ff"><u>Perso
 e.g. driver of a car, pilot of plane, captain of a ship
 
 ### <a id="ac9ab7b0-6c38-4b08-b2b9-caa8486f0f4b"></a>VehicleIdentificationNumber
-VIN – <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> Identification Number.
+VIN ï¿½ <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> Identification Number.
 
 For road vehicles this is often directly referred to as the VIN, but this can also be applied in a generic fashion to other vehicle types.
 
 ISO 3833 for road vehicles (17-digits)
 
 ### <a id="9d24b4be-2ad4-42d6-a906-8f6efda23ec5"></a>VehicleName
-The Name of the respective <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> (if applicable) – often this only applies to ships/boats. 
+The Name of the respective <a href="#3B916F09-F3F4-43e9-9C84-99009C685396"><font color="#0000ff"><u>Vehicle</u></font></a> (if applicable) ï¿½ often this only applies to ships/boats. 
 
 Examples:
 
