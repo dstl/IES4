@@ -9,10 +9,10 @@ data:FredState2 a ies:PersonState ;
     ies:isStateOf data:Fred ;
     ies:worksFor data:AcmeInc .
 data:FredEmployedStart a ies:BoundingState ;
-    ies:inPeriod iso8601:20111205T080000Z ;
+    ies:inPeriod iso8601:20111205T080000 ;
     ies:isStartOf data:FredState2 .
-iso8601:20111205T080000Z a ies:ParticularPeriod .
+iso8601:20111205T080000 a ies:ParticularPeriod .
 data:FredEmployedEnd a ies:BoundingState ;
     ies:isEndOf data:FredState2 .
-iso8601:20160507T170000Z a ies:ParticularPeriod ;
+iso8601:20160507T170000 a ies:ParticularPeriod ;
     ies:after data:FredEmployedEnd .
