@@ -1,9 +1,9 @@
 [back to readme](README.md)
 
-Crown Copyright 2020-2024
+Crown Copyright (c) 2025
 ![Logo](Images/ies-logo.png)
 
-# IES Model version: 4.3.0
+# IES Model version: 4.3.1
 ## Contents
 * Introduction Diagrams
     * [Notation](#9bea56ca-2e23-47b6-af37-991f72d7c4dd)
@@ -347,6 +347,8 @@ Otherwise, things to watch out for in the UML are:
 	<li>Updated comment for <b>RecurringPeriod</b>. Changed mention of recurringFrom and recurringUntil to startsIn and endsIn respectively within the definition of <b>RecurringPeriod</b>. Also corrected the mention of <b>recurrentPeriodRepresentation </b>from recurrentPeriod in the definition of <b>RecurringPeriod</b>.</li>
 	<li>Inclusion of missing <b>powertype </b>relations between Elements and ClassOfElements</li>
 </ul>
+
+<b>v4.3.1 - License change from Apache 2 to MIT</b>
 
 ## <a id="e169a2f5-85cb-41a7-a8b5-5bfac5330ab5"></a>IES Overview
 ![IES Overview Diagram](Images/EAID_E169A2F5_85CB_41a7_A8B5_5BFAC5330AB5.png)
