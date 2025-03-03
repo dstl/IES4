@@ -5,8 +5,8 @@
 ## [Introduction to 4D Ontology](4dOntologyIntro.md)
 ## [The IES Ontology](ies.md)
 
+Until March 2025, this repo provided public access to the IES for collaboration purposes including the specification itself, sample data/code and supporting documentation. From March 2025, IES work is continued through the cross-government [IES Working Group](https://github.com/ies-org) where releases from 4.3.2 can be found.  The final release on this repo is 4.3.1. This repo is now archived. 
+
 IES was developed by the UK Government with contributions from Dstl, Ministry of Defence, Metropolitan Police Service, Foreign & Commonwealth Office, Home Office, Department for Business and Trade (was BEIS), and HMRC, with technical support from Aurora Consulting (to Home Office) and Telicent (to Dstl).
 
-This repo provides public access to the IES for collaboration purposes including the specification itself, sample data/code and supporting documentation. There is also a [private repo](https://github.com/dstl/IES) used for the management of the IES; please get in touch if you require access, for example to submit formal Change Requests. 
-
-© Crown copyright (2024). This information is licensed under the terms of the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) except where otherwise stated
+© Crown copyright (2025). This information is licensed under the terms of the [Open Government Licence](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/) except where otherwise stated
